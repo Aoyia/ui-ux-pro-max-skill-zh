@@ -1,95 +1,95 @@
-# CIP Deliverable Guide
+# CIP 交付物指南
 
-## Core Identity
+## 核心识别
 
-### Primary Logo
-- Vector format (SVG, AI, EPS)
-- Clear space rules defined
-- Scalable from favicon to billboard
+### 主 Logo
+- 矢量格式（SVG, AI, EPS）
+- 定义清晰的保护网/安全区域规则
+- 支持从网站 Favicon 到户外广告牌的无损缩放
 
-### Logo Variations
-- Horizontal, vertical, stacked
-- Icon/symbol only
-- Monochrome versions (black, white, reversed)
+### Logo 变体
+- 横排、竖排、堆叠排版
+- 仅图标/符号版
+- 单色版本（黑色、白色、反白）
 
-## Stationery Set
+## 办公用品组合
 
-### Business Card
-- Standard: 3.5x2 inches / 85x55mm
-- Premium paper stock (300-400gsm)
-- Finishes: matte, spot UV, foil, emboss
+### 名片
+- 标准尺寸：3.5x2 英寸 / 85x55mm
+- 高档纸张材质（300-400gsm）
+- 工艺：哑光、局部 UV、烫金/烫银、凹凸起鼓
 
-### Letterhead
-- A4 or Letter size
-- Header area for logo/contact
-- Digital and print versions
+### 信纸
+- A4 或 Letter 尺寸
+- 页眉区域放置 Logo 与联系方式
+- 提供数字化电子版与印刷版
 
-### Envelope
-- DL, C4, C5 sizes
-- Logo on flap or front
-- Return address styling
+### 信封
+- DL、C4、C5 尺寸
+- Logo 印于封口处或正面
+- 设计寄信人地址样式
 
-## Office Environment
+## 办公环境
 
-### Reception Signage
-- 3D dimensional letters
-- Backlit LED options
-- Materials: acrylic, metal, wood
+### 前台标识
+- 3D 立体发光字/精工字
+- LED 背发光选项
+- 材质：亚克力、金属、木质
 
-### Wayfinding System
-- Consistent icon system
-- Clear hierarchy
-- ADA compliance
+### 路标导视系统
+- 保持一致的图标系统
+- 清晰的视觉层级
+- 符合 ADA 无障碍标准
 
-### Wall Graphics
-- Mission/values displays
-- Large-scale murals
-- Window frosting
+### 墙体画面与装饰
+- 企业使命/价值观展示墙
+- 大型壁画/文化墙
+- 玻璃贴膜/磨砂防撞条
 
-## Apparel
+## 品牌服饰
 
-### Polo Shirt
-- Embroidery preferred
-- Left chest placement
-- Quality fabric (pique cotton)
+### Polo 衫
+- 推荐采用刺绣工艺
+- 印花/刺绣置于左胸口
+- 选用高品质面料（珠地网眼棉）
 
-### Uniforms
-- Department color coding
-- Name badge integration
-- Safety requirements if applicable
+### 员工制服
+- 部门色彩编码区分
+- 整合工牌挂载设计
+- 如适用，需符合安全防护要求
 
-## Vehicle Branding
+## 车身广告与载具识别
 
-### Car/Sedan
-- Door panel branding
-- Partial or full wrap
-- Contact information visible
+### 轿车/乘用车
+- 车门板面品牌展示
+- 局部或全车拉花/车贴
+- 联系信息清晰可见
 
-### Fleet Vehicles
-- Consistent design across fleet
-- High visibility contact details
-- Professional installation
+### 车队/运输载具
+- 车队间保持设计一致性
+- 高度可见的联系详情
+- 需专业人员施工贴膜
 
-## Digital Assets
+## 数字资产
 
-### Social Media
-- Profile pictures (icon version)
-- Cover images (platform-specific)
-- Post templates
+### 社交媒体
+- 头像（仅图标版）
+- 封面图片（适配各个平台的特定规格）
+- 推文/贴文模板
 
-### Email Signature
-- HTML responsive
-- Max 600px width
-- Essential contact only
+### 邮件签名
+- HTML 响应式格式
+- 宽度最大 600px
+- 仅包含必要的联系方式
 
-## Events & Promotional
+## 活动与促销礼品
 
-### Trade Show Booth
-- Modular design
-- Easy assembly
-- Key messaging visible
+### 展会展位
+- 模块化结构设计
+- 易于拆装搭建
+- 核心宣传语高度可见
 
-### Promotional Items
-- Quality over quantity
-- Useful items preferred
-- Brand colors prominent
+### 促销礼品/周边
+- 质重于量
+- 优先选择实用性强的物品
+- 品牌标准色需醒目突出

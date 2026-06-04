@@ -1,109 +1,109 @@
-# Logo Style Guide
+# Logo 风格指南
 
-## Core Logo Types
+## 核心 Logo 类型
 
-### 1. Wordmark (Logotype)
-Text-only logo using custom typography.
-- **Best for:** Established brands, distinctive names
-- **Examples:** Google, Coca-Cola, FedEx
-- **Typography:** Custom letterforms, unique kerning
-- **Tip:** Name must be memorable and pronounceable
+### 1. 字标 / 纯文本标识 (Wordmark / Logotype)
+仅使用定制字体的纯文本 Logo。
+- **最适合：** 知名品牌、独特且易读的品牌名称
+- **示例：** Google, Coca-Cola, FedEx
+- **排版：** 定制字母形状、独特的字距微调
+- **提示：** 名称必须好记且易读
 
-### 2. Lettermark (Monogram)
-Initials or abbreviated letters.
-- **Best for:** Long company names, professional firms
-- **Examples:** IBM, HBO, NASA
-- **Typography:** Bold geometric sans-serif
-- **Tip:** Works well for brands with 2-4 letter abbreviations
+### 2. 字母标 / 首字母缩写 (Lettermark / Monogram)
+品牌首字母或缩写字母。
+- **最适合：** 名称较长的公司、专业机构
+- **示例：** IBM, HBO, NASA
+- **排版：** 粗几何无衬线体
+- **提示：** 非常适合由 2-4 个字母缩写组成的品牌
 
-### 3. Pictorial Mark (Brand Mark)
-Standalone icon or symbol.
-- **Best for:** Global brands with recognition
-- **Examples:** Apple, Twitter, Target
-- **Design:** Simple, scalable, memorable shape
-- **Tip:** Requires brand equity to work alone
+### 3. 图形标 / 品牌标志 (Pictorial Mark / Brand Mark)
+独立的图标或符号。
+- **最适合：** 已经具备极高认知度的全球品牌
+- **示例：** Apple, Twitter, Target
+- **设计：** 简单、可缩放、易记的图形
+- **提示：** 独立使用时需要较强的品牌资产积累
 
-### 4. Abstract Mark
-Non-representational geometric shapes.
-- **Best for:** Tech companies, differentiating brands
-- **Examples:** Pepsi, Airbnb, Spotify
-- **Design:** Unique shape conveying brand values
-- **Tip:** Can represent complex ideas simply
+### 4. 抽象标 (Abstract Mark)
+非具象的几何图形。
+- **最适合：** 科技公司、寻求差异化视觉的品牌
+- **示例：** Pepsi, Airbnb, Spotify
+- **设计：** 传达品牌价值观的独特图形
+- **提示：** 能以简御繁，代表复杂的品牌概念
 
-### 5. Mascot
-Character representing the brand.
-- **Best for:** Family brands, sports teams, food
-- **Examples:** KFC, Pringles, Michelin
-- **Design:** Friendly, expressive, versatile
-- **Tip:** Can evolve with brand while maintaining recognition
+### 5. 吉祥物 (Mascot)
+代表品牌的角色/形象。
+- **最适合：** 亲子/家庭品牌、运动队、食品行业
+- **示例：** KFC, Pringles, Michelin
+- **设计：** 亲切、富有表现力、多场景适用
+- **提示：** 可以在保持识别度的同时随品牌升级而演变
 
-### 6. Emblem
-Symbol enclosed within a shape.
-- **Best for:** Traditional brands, organizations
-- **Examples:** Starbucks, Harley-Davidson, NFL
-- **Design:** Badge, seal, or crest style
-- **Tip:** May have scalability challenges
+### 6. 徽章标 (Emblem)
+包裹在特定形状之内的符号。
+- **最适合：** 传统品牌、社会组织、教育机构
+- **示例：** Starbucks, Harley-Davidson, NFL
+- **设计：** 徽标、印章或盾徽样式
+- **提示：** 较小尺寸下可能会有可缩放性挑战
 
-### 7. Combination Mark
-Icon + text in unified design.
-- **Best for:** New brands, versatile applications
-- **Examples:** Burger King, Lacoste, Doritos
-- **Design:** Lockup with flexible arrangements
-- **Tip:** Most versatile, can separate elements later
+### 7. 组合标 (Combination Mark)
+图标与文本统一设计的结合体。
+- **最适合：** 新兴品牌、多场景多功能应用
+- **示例：** Burger King, Lacoste, Doritos
+- **设计：** 组合排版，支持灵活的布局调整
+- **提示：** 适应性最强，后期可单独拆分出图形或文本使用
 
-## Aesthetic Styles
+## 美学风格
 
-### Minimalist
-- Clean lines, essential elements only
-- High white space, simple geometry
-- Limited color palette (1-2 colors)
-- **Use:** Tech, professional services, modern brands
+### 极简主义
+- 干净的线条，仅保留最核心的元素
+- 充足的留白，简单的几何结构
+- 限制配色（1-2 种颜色）
+- **适用：** 科技、专业服务、现代品牌
 
-### Vintage/Retro
-- Nostalgic, heritage feel
-- Distressed textures, muted colors
-- Script or slab serif typography
-- **Use:** Craft brands, artisan products
+### 复古/怀旧
+- 怀旧、历史传承感
+- 斑驳纹理、低饱和度色彩
+- 手写体或粗衬线体（Slab Serif）排版
+- **适用：** 手工品牌、匠人产品
 
-### Luxury/Premium
-- Elegant, refined aesthetic
-- Gold, black, white color scheme
-- Thin serifs or sophisticated sans
-- **Use:** Fashion, jewelry, high-end services
+### 奢华/尊贵
+- 优雅、高品质的美学追求
+- 黑、白、金等配色体系
+- 纤细的衬线体或精致的无衬线体
+- **适用：** 时尚、珠宝、高端服务业
 
-### Geometric
-- Mathematical precision
-- Circles, triangles, squares
-- Perfect symmetry
-- **Use:** Architecture, tech, modern brands
+### 几何风格
+- 严谨的数学几何美感
+- 圆形、三角形、正方形
+- 完美的对称性
+- **适用：** 建筑、科技、现代品牌
 
-### Organic/Natural
-- Flowing, imperfect lines
-- Earth tones, natural colors
-- Hand-drawn feel
-- **Use:** Eco brands, wellness, organic products
+### 有机/自然
+- 流畅且带有自然不完美感的线条
+- 大地色系、自然色彩
+- 手绘质感
+- **适用：** 环保品牌、康养服务、有机产品
 
-### Gradient/Modern
-- Color transitions, vibrant palettes
-- Dimensional depth
-- Contemporary feel
-- **Use:** Apps, tech startups, digital products
+### 渐变/现代
+- 色彩过渡、富有活力的色彩搭配
+- 空间维度与立体深邃感
+- 时代前沿感
+- **适用：** App 移动端应用、科技初创公司、数字产品
 
-## Style Selection Matrix
+## 风格选择矩阵
 
-| Brand Type | Primary Style | Secondary Options |
+| 品牌类型 | 首选风格 | 次选方案 |
 |------------|---------------|-------------------|
-| Tech Startup | Minimalist, Abstract | Geometric, Gradient |
-| Law Firm | Wordmark, Emblem | Lettermark |
-| Restaurant | Mascot, Badge | Vintage, Combination |
-| Fashion | Wordmark, Luxury | Monogram, Line Art |
-| Healthcare | Professional, Line Art | Abstract, Combination |
-| Non-Profit | Combination, Emblem | Organic, Hand-Drawn |
+| 科技初创 | 极简、抽象 | 几何、渐变 |
+| 律师事务所 | 字标、徽章标 | 字母标 |
+| 餐饮/餐厅 | 吉祥物、徽章标 | 复古、组合标 |
+| 时尚/时装 | 字标、奢华风格 | 首字母缩写、线艺 |
+| 医疗健康 | 专业风格、线艺 | 抽象、组合标 |
+| 非营利组织 | 组合标、徽章标 | 有机自然、手绘风格 |
 
-## Scalability Checklist
+## 可缩放性检查清单
 
-- [ ] Recognizable at 16x16 pixels (favicon)
-- [ ] Clear at business card size
-- [ ] Works in single color
-- [ ] Maintains clarity in black/white
-- [ ] No tiny details that disappear when scaled
+- [ ] 在 16x16 像素下仍清晰可辨（网站 Favicon）
+- [ ] 在名片尺寸下显示清晰
+- [ ] 单色（单色模式）下表现良好
+- [ ] 在黑白对比下保持清晰度
+- [ ] 没有在缩小尺寸时容易丢失的过于微小的细节
