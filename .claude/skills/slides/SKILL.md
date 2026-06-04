@@ -1,42 +1,42 @@
 ---
 name: ckm:slides
-description: Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies.
+description: 创建集成了 Chart.js、设计标记、响应式布局、文案写作公式及上下文幻灯片策略的战略性 HTML 演示文稿。
 argument-hint: "[topic] [slide-count]"
 metadata:
   author: claudekit
   version: "1.0.0"
 ---
 
-# Slides
+# 演示幻灯片 (Slides)
 
-Strategic HTML presentation design with data visualization.
+具有数据可视化功能的战略性 HTML 演示文稿设计。
 
 <args>$ARGUMENTS</args>
 
-## When to Use
+## 使用时机
 
-- Marketing presentations and pitch decks
-- Data-driven slides with Chart.js
-- Strategic slide design with layout patterns
-- Copywriting-optimized presentation content
+- 营销展示与商业路演幻灯片 (Pitch decks)
+- 使用 Chart.js 绘制的数据驱动型幻灯片
+- 使用布局模式进行战略性幻灯片设计
+- 经过文案写作优化的演示内容
 
-## Subcommands
+## 子命令
 
-| Subcommand | Description | Reference |
+| 子命令 | 描述 | 参考文档 |
 |------------|-------------|-----------|
-| `create` | Create strategic presentation slides | `references/create.md` |
+| `create` | 创建战略性演示幻灯片 | `references/create.md` |
 
-## References (Knowledge Base)
+## 参考文档 (知识库)
 
-| Topic | File |
+| 主题 | 文件 |
 |-------|------|
-| Layout Patterns | `references/layout-patterns.md` |
-| HTML Template | `references/html-template.md` |
-| Copywriting Formulas | `references/copywriting-formulas.md` |
-| Slide Strategies | `references/slide-strategies.md` |
+| 布局模式 (Layout Patterns) | `references/layout-patterns.md` |
+| HTML 模板 (HTML Template) | `references/html-template.md` |
+| 文案写作公式 (Copywriting Formulas) | `references/copywriting-formulas.md` |
+| 幻灯片策略 (Slide Strategies) | `references/slide-strategies.md` |
 
-## Routing
+## 路由逻辑
 
-1. Parse subcommand from `$ARGUMENTS` (first word)
-2. Load corresponding `references/{subcommand}.md`
-3. Execute with remaining arguments
+1. 从 `$ARGUMENTS` (第一个单词) 解析子命令
+2. 加载对应的 `references/{subcommand}.md`
+3. 使用剩余参数执行

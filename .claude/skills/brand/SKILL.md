@@ -1,97 +1,97 @@
 ---
 name: ckm:brand
-description: Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides.
+description: 品牌语气/声量、视觉识别、信息传递框架、资产管理、品牌一致性。在需要品牌化内容、语气语调、营销资产、品牌合规、样式指南时激活。
 argument-hint: "[update|review|create] [args]"
 metadata:
   author: claudekit
   version: "1.0.0"
 ---
 
-# Brand
+# 品牌 (Brand)
 
-Brand identity, voice, messaging, asset management, and consistency frameworks.
+品牌身份、语气、信息传递、资产管理及一致性框架。
 
-## When to Use
+## 使用时机
 
-- Brand voice definition and content tone guidance
-- Visual identity standards and style guide development
-- Messaging framework creation
-- Brand consistency review and audit
-- Asset organization, naming, and approval
-- Color palette management and typography specs
+- 品牌语气 (Voice) 定义与内容调性指导
+- 视觉识别 (Visual identity) 标准与样式指南制定
+- 信息传递框架 (Messaging framework) 的创建
+- 品牌一致性审查与审计
+- 资产组织、命名与审批
+- 配色方案管理与排版规范
 
-## Quick Start
+## 快速开始
 
-**Inject brand context into prompts:**
+**向提示词注入品牌上下文：**
 ```bash
 node scripts/inject-brand-context.cjs
 node scripts/inject-brand-context.cjs --json
 ```
 
-**Validate an asset:**
+**验证资产：**
 ```bash
-node scripts/validate-asset.cjs <asset-path>
+node scripts/validate-asset.cjs <asset-path> # 指向要验证的资产路径
 ```
 
-**Extract/compare colors:**
+**提取/对比颜色：**
 ```bash
 node scripts/extract-colors.cjs --palette
-node scripts/extract-colors.cjs <image-path>
+node scripts/extract-colors.cjs <image-path> # 指向要提取颜色的图片路径
 ```
 
-## Brand Sync Workflow
+## 品牌同步工作流 (Brand Sync Workflow)
 
 ```bash
-# 1. Edit docs/brand-guidelines.md (or use /brand update)
-# 2. Sync to design tokens
+# 1. 编辑 docs/brand-guidelines.md (或使用 /brand update)
+# 2. 同步到设计标记 (design tokens)
 node scripts/sync-brand-to-tokens.cjs
-# 3. Verify
+# 3. 验证同步结果
 node scripts/inject-brand-context.cjs --json | head -20
 ```
 
-**Files synced:**
-- `docs/brand-guidelines.md` → Source of truth
-- `assets/design-tokens.json` → Token definitions
-- `assets/design-tokens.css` → CSS variables
+**同步的文件：**
+- `docs/brand-guidelines.md` → 单一事实来源 (Source of truth)
+- `assets/design-tokens.json` → 标记 (Token) 定义
+- `assets/design-tokens.css` → CSS 变量
 
-## Subcommands
+## 子命令 (Subcommands)
 
-| Subcommand | Description | Reference |
+| 子命令 | 描述 | 参考文档 |
 |------------|-------------|-----------|
-| `update` | Update brand identity and sync to all design systems | `references/update.md` |
+| `update` | 更新品牌身份并同步到所有设计系统 | `references/update.md` |
 
-## References
+## 参考文档 (References)
 
-| Topic | File |
+| 主题 | 文件 |
 |-------|------|
-| Voice Framework | `references/voice-framework.md` |
-| Visual Identity | `references/visual-identity.md` |
-| Messaging | `references/messaging-framework.md` |
-| Consistency | `references/consistency-checklist.md` |
-| Guidelines Template | `references/brand-guideline-template.md` |
-| Asset Organization | `references/asset-organization.md` |
-| Color Management | `references/color-palette-management.md` |
-| Typography | `references/typography-specifications.md` |
-| Logo Usage | `references/logo-usage-rules.md` |
-| Approval Checklist | `references/approval-checklist.md` |
+| 语气框架 (Voice Framework) | `references/voice-framework.md` |
+| 视觉识别 (Visual Identity) | `references/visual-identity.md` |
+| 信息传递 (Messaging) | `references/messaging-framework.md` |
+| 一致性 (Consistency) | `references/consistency-checklist.md` |
+| 指南模板 (Guidelines Template) | `references/brand-guideline-template.md` |
+| 资产组织 (Asset Organization) | `references/asset-organization.md` |
+| 色彩管理 (Color Management) | `references/color-palette-management.md` |
+| 排版设计 (Typography) | `references/typography-specifications.md` |
+| Logo 使用规范 (Logo Usage) | `references/logo-usage-rules.md` |
+| 审批清单 (Approval Checklist) | `references/approval-checklist.md` |
 
-## Scripts
+## 脚本 (Scripts)
 
-| Script | Purpose |
+| 脚本 | 用途 |
 |--------|---------|
-| `scripts/inject-brand-context.cjs` | Extract brand context for prompt injection |
-| `scripts/sync-brand-to-tokens.cjs` | Sync brand-guidelines.md → design-tokens.json/css |
-| `scripts/validate-asset.cjs` | Validate asset naming, size, format |
-| `scripts/extract-colors.cjs` | Extract and compare colors against palette |
+| `scripts/inject-brand-context.cjs` | 提取品牌上下文以便进行提示词注入 |
+| `scripts/sync-brand-to-tokens.cjs` | 将 brand-guidelines.md 同步到 design-tokens.json/css |
+| `scripts/validate-asset.cjs` | 验证资产的命名、大小和格式 |
+| `scripts/extract-colors.cjs` | 提取颜色并与调色板进行对比 |
 
-## Templates
+## 模板 (Templates)
 
-| Template | Purpose |
+| 模板 | 用途 |
 |----------|---------|
-| `templates/brand-guidelines-starter.md` | Complete starter template for new brands |
+| `templates/brand-guidelines-starter.md` | 新品牌完整的起步模板 |
 
-## Routing
+## 路由 (Routing)
 
-1. Parse subcommand from `$ARGUMENTS` (first word)
-2. Load corresponding `references/{subcommand}.md`
-3. Execute with remaining arguments
+1. 从 `$ARGUMENTS` (第一个单词) 解析子命令
+2. 加载对应的 `references/{subcommand}.md`
+3. 使用剩余参数执行
