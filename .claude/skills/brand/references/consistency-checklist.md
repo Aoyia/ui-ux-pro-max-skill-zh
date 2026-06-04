@@ -1,94 +1,94 @@
-# Brand Consistency Checklist
+# 品牌一致性检查表
 
-## Visual Consistency
+## 视觉一致性
 
-### Logo
-- [ ] Correct logo version used
-- [ ] Proper clear space maintained
-- [ ] Approved colors only
-- [ ] Legible at all sizes
-- [ ] No unauthorized modifications
+### 标志 (Logo)
+- [ ] 使用了正确的标志版本
+- [ ] 保持了适当的安全空间/留白
+- [ ] 仅使用经批准的颜色
+- [ ] 在所有尺寸下均清晰可读
+- [ ] 无任何未经授权的修改
 
-### Colors
-- [ ] Only brand palette colors
-- [ ] Consistent color application
-- [ ] Proper contrast for accessibility
-- [ ] Color ratios maintained
+### 颜色 (Colors)
+- [ ] 仅使用品牌调色板颜色
+- [ ] 颜色应用一致
+- [ ] 满足无障碍设计的适当对比度
+- [ ] 保持了颜色比例
 
-### Typography
-- [ ] Brand fonts used
-- [ ] Correct weights/styles
-- [ ] Proper hierarchy
-- [ ] Consistent formatting
+### 排版与字体 (Typography)
+- [ ] 使用品牌字体
+- [ ] 正确的字重/样式
+- [ ] 适当的层级结构
+- [ ] 格式一致
 
-### Imagery
-- [ ] Matches brand style
-- [ ] Consistent editing/filters
-- [ ] Appropriate subjects
-- [ ] Quality standards met
+### 图像与图片 (Imagery)
+- [ ] 符合品牌风格
+- [ ] 调色/滤镜一致
+- [ ] 主题合适
+- [ ] 达到质量标准
 
-## Voice Consistency
+## 语气语调一致性
 
-### Tone
-- [ ] Matches brand personality
-- [ ] Appropriate for context
-- [ ] Consistent across channels
-- [ ] No conflicting messages
+### 语气 (Tone)
+- [ ] 符合品牌个性
+- [ ] 符合语境
+- [ ] 跨渠道一致
+- [ ] 无冲突的信息
 
-### Language
-- [ ] Brand terminology used
-- [ ] Consistent capitalization
-- [ ] Proper abbreviations
-- [ ] Jargon level appropriate
+### 语言与用词 (Language)
+- [ ] 使用品牌专属术语
+- [ ] 大小写一致
+- [ ] 缩写适当
+- [ ] 行业术语级别适当
 
-### Messaging
-- [ ] Aligns with key messages
-- [ ] Value prop clear
-- [ ] Differentiators highlighted
-- [ ] CTAs consistent
+### 核心信息 (Messaging)
+- [ ] 与关键信息保持一致
+- [ ] 价值主张清晰
+- [ ] 突显差异化特征
+- [ ] 呼吁操作 (CTA) 一致
 
-## Channel Audit
+## 渠道审计
 
-### Website
-- [ ] Homepage
-- [ ] Product pages
-- [ ] Blog/content
-- [ ] Footer/navigation
+### 网站
+- [ ] 首页
+- [ ] 产品页面
+- [ ] 博客/内容
+- [ ] 页脚/导航栏
 
-### Social Media
-- [ ] Profile images
-- [ ] Cover images
-- [ ] Bio/about sections
-- [ ] Post templates
+### 社交媒体
+- [ ] 头像/资料图片
+- [ ] 封面图片
+- [ ] 个人简介/关于部分
+- [ ] 帖子模板
 
-### Email
-- [ ] Header/footer
-- [ ] Templates
-- [ ] Signatures
-- [ ] Automated messages
+### 电子邮件
+- [ ] 页眉/页脚
+- [ ] 模板
+- [ ] 签名
+- [ ] 自动发送的消息
 
-### Collateral
-- [ ] Presentations
-- [ ] One-pagers
-- [ ] Business cards
-- [ ] Promotional materials
+### 宣传材料 (Collateral)
+- [ ] 演示文稿/幻灯片
+- [ ] 单页宣传册
+- [ ] 名片
+- [ ] 促销材料
 
-## Common Issues
+## 常见问题
 
-| Issue | Fix |
+| 问题 | 解决方法 |
 |-------|-----|
-| Outdated logo | Replace with current version |
-| Off-brand colors | Update to palette |
-| Wrong font | Replace with brand font |
-| Inconsistent voice | Apply style guide |
-| Mixed messaging | Align to framework |
+| 过期的标志 | 替换为当前版本 |
+| 不符合品牌的颜色 | 更新为品牌调色板颜色 |
+| 错误的字体 | 替换为品牌字体 |
+| 语气语调不一致 | 应用风格指南 |
+| 信息混乱/不一致 | 对齐到品牌核心信息框架 |
 
-## Audit Frequency
+## 审计频率
 
-| Asset Type | Frequency |
+| 资产类型 | 频率 |
 |------------|-----------|
-| Website | Monthly |
-| Social profiles | Quarterly |
-| Email templates | Quarterly |
-| Sales materials | Quarterly |
-| Full brand audit | Annually |
+| 网站 | 每月 |
+| 社交媒体个人资料 | 每季度 |
+| 电子邮件模板 | 每季度 |
+| 销售材料 | 每季度 |
+| 完整品牌审计 | 每年 |

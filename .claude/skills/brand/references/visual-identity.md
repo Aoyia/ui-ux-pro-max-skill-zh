@@ -1,96 +1,97 @@
-# Visual Identity Basics
+# 视觉识别系统基础 (VI 基础)
 
-## Core Visual Elements
+## 核心视觉元素
 
-### Logo
-- **Primary:** Full logo (horizontal/stacked)
-- **Secondary:** Abbreviated version
-- **Icon/Mark:** Symbol only
-- **Clear space:** Minimum padding around logo
-- **Minimum size:** Smallest readable size
+### 标志 (Logo)
+- **主要：** 完整标志（横向 / 堆叠式）
+- **次要：** 简化版本标志
+- **图标/图标标示：** 仅图标
+- **安全空间/留白：** 标志周围的最小留白 padding
+- **最小尺寸：** 清晰可读的最小尺寸限制
 
-### Color Palette
+### 调色板
 ```
-Primary Colors (1-2)
-├── Main brand color
-└── Supporting primary
+主色 (Primary Colors) (1-2)
+├── 主要品牌色
+└── 辅助主色
 
-Secondary Colors (2-3)
-├── Accent colors
-└── Supporting visuals
+辅助色 (Secondary Colors) (2-3)
+├── 强调色
+└── 辅助视觉效果
 
-Neutrals (3-4)
-├── Text colors
-├── Background colors
-└── UI elements
+中性色 (Neutrals) (3-4)
+├── 文本颜色
+├── 背景颜色
+└── UI 元素
 ```
 
-### Typography
-| Usage | Font | Weight | Size |
+### 排版与字体
+
+| 用途 | 字体 | 字重 | 尺寸 |
 |-------|------|--------|------|
-| H1 | [Font] | Bold | 32-48px |
-| H2 | [Font] | Semibold | 24-32px |
-| Body | [Font] | Regular | 16-18px |
-| Caption | [Font] | Regular | 12-14px |
+| H1 | [字体] | 粗体 (Bold) | 32-48px |
+| H2 | [字体] | 半粗 (Semibold) | 24-32px |
+| 正文 | [字体] | 常规 (Regular) | 16-18px |
+| 说明文字 | [字体] | 常规 (Regular) | 12-14px |
 
-## Visual Guidelines Template
+## 视觉指南模板
 
 ```markdown
-## Logo Usage
+## 标志使用规范
 
-### Correct Usage
-- [Guidelines for proper logo use]
+### 正确使用方式
+- [正确使用标志的指南]
 
-### Incorrect Usage
-- Don't stretch or distort
-- Don't change colors (unless approved)
-- Don't add effects
-- Don't place on busy backgrounds
+### 错误使用方式
+- 避免拉伸或扭曲
+- 避免更改颜色（除非经批准）
+- 避免添加特效
+- 避免放置在复杂的背景上
 
-## Color Specifications
+## 颜色规范
 
-### Primary Palette
-| Color | Hex | RGB | Usage |
+### 主色调色板
+| 颜色 | 十六进制 (Hex) | RGB | 用途 |
 |-------|-----|-----|-------|
-| [Name] | #XXXXXX | r,g,b | [Where to use] |
+| [颜色名称] | #XXXXXX | r,g,b | [应用位置] |
 
-### Accessibility
-- Text contrast ratio: 4.5:1 minimum
-- Button contrast: WCAG AA compliant
+### 无障碍性
+- 文本对比度：最小 4.5:1
+- 按钮对比度：符合 WCAG AA 标准
 
-## Imagery Style
+## 图像风格
 
-### Photography
-- [Lighting preferences]
-- [Subject guidelines]
-- [Composition rules]
-- [Editing style]
+### 摄影
+- [光线偏好]
+- [主体指南]
+- [构图规则]
+- [修图/调色风格]
 
-### Illustrations
-- [Style description]
-- [Color usage]
-- [Complexity level]
+### 插图
+- [风格描述]
+- [颜色使用]
+- [复杂度级别]
 
-### Icons
-- [Style: outlined/filled/duotone]
-- [Stroke weight]
-- [Corner radius]
+### 图标
+- [风格：描边/填充/双色]
+- [描边粗细]
+- [圆角半径]
 ```
 
-## Quick Checks
+## 快速检查
 
-### Logo
-- [ ] Correct version for context
-- [ ] Sufficient clear space
-- [ ] Legible at size used
-- [ ] Correct color for background
+### 标志 (Logo)
+- [ ] 变体在当前语境中正确使用
+- [ ] 保持了充足的安全空间
+- [ ] 在当前使用尺寸下依然清晰可读
+- [ ] 相对背景的颜色使用正确
 
-### Colors
-- [ ] From approved palette
-- [ ] Accessible contrast
-- [ ] Consistent across materials
+### 颜色
+- [ ] 选自批准的调色板
+- [ ] 对比度满足无障碍性要求
+- [ ] 在不同材料间保持一致
 
-### Typography
-- [ ] Correct fonts
-- [ ] Appropriate hierarchy
-- [ ] Readable size
+### 排版与字体
+- [ ] 字体正确
+- [ ] 具备合理的层级结构
+- [ ] 尺寸清晰易读

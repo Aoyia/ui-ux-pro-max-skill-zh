@@ -1,169 +1,169 @@
-# Asset Approval Checklist
+# 资产审批检查表
 
-Comprehensive checklist for reviewing marketing assets before approval.
+在审批之前审查市场营销资产的全面检查表。
 
-## Quick Review
+## 快速审查
 
-Before detailed review, verify:
-- [ ] Asset serves stated purpose
-- [ ] Target audience appropriate
-- [ ] No obvious errors or issues
-- [ ] Aligns with campaign goals
+进行详细审查前，验证以下内容：
+- [ ] 资产符合既定用途
+- [ ] 适合目标受众
+- [ ] 无明显错误或问题
+- [ ] 符合营销活动目标
 
-## Visual Elements
+## 视觉元素
 
-### Logo Usage
-- [ ] Correct logo variant for context
-- [ ] Proper clear space maintained
-- [ ] Minimum size requirements met
-- [ ] Approved colors only
-- [ ] No unauthorized modifications
-- [ ] Appropriate for background
+### 标志 (Logo) 使用规范
+- [ ] 根据具体语境使用正确的标志变体
+- [ ] 保持了适当的安全空间/留白
+- [ ] 满足最小尺寸要求
+- [ ] 仅使用批准的颜色
+- [ ] 无任何未经授权的修改
+- [ ] 在当前背景下显示效果合适
 
-### Color Compliance
-- [ ] Uses brand palette colors only
-- [ ] Primary/secondary ratio appropriate (60/30/10)
-- [ ] Semantic colors used correctly
-- [ ] No off-brand colors introduced
-- [ ] Consistent across all elements
+### 颜色合规性
+- [ ] 仅使用品牌调色板颜色
+- [ ] 主/辅/强调色比例适当 (60/30/10)
+- [ ] 正确使用语义色
+- [ ] 未引入任何非品牌颜色
+- [ ] 所有元素之间保持一致
 
-### Typography
-- [ ] Brand fonts used throughout
-- [ ] Correct font weights applied
-- [ ] Proper type hierarchy
-- [ ] Appropriate sizes for medium
-- [ ] Line heights adequate
-- [ ] No orphans/widows in body text
+### 排版与字体
+- [ ] 全文使用品牌字体
+- [ ] 应用了正确的字重
+- [ ] 具备良好的字号层级结构
+- [ ] 尺寸适合该媒介渠道
+- [ ] 行高充足
+- [ ] 正文文本中没有孤行/寡行 (Orphans/Widows)
 
-### Imagery
-- [ ] Matches brand photography style
-- [ ] Appropriate subjects/content
-- [ ] Quality meets requirements
-- [ ] Properly licensed/credited
-- [ ] Optimized for intended use
+### 图像与图片
+- [ ] 符合品牌摄影风格
+- [ ] 主题/内容合适
+- [ ] 质量达到要求
+- [ ] 获得适当授权/注明出处
+- [ ] 针对预期用途进行了优化
 
-## Accessibility
+## 无障碍性 (Accessibility)
 
-### Visual Accessibility
-- [ ] Text contrast ratio >= 4.5:1 (AA)
-- [ ] Large text contrast >= 3:1
-- [ ] Interactive elements have visible focus
-- [ ] Color not sole indicator of meaning
-- [ ] Alt text for all images
+### 视觉无障碍
+- [ ] 文本对比度 >= 4.5:1 (AA)
+- [ ] 大号文本对比度 >= 3:1
+- [ ] 交互元素有清晰可见的聚焦 (Focus) 状态
+- [ ] 颜色并非传递信息的唯一指标
+- [ ] 为所有图像添加 Alt 替代文本
 
-### Content Accessibility
-- [ ] Clear and scannable layout
-- [ ] Readable font sizes
-- [ ] Logical reading order
-- [ ] Meaningful headings structure
-- [ ] Links describe destination
+### 内容无障碍
+- [ ] 布局清晰、便于扫读
+- [ ] 字号清晰易读
+- [ ] 阅读顺序符合逻辑
+- [ ] 标题结构有实际逻辑意义
+- [ ] 链接文本描述了其目标指向
 
-## Content Quality
+## 内容质量
 
-### Copy Review
-- [ ] Matches brand voice
-- [ ] Appropriate tone for context
-- [ ] No prohibited terms used
-- [ ] Value proposition clear
-- [ ] CTA compelling and clear
-- [ ] Proofread for errors
+### 文案审查
+- [ ] 符合品牌语气
+- [ ] 语境语调合适
+- [ ] 未使用禁用词汇
+- [ ] 价值主张清晰
+- [ ] CTA 清晰且具吸引力
+- [ ] 已进行校对，确认无误
 
-### Messaging
-- [ ] Aligns with key messages
-- [ ] Differentiators highlighted
-- [ ] Benefits over features
-- [ ] Target audience addressed
-- [ ] No conflicting claims
+### 信息传递
+- [ ] 与核心关键信息对齐
+- [ ] 突显差异化优势
+- [ ] 强调“带来的利益”而非单纯的“功能特性”
+- [ ] 明确面向目标受众
+- [ ] 无冲突/矛盾的表述
 
-## Technical Requirements
+## 技术要求
 
-### File Specifications
-- [ ] Correct file format
-- [ ] Appropriate resolution
-- [ ] File size optimized
-- [ ] Proper naming convention
-- [ ] Metadata included
+### 文件规范
+- [ ] 文件格式正确
+- [ ] 分辨率合适
+- [ ] 文件大小已优化
+- [ ] 符合命名规范
+- [ ] 包含元数据
 
-### Platform Requirements
-| Platform | Verified |
+### 平台要求
+| 平台 | 已验证 |
 |----------|----------|
-| Instagram | [ ] Correct dimensions |
-| Twitter/X | [ ] Meets requirements |
-| LinkedIn | [ ] Professional standards |
-| Facebook | [ ] Guidelines compliant |
-| Email | [ ] Size under 1MB |
-| Web | [ ] Optimized for web |
+| Instagram | [ ] 尺寸正确 |
+| Twitter/X | [ ] 符合要求 |
+| LinkedIn | [ ] 符合专业标准 |
+| Facebook | [ ] 符合指南要求 |
+| 电子邮件 | [ ] 大小在 1MB 以下 |
+| 网页 | [ ] 针对网页进行了优化 |
 
-## Legal & Compliance
+## 法律与合规
 
-### Intellectual Property
-- [ ] Stock images licensed
-- [ ] Music/audio cleared
-- [ ] No trademark violations
-- [ ] User content authorized
-- [ ] Credits included where needed
+### 知识产权 (IP)
+- [ ] 素材库图片已获得授权
+- [ ] 音乐/音频版权已清理完毕
+- [ ] 无商标侵权行为
+- [ ] 用户生成内容 (UGC) 已获授权
+- [ ] 在需要的地方注明了出处/致谢
 
-### Regulatory
-- [ ] Required disclosures present
-- [ ] No misleading claims
-- [ ] Pricing accurate
-- [ ] Terms linked where needed
-- [ ] Privacy compliant
+### 行业监管
+- [ ] 包含必要的免责声明/信息披露
+- [ ] 无误导性陈述
+- [ ] 定价准确无误
+- [ ] 在需要的地方链接了相关条款
+- [ ] 符合隐私政策规范
 
-## Review Status
+## 评审状态
 
-### Reviewer Sign-off
+### 评审人员签字认可 (Sign-off)
 
-| Review Area | Reviewer | Date | Status |
+| 评审领域 | 评审人 | 日期 | 状态 |
 |-------------|----------|------|--------|
-| Visual Design | | | [ ] Pass / [ ] Revisions |
-| Copy/Content | | | [ ] Pass / [ ] Revisions |
-| Brand Compliance | | | [ ] Pass / [ ] Revisions |
-| Technical | | | [ ] Pass / [ ] Revisions |
-| Legal | | | [ ] Pass / [ ] Revisions |
+| 视觉设计 | | | [ ] 通过 / [ ] 需修改 |
+| 文案/内容 | | | [ ] 通过 / [ ] 需修改 |
+| 品牌合规性 | | | [ ] 通过 / [ ] 需修改 |
+| 技术要求 | | | [ ] 通过 / [ ] 需修改 |
+| 法律合规 | | | [ ] 通过 / [ ] 需修改 |
 
-### Final Approval
+### 终审批准
 
-- [ ] All review areas passed
-- [ ] Revisions completed (if any)
-- [ ] Final version uploaded
-- [ ] Metadata updated
-- [ ] Ready for publish/use
+- [ ] 所有评审领域均已通过
+- [ ] 修改（如有）已全部完成
+- [ ] 最终版本已上传
+- [ ] 元数据已更新
+- [ ] 已准备好发布/投入使用
 
-**Approved By:** _______________
+**批准人：** _______________
 
-**Date:** _______________
+**日期：** _______________
 
-**Version:** _______________
+**版本：** _______________
 
-## Common Issues & Fixes
+## 常见问题与解决方法
 
-| Issue | Fix |
+| 问题 | 解决方法 |
 |-------|-----|
-| Logo too small | Increase to minimum size |
-| Wrong font | Replace with brand font |
-| Low contrast | Adjust colors for accessibility |
-| Off-brand color | Replace with palette color |
-| Blurry image | Use higher resolution source |
-| Missing alt text | Add descriptive alt text |
-| Weak CTA | Strengthen action-oriented copy |
+| 标志太小 | 放大至最小尺寸 |
+| 错误的字体 | 替换为品牌字体 |
+| 对比度过低 | 调整颜色以满足无障碍性要求 |
+| 非品牌颜色 | 替换为调色板中的颜色 |
+| 图像模糊 | 使用更高分辨率的源文件 |
+| 缺失 Alt 文本 | 添加描述性 Alt 替代文本 |
+| CTA 引导力度弱 | 强化行动导向的文案 |
 
-## Automation Support
+## 自动化支持
 
-The `validate-asset.cjs` script can auto-check:
-- Color palette compliance
-- Minimum dimensions
-- File format/size
-- Naming convention
-- Basic metadata
+`validate-asset.cjs` 脚本可以自动检查：
+- 调色板合规性
+- 最小尺寸
+- 文件格式/大小
+- 命名规范
+- 基础元数据
 
-Run: `node .claude/skills/brand/scripts/validate-asset.cjs <asset-path>`
+运行：`node .claude/skills/brand/scripts/validate-asset.cjs <asset-path>`
 
-## Archival
+## 归档与通知
 
-After approval:
-1. Update asset status in manifest.json
-2. Add approver and timestamp
-3. Move previous versions to archive
-4. Update campaign tracking
-5. Notify relevant teams
+批准之后：
+1. 在 manifest.json 中更新资产状态
+2. 添加批准人与时间戳
+3. 将旧版本移动至归档区
+4. 更新营销活动跟踪状态
+5. 通知相关团队

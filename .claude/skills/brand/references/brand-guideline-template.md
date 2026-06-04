@@ -1,139 +1,139 @@
-# Brand Guidelines Template
+# 品牌指南模板
 
-Use this template to create comprehensive brand guidelines for any project.
+使用此模板为任何项目创建全面的品牌指南。
 
-## Document Structure
+## 文档结构
 
 ```markdown
-# Brand Guidelines v{X.Y}
+# 品牌指南 v{X.Y}
 
-## Quick Reference
-- **Primary Color:** #XXXXXX
-- **Secondary Color:** #XXXXXX
-- **Primary Font:** {font-family}
-- **Voice:** {3 key traits}
+## 快速参考
+- **主色：** #XXXXXX
+- **辅助色：** #XXXXXX
+- **主要字体：** {font-family}
+- **语气：** {3 个关键特质}
 
-## 1. Color Palette
+## 1. 调色板
 
-### Primary Colors
-| Name | Hex | RGB | Usage |
+### 主色
+| 名称 | 十六进制 (Hex) | RGB | 用途 |
 |------|-----|-----|-------|
-| {Name} | #{hex} | rgb({r},{g},{b}) | Primary brand color, CTAs, headers |
-| {Name} | #{hex} | rgb({r},{g},{b}) | Supporting accent |
+| {名称} | #{hex} | rgb({r},{g},{b}) | 主要品牌色、CTA、页眉 |
+| {名称} | #{hex} | rgb({r},{g},{b}) | 辅助强调色 |
 
-### Secondary Colors
-| Name | Hex | RGB | Usage |
+### 辅助色
+| 名称 | 十六进制 (Hex) | RGB | 用途 |
 |------|-----|-----|-------|
-| {Name} | #{hex} | rgb({r},{g},{b}) | Secondary elements |
-| {Name} | #{hex} | rgb({r},{g},{b}) | Highlights |
+| {名称} | #{hex} | rgb({r},{g},{b}) | 次要元素 |
+| {名称} | #{hex} | rgb({r},{g},{b}) | 突出显示 |
 
-### Neutral Palette
-| Name | Hex | RGB | Usage |
+### 中性调色板
+| 名称 | 十六进制 (Hex) | RGB | 用途 |
 |------|-----|-----|-------|
-| Background | #{hex} | rgb({r},{g},{b}) | Page backgrounds |
-| Text Primary | #{hex} | rgb({r},{g},{b}) | Body text |
-| Text Secondary | #{hex} | rgb({r},{g},{b}) | Captions, muted text |
-| Border | #{hex} | rgb({r},{g},{b}) | Dividers, borders |
+| 背景 | #{hex} | rgb({r},{g},{b}) | 页面背景 |
+| 主要文本 | #{hex} | rgb({r},{g},{b}) | 正文文本 |
+| 次要文本 | #{hex} | rgb({r},{g},{b}) | 说明文字、暗色文本 |
+| 边框 | #{hex} | rgb({r},{g},{b}) | 分割线、边框 |
 
-### Accessibility
-- Text/Background Contrast: {ratio}:1 (WCAG {level})
-- CTA Contrast: {ratio}:1
-- All interactive elements meet WCAG 2.1 AA
+### 无障碍性
+- 文本/背景对比度：{ratio}:1 (WCAG {级别})
+- CTA 对比度：{ratio}:1
+- 所有交互元素均符合 WCAG 2.1 AA 标准
 
-## 2. Typography
+## 2. 排版与字体
 
-### Font Stack
+### 字体栈 (Font Stack)
 ```css
 --font-heading: '{Font}', sans-serif;
 --font-body: '{Font}', sans-serif;
 --font-mono: '{Font}', monospace;
 ```
 
-### Type Scale
-| Element | Font | Weight | Size (Desktop/Mobile) | Line Height |
+### 字号层级 (Type Scale)
+| 元素 | 字体 | 字重 | 尺寸 (桌面端 / 移动端) | 行高 |
 |---------|------|--------|----------------------|-------------|
 | H1 | {font} | 700 | 48px / 32px | 1.2 |
 | H2 | {font} | 600 | 36px / 28px | 1.25 |
 | H3 | {font} | 600 | 28px / 24px | 1.3 |
 | H4 | {font} | 600 | 24px / 20px | 1.35 |
-| Body | {font} | 400 | 16px / 16px | 1.5 |
-| Small | {font} | 400 | 14px / 14px | 1.5 |
-| Caption | {font} | 400 | 12px / 12px | 1.4 |
+| 正文 | {font} | 400 | 16px / 16px | 1.5 |
+| 小字 | {font} | 400 | 14px / 14px | 1.5 |
+| 说明文字 | {font} | 400 | 12px / 12px | 1.4 |
 
-## 3. Logo Usage
+## 3. 标志使用规范
 
-### Variants
-- **Primary:** Full horizontal logo with wordmark
-- **Stacked:** Vertical arrangement for square spaces
-- **Icon:** Symbol only for favicons, app icons
-- **Monochrome:** Single color for limited palettes
+### 变体
+- **主要：** 带有文字标识的完整横向标志
+- **堆叠：** 用于方形空间的纵向布局
+- **图标：** 仅图标，用于网站图标 (favicon)、应用图标
+- **单色：** 用于有限色调的单色版标志
 
-### Clear Space
-Minimum clear space = height of logo mark
+### 安全空间/留白
+最小安全空间 = 标志图标的高度
 
-### Minimum Size
-- Digital: 80px width minimum
-- Print: 25mm width minimum
+### 最小尺寸
+- 数字端：宽度最小 80px
+- 印刷端：宽度最小 25mm
 
-### Don'ts
-- Don't rotate or skew
-- Don't change colors outside approved palette
-- Don't add effects (shadows, gradients)
-- Don't crop or modify proportions
-- Don't place on busy backgrounds
+### 避免做法 (Don'ts)
+- 避免旋转或倾斜
+- 避免使用批准调色板之外的颜色
+- 避免添加特效（投影、渐变）
+- 避免裁剪或修改比例
+- 避免放置在复杂的背景上
 
-## 4. Voice & Tone
+## 4. 语气与语调
 
-### Brand Personality
-{Trait 1}: {Description}
-{Trait 2}: {Description}
-{Trait 3}: {Description}
+### 品牌个性
+{特质 1}: {描述}
+{特质 2}: {描述}
+{特质 3}: {描述}
 
-### Voice Chart
-| Trait | We Are | We Are Not |
+### 语气对照表
+| 特质 | 我们是 | 我们不是 |
 |-------|--------|------------|
-| {Trait} | {Description} | {Anti-description} |
+| {特质} | {描述} | {反面描述} |
 
-### Tone by Context
-| Context | Tone | Example |
+### 不同场景下的语调
+| 场景 | 语调 | 示例 |
 |---------|------|---------|
-| Marketing | {tone} | "{example}" |
-| Support | {tone} | "{example}" |
-| Error Messages | {tone} | "{example}" |
-| Success | {tone} | "{example}" |
+| 市场营销 | {语调} | "{示例}" |
+| 客户支持 | {语调} | "{示例}" |
+| 错误信息 | {语调} | "{示例}" |
+| 成功提示 | {语调} | "{示例}" |
 
-### Prohibited Terms
-- {term 1} (reason)
-- {term 2} (reason)
+### 禁用词汇
+- {词汇 1} (原因)
+- {词汇 2} (原因)
 
-## 5. Imagery Guidelines
+## 5. 图像指南
 
-### Photography Style
-- {Lighting preference}
-- {Subject guidelines}
-- {Color treatment}
+### 摄影风格
+- {光线偏好}
+- {主体指南}
+- {颜色处理}
 
-### Illustrations
-- Style: {description}
-- Colors: Brand palette only
-- Stroke: {weight}px
+### 插图
+- 风格：{描述}
+- 颜色：仅限品牌调色板颜色
+- 描边：{weight}px
 
-### Icons
-- Style: {outlined/filled/duotone}
-- Size: 24px base grid
-- Corner radius: {value}px
+### 图标
+- 风格：{描边/填充/双色}
+- 尺寸：24px 基础网格
+- 圆角半径：{value}px
 ```
 
-## Usage
+## 使用方法
 
-1. Copy template above
-2. Fill in brand-specific values
-3. Save as `docs/brand-guidelines.md`
-4. Reference in content workflows
+1. 复制上述模板
+2. 填写特定品牌的具体数值
+3. 保存为 `docs/brand-guidelines.md`
+4. 在内容工作流中引用
 
-## Extractable Fields
+## 可提取字段
 
-Scripts can extract:
+脚本可以提取以下内容：
 - `colors.primary`, `colors.secondary`, `colors.neutral`
 - `typography.heading`, `typography.body`
 - `voice.traits`, `voice.prohibited`

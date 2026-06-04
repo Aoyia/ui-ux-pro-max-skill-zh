@@ -1,88 +1,88 @@
-# Brand Voice Framework
+# 品牌语气语调框架
 
-## Voice vs. Tone
+## 品牌语气 (Voice) 与语调 (Tone)
 
-**Voice** = Brand's personality (consistent)
-**Tone** = How voice adapts to context (variable)
+**语气 (Voice)** = 品牌个性（一致且恒定）
+**语调 (Tone)** = 语气如何适应具体情境（多变且灵活）
 
-Example: A friendly brand (voice) might be celebratory in a win announcement but empathetic in a support response (tone).
+示例：一个对用户友好的品牌（语气），在宣布成功喜讯时可能是欢庆的，而在进行客户支持回复时则是充满同理心的（语调）。
 
-## Voice Dimensions
+## 语气维度
 
-### Tone Spectrum
+### 语调光谱
 ```
-Formal ←――――――――――――――→ Casual
-[Legal docs]     [Social media]
-```
-
-### Language Spectrum
-```
-Simple ←――――――――――――――→ Complex
-[Consumer]       [Technical B2B]
+正式 ←――――――――――――――→ 休闲
+[法律文档]         [社交媒体]
 ```
 
-### Character Spectrum
+### 语言光谱
 ```
-Serious ←――――――――――――――→ Playful
-[Finance]        [Entertainment]
-```
-
-### Emotion Spectrum
-```
-Reserved ←――――――――――――――→ Expressive
-[Corporate]      [Lifestyle brand]
+简单 ←――――――――――――――→ 复杂
+[大众消费者]       [技术型 B2B]
 ```
 
-## Voice Development Process
+### 个性光谱
+```
+严肃 ←――――――――――――――→ 趣味
+[金融行业]         [娱乐行业]
+```
 
-### Step 1: Define Personality Traits
-Choose 3-5 traits that describe your brand:
-- Confident, not arrogant
-- Friendly, not unprofessional
-- Knowledgeable, not condescending
-- Innovative, not gimmicky
-- Authentic, not casual
+### 情感光谱
+```
+克制 ←――――――――――――――→ 热情
+[企业集团]       [生活方式品牌]
+```
 
-### Step 2: Create Voice Chart
+## 语气开发流程
 
-| Trait | Description | Do | Don't |
+### 步骤 1：定义个性特质
+选择 3-5 个描述你品牌的特质：
+- 自信，而非自大
+- 友好，而非不专业
+- 博学，而非居高临下
+- 创新，而非华而不实
+- 真诚，而非随性
+
+### 步骤 2：创建语气对照表
+
+| 特质 | 描述 | 推荐做法 (Do) | 避免做法 (Don't) |
 |-------|-------------|-----|-------|
-| [Trait] | [Meaning] | [Example] | [Example] |
+| [特质] | [含义] | [示例] | [反面示例] |
 
-### Step 3: Context Adaptation
+### 步骤 3：情境适应
 
-| Context | Tone Shift | Example |
+| 场景 | 语调转变 | 示例 |
 |---------|------------|---------|
-| Social media | More casual | "Hey there!" |
-| Support | More empathetic | "We understand..." |
-| Legal | More formal | "In accordance with..." |
-| Sales | More confident | "You'll see results..." |
+| 社交媒体 | 更休闲 | "嗨，你好呀！" |
+| 客户支持 | 更有同理心 | "我们完全理解您..." |
+| 法律合规 | 更正式 | "根据……的规定，" |
+| 销售推广 | 更自信 | "您将看到显著成效……" |
 
-## Voice Testing
+## 语气测试
 
-Ask these questions:
-1. Does this sound like our brand?
-2. Would a competitor say this?
-3. Does it resonate with our audience?
-4. Is it consistent with our values?
+问自己以下问题：
+1. 这听起来像我们的品牌吗？
+2. 竞品也会这么说吗？
+3. 这能引起我们受众的共鸣吗？
+4. 这与我们的价值观一致吗？
 
-## Voice Guide Template
+## 语气指南模板
 
 ```markdown
-## [Brand] Voice Guide
+## [品牌名称] 语气指南
 
-### We Are
-- [Trait 1]: [Description]
-- [Trait 2]: [Description]
-- [Trait 3]: [Description]
+### 我们是
+- [特质 1]：[描述]
+- [特质 2]：[描述]
+- [特质 3]：[描述]
 
-### We Sound Like
-[Example phrases]
+### 我们的声音像
+[示例短语/表达]
 
-### We Don't Sound Like
-[Anti-examples]
+### 我们的声音不像
+[反面表达示例]
 
-### Sample Rewrites
-Before: [Generic copy]
-After: [Branded copy]
+### 改写示例
+改写前：[平庸通俗的文案]
+改写后：[带有品牌调性的文案]
 ```
