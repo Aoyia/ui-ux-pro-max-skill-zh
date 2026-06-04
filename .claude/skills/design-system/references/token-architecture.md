@@ -1,103 +1,103 @@
-# Token Architecture
+# Token 架构
 
-Three-layer token system for scalable, themeable design systems.
+面向可扩展、可主题化设计系统的三层 Token 系统。
 
-## Layer Overview
+## 分层概述
 
 ```
 ┌─────────────────────────────────────────┐
-│  Component Tokens                       │  Per-component overrides
+│  组件 Token                             │  单组件级覆盖
 │  --button-bg, --card-padding            │
 ├─────────────────────────────────────────┤
-│  Semantic Tokens                        │  Purpose-based aliases
+│  语义 Token                             │  基于用途的别名
 │  --color-primary, --spacing-section     │
 ├─────────────────────────────────────────┤
-│  Primitive Tokens                       │  Raw design values
+│  基础 Token                             │  原始设计数值
 │  --color-blue-600, --space-4            │
 └─────────────────────────────────────────┘
 ```
 
-## Why Three Layers?
+## 为什么采用三层架构？
 
-| Layer | Purpose | When to Change |
+| 层级 | 作用 | 何时修改 |
 |-------|---------|----------------|
-| Primitive | Base values (colors, sizes) | Rarely - foundational |
-| Semantic | Meaning assignment | Theme switching |
-| Component | Component customization | Per-component needs |
+| 基础 (Primitive) | 基础数值 (颜色、尺寸) | 极少修改 - 属于基石 |
+| 语义 (Semantic) | 赋予具体含义 | 切换主题时 |
+| 组件 (Component) | 组件定制 | 满足单个组件的特殊需求时 |
 
-## Layer 1: Primitive Tokens
+## 第一层：基础 Token (Primitive Tokens)
 
-Raw design values without semantic meaning.
+不带语义信息的原始设计数值。
 
 ```css
 :root {
-  /* Colors */
+  /* 颜色 */
   --color-gray-50: #F9FAFB;
   --color-gray-900: #111827;
   --color-blue-500: #3B82F6;
   --color-blue-600: #2563EB;
 
-  /* Spacing (4px base) */
+  /* 间距 (以 4px 为基础) */
   --space-1: 0.25rem;  /* 4px */
   --space-2: 0.5rem;   /* 8px */
   --space-4: 1rem;     /* 16px */
   --space-6: 1.5rem;   /* 24px */
 
-  /* Typography */
+  /* 排版 */
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
   --font-size-lg: 1.125rem;
 
-  /* Radius */
+  /* 圆角 */
   --radius-sm: 0.25rem;
   --radius-default: 0.5rem;
   --radius-lg: 0.75rem;
 
-  /* Shadows */
+  /* 阴影 */
   --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.05);
   --shadow-default: 0 1px 3px rgb(0 0 0 / 0.1);
 }
 ```
 
-## Layer 2: Semantic Tokens
+## 第二层：语义 Token (Semantic Tokens)
 
-Purpose-based aliases that reference primitives.
+引用基础 Token 的基于用途的别名。
 
 ```css
 :root {
-  /* Background */
+  /* 背景 */
   --color-background: var(--color-gray-50);
   --color-foreground: var(--color-gray-900);
 
-  /* Primary */
+  /* 主色 */
   --color-primary: var(--color-blue-600);
   --color-primary-hover: var(--color-blue-700);
 
-  /* Secondary */
+  /* 次要色 */
   --color-secondary: var(--color-gray-100);
   --color-secondary-foreground: var(--color-gray-900);
 
-  /* Muted */
+  /* 暗淡/置灰 */
   --color-muted: var(--color-gray-100);
   --color-muted-foreground: var(--color-gray-500);
 
-  /* Destructive */
+  /* 破坏性/危险 */
   --color-destructive: var(--color-red-600);
   --color-destructive-foreground: white;
 
-  /* Spacing */
+  /* 间距 */
   --spacing-component: var(--space-4);
   --spacing-section: var(--space-6);
 }
 ```
 
-## Layer 3: Component Tokens
+## 第三层：组件 Token (Component Tokens)
 
-Component-specific tokens referencing semantic layer.
+引用语义层的组件专属 Token。
 
 ```css
 :root {
-  /* Button */
+  /* 按钮 */
   --button-bg: var(--color-primary);
   --button-fg: white;
   --button-hover-bg: var(--color-primary-hover);
@@ -105,13 +105,13 @@ Component-specific tokens referencing semantic layer.
   --button-padding-y: var(--space-2);
   --button-radius: var(--radius-default);
 
-  /* Input */
+  /* 输入框 */
   --input-bg: var(--color-background);
   --input-border: var(--color-gray-300);
   --input-focus-ring: var(--color-primary);
   --input-padding: var(--space-2) var(--space-3);
 
-  /* Card */
+  /* 卡片 */
   --card-bg: var(--color-background);
   --card-border: var(--color-gray-200);
   --card-padding: var(--space-4);
@@ -120,9 +120,9 @@ Component-specific tokens referencing semantic layer.
 }
 ```
 
-## Dark Mode
+## 暗黑模式
 
-Override semantic tokens for dark theme:
+在暗黑主题下覆盖语义 Token：
 
 ```css
 .dark {
@@ -134,81 +134,81 @@ Override semantic tokens for dark theme:
 }
 ```
 
-## Naming Convention
+## 命名规范
 
 ```
---{category}-{item}-{variant}-{state}
+--{类别}-{条目}-{变体}-{状态}
 
-Examples:
---color-primary           # category-item
---color-primary-hover     # category-item-state
---button-bg-hover         # component-property-state
---space-section-sm        # category-semantic-variant
+示例：
+--color-primary           # 类别-条目 (category-item)
+--color-primary-hover     # 类别-条目-状态 (category-item-state)
+--button-bg-hover         # 组件-属性-状态 (component-property-state)
+--space-section-sm        # 类别-语义-变体 (category-semantic-variant)
 ```
 
-## Categories
+## 类别
 
-| Category | Examples |
+| 类别 | 示例 |
 |----------|----------|
-| color | primary, secondary, muted, destructive |
-| space | 1, 2, 4, 8, section, component |
-| font-size | xs, sm, base, lg, xl |
-| radius | sm, default, lg, full |
-| shadow | sm, default, lg |
-| duration | fast, normal, slow |
+| color (颜色) | primary, secondary, muted, destructive |
+| space (空间/间距) | 1, 2, 4, 8, section, component |
+| font-size (字体大小) | xs, sm, base, lg, xl |
+| radius (圆角) | sm, default, lg, full |
+| shadow (阴影) | sm, default, lg |
+| duration (持续时间) | fast, normal, slow |
 
-## File Organization
+## 文件组织结构
 
 ```
 tokens/
-├── primitives.css     # Raw values
-├── semantic.css       # Purpose aliases
-├── components.css     # Component tokens
-└── index.css          # Imports all
+├── primitives.css     # 基础 Token (原始数值)
+├── semantic.css       # 语义 Token (用途别名)
+├── components.css     # 组件 Token (专属 Token)
+└── index.css          # 导入所有 Token 文件的入口文件
 ```
 
-Or single file with layer comments:
+或者使用带有层级注释的单个文件：
 
 ```css
-/* === PRIMITIVES === */
+/* === 基础 Token (PRIMITIVES) === */
 :root { ... }
 
-/* === SEMANTIC === */
+/* === 语义 Token (SEMANTIC) === */
 :root { ... }
 
-/* === COMPONENTS === */
+/* === 组件 Token (COMPONENTS) === */
 :root { ... }
 
-/* === DARK MODE === */
+/* === 暗黑模式 (DARK MODE) === */
 .dark { ... }
 ```
 
-## Migration from Flat Tokens
+## 从扁平化 Token 进行迁移
 
-Before (flat):
+迁移前 (扁平化):
 ```css
 --button-primary-bg: #2563EB;
 --button-secondary-bg: #F3F4F6;
 ```
 
-After (three-layer):
+迁移后 (三层):
 ```css
-/* Primitive */
+/* 基础 Token (Primitive) */
 --color-blue-600: #2563EB;
 --color-gray-100: #F3F4F6;
 
-/* Semantic */
+/* 语义 Token (Semantic) */
 --color-primary: var(--color-blue-600);
 --color-secondary: var(--color-gray-100);
 
-/* Component */
+/* 组件 Token (Component) */
 --button-bg: var(--color-primary);
 --button-secondary-bg: var(--color-secondary);
 ```
 
-## W3C DTCG Alignment
+## 对齐 W3C DTCG 规范
 
-Token JSON format (W3C Design Tokens Community Group):
+Token JSON 格式 (W3C 设计 Token 社区小组规范):
 
 ```json
 {

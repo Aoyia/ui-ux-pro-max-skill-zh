@@ -1,10 +1,10 @@
-# Primitive Tokens
+# 基础 Token
 
-Raw design values - foundation of the design system.
+原始设计数值——设计系统的基石。
 
-## Color Scales
+## 色阶 (Color Scales)
 
-### Gray Scale
+### 灰色系 (Gray Scale)
 
 ```css
 :root {
@@ -22,7 +22,7 @@ Raw design values - foundation of the design system.
 }
 ```
 
-### Primary Colors (Blue)
+### 主色系 (蓝色) (Primary Colors (Blue))
 
 ```css
 :root {
@@ -39,30 +39,30 @@ Raw design values - foundation of the design system.
 }
 ```
 
-### Status Colors
+### 状态色 (Status Colors)
 
 ```css
 :root {
-  /* Success - Green */
+  /* 成功 - 绿色 */
   --color-green-500: #22C55E;
   --color-green-600: #16A34A;
 
-  /* Warning - Yellow */
+  /* 警告 - 黄色 */
   --color-yellow-500: #EAB308;
   --color-yellow-600: #CA8A04;
 
-  /* Error - Red */
+  /* 错误 - 红色 */
   --color-red-500: #EF4444;
   --color-red-600: #DC2626;
 
-  /* Info - Blue */
+  /* 信息 - 蓝色 */
   --color-info: var(--color-blue-500);
 }
 ```
 
-## Spacing Scale
+## 间距比例 (Spacing Scale)
 
-4px base unit system.
+以 4px 为基础单位的系统。
 
 ```css
 :root {
@@ -90,11 +90,11 @@ Raw design values - foundation of the design system.
 }
 ```
 
-## Typography Scale
+## 排版比例 (Typography Scale)
 
 ```css
 :root {
-  /* Font Sizes */
+  /* 字体大小 (Font Sizes) */
   --font-size-xs:   0.75rem;   /* 12px */
   --font-size-sm:   0.875rem;  /* 14px */
   --font-size-base: 1rem;      /* 16px */
@@ -105,7 +105,7 @@ Raw design values - foundation of the design system.
   --font-size-4xl:  2.25rem;   /* 36px */
   --font-size-5xl:  3rem;      /* 48px */
 
-  /* Line Heights */
+  /* 行高 (Line Heights) */
   --leading-none:   1;
   --leading-tight:  1.25;
   --leading-snug:   1.375;
@@ -113,13 +113,13 @@ Raw design values - foundation of the design system.
   --leading-relaxed: 1.625;
   --leading-loose:  2;
 
-  /* Font Weights */
+  /* 字重 (Font Weights) */
   --font-weight-normal:   400;
   --font-weight-medium:   500;
   --font-weight-semibold: 600;
   --font-weight-bold:     700;
 
-  /* Letter Spacing */
+  /* 字距 (Letter Spacing) */
   --tracking-tighter: -0.05em;
   --tracking-tight:   -0.025em;
   --tracking-normal:  0;
@@ -128,7 +128,7 @@ Raw design values - foundation of the design system.
 }
 ```
 
-## Border Radius
+## 边框圆角 (Border Radius)
 
 ```css
 :root {
@@ -144,7 +144,7 @@ Raw design values - foundation of the design system.
 }
 ```
 
-## Shadows
+## 阴影 (Shadows)
 
 ```css
 :root {
@@ -163,7 +163,7 @@ Raw design values - foundation of the design system.
 }
 ```
 
-## Motion / Duration
+## 动态 / 持续时间 (Motion / Duration)
 
 ```css
 :root {
@@ -176,14 +176,14 @@ Raw design values - foundation of the design system.
   --duration-700: 700ms;
   --duration-1000: 1000ms;
 
-  /* Semantic durations */
+  /* 语义化持续时间 */
   --duration-fast:   var(--duration-150);
   --duration-normal: var(--duration-200);
   --duration-slow:   var(--duration-300);
 }
 ```
 
-## Z-Index Scale
+## Z-Index 层级比例 (Z-Index Scale)
 
 ```css
 :root {

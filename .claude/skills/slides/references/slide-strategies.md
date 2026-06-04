@@ -1,94 +1,94 @@
-# Slide Strategies
+# 幻灯片策略
 
-15 proven deck structures with emotion arcs.
+15 种行之有效的演示文稿结构与情感弧线。
 
-## Strategy Selection
+## 策略选择
 
-| Strategy | Slides | Goal | Audience |
+| 策略 | 幻灯片页数 | 目标 | 受众 |
 |----------|--------|------|----------|
-| YC Seed Deck | 10-12 | Raise seed funding | VCs |
-| Guy Kawasaki | 10 | Pitch in 20 min | Investors |
-| Series A | 12-15 | Raise Series A | Growth VCs |
-| Product Demo | 5-8 | Demonstrate value | Prospects |
-| Sales Pitch | 7-10 | Close deal | Qualified leads |
-| Nancy Duarte Sparkline | Varies | Transform perspective | Any |
-| Problem-Solution-Benefit | 3-5 | Quick persuasion | Time-pressed |
-| QBR | 10-15 | Update stakeholders | Leadership |
-| Team All-Hands | 8-12 | Align team | Employees |
-| Conference Talk | 15-25 | Thought leadership | Attendees |
-| Workshop | 20-40 | Teach skills | Learners |
-| Case Study | 8-12 | Prove value | Prospects |
-| Competitive Analysis | 6-10 | Strategic decisions | Internal |
-| Board Meeting | 15-20 | Update board | Directors |
-| Webinar | 20-30 | Generate leads | Registrants |
+| YC 种子轮 PPT (YC Seed Deck) | 10-12 | 融种子资金 | 风险投资人 (VC) |
+| 盖伊·川崎法 (Guy Kawasaki) | 10 | 20分钟内演示完成 | 投资者 |
+| A 轮融资 (Series A) | 12-15 | 融 A 轮资金 | 成长型 VC |
+| 产品演示 (Product Demo) | 5-8 | 展示产品价值 | 潜在客户 |
+| 销售提案 (Sales Pitch) | 7-10 | 促成交易 | 意向线索 |
+| 南希·杜阿尔特波形图 (Nancy Duarte Sparkline) | 视情况而定 | 改变受众视角 | 任何受众 |
+| 问题-解决-收益 (Problem-Solution-Benefit) | 3-5 | 快速说服 | 时间紧迫的受众 |
+| 季度业务回顾 (QBR) | 10-15 | 汇报给利益相关者 | 领导层 |
+| 团队全员大会 (Team All-Hands) | 8-12 | 统一步调 | 员工 |
+| 会议演讲 (Conference Talk) | 15-25 | 确立思想领导力 | 参会者 |
+| 工作坊 (Workshop) | 20-40 | 教授技能 | 学习者 |
+| 案例研究 (Case Study) | 8-12 | 证明价值 | 潜在客户 |
+| 竞争分析 (Competitive Analysis) | 6-10 | 做战略决策 | 内部团队 |
+| 董事会会议 (Board Meeting) | 15-20 | 汇报给董事会 | 董事会成员 |
+| 网络研讨会 (Webinar) | 20-30 | 获取销售线索 | 注册参与者 |
 
-## Common Structures
+## 常用结构
 
-### YC Seed Deck (10 slides)
-1. Title/Hook
-2. Problem
-3. Solution
-4. Traction
-5. Market
-6. Product
-7. Business Model
-8. Team
-9. Financials
-10. The Ask
+### YC 种子轮 PPT (10 页)
+1. 标题/诱钩 (Title/Hook)
+2. 问题 (Problem)
+3. 解决方案 (Solution)
+4. 业务牵引/数据 (Traction)
+5. 市场 (Market)
+6. 产品 (Product)
+7. 商业模式 (Business Model)
+8. 团队 (Team)
+9. 财务状况 (Financials)
+10. 融资诉求 (The Ask)
 
-**Emotion arc:** curiosity→frustration→hope→confidence→trust→urgency
+**情感弧线：** 好奇 → 沮丧 → 希望 → 信心 → 信任 → 迫切感
 
-### Sales Pitch (9 slides)
-1. Personalized Hook
-2. Their Problem
-3. Cost of Inaction
-4. Your Solution
-5. Proof/Case Studies
-6. Differentiators
-7. Pricing/ROI
-8. Objection Handling
-9. CTA + Next Steps
+### 销售提案 (9 页)
+1. 个性化诱钩
+2. 他们面临的问题
+3. 错失行动的代价
+4. 你的解决方案
+5. 证明/案例研究
+6. 差异化优势
+7. 定价/投资回报率 (ROI)
+8. 异议处理
+9. CTA + 后续步骤
 
-**Emotion arc:** connection→frustration→fear→hope→trust→confidence→urgency
+**情感弧线：** 联结 → 沮丧 → 恐惧 → 希望 → 信任 → 信心 → 迫切感
 
-### Product Demo (6 slides)
-1. Hook/Problem
-2. Solution Overview
-3. Live Demo/Screenshots
-4. Key Features
-5. Benefits/Pricing
-6. CTA
+### 产品演示 (6 页)
+1. 诱钩/问题
+2. 解决方案概述
+3. 现场演示/截图
+4. 核心功能
+5. 收益/定价
+6. 行动呼吁 (CTA)
 
-**Emotion arc:** curiosity→frustration→hope→confidence→urgency
+**情感弧线：** 好奇 → 沮丧 → 希望 → 信心 → 迫切感
 
-## Duarte Sparkline Pattern
+## 杜阿尔特波形图模式 (Duarte Sparkline Pattern)
 
-Alternate between "What Is" (current pain) and "What Could Be" (better future):
+在“现状”（当前痛点）与“未来设想”（更美好的未来）之间来回交替：
 
 ```
-What Is → What Could Be → What Is → What Could Be → New Bliss
-(pain)     (hope)         (pain)     (hope)         (resolution)
+现状 → 未来设想 → 现状 → 未来设想 → 全新极乐状态
+(痛点)   (希望)    (痛点)   (希望)     (解决方案)
 ```
 
-Pattern breaks at 1/3 and 2/3 positions create engagement peaks.
+在 1/3 和 2/3 位置打破常规的模式可以制造参与度高峰。
 
-## Search Commands
+## 检索命令
 
 ```bash
-# Find strategy by goal
+# 按目标查找策略
 python .claude/skills/design-system/scripts/search-slides.py "investor pitch" -d strategy
 
-# Get emotion arc
+# 获取情感弧线
 python .claude/skills/design-system/scripts/search-slides.py "series a funding" -d strategy --json
 ```
 
-## Matching Strategy to Context
+## 将策略与上下文匹配
 
-| Context | Recommended Strategy |
+| 上下文 | 推荐策略 |
 |---------|---------------------|
-| Raising money | YC Seed, Series A, Guy Kawasaki |
-| Selling product | Sales Pitch, Product Demo |
-| Internal update | QBR, All-Hands, Board Meeting |
-| Public speaking | Conference Talk, Workshop |
-| Proving value | Case Study, Competitive Analysis |
-| Lead generation | Webinar |
+| 融资 | YC Seed, Series A, Guy Kawasaki |
+| 售卖产品 | Sales Pitch, Product Demo |
+| 内部汇报 | QBR, All-Hands, Board Meeting |
+| 公开演讲 | Conference Talk, Workshop |
+| 证明价值 | Case Study, Competitive Analysis |
+| 线索获客 | Webinar |

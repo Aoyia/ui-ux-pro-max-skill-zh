@@ -1,28 +1,28 @@
-# Semantic Tokens
+# 语义 Token
 
-Purpose-based aliases referencing primitive tokens.
+引用基础 Token 的基于用途的别名。
 
-## Color Semantics
+## 色彩语义
 
-### Background & Foreground
+### 背景与前景
 
 ```css
 :root {
-  /* Page background */
+  /* 页面背景 */
   --color-background: var(--color-gray-50);
   --color-foreground: var(--color-gray-900);
 
-  /* Card/surface background */
+  /* 卡片/表面背景 */
   --color-card: white;
   --color-card-foreground: var(--color-gray-900);
 
-  /* Popover/dropdown */
+  /* 气泡卡片 (Popover)/下拉菜单 (Dropdown) */
   --color-popover: white;
   --color-popover-foreground: var(--color-gray-900);
 }
 ```
 
-### Primary
+### 主色
 
 ```css
 :root {
@@ -33,7 +33,7 @@ Purpose-based aliases referencing primitive tokens.
 }
 ```
 
-### Secondary
+### 次要色
 
 ```css
 :root {
@@ -43,7 +43,7 @@ Purpose-based aliases referencing primitive tokens.
 }
 ```
 
-### Muted
+### 暗淡/置灰
 
 ```css
 :root {
@@ -52,7 +52,7 @@ Purpose-based aliases referencing primitive tokens.
 }
 ```
 
-### Accent
+### 强调色
 
 ```css
 :root {
@@ -61,7 +61,7 @@ Purpose-based aliases referencing primitive tokens.
 }
 ```
 
-### Destructive
+### 破坏性/危险
 
 ```css
 :root {
@@ -71,7 +71,7 @@ Purpose-based aliases referencing primitive tokens.
 }
 ```
 
-### Status Colors
+### 状态色
 
 ```css
 :root {
@@ -89,7 +89,7 @@ Purpose-based aliases referencing primitive tokens.
 }
 ```
 
-### Border & Ring
+### 边框与轮廓环
 
 ```css
 :root {
@@ -99,67 +99,67 @@ Purpose-based aliases referencing primitive tokens.
 }
 ```
 
-## Spacing Semantics
+## 间距语义
 
 ```css
 :root {
-  /* Component internal spacing */
+  /* 组件内部间距 */
   --spacing-component-xs: var(--space-1);
   --spacing-component-sm: var(--space-2);
   --spacing-component: var(--space-3);
   --spacing-component-lg: var(--space-4);
 
-  /* Section spacing */
+  /* 版块间距 */
   --spacing-section-sm: var(--space-8);
   --spacing-section: var(--space-12);
   --spacing-section-lg: var(--space-16);
 
-  /* Page margins */
+  /* 页面边距 */
   --spacing-page-x: var(--space-4);
   --spacing-page-y: var(--space-6);
 }
 ```
 
-## Typography Semantics
+## 排版语义
 
 ```css
 :root {
-  /* Headings */
+  /* 标题 */
   --font-heading: var(--font-size-2xl);
   --font-heading-lg: var(--font-size-3xl);
   --font-heading-xl: var(--font-size-4xl);
 
-  /* Body */
+  /* 正文 */
   --font-body: var(--font-size-base);
   --font-body-sm: var(--font-size-sm);
   --font-body-lg: var(--font-size-lg);
 
-  /* Labels & Captions */
+  /* 标签与图注 */
   --font-label: var(--font-size-sm);
   --font-caption: var(--font-size-xs);
 }
 ```
 
-## Interactive States
+## 交互状态
 
 ```css
 :root {
-  /* Focus ring */
+  /* 聚焦环 */
   --ring-width: 2px;
   --ring-offset: 2px;
   --ring-color: var(--color-ring);
 
-  /* Opacity for disabled */
+  /* 禁用的不透明度 */
   --opacity-disabled: 0.5;
 
-  /* Transitions */
+  /* 过渡效果 */
   --transition-colors: color, background-color, border-color;
   --transition-transform: transform;
   --transition-all: all;
 }
 ```
 
-## Dark Mode Overrides
+## 暗黑模式覆盖
 
 ```css
 .dark {
@@ -186,30 +186,30 @@ Purpose-based aliases referencing primitive tokens.
 }
 ```
 
-## Usage Patterns
+## 使用模式
 
-### Applying Semantic Tokens
+### 应用语义 Token
 
 ```css
-/* Good - uses semantic tokens */
+/* 推荐做法 - 使用语义 Token */
 .card {
   background: var(--color-card);
   color: var(--color-card-foreground);
   border: 1px solid var(--color-border);
 }
 
-/* Bad - uses primitive tokens directly */
+/* 不推荐做法 - 直接使用基础 Token */
 .card {
   background: var(--color-gray-50);
   color: var(--color-gray-900);
 }
 ```
 
-### Theme Switching
+### 主题切换
 
-Semantic tokens enable instant theme switching:
+语义 Token 能够实现即时主题切换：
 
 ```js
-// Toggle dark mode
+// 切换暗黑模式
 document.documentElement.classList.toggle('dark');
 ```

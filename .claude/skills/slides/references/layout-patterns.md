@@ -1,29 +1,29 @@
-# Layout Patterns
+# 布局模式
 
-25 slide layouts with CSS structures and animation classes.
+25 种包含 CSS 结构和动画类的幻灯片布局。
 
-## Layout Selection by Use Case
+## 按使用场景选择布局
 
-| Layout | Use Case | Animation |
+| 布局 | 使用场景 | 动画 |
 |--------|----------|-----------|
-| Title Slide | Opening/first impression | `animate-fade-up` |
-| Problem Statement | Establish pain point | `animate-stagger` |
-| Solution Overview | Introduce solution | `animate-scale` |
-| Feature Grid | Show capabilities (3-6 cards) | `animate-stagger` |
-| Metrics Dashboard | Display KPIs (3-4 metrics) | `animate-stagger-scale` |
-| Comparison Table | Compare options | `animate-fade-up` |
-| Timeline Flow | Show progression | `animate-stagger` |
-| Team Grid | Introduce people | `animate-stagger` |
-| Quote Testimonial | Customer endorsement | `animate-fade-up` |
-| Two Column Split | Compare/contrast | `animate-fade-up` |
-| Big Number Hero | Single powerful metric | `animate-count` |
-| Product Screenshot | Show product UI | `animate-scale` |
-| Pricing Cards | Present tiers | `animate-stagger` |
-| CTA Closing | Drive action | `animate-pulse` |
+| Title Slide (标题页) | 开场/第一印象 | `animate-fade-up` |
+| Problem Statement (问题陈述) | 确立痛点 | `animate-stagger` |
+| Solution Overview (方案概述) | 引入解决方案 | `animate-scale` |
+| Feature Grid (功能网格) | 展示能力 (3-6 张卡片) | `animate-stagger` |
+| Metrics Dashboard (指标仪表盘) | 展示 KPI (3-4 个指标) | `animate-stagger-scale` |
+| Comparison Table (对比表格) | 对比不同选项 | `animate-fade-up` |
+| Timeline Flow (时间线流程) | 展示进展/演进 | `animate-stagger` |
+| Team Grid (团队网格) | 介绍团队成员 | `animate-stagger` |
+| Quote Testimonial (引言证言) | 客户背书 | `animate-fade-up` |
+| Two Column Split (双栏拆分) | 比较/对比 | `animate-fade-up` |
+| Big Number Hero (大数字焦点) | 单个强有力的指标 | `animate-count` |
+| Product Screenshot (产品截图) | 展示产品 UI | `animate-scale` |
+| Pricing Cards (定价卡片) | 展示不同资费档次 | `animate-stagger` |
+| CTA Closing (行动呼吁收尾) | 驱动行动 | `animate-pulse` |
 
-## CSS Structures
+## CSS 结构
 
-### Title Slide
+### Title Slide (标题页)
 ```css
 .slide-title {
     display: flex;
@@ -34,7 +34,7 @@
 }
 ```
 
-### Two Column Split
+### Two Column Split (双栏拆分)
 ```css
 .slide-split {
     display: grid;
@@ -47,7 +47,7 @@
 }
 ```
 
-### Feature Grid (3 columns)
+### Feature Grid (功能网格 - 3 栏)
 ```css
 .slide-features {
     display: grid;
@@ -62,7 +62,7 @@
 }
 ```
 
-### Metrics Dashboard (4 columns)
+### Metrics Dashboard (指标仪表盘 - 4 栏)
 ```css
 .slide-metrics {
     display: grid;
@@ -77,61 +77,61 @@
 }
 ```
 
-## Component Variants
+## 组件变体
 
-### Card Styles
-| Style | CSS Class | Use For |
+### 卡片样式
+| 样式 | CSS 类 | 适用场景 |
 |-------|-----------|---------|
-| Icon Left | `.card-icon-left` | Features with icons |
-| Accent Bar | `.card-accent-bar` | Highlighted features |
-| Metric Card | `.card-metric` | Numbers/stats |
-| Avatar Card | `.card-avatar` | Team members |
-| Pricing Card | `.card-pricing` | Price tiers |
+| Icon Left (图标居左) | `.card-icon-left` | 带有图标的功能展示 |
+| Accent Bar (强调条) | `.card-accent-bar` | 突出显示的功能 |
+| Metric Card (指标卡片) | `.card-metric` | 数字/统计数据 |
+| Avatar Card (头像卡片) | `.card-avatar` | 团队成员介绍 |
+| Pricing Card (定价卡片) | `.card-pricing` | 价格档次展示 |
 
-### Metric Styles
-| Style | Effect |
+### 指标样式
+| 样式 | 效果 |
 |-------|--------|
-| `gradient-number` | Gradient text on numbers |
-| `oversized` | Extra large (120px+) |
-| `sparkline` | Small inline chart |
-| `funnel-numbers` | Conversion stages |
+| `gradient-number` | 数字上的渐变文字效果 |
+| `oversized` | 超大字号 (120px+) |
+| `sparkline` | 小型行内图表 |
+| `funnel-numbers` | 转化阶段 |
 
-## Visual Treatments
+## 视觉处理效果
 
-| Treatment | When to Use |
+| 处理效果 | 何时使用 |
 |-----------|-------------|
-| `gradient-glow` | Title slides, CTAs |
-| `subtle-border` | Problem statements |
-| `icon-top` | Feature grids |
-| `screenshot-shadow` | Product screenshots |
-| `popular-highlight` | Pricing (scale 1.05) |
-| `bg-overlay` | Background images |
-| `contrast-pair` | Before/after |
-| `logo-grayscale` | Client logos |
+| `gradient-glow` | 标题页、行动呼吁 (CTA) |
+| `subtle-border` | 问题陈述 |
+| `icon-top` | 功能网格 |
+| `screenshot-shadow` | 产品截图 |
+| `popular-highlight` | 定价 (缩放 1.05) |
+| `bg-overlay` | 背景图像 |
+| `contrast-pair` | 对比 (Before/After) |
+| `logo-grayscale` | 客户 Logo |
 
-## Search Commands
+## 检索命令
 
 ```bash
-# Find layout for specific use
+# 查找特定用途的布局
 python .claude/skills/design-system/scripts/search-slides.py "metrics dashboard" -d layout
 
-# Contextual recommendation
+# 上下文相关推荐
 python .claude/skills/design-system/scripts/search-slides.py "traction slide" \
   --context --position 4 --total 10
 ```
 
-## Layout Decision Flow
+## 布局决策流程
 
 ```
-1. What's the slide goal?
-   └─> Search layout-logic.csv
+1. 幻灯片的目标是什么？
+   └─> 搜索 layout-logic.csv
 
-2. What emotion should it trigger?
-   └─> Search color-logic.csv
+2. 应该触发何种情感？
+   └─> 搜索 color-logic.csv
 
-3. What's the content type?
-   └─> Search typography.csv
+3. 内容类型是什么？
+   └─> 搜索 typography.csv
 
-4. Should it break pattern?
-   └─> Check position (1/3, 2/3) → Use full-bleed
+4. 是否应该打破常规模式？
+   └─> 检查幻灯片位置 (1/3, 2/3) → 使用全出血 (full-bleed) 布局
 ```

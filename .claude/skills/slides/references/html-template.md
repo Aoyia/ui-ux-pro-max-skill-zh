@@ -1,26 +1,26 @@
-# HTML Slide Template
+# HTML 幻灯片模板
 
-Complete HTML structure with navigation, tokens, and Chart.js integration.
+完整的 HTML 结构，包含导航、Token 和 Chart.js 集成。
 
-## Base Structure
+## 基础结构
 
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presentation Title</title>
+    <title>演示文稿标题</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <style>
-        /* Paste embed-tokens.cjs output here */
+        /* 在此处粘贴 embed-tokens.cjs 的输出内容 */
         :root {
             --color-primary: #FF6B6B;
             --color-background: #0D0D0D;
-            /* ... more tokens */
+            /* ... 更多 token */
         }
 
-        /* Base slide styles */
+        /* 基础幻灯片样式 */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             background: var(--color-background);
@@ -29,7 +29,7 @@ Complete HTML structure with navigation, tokens, and Chart.js integration.
             overflow: hidden;
         }
 
-        /* 16:9 Aspect Ratio Container (desktop) */
+        /* 16:9 宽高比容器 (桌面端) */
         .slide-deck {
             position: relative;
             width: 100vw;
@@ -39,7 +39,7 @@ Complete HTML structure with navigation, tokens, and Chart.js integration.
 
         @media (min-width: 769px) {
             .slide-deck {
-                /* Lock to 16:9 — letterbox if viewport ratio differs */
+                /* 锁定为 16:9 —— 若视口比例不同则进行信箱模式填充 (letterbox) */
                 max-width: calc(100vh * 16 / 9);
                 max-height: calc(100vw * 9 / 16);
                 margin: auto;
@@ -61,12 +61,12 @@ Complete HTML structure with navigation, tokens, and Chart.js integration.
             visibility: hidden;
             transition: opacity 0.4s;
             background: var(--color-background);
-            overflow: hidden; /* Prevent content overflow */
+            overflow: hidden; /* 防止内容溢出 */
         }
 
         .slide.active { opacity: 1; visibility: visible; }
 
-        /* Slide inner wrapper — constrains content within safe area */
+        /* 幻灯片内部包装器 — 将内容限制在安全区域内 */
         .slide-content {
             width: 100%;
             max-width: 100%;
@@ -79,7 +79,7 @@ Complete HTML structure with navigation, tokens, and Chart.js integration.
             gap: 16px;
         }
 
-        /* Typography */
+        /* 排版 */
         h1, h2 { font-family: var(--typography-font-heading, 'Space Grotesk', sans-serif); }
         .slide-title {
             font-size: clamp(32px, 6vw, 80px);
@@ -89,9 +89,9 @@ Complete HTML structure with navigation, tokens, and Chart.js integration.
             line-height: 1.1;
         }
 
-        /* ===== RESPONSIVE BREAKPOINTS ===== */
+        /* ===== 响应式断点 ===== */
 
-        /* Tablet (portrait) */
+        /* 平板端 (纵向) */
         @media (max-width: 768px) {
             .slide { padding: 32px 24px; }
             .slide-title { font-size: clamp(28px, 5vw, 48px); }
@@ -99,7 +99,7 @@ Complete HTML structure with navigation, tokens, and Chart.js integration.
             p, li { font-size: clamp(14px, 2.5vw, 18px); }
         }
 
-        /* Mobile */
+        /* 移动端 */
         @media (max-width: 480px) {
             .slide { padding: 24px 16px; }
             .slide-title { font-size: clamp(22px, 6vw, 36px); }
@@ -109,7 +109,7 @@ Complete HTML structure with navigation, tokens, and Chart.js integration.
             .nav-btn { width: 32px; height: 32px; font-size: 14px; }
         }
 
-        /* Navigation */
+        /* 导航 */
         .progress-bar {
             position: fixed;
             top: 0; left: 0;
@@ -142,25 +142,25 @@ Complete HTML structure with navigation, tokens, and Chart.js integration.
     </style>
 </head>
 <body>
-    <!-- Progress Bar -->
+    <!-- 进度条 -->
     <div class="progress-bar" id="progressBar"></div>
 
-    <!-- Slide Deck Container (16:9 on desktop) -->
+    <!-- 幻灯片容器 (桌面端锁定 16:9) -->
     <div class="slide-deck">
 
-    <!-- Slides -->
+    <!-- 幻灯片页面 -->
     <div class="slide active">
         <div class="slide-content">
-            <h1 class="slide-title">Title Slide</h1>
-            <p>Subtitle or tagline</p>
+            <h1 class="slide-title">标题页</h1>
+            <p>副标题或核心口号</p>
         </div>
     </div>
 
-    <!-- More slides... (always wrap content in .slide-content) -->
+    <!-- 更多幻灯片页面... (始终将内容包裹在 .slide-content 中) -->
 
     </div><!-- /.slide-deck -->
 
-    <!-- Navigation -->
+    <!-- 导航 -->
     <div class="nav-controls">
         <button class="nav-btn" onclick="prevSlide()">←</button>
         <span class="slide-counter"><span id="current">1</span> / <span id="total">9</span></span>
@@ -201,7 +201,7 @@ Complete HTML structure with navigation, tokens, and Chart.js integration.
 </html>
 ```
 
-## Chart.js Integration
+## Chart.js 集成
 
 ```html
 <div class="chart-container" style="width: min(80%, 600px); height: clamp(200px, 40vh, 350px);">
@@ -210,7 +210,7 @@ Complete HTML structure with navigation, tokens, and Chart.js integration.
 
 <script>
 new Chart(document.getElementById('revenueChart'), {
-    type: 'line', // or 'bar', 'doughnut', 'radar'
+    type: 'line', // 也可以是 'bar', 'doughnut', 'radar'
     data: {
         labels: ['Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [{
@@ -236,10 +236,10 @@ new Chart(document.getElementById('revenueChart'), {
 </script>
 ```
 
-## Animation Classes
+## 动画类
 
 ```css
-/* Fade Up */
+/* 向上淡入 */
 .animate-fade-up {
     animation: fadeUp 0.6s ease-out forwards;
     opacity: 0;
@@ -249,10 +249,10 @@ new Chart(document.getElementById('revenueChart'), {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Count Animation */
+/* 数字动画 */
 .animate-count { animation: countUp 1s ease-out forwards; }
 
-/* Scale */
+/* 缩放 */
 .animate-scale {
     animation: scaleIn 0.5s ease-out forwards;
 }
@@ -261,7 +261,7 @@ new Chart(document.getElementById('revenueChart'), {
     to { opacity: 1; transform: scale(1); }
 }
 
-/* Stagger Children */
+/* 子元素交错动画 */
 .animate-stagger > * {
     opacity: 0;
     animation: fadeUp 0.5s ease-out forwards;
@@ -272,24 +272,24 @@ new Chart(document.getElementById('revenueChart'), {
 .animate-stagger > *:nth-child(4) { animation-delay: 0.4s; }
 ```
 
-## Background Images
+## 背景图像
 
 ```html
 <div class="slide slide-with-bg" style="background-image: url('https://images.pexels.com/...')">
     <div class="overlay" style="background: linear-gradient(135deg, rgba(13,13,13,0.9), rgba(13,13,13,0.7))"></div>
     <div class="content" style="position: relative; z-index: 1;">
-        <!-- Slide content -->
+        <!-- 幻灯片内容 -->
     </div>
 </div>
 ```
 
-## CSS Variables Reference
+## CSS 变量参考
 
-| Variable | Usage |
+| 变量 | 用途 |
 |----------|-------|
-| `--color-primary` | Brand primary (CTA, highlights) |
-| `--color-background` | Slide background |
-| `--color-secondary` | Secondary elements |
-| `--primitive-gradient-primary` | Title gradients |
-| `--typography-font-heading` | Headlines |
-| `--typography-font-body` | Body text |
+| `--color-primary` | 品牌主色 (行动呼吁 CTA, 高亮) |
+| `--color-background` | 幻灯片背景 |
+| `--color-secondary` | 次要元素颜色 |
+| `--primitive-gradient-primary` | 标题渐变色 |
+| `--typography-font-heading` | 大标题字体 |
+| `--typography-font-body` | 正文字体 |

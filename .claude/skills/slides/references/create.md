@@ -1,4 +1,4 @@
-Invoke `slides` skill to create persuasive HTML slides using design tokens, Chart.js, and the slide knowledge database.
+调用 `slides` 技能以使用设计 Token、Chart.js 和幻灯片知识库来创建具有说服力的 HTML 幻灯片。
 
-## Task
+## 任务
 <task>$ARGUMENTS</task>
