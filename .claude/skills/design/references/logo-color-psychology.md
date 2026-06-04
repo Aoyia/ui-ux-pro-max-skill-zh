@@ -1,101 +1,101 @@
-# Logo Color Psychology
+# Logo 色彩心理学 (Logo Color Psychology)
 
-## Primary Color Meanings
+## 基础色彩心理暗示 (Primary Color Meanings)
 
-### Blue
-- **Psychology:** Trust, stability, professionalism, calm
-- **Industries:** Finance, healthcare, tech, corporate
-- **Hex Examples:** Navy #003366, Royal #0055A4, Sky #0EA5E9
-- **Pairings:** White, gold, light gray
+### 蓝色 (Blue)
+- **心理暗示**：信任、稳定、专业度、令人安心
+- **适合行业**：金融、医疗健康、科技、集团企业
+- **Hex 颜色示例**：藏青 #003366，宝蓝 #0055A4，天蓝 #0EA5E9
+- **配色组合**：白色、金色、浅灰色
 
-### Red
-- **Psychology:** Energy, passion, urgency, excitement
-- **Industries:** Food, sports, entertainment, sales
-- **Hex Examples:** Crimson #DC2626, Scarlet #EF4444, Burgundy #9F1239
-- **Pairings:** White, black, gold
-- **Caution:** Avoid for healthcare (blood connotation)
+### 红色 (Red)
+- **心理暗示**：能量、激情、紧迫感、兴奋感
+- **适合行业**：餐饮食品、体育运动、娱乐业、零售促销
+- **Hex 颜色示例**：绯红 #DC2626，猩红 #EF4444，酒红 #9F1239
+- **配色组合**：白色、黑色、金色
+- **注意禁忌**：医疗健康行业需谨慎使用（易产生流血暗示）
 
-### Green
-- **Psychology:** Growth, nature, health, sustainability
-- **Industries:** Eco, wellness, organic, finance (growth)
-- **Hex Examples:** Forest #228B22, Sage #2E8B57, Mint #10B981
-- **Pairings:** White, brown, blue
+### 绿色 (Green)
+- **心理暗示**：生长、自然、健康、可持续性
+- **适合行业**：生态环保、身心健康、有机产品、金融（代表财富增长）
+- **Hex 颜色示例**：森林绿 #228B22，鼠尾草绿 #2E8B57，薄荷绿 #10B981
+- **配色组合**：白色、棕色、蓝色
 
-### Yellow/Gold
-- **Psychology:** Optimism, warmth, luxury, attention
-- **Industries:** Food, children, luxury (gold), energy
-- **Hex Examples:** Gold #D4AF37, Amber #F59E0B, Lemon #FACC15
-- **Pairings:** Black, navy, dark brown
+### 黄色/金色 (Yellow/Gold)
+- **心理暗示**：乐观、温暖、奢华感、引人注目
+- **适合行业**：餐饮食品、儿童用品、奢侈品 (金色)、能源行业
+- **Hex 颜色示例**：金色 #D4AF37，琥珀色 #F59E0B，柠檬黄 #FACC15
+- **配色组合**：黑色、藏青色、深棕色
 
-### Purple
-- **Psychology:** Creativity, wisdom, luxury, mystery
-- **Industries:** Beauty, creative, spiritual, premium
-- **Hex Examples:** Royal #7C3AED, Lavender #A78BFA, Deep #581C87
-- **Pairings:** Gold, white, pink
+### 紫色 (Purple)
+- **心理暗示**：创造力、智慧、高档、神秘感
+- **适合行业**：美容美妆、创意设计、心灵理疗、高端品牌
+- **Hex 颜色示例**：皇家紫 #7C3AED，薰衣草紫 #A78BFA，深紫 #581C87
+- **配色组合**：金色、白色、粉色
 
-### Orange
-- **Psychology:** Friendly, energetic, confident, youthful
-- **Industries:** Food, sports, entertainment, retail
-- **Hex Examples:** Tangerine #F97316, Coral #FB923C, Burnt #EA580C
-- **Pairings:** White, navy, dark gray
+### 橙色 (Orange)
+- **心理暗示**：友好、活力四射、自信、年轻化
+- **适合行业**：餐饮食品、体育运动、娱乐业、百货零售
+- **Hex 颜色示例**：橘红 #F97316，珊瑚橙 #FB923C，焦橙 #EA580C
+- **配色组合**：白色、藏青色、深灰色
 
-### Black
-- **Psychology:** Sophistication, power, elegance, authority
-- **Industries:** Luxury, fashion, tech, premium
-- **Pairings:** White, gold, silver
-- **Note:** Use for high-end positioning
+### 黑色 (Black)
+- **心理暗示**：精致、力量感、优雅、权威性
+- **适合行业**：奢侈品、时尚服装、科技产品、高端定位
+- **配色组合**：白色、金色、银色
+- **备注**：适用于塑造高端/轻奢的定位
 
-### White
-- **Psychology:** Purity, simplicity, cleanliness, modern
-- **Use:** Backgrounds, negative space, contrast
-- **Pairings:** Any color (universal neutral)
+### 白色 (White)
+- **心理暗示**：纯洁、极简、整洁卫生、现代感
+- **应用场景**：常用于背景底色、留白与负空间、形成强烈对比
+- **配色组合**：可搭配任何颜色 (属于通用中性色)
 
-## Color Combinations by Industry
+## 按行业划分的色彩搭配推荐 (Color Combinations by Industry)
 
-| Industry | Primary | Secondary | Accent | Avoid |
+| 行业 | 主色 (Primary) | 辅助色 (Secondary) | 强调色 (Accent) | 避开颜色 (Avoid) |
 |----------|---------|-----------|--------|-------|
-| Tech | Blue, Purple | Gray, White | Teal, Green | Brown, Beige |
-| Healthcare | Blue, Green | Teal, White | Light Purple | Red, Black |
-| Finance | Navy, Blue | Gold, Gray | Green | Bright colors |
-| Food | Red, Orange | Yellow, Brown | Green | Blue (appetite suppressant) |
-| Fashion | Black, White | Gold, Blush | Navy | Neon (unless intentional) |
-| Eco | Green, Brown | Beige, Blue | Yellow | Neon, Black |
-| Children | Multi-color | Pastels | Bright accents | Dark, muted |
+| 科技行业 (Tech) | 蓝色、紫色 | 灰色、白色 | 青色、绿色 | 棕色、米色 |
+| 医疗健康 (Healthcare) | 蓝色、绿色 | 青色、白色 | 浅紫色 | 红色、黑色 |
+| 金融保险 (Finance) | 藏青、蓝色 | 金色、灰色 | 绿色 | 鲜艳亮色 |
+| 餐饮食品 (Food) | 红色、橙色 | 黄色、棕色 | 绿色 | 蓝色（会抑制食欲） |
+| 时尚潮流 (Fashion) | 黑色、白色 | 金色、肉粉 | 藏青色 | 霓虹色（除非特定主题） |
+| 生态环保 (Eco) | 绿色、棕色 | 米色、蓝色 | 黄色 | 霓虹色、黑色 |
+| 儿童用品 (Children) | 多彩色 (红黄蓝等) | 柔和粉色 | 明亮强调色 | 阴暗、沉闷的色调 |
 
-## Color Harmony Types
+## 色彩和谐搭配类型 (Color Harmony Types)
 
-### Monochromatic
-Single color with tints/shades. Safe, cohesive.
+### 单色搭配 (Monochromatic)
+使用单一颜色的不同深浅与明暗度。非常安全且具有高度的整体凝聚力。
 
-### Complementary
-Opposite colors (blue-orange). High contrast, vibrant.
+### 互补色搭配 (Complementary)
+使用色相环上对立的两个颜色（例如蓝色和橙色）。产生强烈的对比，效果非常鲜活醒目。
 
-### Analogous
-Adjacent colors (blue-teal-green). Harmonious, natural.
+### 邻近色搭配 (Analogous)
+使用色相环上相邻的颜色（例如蓝色、青色和绿色）。和谐自然，视觉上很舒适。
 
-### Triadic
-Three evenly spaced colors. Balanced, dynamic.
+### 三元色搭配 (Triadic)
+使用色相环上等距分布的三个颜色。色彩平衡，极具动态感。
 
-## Accessibility Considerations
+## 色彩无障碍设计考量 (Accessibility Considerations)
 
-- Minimum contrast ratio: 4.5:1 (WCAG AA)
-- Avoid red-green only indicators
-- Test in grayscale for clarity
-- Consider colorblind users (~8% of males)
+- 最小对比度要求：常规文本与背景色对比度至少为 4.5:1 (符合 WCAG AA 级标准)
+- 避免仅使用红绿色作为区分状态的唯一指示器
+- 务必在灰度模式下测试 Logo，以确保对比度和边缘清晰度
+- 充分考虑色盲或色弱用户的阅读体验（占男性的约 8%）
 
-## Quick Reference Palettes
+## 快速参考调色盘 (Quick Reference Palettes)
 
-**Tech Professional:**
-Primary: #6366F1 | Secondary: #8B5CF6 | Accent: #06B6D4
+**专业科技感 (Tech Professional):**
+主色: #6366F1 | 辅助色: #8B5CF6 | 强调色: #06B6D4
 
-**Eco Sustainable:**
-Primary: #228B22 | Secondary: #2E8B57 | Accent: #DEB887
+**生态可持续 (Eco Sustainable):**
+主色: #228B22 | 辅助色: #2E8B57 | 强调色: #DEB887
 
-**Luxury Premium:**
-Primary: #1C1917 | Secondary: #D4AF37 | Accent: #FFFFFF
+**高端奢侈品 (Luxury Premium):**
+主色: #1C1917 | 辅助色: #D4AF37 | 强调色: #FFFFFF
 
-**Healthcare Trust:**
-Primary: #0077B6 | Secondary: #00A896 | Accent: #FFFFFF
+**医疗与信任 (Healthcare Trust):**
+主色: #0077B6 | 辅助色: #00A896 | 强调色: #FFFFFF
 
-**Food Warm:**
-Primary: #DC2626 | Secondary: #F97316 | Accent: #CA8A04
+**温暖食欲餐饮 (Food Warm):**
+主色: #DC2626 | 辅助色: #F97316 | 强调色: #CA8A04

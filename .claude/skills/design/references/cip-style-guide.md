@@ -1,68 +1,68 @@
-# CIP Design Style Guide
+# CIP 企业形象设计风格指南 (CIP Design Style Guide)
 
-## Corporate Minimal
-**Industries:** Finance, Legal, Consulting, Tech
-**Colors:** Navy (#0F172A), White (#FFFFFF), Blue accents
-**Typography:** Clean sans-serif (Inter, Helvetica)
-**Materials:** Premium matte paper, subtle textures
-**Finishes:** Matte, spot UV on logo
+## 极简商务风格 (Corporate Minimal)
+- **适合行业**：金融、法律、咨询、科技
+- **色彩搭配**：深藏青 (#0F172A)、白色 (#FFFFFF)、蓝色调点缀
+- **字体排印**：干净利落的无衬线体 (Inter, Helvetica)
+- **选用材质**：优质哑光纸、微妙质感纹理纸
+- **工艺效果**：哑光油墨、Logo 处做局部 UV (Spot UV) 效果
 
-## Modern Tech
-**Industries:** Tech, SaaS, Startups, AI
-**Colors:** Purple (#6366F1), Cyan (#0EA5E9), Green (#10B981)
-**Typography:** Geometric sans (Outfit, Poppins)
-**Materials:** Smooth surfaces, gradient prints
-**Finishes:** Gloss, metallic accents
+## 现代科技风格 (Modern Tech)
+- **适合行业**：科技研发、SaaS、初创企业、人工智能 (AI)
+- **色彩搭配**：紫色 (#6366F1)、青色 (#0EA5E9)、绿色 (#10B981)
+- **字体排印**：几何无衬线体 (Outfit, Poppins)
+- **选用材质**：光滑平整材质、渐变印刷载体
+- **工艺效果**：高亮光泽面、金属感点缀
 
-## Luxury Premium
-**Industries:** Fashion, Jewelry, Hotels, Fine Dining
-**Colors:** Black (#1C1917), Gold (#D4AF37), White
-**Typography:** Elegant serif (Playfair), thin sans
-**Materials:** Heavy cotton paper, leather, metal
-**Finishes:** Gold foil, emboss, deboss, soft-touch
+## 尊贵奢华风格 (Luxury Premium)
+- **适合行业**：高端时尚、珠宝首饰、奢华酒店、高级餐饮
+- **色彩搭配**：黑色 (#1C1917)、金色 (#D4AF37)、白色
+- **字体排印**：优雅的衬线体 (Playfair)、极细无衬线体
+- **选用材质**：厚重纯棉纸、皮革、金属
+- **工艺效果**：烫金 (Gold foil)、击凸 (Emboss)、击凹 (Deboss)、触感膜 (Soft-touch)
 
-## Classic Traditional
-**Industries:** Law Firms, Heritage Brands, Finance
-**Colors:** Navy, Burgundy, Gold
-**Typography:** Traditional serif (Times, Garamond)
-**Materials:** Quality laid paper, wood
-**Finishes:** Letterpress, gold emboss
+## 经典传统风格 (Classic Traditional)
+- **适合行业**：律师事务所、历史传承品牌、传统金融
+- **色彩搭配**：藏青色、酒红色、金色
+- **字体排印**：传统衬线体 (Times, Garamond)
+- **选用材质**：高档条纹纸 (Laid paper)、木质纹理
+- **工艺效果**：凸版印刷 (Letterpress)、烫金击凸
 
-## Warm Organic
-**Industries:** Food, Organic, Wellness, Craft
-**Colors:** Brown (#8B4513), Green (#228B22), Cream
-**Typography:** Friendly serif, organic script
-**Materials:** Kraft paper, recycled materials
-**Finishes:** Uncoated, natural textures
+## 温暖有机风格 (Warm Organic)
+- **适合行业**：餐饮食品、健康养生、有机产品、手工艺品
+- **色彩搭配**：棕色 (#8B4513)、绿色 (#228B22)、奶油色 (Cream)
+- **字体排印**：具有亲和力的衬线体、自然手写感字体
+- **选用材质**：牛皮纸 (Kraft paper)、可回收环保材质
+- **工艺效果**：无涂布加工 (Uncoated)、自然粗粝的材质纹理
 
-## Bold Dynamic
-**Industries:** Sports, Entertainment, Gaming
-**Colors:** Red (#DC2626), Orange (#F97316), Black
-**Typography:** Bold condensed sans
-**Materials:** High-contrast, metallic
-**Finishes:** Gloss, vibrant colors
+## 大胆动态风格 (Bold Dynamic)
+- **适合行业**：体育运动、娱乐产业、游戏行业
+- **色彩搭配**：红色 (#DC2626)、橙色 (#F97316)、黑色
+- **字体排印**：粗体紧凑型无衬线体 (Bold condensed sans)
+- **选用材质**：高对比度介质、金属感介质
+- **工艺效果**：高亮光泽面、高饱和度色彩表现
 
-## Fresh Modern
-**Industries:** Healthcare, Wellness, Fintech
-**Colors:** Mint (#10B981), Sky (#0EA5E9), White
-**Typography:** Modern rounded sans
-**Materials:** Light, clean surfaces
-**Finishes:** Matte, clean minimal
+## 清新现代风格 (Fresh Modern)
+- **适合行业**：医疗机构、身心健康、金融科技 (Fintech)
+- **色彩搭配**：薄荷绿 (#10B981)、天蓝色 (#0EA5E9)、白色
+- **字体排印**：现代圆角无衬线体
+- **选用材质**：轻量、整洁的表面材质
+- **工艺效果**：哑光面、极简干净感
 
-## Soft Elegant
-**Industries:** Beauty, Wedding, Spa, Fashion
-**Colors:** Pink (#F472B6), Gold, White
-**Typography:** Elegant script, thin sans
-**Materials:** Soft-touch, quality paper
-**Finishes:** Rose gold foil, emboss
+## 柔和优雅风格 (Soft Elegant)
+- **适合行业**：美容美妆、婚礼婚庆、水疗 Spa、时尚服饰
+- **色彩搭配**：粉色 (#F472B6)、金色、白色
+- **字体排印**：优雅手写体、极细无衬线体
+- **选用材质**：天鹅绒触感纸、高档触感纸
+- **工艺效果**：玫瑰金烫金、击凸工艺
 
-## Color Psychology
+## 色彩心理学 (Color Psychology)
 
-| Color | Meaning | Best Use |
+| 颜色 | 心理暗示 | 最佳应用场景 |
 |-------|---------|----------|
-| Blue | Trust, stability | Finance, Tech, Healthcare |
-| Green | Growth, nature | Eco, Wellness, Organic |
-| Gold | Luxury, prestige | Premium, Jewelry |
-| Red | Energy, passion | Food, Sports |
-| Black | Sophistication | Luxury, Fashion |
-| White | Clean, minimal | Tech, Healthcare |
+| 蓝色 | 信任、稳定 | 金融、科技、医疗健康 |
+| 绿色 | 生长、自然 | 生态环保、身心健康、有机产品 |
+| 金色 | 奢华、声望 | 高端品牌、珠宝首饰 |
+| 红色 | 能量、激情 | 餐饮食品、体育运动 |
+| 黑色 | 精致、高级感 | 奢侈品、高端时尚 |
+| 白色 | 干净、极简 | 科技、医疗健康 |

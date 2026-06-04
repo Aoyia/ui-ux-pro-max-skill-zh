@@ -1,21 +1,21 @@
-# shadcn/ui Component Reference
+# shadcn/ui 组件参考指南
 
-Complete catalog of shadcn/ui components with usage patterns and installation.
+完整的 shadcn/ui 组件库目录，包含使用模式和安装方法。
 
-## Installation
+## 安装方式
 
-**Add specific components:**
+**添加特定组件：**
 ```bash
 npx shadcn@latest add button
-npx shadcn@latest add button card dialog  # Multiple
-npx shadcn@latest add --all              # All components
+npx shadcn@latest add button card dialog  # 多个组件
+npx shadcn@latest add --all              # 所有组件
 ```
 
-Components install to `components/ui/` with automatic dependency management.
+组件会安装到 `components/ui/` 目录下，并带有自动的依赖管理。
 
-## Form & Input Components
+## 表单与输入组件 (Form & Input Components)
 
-### Button
+### 按钮 (Button)
 ```tsx
 import { Button } from "@/components/ui/button"
 
@@ -26,10 +26,10 @@ import { Button } from "@/components/ui/button"
 <Button variant="link">Link Style</Button>
 ```
 
-Variants: `default | destructive | outline | secondary | ghost | link`
-Sizes: `default | sm | lg | icon`
+变体类型 (Variants)：`default | destructive | outline | secondary | ghost | link`
+尺寸大小 (Sizes)：`default | sm | lg | icon`
 
-### Input
+### 输入框 (Input)
 ```tsx
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -40,7 +40,7 @@ import { Label } from "@/components/ui/label"
 </div>
 ```
 
-### Form (with React Hook Form + Zod)
+### 表单 (结合 React Hook Form + Zod)
 ```tsx
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -79,7 +79,7 @@ function ProfileForm() {
 }
 ```
 
-### Select
+### 选择框 (Select)
 ```tsx
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
@@ -95,7 +95,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 </Select>
 ```
 
-### Checkbox
+### 复选框 (Checkbox)
 ```tsx
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
@@ -106,7 +106,7 @@ import { Label } from "@/components/ui/label"
 </div>
 ```
 
-### Radio Group
+### 单选框组 (Radio Group)
 ```tsx
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Label } from "@/components/ui/label"
@@ -123,14 +123,14 @@ import { Label } from "@/components/ui/label"
 </RadioGroup>
 ```
 
-### Textarea
+### 多行文本框 (Textarea)
 ```tsx
 import { Textarea } from "@/components/ui/textarea"
 
 <Textarea placeholder="Type your message here." />
 ```
 
-### Switch
+### 开关 (Switch)
 ```tsx
 import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
@@ -141,7 +141,7 @@ import { Label } from "@/components/ui/label"
 </div>
 ```
 
-### Date Picker
+### 日期选择器 (Date Picker)
 ```tsx
 import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
@@ -165,9 +165,9 @@ const [date, setDate] = useState<Date>()
 </Popover>
 ```
 
-## Layout & Navigation
+## 布局与导航 (Layout & Navigation)
 
-### Card
+### 卡片 (Card)
 ```tsx
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
@@ -185,7 +185,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 </Card>
 ```
 
-### Tabs
+### 选项卡 (Tabs)
 ```tsx
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
@@ -199,7 +199,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 </Tabs>
 ```
 
-### Accordion
+### 手风琴 (Accordion)
 ```tsx
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
@@ -219,7 +219,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 </Accordion>
 ```
 
-### Navigation Menu
+### 导航菜单 (Navigation Menu)
 ```tsx
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu"
 
@@ -236,9 +236,9 @@ import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMe
 </NavigationMenu>
 ```
 
-## Overlays & Dialogs
+## 覆盖层与对话框 (Overlays & Dialogs)
 
-### Dialog
+### 对话框 (Dialog)
 ```tsx
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 
@@ -255,7 +255,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 </Dialog>
 ```
 
-### Drawer
+### 抽屉 (Drawer)
 ```tsx
 import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer"
 
@@ -274,7 +274,7 @@ import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, Dr
 </Drawer>
 ```
 
-### Popover
+### 气泡卡片 (Popover)
 ```tsx
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 
@@ -284,7 +284,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 </Popover>
 ```
 
-### Toast
+### 轻量提示 (Toast)
 ```tsx
 import { useToast } from "@/hooks/use-toast"
 import { Button } from "@/components/ui/button"
@@ -301,7 +301,7 @@ const { toast } = useToast()
 </Button>
 ```
 
-### Command
+### 命令菜单 (Command)
 ```tsx
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command"
 
@@ -318,7 +318,7 @@ import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, Command
 </Command>
 ```
 
-### Alert Dialog
+### 警示确认对话框 (Alert Dialog)
 ```tsx
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog"
 
@@ -341,9 +341,9 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 </AlertDialog>
 ```
 
-## Feedback & Status
+## 反馈与状态 (Feedback & Status)
 
-### Alert
+### 警示框 (Alert)
 ```tsx
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 
@@ -358,14 +358,14 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 </Alert>
 ```
 
-### Progress
+### 进度条 (Progress)
 ```tsx
 import { Progress } from "@/components/ui/progress"
 
 <Progress value={33} />
 ```
 
-### Skeleton
+### 骨架屏 (Skeleton)
 ```tsx
 import { Skeleton } from "@/components/ui/skeleton"
 
@@ -378,9 +378,9 @@ import { Skeleton } from "@/components/ui/skeleton"
 </div>
 ```
 
-## Display Components
+## 数据展示组件 (Display Components)
 
-### Table
+### 表格 (Table)
 ```tsx
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 
@@ -403,7 +403,7 @@ import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, Tabl
 </Table>
 ```
 
-### Avatar
+### 头像 (Avatar)
 ```tsx
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
@@ -413,7 +413,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 </Avatar>
 ```
 
-### Badge
+### 徽章 (Badge)
 ```tsx
 import { Badge } from "@/components/ui/badge"
 

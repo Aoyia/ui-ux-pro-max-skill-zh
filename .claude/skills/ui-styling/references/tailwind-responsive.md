@@ -1,28 +1,28 @@
-# Tailwind CSS Responsive Design
+# Tailwind CSS 响应式设计
 
-Mobile-first breakpoints, responsive utilities, and adaptive layouts.
+移动端优先 (Mobile-First) 的断点、响应式工具类以及自适应布局。
 
-## Mobile-First Approach
+## 移动端优先方法 (Mobile-First Approach)
 
-Tailwind uses mobile-first responsive design. Base styles apply to all screen sizes, then use breakpoint prefixes to override at larger sizes.
+Tailwind 采用移动端优先的响应式设计。基础样式会应用到所有屏幕尺寸上，然后使用断点前缀在更大的屏幕尺寸上进行样式覆盖。
 
 ```html
-<!-- Base: 1 column (mobile)
-     sm: 2 columns (tablet)
-     lg: 4 columns (desktop) -->
+<!-- 基础: 1 列 (移动端)
+     sm: 2 列 (平板端)
+     lg: 4 列 (桌面端) -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-  <div>Item 1</div>
-  <div>Item 2</div>
-  <div>Item 3</div>
-  <div>Item 4</div>
+  <div>项目 1</div>
+  <div>项目 2</div>
+  <div>项目 3</div>
+  <div>项目 4</div>
 </div>
 ```
 
-## Breakpoint System
+## 断点系统 (Breakpoint System)
 
-**Default breakpoints:**
+**默认断点：**
 
-| Prefix | Min Width | CSS Media Query |
+| 前缀 | 最小宽度 | CSS 媒体查询 |
 |--------|-----------|-----------------|
 | `sm:` | 640px | `@media (min-width: 640px)` |
 | `md:` | 768px | `@media (min-width: 768px)` |
@@ -30,115 +30,115 @@ Tailwind uses mobile-first responsive design. Base styles apply to all screen si
 | `xl:` | 1280px | `@media (min-width: 1280px)` |
 | `2xl:` | 1536px | `@media (min-width: 1536px)` |
 
-## Responsive Patterns
+## 响应式模式 (Responsive Patterns)
 
-### Layout Changes
+### 布局切换 (Layout Changes)
 
 ```html
-<!-- Vertical on mobile, horizontal on desktop -->
+<!-- 移动端垂直排列，桌面端水平排列 -->
 <div class="flex flex-col lg:flex-row gap-4">
-  <div>Left</div>
-  <div>Right</div>
+  <div>左侧</div>
+  <div>右侧</div>
 </div>
 
-<!-- 1 column -> 2 columns -> 3 columns -->
+<!-- 1 列 -> 2 列 -> 3 列 -->
 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-  <div>Item 1</div>
-  <div>Item 2</div>
-  <div>Item 3</div>
+  <div>项目 1</div>
+  <div>项目 2</div>
+  <div>项目 3</div>
 </div>
 ```
 
-### Visibility
+### 可见性控制 (Visibility)
 
 ```html
-<!-- Hide on mobile, show on desktop -->
+<!-- 移动端隐藏，桌面端显示 -->
 <div class="hidden lg:block">
-  Desktop only content
+  仅在桌面端显示的内容
 </div>
 
-<!-- Show on mobile, hide on desktop -->
+<!-- 移动端显示，桌面端隐藏 -->
 <div class="block lg:hidden">
-  Mobile only content
+  仅在移动端显示的内容
 </div>
 
-<!-- Different content per breakpoint -->
-<div class="lg:hidden">Mobile menu</div>
-<div class="hidden lg:flex">Desktop navigation</div>
+<!-- 不同断点显示不同内容 -->
+<div class="lg:hidden">移动端菜单</div>
+<div class="hidden lg:flex">桌面端导航</div>
 ```
 
-### Typography
+### 排版 (Typography)
 
 ```html
-<!-- Responsive text sizes -->
+<!-- 响应式字体大小 -->
 <h1 class="text-2xl md:text-4xl lg:text-6xl font-bold">
-  Heading scales with screen size
+  标题随屏幕尺寸缩放
 </h1>
 
 <p class="text-sm md:text-base lg:text-lg">
-  Body text scales appropriately
+  正文文本进行适当缩放
 </p>
 ```
 
-### Spacing
+### 间距 (Spacing)
 
 ```html
-<!-- Responsive padding -->
+<!-- 响应式内边距 -->
 <div class="p-4 md:p-6 lg:p-8">
-  More padding on larger screens
+  在更大屏幕上拥有更多内边距
 </div>
 
-<!-- Responsive gap -->
+<!-- 响应式间距 -->
 <div class="flex gap-2 md:gap-4 lg:gap-6">
-  <div>Item 1</div>
-  <div>Item 2</div>
+  <div>项目 1</div>
+  <div>项目 2</div>
 </div>
 ```
 
-### Width
+### 宽度 (Width)
 
 ```html
-<!-- Full width on mobile, constrained on desktop -->
+<!-- 移动端占满宽度，桌面端限制宽度 -->
 <div class="w-full lg:w-1/2 xl:w-1/3">
-  Responsive width
+  响应式宽度
 </div>
 
-<!-- Responsive max-width -->
+<!-- 响应式最大宽度 -->
 <div class="max-w-sm md:max-w-2xl lg:max-w-4xl mx-auto">
-  Centered with responsive max width
+  居中且带响应式最大宽度
 </div>
 ```
 
-## Common Responsive Layouts
+## 常见响应式布局 (Common Responsive Layouts)
 
-### Sidebar Layout
+### 侧边栏布局 (Sidebar Layout)
 
 ```html
 <div class="flex flex-col lg:flex-row min-h-screen">
-  <!-- Sidebar: Full width on mobile, fixed on desktop -->
+  <!-- 侧边栏：移动端满宽，桌面端固定宽度 -->
   <aside class="w-full lg:w-64 bg-gray-100 p-4">
-    Sidebar
+    侧边栏
   </aside>
 
-  <!-- Main content -->
+  <!-- 主内容区 -->
   <main class="flex-1 p-4 md:p-8">
-    Main content
+    主内容
   </main>
 </div>
 ```
 
-### Card Grid
+### 卡片网格 (Card Grid)
 
 ```html
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
-  <div class="bg-white rounded-lg shadow p-6">Card 1</div>
-  <div class="bg-white rounded-lg shadow p-6">Card 2</div>
-  <div class="bg-white rounded-lg shadow p-6">Card 3</div>
-  <div class="bg-white rounded-lg shadow p-6">Card 4</div>
+  <div class="bg-white rounded-lg shadow p-6">卡片 1</div>
+  <div class="bg-white rounded-lg shadow p-6">卡片 2</div>
+  <div class="bg-white rounded-lg shadow p-6">卡片 3</div>
+  <div class="bg-white rounded-lg shadow p-6">卡片 4</div>
 </div>
 ```
 
-### Hero Section
+### 主视觉区 (Hero Section)
 
 ```html
 <section class="py-12 md:py-20 lg:py-32">
@@ -146,13 +146,13 @@ Tailwind uses mobile-first responsive design. Base styles apply to all screen si
     <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
       <div class="flex-1 text-center lg:text-left">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-          Hero Title
+          主视觉标题
         </h1>
         <p class="text-lg md:text-xl mb-6">
-          Hero description
+          主视觉描述信息
         </p>
         <button class="px-6 py-3 md:px-8 md:py-4">
-          CTA Button
+          行动呼吁 (CTA) 按钮
         </button>
       </div>
       <div class="flex-1">
@@ -163,23 +163,23 @@ Tailwind uses mobile-first responsive design. Base styles apply to all screen si
 </section>
 ```
 
-### Navigation
+### 导航栏 (Navigation)
 
 ```html
 <nav class="bg-white shadow">
   <div class="container mx-auto px-4">
     <div class="flex items-center justify-between h-16">
-      <div class="text-xl font-bold">Logo</div>
+      <div class="text-xl font-bold">Logo (标志)</div>
 
-      <!-- Desktop navigation -->
+      <!-- 桌面端导航 -->
       <div class="hidden md:flex gap-6">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+        <a href="#">首页</a>
+        <a href="#">关于我们</a>
+        <a href="#">服务</a>
+        <a href="#">联系我们</a>
       </div>
 
-      <!-- Mobile menu button -->
+      <!-- 移动端菜单按钮 -->
       <button class="md:hidden">
         <svg class="w-6 h-6">...</svg>
       </button>
@@ -188,57 +188,57 @@ Tailwind uses mobile-first responsive design. Base styles apply to all screen si
 </nav>
 ```
 
-## Max-Width Queries
+## 最大宽度查询 (Max-Width Queries)
 
-Apply styles only below certain breakpoint using `max-*:` prefix:
+使用 `max-*:` 前缀应用仅在特定断点以下的样式：
 
 ```html
-<!-- Only on mobile and tablet (below 1024px) -->
+<!-- 仅在移动端和平板端生效 (低于 1024px) -->
 <div class="max-lg:text-center">
-  Centered on mobile/tablet, left-aligned on desktop
+  在移动端/平板端居中对齐，在桌面端左对齐
 </div>
 
-<!-- Only on mobile (below 640px) -->
+<!-- 仅在移动端生效 (低于 640px) -->
 <div class="max-sm:hidden">
-  Hidden only on mobile
+  仅在移动端隐藏
 </div>
 ```
 
-Available: `max-sm:` `max-md:` `max-lg:` `max-xl:` `max-2xl:`
+可用前缀：`max-sm:` `max-md:` `max-lg:` `max-xl:` `max-2xl:`
 
-## Range Queries
+## 区间查询 (Range Queries)
 
-Apply styles between breakpoints:
+在断点区间之间应用样式：
 
 ```html
-<!-- Only on tablets (between md and lg) -->
+<!-- 仅在平板端生效 (介于 md 和 lg 之间) -->
 <div class="md:block lg:hidden">
-  Visible only on tablets
+  仅在平板端可见
 </div>
 
-<!-- Between sm and xl -->
+<!-- 介于 sm 和 xl 之间 -->
 <div class="sm:grid-cols-2 xl:grid-cols-4">
-  2 columns on tablet, 4 on extra large
+  平板端显示 2 列，超大屏显示 4 列
 </div>
 ```
 
-## Container Queries
+## 容器查询 (Container Queries)
 
-Style elements based on parent container width:
+根据父容器的宽度而非视口宽度来设置元素样式：
 
 ```html
 <div class="@container">
   <div class="@md:grid-cols-2 @lg:grid-cols-3">
-    Responds to parent width, not viewport
+    根据父容器宽度做出响应，而非整个视口
   </div>
 </div>
 ```
 
-Container query breakpoints: `@sm:` `@md:` `@lg:` `@xl:` `@2xl:`
+容器查询断点：`@sm:` `@md:` `@lg:` `@xl:` `@2xl:`
 
-## Custom Breakpoints
+## 自定义断点 (Custom Breakpoints)
 
-Define custom breakpoints in theme:
+在主题中定义自定义断点：
 
 ```css
 @theme {
@@ -249,134 +249,134 @@ Define custom breakpoints in theme:
 
 ```html
 <div class="tablet:grid-cols-2 3xl:grid-cols-6">
-  Uses custom breakpoints
+  使用自定义断点
 </div>
 ```
 
-## Responsive State Variants
+## 响应式状态变体 (Responsive State Variants)
 
-Combine responsive with hover/focus:
+将响应式与悬停 (hover)/聚焦 (focus) 结合：
 
 ```html
-<!-- Hover effect only on desktop -->
+<!-- 仅在桌面端有悬停放大效果 -->
 <button class="lg:hover:scale-105">
-  Scale on hover (desktop only)
+  悬停缩放 (仅限桌面端)
 </button>
 
-<!-- Different hover colors per breakpoint -->
+<!-- 在不同断点下有不同的悬停文字颜色 -->
 <a class="hover:text-blue-600 lg:hover:text-purple-600">
-  Link
+  链接
 </a>
 ```
 
-## Best Practices
+## 最佳实践 (Best Practices)
 
-### 1. Mobile-First Design
+### 1. 移动端优先 design
 
-Start with mobile styles, add complexity at larger breakpoints:
+从移动端样式开始，在更大的断点上逐步增加复杂度：
 
 ```html
-<!-- Good: Mobile first -->
+<!-- 推荐：移动端优先 -->
 <div class="text-base md:text-lg lg:text-xl">
 
-<!-- Avoid: Desktop first -->
+<!-- 避免：桌面端优先 -->
 <div class="text-xl lg:text-base">
 ```
 
-### 2. Consistent Breakpoint Usage
+### 2. 保持断点使用一致 (Consistent Breakpoint Usage)
 
-Use same breakpoints across related elements:
+在相关元素之间使用相同的断点：
 
 ```html
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
-  Spacing scales with layout
+  间距随布局同步缩放
 </div>
 ```
 
-### 3. Test at Breakpoint Boundaries
+### 3. 在断点临界点进行测试 (Test at Breakpoint Boundaries)
 
-Test at exact breakpoint widths (640px, 768px, 1024px, etc.) to catch edge cases.
+在确切的断点宽度（如 640px, 768px, 1024px 等）进行测试，以发现边缘排版问题。
 
-### 4. Use Container for Content Width
+### 4. 使用 Container 限制内容宽度
 
 ```html
 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
   <div class="max-w-7xl">
-    Content with consistent max width
+    具有一致最大宽度限制的内容
   </div>
 </div>
 ```
 
-### 5. Progressive Enhancement
+### 5. 渐进式增强 (Progressive Enhancement)
 
-Ensure core functionality works on mobile, enhance for larger screens:
+确保核心功能在移动端可用，并在大屏上提供更好的体验：
 
 ```html
-<!-- Core layout works on mobile -->
+<!-- 核心布局在移动端能正常工作 -->
 <div class="p-4">
-  <!-- Enhanced spacing on desktop -->
+  <!-- 桌面端增强内边距 -->
   <div class="lg:p-8">
-    Content
+    内容
   </div>
 </div>
 ```
 
-### 6. Avoid Too Many Breakpoints
+### 6. 避免使用过多的断点 (Avoid Too Many Breakpoints)
 
-Use 2-3 breakpoints per element for maintainability:
+每个元素最好使用 2-3 个断点，以便于维护：
 
 ```html
-<!-- Good: 2 breakpoints -->
+<!-- 推荐：2 个断点 -->
 <div class="grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
 
-<!-- Avoid: Too many breakpoints -->
+<!-- 避免：使用过多断点 -->
 <div class="grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
 ```
 
-## Common Responsive Utilities
+## 常见响应式工具类 (Common Responsive Utilities)
 
-### Responsive Display
+### 响应式显示 (Responsive Display)
 
 ```html
 <div class="block md:flex lg:grid">
-  Changes display type per breakpoint
+  在不同的断点下改变显示类型
 </div>
 ```
 
-### Responsive Position
+### 响应式定位 (Responsive Position)
 
 ```html
 <div class="relative lg:absolute">
-  Positioned differently per breakpoint
+  在不同的断点下定位不同
 </div>
 ```
 
-### Responsive Order
+### 响应式排序 (Responsive Order)
 
 ```html
 <div class="flex flex-col">
-  <div class="order-2 lg:order-1">First on desktop</div>
-  <div class="order-1 lg:order-2">First on mobile</div>
+  <div class="order-2 lg:order-1">桌面端排第一</div>
+  <div class="order-1 lg:order-2">移动端排第一</div>
 </div>
 ```
 
-### Responsive Overflow
+### 响应式溢出处理 (Responsive Overflow)
 
 ```html
 <div class="overflow-auto lg:overflow-visible">
-  Scrollable on mobile, expanded on desktop
+  移动端支持滚动，桌面端展开显示
 </div>
 ```
 
-## Testing Checklist
+## 测试清单 (Testing Checklist)
 
-- [ ] Test at 320px (small mobile)
-- [ ] Test at 640px (mobile breakpoint)
-- [ ] Test at 768px (tablet breakpoint)
-- [ ] Test at 1024px (desktop breakpoint)
-- [ ] Test at 1280px (large desktop breakpoint)
-- [ ] Test landscape orientation
-- [ ] Verify touch targets (min 44x44px)
-- [ ] Check text readability at all sizes
-- [ ] Verify navigation works on mobile
-- [ ] Test with browser zoom
+- [ ] 在 320px 测试 (小屏幕手机)
+- [ ] 在 640px 测试 (手机断点)
+- [ ] 在 768px 测试 (平板断点)
+- [ ] 在 1024px 测试 (桌面断点)
+- [ ] 在 1280px 测试 (大屏桌面断点)
+- [ ] 测试横屏方向
+- [ ] 验证触摸目标尺寸 (最小为 44x44px)
+- [ ] 检查所有尺寸下的文本可读性
+- [ ] 验证导航栏在移动端能正常工作
+- [ ] 使用浏览器缩放进行测试

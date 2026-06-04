@@ -1,58 +1,58 @@
-# Tailwind CSS Customization
+# Tailwind CSS 定制开发指南
 
-Config file structure, custom utilities, plugins, and theme extensions.
+配置文件结构、自定义工具类、插件以及主题扩展。
 
-## @theme Directive
+## @theme 指令
 
-Modern approach to customize Tailwind using CSS:
+在 CSS 中定制 Tailwind 的现代方法：
 
 ```css
 @import "tailwindcss";
 
 @theme {
-  /* Custom colors */
+  /* 自定义颜色 */
   --color-brand-50: oklch(0.97 0.02 264);
   --color-brand-500: oklch(0.55 0.22 264);
   --color-brand-900: oklch(0.25 0.15 264);
 
-  /* Custom fonts */
+  /* 自定义字体 */
   --font-display: "Satoshi", "Inter", sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 
-  /* Custom spacing */
+  /* 自定义间距 */
   --spacing-18: calc(var(--spacing) * 18);
   --spacing-navbar: 4.5rem;
 
-  /* Custom breakpoints */
+  /* 自定义断点 */
   --breakpoint-3xl: 120rem;
   --breakpoint-tablet: 48rem;
 
-  /* Custom shadows */
+  /* 自定义阴影 */
   --shadow-glow: 0 0 20px rgba(139, 92, 246, 0.3);
 
-  /* Custom radius */
+  /* 自定义圆角 */
   --radius-large: 1.5rem;
 }
 ```
 
-**Usage:**
+**用法：**
 ```html
 <div class="bg-brand-500 font-display shadow-glow rounded-large">
-  Custom themed element
+  自定义主题元素
 </div>
 
 <div class="tablet:grid-cols-2 3xl:grid-cols-6">
-  Custom breakpoints
+  自定义断点
 </div>
 ```
 
-## Color Customization
+## 颜色自定义 (Color Customization)
 
-### Custom Color Palette
+### 自定义调色板 (Custom Color Palette)
 
 ```css
 @theme {
-  /* Full color scale */
+  /* 完整色阶 */
   --color-primary-50: oklch(0.98 0.02 250);
   --color-primary-100: oklch(0.95 0.05 250);
   --color-primary-200: oklch(0.90 0.10 250);
@@ -67,7 +67,7 @@ Modern approach to customize Tailwind using CSS:
 }
 ```
 
-### Semantic Colors
+### 语义化颜色 (Semantic Colors)
 
 ```css
 @theme {
@@ -79,13 +79,13 @@ Modern approach to customize Tailwind using CSS:
 ```
 
 ```html
-<div class="bg-success text-white">Success message</div>
-<div class="border-error">Error state</div>
+<div class="bg-success text-white">成功信息</div>
+<div class="border-error">错误状态</div>
 ```
 
-## Typography Customization
+## 排版自定义 (Typography Customization)
 
-### Custom Fonts
+### 自定义字体
 
 ```css
 @theme {
@@ -97,12 +97,12 @@ Modern approach to customize Tailwind using CSS:
 ```
 
 ```html
-<h1 class="font-display">Display heading</h1>
-<p class="font-sans">Body text</p>
-<code class="font-mono">Code block</code>
+<h1 class="font-display">大标题展示</h1>
+<p class="font-sans">正文文本</p>
+<code class="font-mono">代码块</code>
 ```
 
-### Custom Font Sizes
+### 自定义字号
 
 ```css
 @theme {
@@ -119,16 +119,16 @@ Modern approach to customize Tailwind using CSS:
 }
 ```
 
-## Spacing Customization
+## 间距自定义 (Spacing Customization)
 
 ```css
 @theme {
-  /* Add custom spacing values */
+  /* 添加自定义间距值 */
   --spacing-13: calc(var(--spacing) * 13);
   --spacing-15: calc(var(--spacing) * 15);
   --spacing-18: calc(var(--spacing) * 18);
 
-  /* Named spacing */
+  /* 命名间距 */
   --spacing-header: 4rem;
   --spacing-footer: 3rem;
   --spacing-section: 6rem;
@@ -136,13 +136,13 @@ Modern approach to customize Tailwind using CSS:
 ```
 
 ```html
-<div class="p-18">Custom padding</div>
-<section class="py-section">Section spacing</section>
+<div class="p-18">自定义内边距</div>
+<section class="py-section">区块间距</section>
 ```
 
-## Custom Utilities
+## 自定义工具类 (Custom Utilities)
 
-Create reusable utility classes:
+创建可复用的工具类：
 
 ```css
 @utility content-auto {
@@ -160,16 +160,16 @@ Create reusable utility classes:
 }
 ```
 
-**Usage:**
+**用法：**
 ```html
-<div class="content-auto">Optimized rendering</div>
-<pre class="tab-4">Code with 4-space tabs</pre>
-<div class="glass">Glassmorphism effect</div>
+<div class="content-auto">优化渲染性能</div>
+<pre class="tab-4">使用 4 个空格缩进的代码</pre>
+<div class="glass">毛玻璃特效</div>
 ```
 
-## Custom Variants
+## 自定义变体 (Custom Variants)
 
-Create custom state variants:
+创建自定义状态变体：
 
 ```css
 @custom-variant theme-midnight (&:where([data-theme="midnight"] *));
@@ -177,20 +177,20 @@ Create custom state variants:
 @custom-variant required (&:required);
 ```
 
-**Usage:**
+**用法：**
 ```html
 <div data-theme="midnight">
   <div class="theme-midnight:bg-navy-900">
-    Applies in midnight theme
+    在午夜 (midnight) 主题中应用
   </div>
 </div>
 
 <input class="required:border-red-500" required />
 ```
 
-## Layer Organization
+## 分层组织 (Layer Organization)
 
-Organize CSS into layers:
+将 CSS 组织到不同的图层中：
 
 ```css
 @layer base {
@@ -248,9 +248,9 @@ Organize CSS into layers:
 }
 ```
 
-## @apply Directive
+## @apply 指令
 
-Extract repeated utility patterns:
+提取重复的工具类组合模式：
 
 ```css
 .btn-primary {
@@ -266,16 +266,16 @@ Extract repeated utility patterns:
 }
 ```
 
-**Usage:**
+**用法：**
 ```html
-<button class="btn-primary">Click me</button>
+<button class="btn-primary">点击我</button>
 <input class="input-field" />
-<div class="section-container">Content</div>
+<div class="section-container">内容</div>
 ```
 
-## Plugins
+## 插件 (Plugins)
 
-### Official Plugins
+### 官方插件
 
 ```bash
 npm install -D @tailwindcss/typography @tailwindcss/forms @tailwindcss/container-queries
@@ -292,23 +292,23 @@ export default {
 }
 ```
 
-**Typography plugin:**
+**排版插件 (Typography plugin)：**
 ```html
 <article class="prose lg:prose-xl">
-  <h1>Styled article</h1>
-  <p>Automatically styled prose content</p>
+  <h1>排版美化的文章</h1>
+  <p>自动应用精美排版样式的文章内容</p>
 </article>
 ```
 
-**Forms plugin:**
+**表单插件 (Forms plugin)：**
 ```html
-<!-- Automatically styled form elements -->
+<!-- 自动美化表单元素 -->
 <input type="text" />
 <select></select>
 <textarea></textarea>
 ```
 
-### Custom Plugin
+### 自定义插件 (Custom Plugin)
 
 ```javascript
 // tailwind.config.js
@@ -317,7 +317,7 @@ const plugin = require('tailwindcss/plugin')
 export default {
   plugins: [
     plugin(function({ addUtilities, addComponents, theme }) {
-      // Add utilities
+      // 添加自定义工具类
       addUtilities({
         '.text-shadow': {
           textShadow: '2px 2px 4px rgba(0, 0, 0, 0.1)',
@@ -327,7 +327,7 @@ export default {
         },
       })
 
-      // Add components
+      // 添加自定义组件
       addComponents({
         '.card-custom': {
           backgroundColor: theme('colors.white'),
@@ -341,9 +341,9 @@ export default {
 }
 ```
 
-## Configuration Examples
+## 配置示例
 
-### Complete Tailwind Config
+### 完整的 Tailwind 配置
 
 ```javascript
 // tailwind.config.ts
@@ -412,34 +412,34 @@ const config: Config = {
 export default config
 ```
 
-## Dark Mode Configuration
+## 暗黑模式配置 (Dark Mode Configuration)
 
 ```javascript
 // tailwind.config.js
 export default {
-  darkMode: ["class"],  // or "media" for automatic
+  darkMode: ["class"],  // 或者是 "media" 实现自动切换
   // ...
 }
 ```
 
-**Usage:**
+**用法：**
 ```html
-<!-- Class-based -->
+<!-- 基于 Class -->
 <html class="dark">
   <div class="bg-white dark:bg-gray-900">
-    Responds to .dark class
+    对 .dark 类名做出响应
   </div>
 </html>
 
-<!-- Media query-based -->
+<!-- 基于媒体查询 -->
 <div class="bg-white dark:bg-gray-900">
-  Responds to system preference automatically
+    自动对系统偏好设置做出响应
 </div>
 ```
 
-## Content Configuration
+## 扫描内容配置 (Content Configuration)
 
-Specify files to scan for classes:
+指定需要扫描以查找 Tailwind 类名物的文件：
 
 ```javascript
 // tailwind.config.js
@@ -454,9 +454,9 @@ export default {
 }
 ```
 
-### Safelist
+### 白名单 (Safelist)
 
-Preserve dynamic classes:
+强制保留动态生成的类名：
 
 ```javascript
 export default {
@@ -471,13 +471,13 @@ export default {
 }
 ```
 
-## Best Practices
+## 最佳实践
 
-1. **Use @theme for simple customizations**: Prefer CSS-based customization
-2. **Extract components sparingly**: Use @apply only for truly repeated patterns
-3. **Leverage design tokens**: Define custom tokens in @theme
-4. **Layer organization**: Keep base, components, and utilities separate
-5. **Plugin for complex logic**: Use plugins for advanced customizations
-6. **Test dark mode**: Ensure custom colors work in both themes
-7. **Document custom utilities**: Add comments explaining custom classes
-8. **Semantic naming**: Use descriptive names (primary not blue)
+1. **对于简单自定义推荐使用 @theme**：优先选择基于 CSS 的定制方法
+2. **谨慎提取组件**：仅对真正重复使用的排版或布局模式使用 @apply
+3. **充分利用设计令牌 (Design Tokens)**：在 @theme 中定义自定义的设计令牌
+4. **合理的分层组织**：保持 base、components 和 utilities 的分离
+5. **处理复杂逻辑推荐使用插件**：对于高级定制或动态工具类使用 plugins
+6. **充分测试暗黑模式**：确保自定义颜色在两种主题下都能完美工作
+7. **对自定义工具类进行文档记录**：添加必要的 CSS 注释以解释自定义类名的用途
+8. **语义化命名**：使用具有业务或视觉含义的名称（如 primary 而不是 blue）

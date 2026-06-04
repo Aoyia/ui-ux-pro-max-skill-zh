@@ -1,110 +1,110 @@
-# Tailwind CSS Utility Reference
+# Tailwind CSS 工具类参考指南
 
-Core utility classes for layout, spacing, typography, colors, borders, and shadows.
+用于布局 (Layout)、间距 (Spacing)、排版 (Typography)、颜色 (Colors)、边框 (Borders) 和阴影 (Shadows) 的核心工具类。
 
-## Layout Utilities
+## 布局工具类 (Layout Utilities)
 
-### Display
+### 块级与行内 (Display)
 
 ```html
-<div class="block">Block</div>
-<div class="inline-block">Inline Block</div>
-<div class="inline">Inline</div>
+<div class="block">Block (块级)</div>
+<div class="inline-block">Inline Block (行内块级)</div>
+<div class="inline">Inline (行内)</div>
 <div class="flex">Flexbox</div>
 <div class="inline-flex">Inline Flex</div>
-<div class="grid">Grid</div>
+<div class="grid">Grid (网格)</div>
 <div class="inline-grid">Inline Grid</div>
-<div class="hidden">Hidden</div>
+<div class="hidden">Hidden (隐藏)</div>
 ```
 
-### Flexbox
+### 弹性盒模型 (Flexbox)
 
-**Container:**
+**容器 (Container)：**
 ```html
-<div class="flex flex-row">Row (default)</div>
-<div class="flex flex-col">Column</div>
-<div class="flex flex-row-reverse">Reverse row</div>
-<div class="flex flex-col-reverse">Reverse column</div>
+<div class="flex flex-row">Row (默认水平方向)</div>
+<div class="flex flex-col">Column (垂直方向)</div>
+<div class="flex flex-row-reverse">Reverse row (水平反向)</div>
+<div class="flex flex-col-reverse">Reverse column (垂直反向)</div>
 ```
 
-**Justify (main axis):**
+**对齐主轴 (Justify - main axis)：**
 ```html
-<div class="flex justify-start">Start</div>
-<div class="flex justify-center">Center</div>
-<div class="flex justify-end">End</div>
-<div class="flex justify-between">Space between</div>
-<div class="flex justify-around">Space around</div>
-<div class="flex justify-evenly">Space evenly</div>
+<div class="flex justify-start">Start (起点对齐)</div>
+<div class="flex justify-center">Center (居中对齐)</div>
+<div class="flex justify-end">End (终点对齐)</div>
+<div class="flex justify-between">Space between (两端对齐，项目之间间距相等)</div>
+<div class="flex justify-around">Space around (每个项目两侧间距相等)</div>
+<div class="flex justify-evenly">Space evenly (项目之间及两端间距均等)</div>
 ```
 
-**Align (cross axis):**
+**对齐交叉轴 (Align - cross axis)：**
 ```html
-<div class="flex items-start">Start</div>
-<div class="flex items-center">Center</div>
-<div class="flex items-end">End</div>
-<div class="flex items-baseline">Baseline</div>
-<div class="flex items-stretch">Stretch</div>
+<div class="flex items-start">Start (起点对齐)</div>
+<div class="flex items-center">Center (居中对齐)</div>
+<div class="flex items-end">End (终点对齐)</div>
+<div class="flex items-baseline">Baseline (基线对齐)</div>
+<div class="flex items-stretch">Stretch (拉伸对齐)</div>
 ```
 
-**Gap:**
+**间距 (Gap)：**
 ```html
-<div class="flex gap-4">All sides</div>
-<div class="flex gap-x-6 gap-y-2">X and Y</div>
+<div class="flex gap-4">四边间距</div>
+<div class="flex gap-x-6 gap-y-2">X 轴与 Y 轴间距</div>
 ```
 
-**Wrap:**
+**换行 (Wrap)：**
 ```html
-<div class="flex flex-wrap">Wrap</div>
-<div class="flex flex-nowrap">No wrap</div>
+<div class="flex flex-wrap">Wrap (换行)</div>
+<div class="flex flex-nowrap">No wrap (不换行)</div>
 ```
 
-### Grid
+### 网格布局 (Grid)
 
-**Columns:**
+**网格列 (Columns)：**
 ```html
-<div class="grid grid-cols-1">1 column</div>
-<div class="grid grid-cols-2">2 columns</div>
-<div class="grid grid-cols-3">3 columns</div>
-<div class="grid grid-cols-4">4 columns</div>
-<div class="grid grid-cols-12">12 columns</div>
-<div class="grid grid-cols-[1fr_500px_2fr]">Custom</div>
+<div class="grid grid-cols-1">1 列</div>
+<div class="grid grid-cols-2">2 列</div>
+<div class="grid grid-cols-3">3 列</div>
+<div class="grid grid-cols-4">4 列</div>
+<div class="grid grid-cols-12">12 列</div>
+<div class="grid grid-cols-[1fr_500px_2fr]">自定义列宽</div>
 ```
 
-**Rows:**
+**网格行 (Rows)：**
 ```html
-<div class="grid grid-rows-3">3 rows</div>
-<div class="grid grid-rows-[auto_1fr_auto]">Custom</div>
+<div class="grid grid-rows-3">3 行</div>
+<div class="grid grid-rows-[auto_1fr_auto]">自定义行高</div>
 ```
 
-**Span:**
+**跨度 (Span)：**
 ```html
-<div class="col-span-2">Span 2 columns</div>
-<div class="row-span-3">Span 3 rows</div>
+<div class="col-span-2">跨 2 列</div>
+<div class="row-span-3">跨 3 行</div>
 ```
 
-**Gap:**
+**网格间距 (Gap)：**
 ```html
-<div class="grid gap-4">All sides</div>
-<div class="grid gap-x-8 gap-y-4">X and Y</div>
+<div class="grid gap-4">四边间距</div>
+<div class="grid gap-x-8 gap-y-4">X 轴与 Y 轴间距</div>
 ```
 
-### Positioning
+### 定位 (Positioning)
 
 ```html
-<div class="static">Static (default)</div>
-<div class="relative">Relative</div>
-<div class="absolute">Absolute</div>
-<div class="fixed">Fixed</div>
-<div class="sticky">Sticky</div>
+<div class="static">Static (默认定位)</div>
+<div class="relative">Relative (相对定位)</div>
+<div class="absolute">Absolute (绝对定位)</div>
+<div class="fixed">Fixed (固定定位)</div>
+<div class="sticky">Sticky (粘性定位)</div>
 
-<!-- Position values -->
-<div class="absolute top-0 right-0">Top right</div>
-<div class="absolute inset-0">All sides 0</div>
-<div class="absolute inset-x-4">Left/right 4</div>
-<div class="absolute inset-y-8">Top/bottom 8</div>
+<!-- 定位坐标值 -->
+<div class="absolute top-0 right-0">右上角</div>
+<div class="absolute inset-0">四边均为 0</div>
+<div class="absolute inset-x-4">左右边距为 4</div>
+<div class="absolute inset-y-8">上下边距为 8</div>
 ```
 
-### Z-Index
+### 层叠顺序 (Z-Index)
 
 ```html
 <div class="z-0">z-index: 0</div>
@@ -113,39 +113,39 @@ Core utility classes for layout, spacing, typography, colors, borders, and shado
 <div class="z-50">z-index: 50</div>
 ```
 
-## Spacing Utilities
+## Spacing 间距工具类
 
-### Padding
-
-```html
-<div class="p-4">All sides</div>
-<div class="px-6">Left and right</div>
-<div class="py-3">Top and bottom</div>
-<div class="pt-8">Top</div>
-<div class="pr-4">Right</div>
-<div class="pb-2">Bottom</div>
-<div class="pl-6">Left</div>
-```
-
-### Margin
+### 内边距 (Padding)
 
 ```html
-<div class="m-4">All sides</div>
-<div class="mx-auto">Center horizontally</div>
-<div class="my-6">Top and bottom</div>
-<div class="mt-8">Top</div>
-<div class="-mt-4">Negative top</div>
-<div class="ml-auto">Push to right</div>
+<div class="p-4">四边内边距</div>
+<div class="px-6">左右内边距</div>
+<div class="py-3">上下内边距</div>
+<div class="pt-8">上内边距</div>
+<div class="pr-4">右内边距</div>
+<div class="pb-2">下内边距</div>
+<div class="pl-6">左内边距</div>
 ```
 
-### Space Between
+### 外边距 (Margin)
 
 ```html
-<div class="space-x-4">Horizontal spacing</div>
-<div class="space-y-6">Vertical spacing</div>
+<div class="m-4">四边外边距</div>
+<div class="mx-auto">水平居中</div>
+<div class="my-6">上下外边距</div>
+<div class="mt-8">上外边距</div>
+<div class="-mt-4">负数上外边距</div>
+<div class="ml-auto">推至最右侧</div>
 ```
 
-### Spacing Scale
+### 子元素间距 (Space Between)
+
+```html
+<div class="space-x-4">水平子元素间距</div>
+<div class="space-y-6">垂直子元素间距</div>
+```
+
+### 间距比例尺 (Spacing Scale)
 
 - `0`: 0px
 - `px`: 1px
@@ -160,161 +160,161 @@ Core utility classes for layout, spacing, typography, colors, borders, and shado
 - `16`: 4rem (64px)
 - `24`: 6rem (96px)
 
-## Typography
+## Typography 排版工具类
 
-### Font Size
+### 字体大小 (Font Size)
 
 ```html
-<p class="text-xs">Extra small (12px)</p>
-<p class="text-sm">Small (14px)</p>
-<p class="text-base">Base (16px)</p>
-<p class="text-lg">Large (18px)</p>
-<p class="text-xl">XL (20px)</p>
+<p class="text-xs">Extra small (超小，12px)</p>
+<p class="text-sm">Small (小号，14px)</p>
+<p class="text-base">Base (默认，16px)</p>
+<p class="text-lg">Large (大号，18px)</p>
+<p class="text-xl">XL (超大，20px)</p>
 <p class="text-2xl">2XL (24px)</p>
 <p class="text-3xl">3XL (30px)</p>
 <p class="text-4xl">4XL (36px)</p>
 <p class="text-5xl">5XL (48px)</p>
 ```
 
-### Font Weight
+### 字体粗细 (Font Weight)
 
 ```html
-<p class="font-thin">Thin (100)</p>
-<p class="font-light">Light (300)</p>
-<p class="font-normal">Normal (400)</p>
-<p class="font-medium">Medium (500)</p>
-<p class="font-semibold">Semibold (600)</p>
-<p class="font-bold">Bold (700)</p>
-<p class="font-black">Black (900)</p>
+<p class="font-thin">Thin (极细，100)</p>
+<p class="font-light">Light (细体，300)</p>
+<p class="font-normal">Normal (常规，400)</p>
+<p class="font-medium">Medium (中等，500)</p>
+<p class="font-semibold">Semibold (半粗，600)</p>
+<p class="font-bold">Bold (粗体，700)</p>
+<p class="font-black">Black (极粗，900)</p>
 ```
 
-### Text Alignment
+### 文本对齐 (Text Alignment)
 
 ```html
-<p class="text-left">Left</p>
-<p class="text-center">Center</p>
-<p class="text-right">Right</p>
-<p class="text-justify">Justify</p>
+<p class="text-left">左对齐</p>
+<p class="text-center">居中对齐</p>
+<p class="text-right">右对齐</p>
+<p class="text-justify">两端对齐</p>
 ```
 
-### Line Height
+### 行高 (Line Height)
 
 ```html
-<p class="leading-none">1</p>
-<p class="leading-tight">1.25</p>
-<p class="leading-normal">1.5</p>
-<p class="leading-relaxed">1.75</p>
-<p class="leading-loose">2</p>
+<p class="leading-none">1 (无行距)</p>
+<p class="leading-tight">1.25 (紧凑)</p>
+<p class="leading-normal">1.5 (常规)</p>
+<p class="leading-relaxed">1.75 (宽松)</p>
+<p class="leading-loose">2 (松散)</p>
 ```
 
-### Combined Font Utilities
+### 组合字体工具类
 
 ```html
 <h1 class="text-4xl/tight font-bold">
-  Font size 4xl with tight line height
+  字体大小为 4xl 且带有紧凑行高
 </h1>
 ```
 
-### Text Transform
+### 文本转换 (Text Transform)
 
 ```html
-<p class="uppercase">UPPERCASE</p>
-<p class="lowercase">lowercase</p>
-<p class="capitalize">Capitalize</p>
-<p class="normal-case">Normal</p>
+<p class="uppercase">UPPERCASE (大写)</p>
+<p class="lowercase">lowercase (小写)</p>
+<p class="capitalize">Capitalize (首字母大写)</p>
+<p class="normal-case">Normal (默认)</p>
 ```
 
-### Text Decoration
+### 文本修饰 (Text Decoration)
 
 ```html
-<p class="underline">Underline</p>
-<p class="line-through">Line through</p>
-<p class="no-underline">No underline</p>
+<p class="underline">Underline (下划线)</p>
+<p class="line-through">Line through (删除线)</p>
+<p class="no-underline">No underline (无装饰)</p>
 ```
 
-### Text Overflow
+### 文本溢出 (Text Overflow)
 
 ```html
-<p class="truncate">Truncate with ellipsis...</p>
-<p class="line-clamp-3">Clamp to 3 lines...</p>
-<p class="text-ellipsis overflow-hidden">Ellipsis</p>
+<p class="truncate">用省略号截断超长文本...</p>
+<p class="line-clamp-3">限制显示为 3 行...</p>
+<p class="text-ellipsis overflow-hidden">溢出省略</p>
 ```
 
-## Colors
+## Colors 颜色工具类
 
-### Text Colors
+### 文本颜色 (Text Colors)
 
 ```html
-<p class="text-black">Black</p>
-<p class="text-white">White</p>
-<p class="text-gray-500">Gray 500</p>
-<p class="text-red-600">Red 600</p>
-<p class="text-blue-500">Blue 500</p>
-<p class="text-green-600">Green 600</p>
+<p class="text-black">黑色</p>
+<p class="text-white">白色</p>
+<p class="text-gray-500">灰色 500</p>
+<p class="text-red-600">红色 600</p>
+<p class="text-blue-500">蓝色 500</p>
+<p class="text-green-600">绿色 600</p>
 ```
 
-### Background Colors
+### 背景颜色 (Background Colors)
 
 ```html
-<div class="bg-white">White</div>
-<div class="bg-gray-100">Gray 100</div>
-<div class="bg-blue-500">Blue 500</div>
-<div class="bg-red-600">Red 600</div>
+<div class="bg-white">白色</div>
+<div class="bg-gray-100">灰色 100</div>
+<div class="bg-blue-500">蓝色 500</div>
+<div class="bg-red-600">红色 600</div>
 ```
 
-### Color Scale
+### 颜色级别 (Color Scale)
 
-Each color has 11 shades (50-950):
-- `50`: Lightest
-- `100-400`: Light variations
-- `500`: Base color
-- `600-800`: Dark variations
-- `950`: Darkest
+每种颜色有 11 个色阶 (50-950)：
+- `50`：最浅
+- `100-400`：浅色渐变
+- `500`：基准色
+- `600-800`：深色渐变
+- `950`：最深
 
-### Opacity Modifiers
+### 不透明度修饰符 (Opacity Modifiers)
 
 ```html
-<div class="bg-black/75">75% opacity</div>
-<div class="text-blue-500/30">30% opacity</div>
-<div class="bg-purple-500/[0.87]">87% opacity</div>
+<div class="bg-black/75">75% 不透明度</div>
+<div class="text-blue-500/30">30% 不透明度</div>
+<div class="bg-purple-500/[0.87]">87% 不透明度</div>
 ```
 
-### Gradients
+### 渐变 (Gradients)
 
 ```html
 <div class="bg-gradient-to-r from-blue-500 to-purple-600">
-  Left to right gradient
+  自左向右渐变
 </div>
 <div class="bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500">
-  With via color
+  带有中间过渡色的渐变
 </div>
 ```
 
-Directions: `to-t | to-tr | to-r | to-br | to-b | to-bl | to-l | to-tl`
+方向：`to-t | to-tr | to-r | to-br | to-b | to-bl | to-l | to-tl`
 
-## Borders
+## Borders 边框工具类
 
-### Border Width
-
-```html
-<div class="border">1px all sides</div>
-<div class="border-2">2px all sides</div>
-<div class="border-t">Top only</div>
-<div class="border-r-4">Right 4px</div>
-<div class="border-b-2">Bottom 2px</div>
-<div class="border-l">Left only</div>
-<div class="border-0">No border</div>
-```
-
-### Border Color
+### 边框宽度 (Border Width)
 
 ```html
-<div class="border border-gray-300">Gray</div>
-<div class="border-2 border-blue-500">Blue</div>
-<div class="border border-red-600/50">Red with opacity</div>
+<div class="border">四边均为 1px</div>
+<div class="border-2">四边均为 2px</div>
+<div class="border-t">仅顶部边框</div>
+<div class="border-r-4">右侧边框 4px</div>
+<div class="border-b-2">底部边框 2px</div>
+<div class="border-l">仅左侧边框</div>
+<div class="border-0">无边框</div>
 ```
 
-### Border Radius
+### 边框颜色 (Border Color)
+
+```html
+<div class="border border-gray-300">灰色</div>
+<div class="border-2 border-blue-500">蓝色</div>
+<div class="border border-red-600/50">带透明度的红色</div>
+```
+
+### 圆角半径 (Border Radius)
 
 ```html
 <div class="rounded">0.25rem</div>
@@ -322,42 +322,42 @@ Directions: `to-t | to-tr | to-r | to-br | to-b | to-bl | to-l | to-tl`
 <div class="rounded-lg">0.5rem</div>
 <div class="rounded-xl">0.75rem</div>
 <div class="rounded-2xl">1rem</div>
-<div class="rounded-full">9999px</div>
+<div class="rounded-full">9999px (圆角/胶囊)</div>
 
-<!-- Individual corners -->
-<div class="rounded-t-lg">Top corners</div>
-<div class="rounded-br-xl">Bottom right</div>
+<!-- 单个圆角 -->
+<div class="rounded-t-lg">顶部圆角</div>
+<div class="rounded-br-xl">右下角圆角</div>
 ```
 
-### Border Style
+### 边框样式 (Border Style)
 
 ```html
-<div class="border border-solid">Solid</div>
-<div class="border-2 border-dashed">Dashed</div>
-<div class="border border-dotted">Dotted</div>
+<div class="border border-solid">实线</div>
+<div class="border-2 border-dashed">虚线</div>
+<div class="border border-dotted">点线</div>
 ```
 
-## Shadows
+## Shadows 阴影
 
 ```html
-<div class="shadow-sm">Small</div>
-<div class="shadow">Default</div>
-<div class="shadow-md">Medium</div>
-<div class="shadow-lg">Large</div>
-<div class="shadow-xl">Extra large</div>
-<div class="shadow-2xl">2XL</div>
-<div class="shadow-none">No shadow</div>
+<div class="shadow-sm">小阴影</div>
+<div class="shadow">默认阴影</div>
+<div class="shadow-md">中等阴影</div>
+<div class="shadow-lg">大阴影</div>
+<div class="shadow-xl">超大阴影</div>
+<div class="shadow-2xl">极特大阴影</div>
+<div class="shadow-none">无阴影</div>
 ```
 
-### Colored Shadows
+### 彩色阴影 (Colored Shadows)
 
 ```html
-<div class="shadow-lg shadow-blue-500/50">Blue shadow</div>
+<div class="shadow-lg shadow-blue-500/50">蓝色阴影</div>
 ```
 
-## Width & Height
+## 宽度与高度 (Width & Height)
 
-### Width
+### 宽度 (Width)
 
 ```html
 <div class="w-full">100%</div>
@@ -367,13 +367,13 @@ Directions: `to-t | to-tr | to-r | to-br | to-b | to-bl | to-l | to-tl`
 <div class="w-[500px]">500px</div>
 <div class="w-screen">100vw</div>
 
-<!-- Min/Max width -->
+<!-- 最小/最大宽度 -->
 <div class="min-w-0">min-width: 0</div>
 <div class="max-w-md">max-width: 28rem</div>
 <div class="max-w-screen-xl">max-width: 1280px</div>
 ```
 
-### Height
+### 高度 (Height)
 
 ```html
 <div class="h-full">100%</div>
@@ -381,75 +381,75 @@ Directions: `to-t | to-tr | to-r | to-br | to-b | to-bl | to-l | to-tl`
 <div class="h-64">16rem</div>
 <div class="h-[500px]">500px</div>
 
-<!-- Min/Max height -->
+<!-- 最小/最大高度 -->
 <div class="min-h-screen">min-height: 100vh</div>
 <div class="max-h-96">max-height: 24rem</div>
 ```
 
-## Arbitrary Values
+## 任意值 (Arbitrary Values)
 
-Use square brackets for custom values:
+使用方括号来自定义特殊属性值：
 
 ```html
-<!-- Spacing -->
-<div class="p-[17px]">Custom padding</div>
-<div class="top-[117px]">Custom position</div>
+<!-- 间距 -->
+<div class="p-[17px]">自定义内边距</div>
+<div class="top-[117px]">自定义定位坐标</div>
 
-<!-- Colors -->
-<div class="bg-[#bada55]">Hex color</div>
-<div class="text-[rgb(123,45,67)]">RGB</div>
+<!-- 颜色 -->
+<div class="bg-[#bada55]">十六进制颜色</div>
+<div class="text-[rgb(123,45,67)]">RGB 颜色</div>
 
-<!-- Sizes -->
-<div class="w-[500px]">Custom width</div>
-<div class="text-[22px]">Custom font size</div>
+<!-- 尺寸 -->
+<div class="w-[500px]">自定义宽度</div>
+<div class="text-[22px]">自定义字体大小</div>
 
-<!-- CSS variables -->
-<div class="bg-[var(--brand-color)]">CSS var</div>
+<!-- CSS 变量 -->
+<div class="bg-[var(--brand-color)]">CSS 变量</div>
 
-<!-- Complex values -->
-<div class="grid-cols-[1fr_500px_2fr]">Custom grid</div>
+<!-- 复杂数值 -->
+<div class="grid-cols-[1fr_500px_2fr]">自定义网格</div>
 ```
 
-## Aspect Ratio
+## 宽高比 (Aspect Ratio)
 
 ```html
-<div class="aspect-square">1:1</div>
-<div class="aspect-video">16:9</div>
-<div class="aspect-[4/3]">4:3</div>
+<div class="aspect-square">1:1 正方形</div>
+<div class="aspect-video">16:9 视频比例</div>
+<div class="aspect-[4/3]">4:3 比例</div>
 ```
 
-## Overflow
+## 溢出处理 (Overflow)
 
 ```html
-<div class="overflow-auto">Auto scroll</div>
-<div class="overflow-hidden">Hidden</div>
-<div class="overflow-scroll">Always scroll</div>
-<div class="overflow-x-auto">Horizontal scroll</div>
-<div class="overflow-y-hidden">No vertical scroll</div>
+<div class="overflow-auto">自动滚动</div>
+<div class="overflow-hidden">内容隐藏</div>
+<div class="overflow-scroll">始终显示滚动条</div>
+<div class="overflow-x-auto">水平滚动</div>
+<div class="overflow-y-hidden">禁止垂直滚动</div>
 ```
 
-## Opacity
+## 不透明度 (Opacity)
 
 ```html
-<div class="opacity-0">0%</div>
+<div class="opacity-0">0% (完全透明)</div>
 <div class="opacity-50">50%</div>
 <div class="opacity-75">75%</div>
-<div class="opacity-100">100%</div>
+<div class="opacity-100">100% (完全不透明)</div>
 ```
 
-## Cursor
+## 光标样式 (Cursor)
 
 ```html
-<div class="cursor-pointer">Pointer</div>
-<div class="cursor-wait">Wait</div>
-<div class="cursor-not-allowed">Not allowed</div>
-<div class="cursor-default">Default</div>
+<div class="cursor-pointer">手型 (Pointer)</div>
+<div class="cursor-wait">等待 (Wait)</div>
+<div class="cursor-not-allowed">禁止 (Not allowed)</div>
+<div class="cursor-default">默认 (Default)</div>
 ```
 
-## User Select
+## 文本选择 (User Select)
 
 ```html
-<div class="select-none">No select</div>
-<div class="select-text">Text selectable</div>
-<div class="select-all">Select all</div>
+<div class="select-none">禁止选择</div>
+<div class="select-text">文本可选择</div>
+<div class="select-all">点击全选</div>
 ```
