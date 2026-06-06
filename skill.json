@@ -1,7 +1,7 @@
 {
   "name": "ui-ux-pro-max",
   "displayName": "UI/UX Pro Max",
-  "description": "AI-powered design intelligence with 67 UI styles, 161 color palettes, 57 font pairings, 99 UX guidelines, and 25 chart types across 15+ tech stacks.",
+  "description": "AI 驱动的设计智能工具包，支持跨 15+ 技术栈的 67 种 UI 风格、161 个色板、57 组字体配对、99 条 UX 指南以及 25 种图表类型。",
   "version": "2.5.0",
   "author": "NextLevelBuilder",
   "license": "MIT",
