@@ -79,29 +79,29 @@ const Container = () => <div>内容</div>,HIGH
 - [x] **Step 5: 翻译 UI 样式与框架应用指南** (共 7 个 md 文件)
 
 ### Task 5: 设计数据库 (CSV) 翻译 (P1)
-- [ ] **Step 1: 翻译核心 UI/UX 指南规则数据**  
+- [x] **Step 1: 翻译核心 UI/UX 指南规则数据**  
   翻译 `ux-guidelines.csv` (100 行)、`ui-reasoning.csv` (162 行)、`app-interface.csv` (31 行) 和 `react-performance.csv` (45 行) 里的描述、Do 和 Don't 字段。
-- [ ] **Step 2: 翻译产品及分类配置数据**  
+- [x] **Step 2: 翻译产品及分类配置数据**  
   翻译 `products.csv`、`styles.csv`、`colors.csv`、`typography.csv`、`charts.csv`、`landing.csv` 和 `icons.csv` 里的对应描述性列（保留英文检索键）。
-- [ ] **Step 3: 翻译 17 个框架 stacks 数据**  
-  翻译 `src/ui-ux-pro-max/data/stacks/` 目录下的 17 个 CSV 文件中描述和 Do/Don't 指引。
-- [ ] **Step 4: 翻译大型设计手册数据**  
+- [x] **Step 3: 翻译 17 个框架 stacks 数据**  
+  翻译 `src/ui-ux-pro-max/data/stacks/` 目录下的 17 个 CSV 文件中描述 and Do/Don't 指引。
+- [x] **Step 4: 翻译大型设计手册数据**  
   翻译 `design.csv` (1776 行) 和 `draft.csv` (1779 行) 中每种设计风格下的文本段落和组件设计规范。
 
 ### Task 6: 全局文档与安装平台配置翻译 (P2)
-- [ ] **Step 1: 翻译安装及全局文档**  
+- [x] **Step 1: 翻译安装及全局文档**  
   翻译 `README.md` (513 行) 和 `CLAUDE.md` (98 行) 等。
-- [ ] **Step 2: 翻译技能及平台配置文件**  
+- [x] **Step 2: 翻译技能及平台配置文件**  
   翻译 `skill.json` (41 行) 及 `src/ui-ux-pro-max/templates/platforms/*.json` 的 `description` 部分。
 
 ### Task 7: 资产同步与校验 (P0)
-- [ ] **Step 1: 运行同步衍生脚本对齐数据库**  
+- [x] **Step 1: 运行同步衍生脚本对齐数据库**  
   在核心目录下运行：`python3 src/ui-ux-pro-max/data/_sync_all.py`。
-- [ ] **Step 2: 将 core 目录的全部翻译内容同步到 CLI assets 文件夹**  
+- [x] **Step 2: 将 core 目录的全部翻译内容同步到 CLI assets 文件夹**  
   使用 rsync 复制最新 CSV 到 `cli/assets/` 中。
-- [ ] **Step 3: 运行 CSV 完整性自动化校验**  
+- [x] **Step 3: 运行 CSV 完整性自动化校验**  
   运行 Python 脚本自检 CSV 行列是否对齐。
-- [ ] **Step 4: 校验搜索引擎功能**  
+- [x] **Step 4: 校验搜索引擎功能**  
   执行 `python3 src/ui-ux-pro-max/scripts/search.py` 测试检索。
 
 ---

@@ -6,8 +6,8 @@ Usage: python search.py "<query>" [--domain <domain>] [--stack <stack>] [--max-r
        python search.py "<query>" --design-system [-p "Project Name"]
        python search.py "<query>" --design-system --persist [-p "Project Name"] [--page "dashboard"]
 
-Domains: style, prompt, color, chart, landing, product, ux, typography
-Stacks: html-tailwind, react, nextjs
+Domains: style, prompt, color, chart, landing, product, ux, typography, google-fonts
+Stacks: react, nextjs, vue, svelte, astro, swiftui, react-native, flutter, nuxtjs, nuxt-ui, html-tailwind, shadcn, jetpack-compose, threejs
 
 Persistence (Master + Overrides pattern):
   --persist    Save design system to design-system/MASTER.md
@@ -34,15 +34,15 @@ def format_output(result):
 
     output = []
     if result.get("stack"):
-        output.append(f"## UI Pro Max Stack Guidelines")
-        output.append(f"**Stack:** {result['stack']} | **Query:** {result['query']}")
+        output.append(f"## UI Pro Max 框架指南")
+        output.append(f"**框架：** {result['stack']} | **查询：** {result['query']}")
     else:
-        output.append(f"## UI Pro Max Search Results")
-        output.append(f"**Domain:** {result['domain']} | **Query:** {result['query']}")
-    output.append(f"**Source:** {result['file']} | **Found:** {result['count']} results\n")
+        output.append(f"## UI Pro Max 搜索结果")
+        output.append(f"**领域：** {result['domain']} | **查询：** {result['query']}")
+    output.append(f"**数据源：** {result['file']} | **找到：** {result['count']} 个结果\n")
 
     for i, row in enumerate(result['results'], 1):
-        output.append(f"### Result {i}")
+        output.append(f"### 结果 {i}")
         for key, value in row.items():
             value_str = str(value)
             if len(value_str) > 300:
@@ -57,7 +57,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="UI Pro Max Search")
     parser.add_argument("query", help="Search query")
     parser.add_argument("--domain", "-d", choices=list(CSV_CONFIG.keys()), help="Search domain")
-    parser.add_argument("--stack", "-s", choices=AVAILABLE_STACKS, help="Stack-specific search (html-tailwind, react, nextjs)")
+    parser.add_argument("--stack", "-s", choices=AVAILABLE_STACKS, help=f"Stack-specific search. Available: {', '.join(AVAILABLE_STACKS)}")
     parser.add_argument("--max-results", "-n", type=int, default=MAX_RESULTS, help="Max results (default: 3)")
     parser.add_argument("--json", action="store_true", help="Output as JSON")
     # Design system generation
@@ -87,14 +87,14 @@ if __name__ == "__main__":
         if args.persist:
             project_slug = args.project_name.lower().replace(' ', '-') if args.project_name else "default"
             print("\n" + "=" * 60)
-            print(f"✅ Design system persisted to design-system/{project_slug}/")
-            print(f"   📄 design-system/{project_slug}/MASTER.md (Global Source of Truth)")
+            print(f"✅ 设计系统已成功持久化至 design-system/{project_slug}/")
+            print(f"   📄 design-system/{project_slug}/MASTER.md (全局单一事实来源)")
             if args.page:
                 page_filename = args.page.lower().replace(' ', '-')
-                print(f"   📄 design-system/{project_slug}/pages/{page_filename}.md (Page Overrides)")
+                print(f"   📄 design-system/{project_slug}/pages/{page_filename}.md (页面级覆盖)")
             print("")
-            print(f"📖 Usage: When building a page, check design-system/{project_slug}/pages/[page].md first.")
-            print(f"   If exists, its rules override MASTER.md. Otherwise, use MASTER.md.")
+            print(f"📖 使用：在构建特定页面时，先检查 design-system/{project_slug}/pages/[page].md。")
+            print(f"   如果存在，其规则将覆盖 MASTER.md；如果不存在，则仅使用 MASTER.md。")
             print("=" * 60)
     # Stack search
     elif args.stack:

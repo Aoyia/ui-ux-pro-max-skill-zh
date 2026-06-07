@@ -34,15 +34,15 @@ def format_output(result):
 
     output = []
     if result.get("stack"):
-        output.append(f"## UI Pro Max Stack Guidelines")
-        output.append(f"**Stack:** {result['stack']} | **Query:** {result['query']}")
+        output.append(f"## UI Pro Max 框架指南")
+        output.append(f"**框架：** {result['stack']} | **查询：** {result['query']}")
     else:
-        output.append(f"## UI Pro Max Search Results")
-        output.append(f"**Domain:** {result['domain']} | **Query:** {result['query']}")
-    output.append(f"**Source:** {result['file']} | **Found:** {result['count']} results\n")
+        output.append(f"## UI Pro Max 搜索结果")
+        output.append(f"**领域：** {result['domain']} | **查询：** {result['query']}")
+    output.append(f"**数据源：** {result['file']} | **找到：** {result['count']} 个结果\n")
 
     for i, row in enumerate(result['results'], 1):
-        output.append(f"### Result {i}")
+        output.append(f"### 结果 {i}")
         for key, value in row.items():
             value_str = str(value)
             if len(value_str) > 300:
@@ -87,14 +87,14 @@ if __name__ == "__main__":
         if args.persist:
             project_slug = args.project_name.lower().replace(' ', '-') if args.project_name else "default"
             print("\n" + "=" * 60)
-            print(f"✅ Design system persisted to design-system/{project_slug}/")
-            print(f"   📄 design-system/{project_slug}/MASTER.md (Global Source of Truth)")
+            print(f"✅ 设计系统已成功持久化至 design-system/{project_slug}/")
+            print(f"   📄 design-system/{project_slug}/MASTER.md (全局单一事实来源)")
             if args.page:
                 page_filename = args.page.lower().replace(' ', '-')
-                print(f"   📄 design-system/{project_slug}/pages/{page_filename}.md (Page Overrides)")
+                print(f"   📄 design-system/{project_slug}/pages/{page_filename}.md (页面级覆盖)")
             print("")
-            print(f"📖 Usage: When building a page, check design-system/{project_slug}/pages/[page].md first.")
-            print(f"   If exists, its rules override MASTER.md. Otherwise, use MASTER.md.")
+            print(f"📖 使用：在构建特定页面时，先检查 design-system/{project_slug}/pages/[page].md。")
+            print(f"   如果存在，其规则将覆盖 MASTER.md；如果不存在，则仅使用 MASTER.md。")
             print("=" * 60)
     # Stack search
     elif args.stack:
