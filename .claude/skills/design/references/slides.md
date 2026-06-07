@@ -10,11 +10,11 @@
 
 | 主题 | 文件路径 | 用途 |
 |-------|------|---------|
-| 创建指南 | `references/slides-create.md` | 逐步创建幻灯片的工作流 |
-| 布局模式 | `references/slides-layout-patterns.md` | 幻灯片布局模板与网格系统 |
-| HTML 模板 | `references/slides-html-template.md` | 演示文稿的基础 HTML 结构 |
-| 撰稿公式 | `references/slides-copywriting-formulas.md` | 适用于幻灯片内容的 AIDA、PAS、FAB 公式 |
-| 策略指南 | `references/slides-strategies.md` | 按演示文稿类型细分的上下文策略 |
+| 创建指南 | [slides-create.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/slides-create.md) | 逐步创建幻灯片的工作流 |
+| 布局模式 | [slides-layout-patterns.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/slides-layout-patterns.md) | 幻灯片布局模板与网格系统 |
+| HTML 模板 | [slides-html-template.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/slides-html-template.md) | 演示文稿的基础 HTML 结构 |
+| 撰稿公式 | [slides-copywriting-formulas.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/slides-copywriting-formulas.md) | 适用于幻灯片内容的 AIDA、PAS、FAB 公式 |
+| 策略指南 | [slides-strategies.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/slides-strategies.md) | 按演示文稿类型细分的上下文策略 |
 
 ## 适用场景 (When to Use)
 
@@ -35,8 +35,8 @@
 ## 工作流 (Workflow)
 
 1. 从用户请求中解析演示文稿的类型
-2. 加载 `references/slides-create.md` 获取创建指南
-3. 从 `references/slides-layout-patterns.md` 中选择合适的布局模式
-4. 应用 `references/slides-copywriting-formulas.md` 中的撰稿公式
-5. 使用来自 `references/slides-html-template.md` 的 HTML 模板
-6. 应用 `references/slides-strategies.md` 中的策略
+2. 加载 [slides-create.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/slides-create.md) 获取创建指南
+3. 从 [slides-layout-patterns.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/slides-layout-patterns.md) 中选择合适的布局模式
+4. 应用 [slides-copywriting-formulas.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/slides-copywriting-formulas.md) 中的撰稿公式
+5. 使用来自 [slides-html-template.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/slides-html-template.md) 的 HTML 模板
+6. 应用 [slides-strategies.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/slides-strategies.md) 中的策略

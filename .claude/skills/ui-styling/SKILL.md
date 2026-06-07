@@ -10,16 +10,15 @@ metadata:
 
 # UI 样式设计技能 (UI Styling Skill)
 
-一套综合性技能体系，通过将 shadcn/ui 组件、Tailwind CSS 原子化样式以及基于 Canvas 的视觉设计系统相融合，从而创建出美观且符合无障碍规范的用户界面。
+整合 shadcn/ui 组件库、Tailwind CSS 实用工具优先样式系统以及 Canvas 级视觉合成设计，致力于构建极具设计美感且深度符合 A11y 无障碍标准的现代化用户界面。
 
 ## 参考链接
 
 - shadcn/ui: https://ui.shadcn.com/llms.txt
 - Tailwind CSS: https://tailwindcss.com/docs
 
-## 使用时机
+## 适用场景 (When to Use)
 
-在以下场景使用：
 - 使用基于 React 的框架（Next.js、Vite、Remix、Astro）构建 UI
 - 实现无障碍组件（对话框、表单、表格、导航）
 - 采用原子化（Utility-first）CSS 方式进行样式设计
@@ -28,25 +27,25 @@ metadata:
 - 构建具有一致设计标记（Design tokens）的设计系统
 - 生成视觉设计、海报或品牌物料
 - 快速构建原型并获得即时视觉反馈
-- 增加复杂的 UI 模式（数据表格、图表、命令面板）
+- 引入复杂的 UI 模式（数据表格、图表、命令面板）
 
 ## 核心技术栈
 
-### 组件层：shadcn/ui
-- 通过 Radix UI 基础级组件提供开箱即用的无障碍组件
-- 采用复制粘贴的分发模式（组件直接存放在您的代码库中）
+### 组件层：shadcn/ui（强主张的组件级真理源）
+- 底座基于 Radix UI 无样式原语组件，提供顶级且开箱即用的无障碍体验
+- 倡导代码所有权，组件以源码形式直接注入您的项目中（自由定制，不强锁依赖）
 - TypeScript 优先，具有完整的类型安全保障
 - 提供可组合的组件基底以构建复杂的 UI
 - 采用基于命令行（CLI）的方式进行安装与管理
 
-### 样式层：Tailwind CSS
+### 样式层：Tailwind CSS（原子化实用工具优先样式）
 - 原子化（Utility-first）的 CSS 框架
 - 构建时处理，零运行时开销
 - 移动优先的响应式设计
-- 一致的设计标记（配色方案、间距、字体排版）
+- 一致的设计标记（配色方案、间距、排版比例）
 - 自动消除未使用的 CSS 代码（Dead code elimination）
 
-### 视觉设计层：Canvas
+### Canvas 视觉设计层（博物馆级合成表达）
 - 博物馆级的视觉合成效果
 - 哲学驱动的设计方法
 - 精致的视觉传达
@@ -115,7 +114,7 @@ export default { plugins: [tailwindcss()] }
 
 **包含用法模式、安装说明和组合示例的完整组件目录。**
 
-参见：`references/shadcn-components.md`
+参见：[shadcn-components.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/ui-styling/references/shadcn-components.md)
 
 涵盖以下内容：
 - 表单与输入组件（Button, Input, Select, Checkbox, Date Picker, Form validation 表单验证）
@@ -128,7 +127,7 @@ export default { plugins: [tailwindcss()] }
 
 **主题配置、CSS 变量、暗色模式实现以及组件自定义。**
 
-参见：`references/shadcn-theming.md`
+参见：[shadcn-theming.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/ui-styling/references/shadcn-theming.md)
 
 涵盖以下内容：
 - 结合 next-themes 配置暗色模式
@@ -141,7 +140,7 @@ export default { plugins: [tailwindcss()] }
 
 **ARIA 规范、键盘导航、屏幕阅读器支持以及无障碍组件用法。**
 
-参见：`references/shadcn-accessibility.md`
+参见：[shadcn-accessibility.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/ui-styling/references/shadcn-accessibility.md)
 
 涵盖以下内容：
 - Radix UI 的无障碍特性
@@ -154,7 +153,7 @@ export default { plugins: [tailwindcss()] }
 
 **用于布局、间距、排版、颜色、边框和阴影的核心工具类。**
 
-参见：`references/tailwind-utilities.md`
+参见：[tailwind-utilities.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/ui-styling/references/tailwind-utilities.md)
 
 涵盖以下内容：
 - 布局工具类（Flexbox、Grid、定位）
@@ -168,7 +167,7 @@ export default { plugins: [tailwindcss()] }
 
 **移动优先的断点、响应式工具类以及自适应布局。**
 
-参见：`references/tailwind-responsive.md`
+参见：[tailwind-responsive.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/ui-styling/references/tailwind-responsive.md)
 
 涵盖以下内容：
 - 移动优先（Mobile-first）的设计方法
@@ -182,7 +181,7 @@ export default { plugins: [tailwindcss()] }
 
 **配置文件结构、自定义工具类、插件以及主题扩展。**
 
-参见：`references/tailwind-customization.md`
+参见：[tailwind-customization.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/ui-styling/references/tailwind-customization.md)
 
 涵盖以下内容：
 - 用于自定义标记的 @theme 指令
@@ -197,7 +196,7 @@ export default { plugins: [tailwindcss()] }
 
 **基于 Canvas 的设计哲学、视觉传达原则以及精致的画面合成。**
 
-参见：`references/canvas-design-system.md`
+参见：[canvas-design-system.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/ui-styling/references/canvas-design-system.md)
 
 涵盖以下内容：
 - 设计哲学与方法
@@ -240,17 +239,17 @@ python scripts/tailwind_config_gen.py --colors brand:blue --fonts display:Inter
 ## 参考导航
 
 **组件库**
-- `references/shadcn-components.md` - 完整组件目录
-- `references/shadcn-theming.md` - 主题与定制
-- `references/shadcn-accessibility.md` - 无障碍设计模式
+- [shadcn-components.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/ui-styling/references/shadcn-components.md) - 完整组件目录
+- [shadcn-theming.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/ui-styling/references/shadcn-theming.md) - 主题与定制
+- [shadcn-accessibility.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/ui-styling/references/shadcn-accessibility.md) - 无障碍设计模式
 
 **样式系统**
-- `references/tailwind-utilities.md` - 核心工具类
-- `references/tailwind-responsive.md` - 响应式设计
-- `references/tailwind-customization.md` - 配置与扩展
+- [tailwind-utilities.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/ui-styling/references/tailwind-utilities.md) - 核心工具类
+- [tailwind-responsive.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/ui-styling/references/tailwind-responsive.md) - 响应式设计
+- [tailwind-customization.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/ui-styling/references/tailwind-customization.md) - 配置与扩展
 
 **视觉设计**
-- `references/canvas-design-system.md` - 设计哲学与 Canvas 工作流
+- [canvas-design-system.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/ui-styling/references/canvas-design-system.md) - 设计哲学与 Canvas 工作流
 
 **自动化**
 - `scripts/shadcn_add.py` - 组件安装

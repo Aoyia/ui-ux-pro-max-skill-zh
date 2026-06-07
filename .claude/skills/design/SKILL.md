@@ -10,9 +10,9 @@ metadata:
 
 # 设计 (Design)
 
-统一的设计技能系统：涵盖品牌 (brand)、设计标记 (tokens)、UI设计 (UI)、徽标 (logo)、企业识别系统 (CIP)、演示幻灯片 (slides)、横幅 (banners)、社交媒体图片 (social photos) 及图标 (icons)。
+一站式设计开发技能系统：涵盖品牌体系 (brand)、设计标记 (tokens)、UI 设计 (UI)、徽标 (logo)、企业识别系统 (CIP)、演示幻灯片 (slides)、横幅 (banners)、社交媒体图片 (social photos) 及图标 (icons)。
 
-## 使用时机
+## 适用场景 (When to Use)
 
 - 品牌识别 (Brand identity)、语气与资产管理
 - 设计系统标记 (Design system tokens) 与规格定义
@@ -23,7 +23,7 @@ metadata:
 - 社交媒体、广告、网页及印刷的横幅 (Banner) 设计
 - Instagram、Facebook、LinkedIn、Twitter、Pinterest、TikTok 的社交媒体图片设计
 
-## 子技能路由
+## 技能路由 (Skill Routing)
 
 | 任务 | 子技能 | 详情 |
 |------|-----------|---------|
@@ -51,7 +51,13 @@ python3 ~/.claude/skills/design/scripts/logo/search.py "tech startup modern" --d
 
 ```bash
 python3 ~/.claude/skills/design/scripts/logo/search.py "minimalist clean" --domain style # 搜索极简干净的风格
+```
+
+```bash
 python3 ~/.claude/skills/design/scripts/logo/search.py "tech professional" --domain color # 搜索科技专业配色
+```
+
+```bash
 python3 ~/.claude/skills/design/scripts/logo/search.py "healthcare medical" --domain industry # 搜索医疗健康行业
 ```
 
@@ -60,13 +66,16 @@ python3 ~/.claude/skills/design/scripts/logo/search.py "healthcare medical" --do
 **务必**在生成输出的 Logo 图片时使用白色背景。
 
 ```bash
-python3 ~/.claude/skills/design/scripts/logo/generate.py --brand "TechFlow" --style minimalist --industry tech # 为TechFlow生成极简风格科技行业Logo
-python3 ~/.claude/skills/design/scripts/logo/generate.py --prompt "coffee shop vintage badge" --style vintage # 为复古风格咖啡店徽章生成Logo
+python3 ~/.claude/skills/design/scripts/logo/generate.py --brand "TechFlow" --style minimalist --industry tech # 为 TechFlow 生成极简风格科技行业 Logo
 ```
 
-**重要提示：**当脚本运行时发生错误，请尝试直接修复它们。
+```bash
+python3 ~/.claude/skills/design/scripts/logo/generate.py --prompt "coffee shop vintage badge" --style vintage # 为复古风格咖啡店徽章生成 Logo
+```
 
-生成完成后，**务必**通过 `AskUserQuestion` 询问用户是否生成 HTML 预览。若用户同意，调用 `/ui-ux-pro-max` 以展示画廊。
+**开发提示**：若脚本在执行期间发生报错，请优先进行代码级排错与修复。
+
+生成完成后，**必须**调用 `AskUserQuestion` 交互工具，询问用户是否需要生成 HTML 预览。若用户确认，调用 `/ui-ux-pro-max` 技能以画廊形式在浏览器中呈现。
 
 ## 企业识别系统设计 (CIP Design - 内置)
 
@@ -82,8 +91,17 @@ python3 ~/.claude/skills/design/scripts/cip/search.py "tech startup" --cip-brief
 
 ```bash
 python3 ~/.claude/skills/design/scripts/cip/search.py "business card letterhead" --domain deliverable # 搜索名片与信头交付物
+```
+
+```bash
 python3 ~/.claude/skills/design/scripts/cip/search.py "luxury premium elegant" --domain style # 搜索奢华优雅风格
+```
+
+```bash
 python3 ~/.claude/skills/design/scripts/cip/search.py "hospitality hotel" --domain industry # 搜索酒店餐饮行业
+```
+
+```bash
 python3 ~/.claude/skills/design/scripts/cip/search.py "office reception" --domain mockup # 搜索办公室前台效果图
 ```
 
@@ -92,13 +110,19 @@ python3 ~/.claude/skills/design/scripts/cip/search.py "office reception" --domai
 ```bash
 # 带有 Logo 的生成（推荐）
 python3 ~/.claude/skills/design/scripts/cip/generate.py --brand "TopGroup" --logo /path/to/logo.png --deliverable "business card" --industry "consulting"
+```
 
+```bash
 # 生成全套 CIP 交付物
 python3 ~/.claude/skills/design/scripts/cip/generate.py --brand "TopGroup" --logo /path/to/logo.png --industry "consulting" --set
+```
 
+```bash
 # 使用 Pro 模型（4K 文本渲染）
 python3 ~/.claude/skills/design/scripts/cip/generate.py --brand "TopGroup" --logo logo.png --deliverable "business card" --model pro
+```
 
+```bash
 # 不带 Logo 的生成
 python3 ~/.claude/skills/design/scripts/cip/generate.py --brand "TechFlow" --deliverable "business card" --no-logo-prompt
 ```
@@ -111,7 +135,7 @@ python3 ~/.claude/skills/design/scripts/cip/generate.py --brand "TechFlow" --del
 python3 ~/.claude/skills/design/scripts/cip/render-html.py --brand "TopGroup" --industry "consulting" --images /path/to/cip-output
 ```
 
-**小贴士：**如果品牌尚未生成 Logo，请先按照上文的 "Logo 设计" 部分生成。
+**设计贴士**：如果该品牌尚未生成专属 Logo，请先参考前文的“Logo 设计”流程完成标志的生成。
 
 ## 幻灯片演示文稿 (Slides - 内置)
 
@@ -123,25 +147,25 @@ python3 ~/.claude/skills/design/scripts/cip/render-html.py --brand "TopGroup" --
 
 | 主题 | 文件 |
 |-------|------|
-| 创建指南 (Creation Guide) | `references/slides-create.md` |
-| 布局模式 (Layout Patterns) | `references/slides-layout-patterns.md` |
-| HTML 模板 (HTML Template) | `references/slides-html-template.md` |
-| 文案写作 (Copywriting) | `references/slides-copywriting-formulas.md` |
-| 演示策略 (Strategies) | `references/slides-strategies.md` |
+| 创建指南 (Creation Guide) | [slides-create.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/slides-create.md) |
+| 布局模式 (Layout Patterns) | [slides-layout-patterns.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/slides-layout-patterns.md) |
+| HTML 模板 (HTML Template) | [slides-html-template.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/slides-html-template.md) |
+| 文案写作 (Copywriting) | [slides-copywriting-formulas.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/slides-copywriting-formulas.md) |
+| 演示策略 (Strategies) | [slides-strategies.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/slides-strategies.md) |
 
 ## 横幅设计 (Banner Design - 内置)
 
 横跨社交、广告、网页和印刷的 22 种艺术指导风格。使用 `frontend-design`、`ai-artist`、`ai-multimodal`、`chrome-devtools` 技能。
 
-阅读 `references/banner-sizes-and-styles.md` 以获取完整的尺寸和风格参考。
+阅读 [banner-sizes-and-styles.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/banner-sizes-and-styles.md) 以获取完整的尺寸和风格参考。
 
 ### 横幅：工作流程
 
-1. **收集需求**：通过 `AskUserQuestion` 收集 —— 目的、平台、内容、品牌、风格、数量
-2. **意向调研**：激活 `ui-ux-pro-max`，在 Pinterest 上寻找设计参考
-3. **方案设计**：使用 `frontend-design` 技能创建 HTML/CSS 横幅，使用 `ai-artist`/`ai-multimodal` 生成视觉元素
-4. **横幅导出**：使用 `chrome-devtools` 技能在准确尺寸下截图并导出为 PNG
-5. **展示迭代**：并排展示所有选项，根据反馈进行迭代
+1. **需求交互收集**：使用 `AskUserQuestion` 工具交互收集：设计诉求、发布平台、文案内容、品牌定位、视觉风格及产出数量。
+2. **设计意向与灵感检索**：激活 `/ui-ux-pro-max` 技能，通过 Pinterest 检索相关的成熟设计进行参考。
+3. **原型编码与视觉生成**：使用 `/frontend-design` 技能搭建 HTML/CSS 横幅骨架，并结合 `/ai-artist` 或 `/ai-multimodal` 生成适配的视觉核心资产。
+4. **精确截图导出**：调用 `/chrome-devtools` 技能在准确的物理尺寸下进行区域截图，导出为高保真 PNG 图片。
+5. **展示迭代**：并排展示所有选项，根据反馈进行迭代。
 
 ### 横幅：快速尺寸参考
 
@@ -184,14 +208,20 @@ python3 ~/.claude/skills/design/scripts/cip/render-html.py --brand "TopGroup" --
 
 ```bash
 python3 ~/.claude/skills/design/scripts/icon/generate.py --prompt "settings gear" --style outlined # 生成线框风格设置齿轮图标
+```
+
+```bash
 python3 ~/.claude/skills/design/scripts/icon/generate.py --prompt "shopping cart" --style filled --color "#6366F1" # 生成填充风格靛蓝色购物车图标
+```
+
+```bash
 python3 ~/.claude/skills/design/scripts/icon/generate.py --name "dashboard" --category navigation --style duotone # 生成导航分类的双色调仪表盘图标
 ```
 
 ### 图标：批量生成变体
 
 ```bash
-python3 ~/.claude/skills/design/scripts/icon/generate.py --prompt "cloud upload" --batch 4 --output-dir ./icons # 为云上传生成4个变体图标并输出至./icons
+python3 ~/.claude/skills/design/scripts/icon/generate.py --prompt "cloud upload" --batch 4 --output-dir ./icons # 为云上传生成 4 个变体图标并输出至 ./icons
 ```
 
 ### 图标：多尺寸导出
@@ -218,18 +248,18 @@ python3 ~/.claude/skills/design/scripts/icon/generate.py --prompt "user profile"
 
 多平台社交媒体图像设计：利用 HTML/CSS 编写样式并导出截图。使用 `ui-ux-pro-max`、`brand`、`design-system`、`chrome-devtools` 技能。
 
-阅读 `references/social-photos-design.md` 获取关于尺寸、模板和最佳实践的详细指导。
+阅读 [social-photos-design.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/social-photos-design.md) 获取关于尺寸、模板和最佳实践的详细指导。
 
 ### 社交媒体图片：工作流程
 
-1. **任务编排**：使用 `project-management` 技能创建待办任务；为独立工作派遣并行子代理
-2. **需求分析**：解析提示词中的主题、平台、风格、品牌上下文和内容元素
-3. **概念构思**：构思 3-5 个设计概念，通过 `AskUserQuestion` 展示给用户
-4. **编码设计**：调用 `/ckm:brand` -> `/ckm:design-system` -> 随机调用 `/ck:ui-ux-pro-max` 或 `/ck:frontend-design` 进行设计；为每个概念按尺寸编写 HTML
-5. **图片导出**：使用 `chrome-devtools` 或 Playwright 进行截图，输出精确像素（以 2x 设备缩放因子 `deviceScaleFactor` 导出）
-6. **视觉校验**：使用 Chrome 开发者工具或 `chrome-devtools` 技能视觉检查导出的设计，修复布局或样式问题并重新导出
-7. **成果汇报**：将包含设计决定的总结报告写入 `plans/reports/` 目录下
-8. **文件整理**：调用 `assets-organizing` 技能整理导出的文件和报告
+1. **任务编排**：使用 `project-management` 技能创建待办任务；为独立工作派遣并行子代理。
+2. **需求分析**：解析提示词中的主题、平台、风格、品牌上下文和内容元素。
+3. **概念构思**：构思 3-5 个设计概念，通过 `AskUserQuestion` 展示给用户。
+4. **编码设计**：调用 `/ckm:brand` -> `/ckm:design-system` -> 随机调用 `/ck:ui-ux-pro-max` 或 `/ck:frontend-design` 进行设计；为每个概念按尺寸编写 HTML。
+5. **图片导出**：使用 `chrome-devtools` 或 Playwright 进行截图，输出精确像素（以 2x 设备缩放因子 `deviceScaleFactor` 导出）。
+6. **视觉校验**：使用 Chrome 开发者工具或 `chrome-devtools` 技能视觉检查导出的设计，修复布局或样式问题并重新导出。
+7. **成果汇报**：将包含设计决定的总结报告写入 `plans/reports/` 目录下。
+8. **文件整理**：调用 `assets-organizing` 技能整理导出的文件和报告。
 
 ### 社交媒体图片：核心尺寸
 
@@ -244,37 +274,37 @@ python3 ~/.claude/skills/design/scripts/icon/generate.py --prompt "user profile"
 
 ### 完整的品牌包装方案
 
-1. **徽标** → 使用 `scripts/logo/generate.py` 生成 Logo 变体
-2. **企业识别系统 (CIP)** → 使用 `scripts/cip/generate.py --logo ...` 创建交付物效果图
-3. **演示文稿** → 阅读 `references/slides-create.md` 以构建商业路演幻灯片
+1. **徽标** → 使用 `scripts/logo/generate.py` 生成 Logo 变体。
+2. **企业识别系统 (CIP)** → 使用 `scripts/cip/generate.py --logo ...` 创建交付物效果图。
+3. **演示文稿** → 阅读 [slides-create.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/slides-create.md) 以构建商业路演幻灯片。
 
 ### 新设计系统搭建
 
-1. **品牌** (基于 brand 技能) → 定义配色方案、字体排版以及品牌语气
-2. **标记** (基于 design-system 技能) → 创建语义化 Token 图层
-3. **实现** (基于 ui-styling 技能) → 配置 Tailwind 和 shadcn/ui
+1. **品牌** (基于 brand 技能) → 定义配色方案、字体排版以及品牌语气。
+2. **标记** (基于 design-system 技能) → 创建语义化 Token 图层。
+3. **实现** (基于 ui-styling 技能) → 配置 Tailwind 和 shadcn/ui。
 
 ## 参考文档 (References)
 
 | 主题 | 文件 |
 |-------|------|
-| 设计路由导航 (Design Routing) | `references/design-routing.md` |
-| Logo 设计指南 (Logo Design Guide) | `references/logo-design.md` |
-| Logo 风格样式 (Logo Styles) | `references/logo-style-guide.md` |
-| Logo 色彩心理学 (Logo Colors) | `references/logo-color-psychology.md` |
-| Logo 提示词工程 (Logo Prompts) | `references/logo-prompt-engineering.md` |
-| CIP 设计指南 (CIP Design Guide) | `references/cip-design.md` |
-| CIP 交付物指南 (CIP Deliverables) | `references/cip-deliverable-guide.md` |
-| CIP 风格样式 (CIP Styles) | `references/cip-style-guide.md` |
-| CIP 提示词工程 (CIP Prompts) | `references/cip-prompt-engineering.md` |
-| 幻灯片创建 (Slides Create) | `references/slides-create.md` |
-| 幻灯片布局 (Slides Layouts) | `references/slides-layout-patterns.md` |
-| 幻灯片 HTML 模板 (Slides Template) | `references/slides-html-template.md` |
-| 幻灯片文案 (Slides Copy) | `references/slides-copywriting-formulas.md` |
-| 幻灯片战略 (Slides Strategy) | `references/slides-strategies.md` |
-| 横幅尺寸与风格 (Banner Sizes & Styles) | `references/banner-sizes-and-styles.md` |
-| 社交媒体图片指南 (Social Photos Guide) | `references/social-photos-design.md` |
-| 图标设计指南 (Icon Design Guide) | `references/icon-design.md` |
+| 设计路由导航 (Design Routing) | [design-routing.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/design-routing.md) |
+| Logo 设计指南 (Logo Design Guide) | [logo-design.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/logo-design.md) |
+| Logo 风格样式 (Logo Styles) | [logo-style-guide.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/logo-style-guide.md) |
+| Logo 色彩心理学 (Logo Colors) | [logo-color-psychology.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/logo-color-psychology.md) |
+| Logo 提示词 engineering (Logo Prompts) | [logo-prompt-engineering.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/logo-prompt-engineering.md) |
+| CIP 设计指南 (CIP Design Guide) | [cip-design.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/cip-design.md) |
+| CIP 交付物指南 (CIP Deliverables) | [cip-deliverable-guide.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/cip-deliverable-guide.md) |
+| CIP 风格样式 (CIP Styles) | [cip-style-guide.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/cip-style-guide.md) |
+| CIP 提示词 engineering (CIP Prompts) | [cip-prompt-engineering.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/cip-prompt-engineering.md) |
+| 幻灯片创建 (Slides Create) | [slides-create.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/slides-create.md) |
+| 幻灯片布局 (Slides Layouts) | [slides-layout-patterns.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/slides-layout-patterns.md) |
+| 幻灯片 HTML 模板 (Slides Template) | [slides-html-template.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/slides-html-template.md) |
+| 幻灯片文案 (Slides Copy) | [slides-copywriting-formulas.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/slides-copywriting-formulas.md) |
+| 幻灯片战略 (Slides Strategy) | [slides-strategies.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/slides-strategies.md) |
+| 横幅尺寸与风格 (Banner Sizes & Styles) | [banner-sizes-and-styles.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/banner-sizes-and-styles.md) |
+| 社交媒体图片指南 (Social Photos Guide) | [social-photos-design.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/social-photos-design.md) |
+| 图标设计指南 (Icon Design Guide) | [icon-design.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/icon-design.md) |
 
 ## 脚本 (Scripts)
 
@@ -298,5 +328,5 @@ pip install google-genai pillow
 
 ## 集成与协作
 
-**外部子技能：** brand (品牌)、design-system (设计系统)、ui-styling (UI样式)
+**外部子技能：** brand (品牌)、design-system (设计系统)、ui-styling (UI 样式)
 **关联技能：** frontend-design (前端设计)、ui-ux-pro-max (UI/UX 智能设计)、ai-multimodal (AI 多模态)、chrome-devtools (Chrome 开发者工具)

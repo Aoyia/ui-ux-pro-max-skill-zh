@@ -5,315 +5,315 @@ description: "UI/UX design intelligence for web and mobile. Includes 50+ styles,
 
 # UI/UX Pro Max - 设计智能 (Design Intelligence)
 
-适用于 Web 和移动端应用的全面设计指南。包含 50+ 种风格、161 种配色方案、57 种字体搭配、161 种带有推导逻辑规则的产品类型、99 条 UX 指南以及涵盖 10 种技术栈的 25 种图表类型。支持基于优先级推荐的检索数据库。
+适用于 Web 与移动端应用的全面设计智能指南。包含 50+ 种前沿 UI 风格、161 套专业色板、57 组经典字体配对、161 种集成商业决策推导逻辑的产品原型模式、99 条顶级 UX 指导原则，以及横跨 10 种技术栈的 25 类数据可视化图表。支持按规则优先级自动匹配的轻量级检索数据库。
 
 ## 适用场景 (When to Apply)
 
-当任务涉及 **UI 结构、视觉设计决策、交互模式或用户体验质量控制**时，应使用此 Skill。
+当任务涉及 **UI 结构、视觉设计决策、交互模式或用户体验质量控制** 时，应使用此 Skill。
 
 ### 必须使用 (Must Use)
 
-在以下情况下，必须调用此 Skill：
+在以下场景中，必须调用此技能：
 
-- 设计新页面（落地页、仪表盘、管理后台、SaaS、移动端 App）
-- 创建或重构 UI 组件（按钮、模态框、表单、表格、图表等）
-- 选择配色方案、排版系统、间距标准或布局系统
-- 针对用户体验、无障碍或视觉一致性审查 UI 代码
-- 实现导航结构、动画效果或响应式行为
-- 做出产品级的设计决策（风格、信息层级、品牌表达）
-- 提升界面的感知质量、清晰度或可用性
+- 设计新的页面（Landing Page、Dashboard、Admin 后台、SaaS、移动端 App）
+- 创建或重构 UI 组件（按钮、弹窗、表单、表格、图表等）
+- 选择配色方案、字体系统、间距规范或布局体系
+- 审查 UI 代码的用户体验、可访问性 (A11y) 或视觉一致性
+- 实现导航结构、过渡动效或响应式布局
+- 制定产品级的设计决策（风格偏好、信息层级、品牌调性传达）
+- 提升界面的感知质量 (Perceived Quality)、清晰度或易用性
 
 ### 推荐使用 (Recommended)
 
-在以下情况下，推荐使用此 Skill：
+在以下场景中，强烈建议使用此技能：
 
-- UI 看起来“不够专业”但具体原因不明
-- 收到关于可用性或体验的反馈
-- 发布前进行 UI 质量优化
-- 对齐跨平台设计（Web / iOS / Android）
-- 构建设计系统或可重用组件库
+- 觉得 UI 视觉效果“不够专业”，但具体原因不明确时
+- 收到可用性或交互体验方面的改进反馈时
+- 项目上线前的 UI 走查与细节调优 (UI Polish)
+- 需要多端统一设计（Web / iOS / Android）时
+- 构建设计系统 (Design System) 或可复用组件库时
 
-### 跳过 (Skip)
+### 无需使用 (Skip)
 
-在以下情况下，不需要此 Skill：
+在以下场景中，无需调用此技能：
 
-- 纯后端逻辑开发
-- 仅涉及 API 或数据库设计
-- 与界面无关的性能优化
-- 基础设施或 DevOps 工作
-- 非视觉脚本或自动化任务
+- 纯后端业务逻辑开发
+- 仅涉及 API 或数据库结构设计
+- 与界面呈现完全无关的底层性能调优
+- 基础设施搭建或 DevOps 工作
+- 纯文本脚本或非视觉类自动化任务
 
-**决策标准 (Decision criteria)**：如果任务将改变功能的**外观、感觉、动效或交互方式**，则应使用此 Skill。
+**核心判定准则**：只要任务会影响界面的**视觉呈现（看起来如何）、用户体验（用起来如何）、动效展示（如何运动）或交互逻辑（如何响应）**，即必须调用此技能。
 
-## 按优先级划分的规则类别 (Rule Categories by Priority)
+## 按优先级排序的规则类别
 
-*供人类/AI 参考：请按照优先级 1→10 决定首先关注哪个规则类别；需要时使用 `--domain <Domain>` 来查询细节。脚本不会读取此表格。*
+*注：本表供开发人员与 AI 查阅，用以明确 1→10 级规则的关注优先级；详细细则请使用 `--domain <Domain>` 命令检索。脚本本身不解析此表。*
 
-| 优先级 | 规则类别 | 影响程度 | 领域 (Domain) | 关键检查项（必须具备） | 应避免的反面模式 |
+| 优先级 | 类别 | 影响度 | 领域 | 关键检查项 (必须满足) | 反面模式 (避免使用) |
 |----------|----------|--------|--------|------------------------|------------------------|
-| 1 | 无障碍可访问性 (Accessibility) | 严重 (CRITICAL) | `ux` | 对比度 4.5:1、Alt 文本、键盘导航、Aria 标签 | 移除焦点环、没有标签的纯图标按钮 |
-| 2 | 触控与交互 (Touch & Interaction) | 严重 (CRITICAL) | `ux` | 最小尺寸 44×44px、8px+ 间距、加载反馈 | 仅依赖悬停操作、瞬时状态改变 (0ms) |
-| 3 | 性能表现 (Performance) | 高 (HIGH) | `ux` | WebP/AVIF、延迟加载、预留空间 (CLS < 0.1) | 布局抖动、累计布局偏移 (CLS) |
-| 4 | 风格选择 (Style Selection) | 高 (HIGH) | `style`, `product` | 匹配产品类型、一致性、SVG 图标（无表情符号） | 随机混用扁平与拟物、Emoji 表情用作图标 |
-| 5 | 布局与响应式 (Layout & Responsive) | 高 (HIGH) | `ux` | 移动端优先断点、视口 meta、无水平滚动 | 水平滚动、固定像素 container 宽度、禁用缩放 |
-| 6 | 排版与色彩 (Typography & Color) | 中 (MEDIUM) | `typography`, `color` | 基础 16px、行高 1.5、语义化颜色 Token | 正文文本 < 12px、灰底灰字、组件内硬编码 Hex 值 |
-| 7 | 动画效果 (Animation) | 中 (MEDIUM) | `ux` | 时长 150–300ms、动效传达意图、空间连续性 | 仅作装饰的动画、动画化宽/高、不支持减弱动态效果 |
-| 8 | 表单与反馈 (Forms & Feedback) | 中 (MEDIUM) | `ux` | 可见标签、邻近字段的错误提示、帮助文本、渐进式呈现 | 仅有占位符标签、错误仅显示在顶部、一开始呈现过多内容 |
-| 9 | 导航模式 (Navigation Patterns) | 高 (HIGH) | `ux` | 可预测的返回、底部导航 ≤5 个、深度链接 | 导航项过载、损坏的返回行为、无深度链接 |
-| 10 | 图表与数据 (Charts & Data) | 低 (LOW) | `chart` | 图例、工具提示、无障碍配色 | 仅依赖颜色来表达数据含义 |
+| 1 | 无障碍合规性 (Accessibility) | 严重 (CRITICAL) | `ux` | 对比度 4.5:1、Alt 文本、键盘导航、Aria 标签 | 强行移除焦点环、使用无标签的纯图标按钮 |
+| 2 | 触控与交互 (Touch & Interaction) | 严重 (CRITICAL) | `ux` | 最小尺寸 44×44px、8px+ 间距、加载状态反馈 | 仅依赖悬停 (hover)、瞬间状态切换 (0ms) |
+| 3 | 性能与加载 (Performance) | 高 (HIGH) | `ux` | WebP/AVIF、延迟加载、保留空间 (CLS < 0.1) | 布局抖动、累积布局偏移 (CLS) |
+| 4 | 界面风格适配 (Style Selection) | 高 (HIGH) | `style`, `product` | 匹配产品类型、风格一致性、使用 SVG 图标 | 随机混搭扁平与拟物风、使用 Emoji 作为图标 |
+| 5 | 布局与响应式 (Layout & Responsive) | High (HIGH) | `ux` | 移动优先断点、视口 meta 标签、无水平滚动 | 产生水平滚动条、硬编码 px 容器宽度、禁用缩放 |
+| 6 | 排版与色彩 (Typography & Color) | 中 (MEDIUM) | `typography`, `color` | 正文字体 ≥16px、行高 1.5、语义化颜色 Token | 正文字体小于 12px、灰底灰字、在组件中硬编码十六进制颜色值 |
+| 7 | 动效与过渡 (Animation) | 中 (MEDIUM) | `ux` | 时长 150–300ms、动效传达意图、空间连续性 | 仅作点缀的冗余动画、对宽/高做过渡、不支持减弱动态效果 (reduced-motion) |
+| 8 | 表单与反馈 (Forms & Feedback) | 中 (MEDIUM) | `ux` | 可见标签、就近字段错误提示、渐进式呈现 | 仅使用占位符作标签、错误仅堆叠在顶部、初始展示过多字段 |
+| 9 | 导航与层级 (Navigation Patterns) | 高 (HIGH) | `ux` | 可预测的返回、底部导航 ≤5 个、支持深层链接 | 导航项过载、返回行为混乱、缺少深层链接支持 |
+| 10 | 图表与数据 (Charts & Data) | 低 (LOW) | `chart` | 图例清晰、悬停工具提示、无障碍色彩区分 | 仅依靠颜色传达数据维度与含义 |
 
-## Quick Reference
+## 快速参考指南
 
-### 1. Accessibility (CRITICAL)
+### 1. 无障碍合规性 Accessibility (CRITICAL)
 
-- `color-contrast` - 普通文本的对比度至少为 4.5:1（大文本为 3:1）（参考 Material Design）
-- `focus-states` - 交互元素上必须有清晰可见的焦点环（2–4px；参考 Apple HIG, MD）
-- `alt-text` - 为有实际意义的图片提供描述性的 alt 文本
-- `aria-labels` - 为纯图标按钮提供 `aria-label`；在原生应用中使用 `accessibilityLabel`（参考 Apple HIG）
-- `keyboard-nav` - 键盘 Tab 键的聚焦顺序应与视觉顺序一致；提供完整的键盘支持（参考 Apple HIG）
-- `form-labels` - 使用带有 `for` 属性的 label 标签与输入框关联
-- `skip-links` - 为键盘用户提供“跳过至主要内容”的快捷链接
-- `heading-hierarchy` - 标题级别应按 h1→h6 顺序递增，不能跳过级别
-- `color-not-only` - 不要仅通过颜色来传达信息（应辅以图标或文字说明）
-- `dynamic-type` - 支持系统文字缩放；避免文本变大时发生截断（参考 Apple Dynamic Type, MD）
-- `reduced-motion` - 尊重用户的“减弱动态效果”设置；在用户要求时减少或禁用动画（参考 Apple Reduced Motion API, MD）
-- `voiceover-sr` - 提供有意义的 `accessibilityLabel` / `accessibilityHint`；为 VoiceOver / 屏幕阅读器保持逻辑清晰的朗读顺序（参考 Apple HIG, MD）
-- `escape-routes` - 在模态框和多步骤流程中提供取消或返回的出口路径（参考 Apple HIG）
-- `keyboard-shortcuts` - 保留系统和辅助功能的默认快捷键；为拖拽操作提供键盘替代方案（参考 Apple HIG）
+- `color-contrast` —— 普通正文的对比度至少达到 4.5:1（大号文本为 3:1）；设计时可参考 Material Design 规范
+- `focus-states` —— 交互元素上必须有清晰可见的焦点环（建议 2–4px，参考 Apple HIG 与 Material Design）
+- `alt-text` —— 为具有实际信息含义的图片提供准确且描述性的 `alt` 属性
+- `aria-labels` —— 针对仅包含图标的按钮必须提供 `aria-label` 属性；在移动端原生开发中对应 `accessibilityLabel`（参考 Apple HIG）
+- `keyboard-nav` —— 键盘 Tab 键焦点切换顺序应与视觉布局顺序一致，提供完整的键盘无障碍通道支持（参考 Apple HIG）
+- `form-labels` —— 使用带有 `for` 属性的 `label` 标签与输入框显式关联
+- `skip-links` —— 为键盘操作用户提供“跳过至主要内容 (Skip to content)”的快捷导航链接
+- `heading-hierarchy` —— 严格遵循 `h1` → `h6` 的阶梯级标题顺序，切勿越级使用
+- `color-not-only` —— 绝不能仅通过颜色差异来传达信息（应结合图标或文本补充说明）
+- `dynamic-type` —— 完美适配系统级字体缩放，确保文字放大时不会发生布局截断（参考 Apple Dynamic Type 与 Material Design）
+- `reduced-motion` —— 适配 `prefers-reduced-motion` 属性，当用户开启减弱动画偏好时，自动简化或禁用非必要动效（参考 Apple Reduced Motion API，MD）
+- `voiceover-sr` —— 提供具有明确现实意义的 `accessibilityLabel` 与 `accessibilityHint`，为屏幕阅读器 (VoiceOver) 规划合理的朗读顺序（参考 Apple HIG，MD）
+- `escape-routes` —— 在弹窗模态框与多步骤流程中，始终提供清晰的“取消”、“返回”或关闭的物理出口（参考 Apple HIG）
+- `keyboard-shortcuts` —— 保留系统默认和辅助技术专用的快捷键，为拖拽等复杂手势提供键盘替代操作（参考 Apple HIG）
 
-### 2. Touch & Interaction (CRITICAL)
+### 2. 触控体验与交互响应 Touch & Interaction (CRITICAL)
 
-- `touch-target-size` - 最小触控热区为 44×44pt (Apple) / 48×48dp (Material)；如有必要，可将点击热区扩展至视觉边界之外
-- `touch-spacing` - 触控目标之间至少保持 8px/8dp 的间距（参考 Apple HIG, MD）
-- `hover-vs-tap` - 核心交互使用点击/轻触触发；不要仅依赖悬停操作 (hover)
-- `loading-buttons` - 在异步操作期间禁用按钮；显示加载动画 (spinner) 或进度条
-- `error-feedback` - 在发生问题的地方邻近处展示清晰的错误提示信息
-- `cursor-pointer` - 为可点击元素添加 `cursor-pointer` 样式（Web 端）
-- `gesture-conflicts` - 避免在主要内容区域使用水平滑动操作；优先使用垂直滚动
-- `tap-delay` - 使用 `touch-action: manipulation` 来消除 300ms 的点击延迟（Web 端）
-- `standard-gestures` - 始终一致地使用平台标准手势，不要重新定义其含义（例如：侧滑返回、捏合缩放）（参考 Apple HIG）
-- `system-gestures` - 不要阻碍系统手势操作（如控制中心、侧滑返回等）（参考 Apple HIG）
-- `press-feedback` - 点击时提供明确的视觉反馈（如涟漪效果/高亮；参考 MD 状态层）
-- `haptic-feedback` - 在确认和重要操作时使用触觉反馈，但要避免滥用（参考 Apple HIG）
-- `gesture-alternative` - 不要依赖仅手势触发的交互；对于核心操作，必须始终提供可见的常规控件
-- `safe-area-awareness` - 核心触控目标必须避开刘海屏、动态岛、底部手势条和屏幕边缘
-- `no-precision-required` - 避免要求用户在极小的图标或狭窄的边缘上进行像素级的精准点击
-- `swipe-clarity` - 滑动操作必须提供清晰的视觉线索或提示（如箭头、标签、新手引导）
-- `drag-threshold` - 在开始拖拽前设置移动阈值，以避免用户的误触拖动
+- `touch-target-size` —— 触控目标尺寸最小为 44×44pt (Apple) / 48×48dp (Material)；必要时可通过负外边距或填充将触控热区扩展至视觉边界外
+- `touch-spacing` —— 触控目标之间至少保持 8px/8dp 的物理间距，避免误触（参考 Apple HIG，MD）
+- `hover-vs-tap` —— 将点击/触控作为第一交互现场；绝不能将关键操作仅绑定在悬停 (Hover) 状态上
+- `loading-buttons` —— 在异步操作（如接口请求）执行期间禁用提交按钮，并展示加载中 (Spinner) 或进度状态
+- `error-feedback` —— 在校验未通过的表单字段就近位置，显示清晰且具体的错误提示信息
+- `cursor-pointer` —— 为 Web 端所有可交互及可点击元素显式声明 `cursor-pointer` 样式
+- `gesture-conflicts` —— 避免在容易引发冲突的区域使用水平滑动操作，优先使用主流的垂直滚动
+- `tap-delay` —— 使用 `touch-action: manipulation` 消除移动端 Web 浏览器中 300ms 的点击延迟
+- `standard-gestures` —— 尊重并一致地使用系统标准手势，切勿重新定义其核心功能（如侧滑返回、双指捏合缩放）（参考 Apple HIG）
+- `system-gestures` —— 绝不屏蔽或干扰系统的边缘划动手势（如调出控制中心、手势导航等）（参考 Apple HIG）
+- `press-feedback` —— 在用户按压时提供即时的视觉反馈（如水波纹/涟漪效果或状态层变暗，参考 Material Design 状态层设计）
+- `haptic-feedback` —— 在操作成功或遇到重要提示时提供精细的振动触觉反馈，但切忌泛滥（参考 Apple HIG）
+- `gesture-alternative` —— 绝不依赖手势作为唯一触发手段，关键操作必须提供可见的常规控制按钮
+- `safe-area-awareness` —— 主动适配刘海屏 (Notch)、动态岛 (Dynamic Island)、底部手势条等系统边界，将交互按钮放置在安全区域内 (Safe Area)
+- `no-precision-required` —— 避免强迫用户在极窄的边缘或过小的像素点上进行高精度点击操作
+- `swipe-clarity` —— 凡是支持滑动的操作，必须提供直观的视觉引导或暗示（如箭头、渐变虚化、新手引导）
+- `drag-threshold` —— 在触发拖拽行为前设置合理的移动阈值，以避免因手抖或微小位移导致的误触发
 
-### 3. Performance (HIGH)
+### 3. 性能与加载优化 Performance (HIGH)
 
-- `image-optimization` - 使用 WebP/AVIF 格式，使用响应式图片（`srcset`/`sizes`），延迟加载非核心资源
-- `image-dimension` - 明确声明图片的 `width`/`height` 或使用 `aspect-ratio`，以防止页面布局抖动（参考 Core Web Vitals: CLS）
-- `font-loading` - 使用 `font-display: swap/optional` 来避免文字隐形 (FOIT)；为文字预留空间以减少布局偏移（参考 MD）
-- `font-preload` - 仅预加载最关键的字体；避免对每种字重和变体都使用 preload
-- `critical-css` - 优先加载首屏 CSS（使用内联关键 CSS 或尽早加载的样式表）
-- `lazy-loading` - 通过动态导入 (dynamic import) / 路由级拆分，延迟加载非首屏组件
-- `bundle-splitting` - 按路由/功能进行代码拆分（使用 React Suspense / Next.js dynamic）以减少初始加载体积和缩短 TTI
-- `third-party-scripts` - 异步或延迟加载第三方脚本（`async`/`defer`）；审计并移除无用脚本（参考 MD）
-- `reduce-reflows` - 避免频繁读写布局；将 DOM 的读取和写入操作分别进行合并批处理
-- `content-jumping` - 为异步加载的内容预留占位空间，以避免页面布局发生跳跃（参考 Core Web Vitals: CLS）
-- `lazy-load-below-fold` - 对折行（首屏）以下图片和重度媒体资源使用 `loading="lazy"`
-- `virtualize-lists` - 对包含 50+ 项的列表使用虚拟化技术，以提高内存效率和滚动性能
-- `main-thread-budget` - 保持每帧工作在 ~16ms 以内以达到 60fps；将繁重的计算任务移出主线程（参考 HIG, MD）
-- `progressive-loading` - 对于耗时超过 1s 的操作，使用骨架屏/闪光占位符，而不是长时间显示静态加载菊花图（参考 Apple HIG）
-- `input-latency` - 保持点击/滚动的输入延迟在 ~100ms 以内（参考 Material 响应性标准）
-- `tap-feedback-speed` - 在点击后 100ms 内提供视觉反馈（参考 Apple HIG）
-- `debounce-throttle` - 对高频事件（如滚动、调整大小、输入）进行防抖 (debounce) 或节流 (throttle) 处理
-- `offline-support` - 提供离线状态提示和基本兜底体验（PWA / 移动端）
-- `network-fallback` - 针对慢速网络提供降级模式（低分辨率图片、减少动画效果）
+- `image-optimization` —— 优先使用下一代图片格式 WebP/AVIF，配置响应式图片资源（`srcset`/`sizes`），并懒加载非首屏图片
+- `image-dimension` —— 声明图片的宽/高或使用 `aspect-ratio` 属性占位，以避免图片加载时引起布局偏移（CLS 调优）
+- `font-loading` —— 声明 `font-display: swap` 或 `optional`，防止因自定义字体未加载导致的正文闪烁或隐形 (FOIT / FOUT)
+- `font-preload` —— 仅预加载最核心的字体变体，避免无节制地加载全量字重导致网络阻塞
+- `critical-css` —— 抽取并内联首屏关键 CSS 样式，或确保核心样式表尽早加载
+- `lazy-loading` - 通过动态导入 (Dynamic Imports) 或路由级分包，懒加载非首屏及较重组件
+- `bundle-splitting` —— 实施代码分割 (Code Splitting)（如配合 React Suspense / Next.js dynamic），降低首次加载体积，提升可交互时间 (TTI)
+- `third-party-scripts` —— 对第三方脚本应用 `async` 或 `defer` 异步加载，审计并果断移除无用脚本
+- `reduce-reflows` —— 避免在同一个执行帧中频繁读取与写入 DOM 属性，合理合并 DOM 操作以减少浏览器重排
+- `content-jumping` —— 为异步加载的内容提前保留高度或骨架占位，避免页面出现大范围布局跳动
+- `lazy-load-below-fold` —— 对首屏折叠线以下的所有图片和媒体资源显式添加 `loading="lazy"` 属性
+- `virtualize-lists` —— 针对长度超过 50 条的数据列表引入虚拟列表 (Virtual List) 机制，优化内存占用与滚动性能
+- `main-thread-budget` —— 确保单帧计算量控制在 16ms 内以实现 60fps 流程度；将计算重任分流至主线程外（如 Web Workers）
+- `progressive-loading` —— 对于耗时超过 1 秒的操作，使用带有微光动画的骨架屏 (Skeleton Screen) 替代无聊的加载菊花图 (Spinner)（参考 Apple HIG）
+- `input-latency` —— 确保触控或滚动的输入响应延迟在 100ms 以内（参考 Material Design 响应度标准）
+- `tap-feedback-speed` —— 在用户触碰屏幕后的 100ms 内，界面必须产生即时视觉反馈（参考 Apple HIG）
+- `debounce-throttle` —— 对滚动、窗口重置大小、实时搜索等高频触发事件应用防抖 (Debounce) 或节流 (Throttle) 处理
+- `offline-support` —— 提供友好的离线状态信息以及核心功能的离线缓存回退方案 (PWA/原生)
+- `network-fallback` —— 针对慢速网络环境提供平滑降级模式（如加载低清图、精简复杂动效等）
 
-### 4. Style Selection (HIGH)
+### 4. 界面风格适配 Style Selection (HIGH)
 
-- `style-match` - 风格必须与产品类型匹配（使用 `--design-system` 获取推荐建议）
-- `consistency` - 在所有页面中保持风格一致
-- `no-emoji-icons` - 使用矢量 SVG 图标（如 Heroicons, Lucide），不要使用 Emoji 表情符号作为图标
-- `color-palette-from-product` - 根据产品/行业属性选择配色方案（使用 `--domain color` 查询）
-- `effects-match-style` - 阴影、模糊、圆角大小应与所选风格保持一致（如玻璃拟态、扁平化、粘土拟态等）
-- `platform-adaptive` - 尊重平台的设计惯例（iOS HIG vs Material Design）：在导航、控件、排版、动效上做好适配
-- `state-clarity` - 使悬停/按压/禁用状态在视觉上清晰可辨，同时与整体风格协调（参考 Material 状态层）
-- `elevation-consistent` - 为卡片、面板、模态框使用一致的高度/阴影阶梯；避免使用随意的阴影值
-- `dark-mode-pairing` - 同时设计亮色和暗色版本，以保持品牌感、对比度和风格的一致性
-- `icon-style-consistent` - 在整个产品中使用统一的图标集/视觉语言（如相同的线宽、圆角）
-- `system-controls` - 优先使用系统/原生控件，而不是完全自定义；仅在品牌调性有明确要求时进行定制（参考 Apple HIG）
-- `blur-purpose` - 使用模糊效果来暗示背景已被遮罩/关闭（如模态框、面板），而不是单纯作为装饰（参考 Apple HIG）
-- `primary-action` - 每个屏幕应有且仅有一个主要 CTA（行动召唤按钮）；次要操作在视觉上应弱化（参考 Apple HIG）
+- `style-match` —— 确保产品 UI 视觉风格与产品类别高度吻合（可运行 `--design-system` 指令获取匹配方案）
+- `consistency` —— 确保产品的所有页面在主视觉风格、阴影、圆角和设计系统变量上保持全局一致
+- `no-emoji-icons` —— 规范使用现代 SVG 图标（如 Heroicons, Lucide），绝不直接使用系统 Emoji 作为 UI 图标
+- `color-palette-from-product` —— 依据产品定位与目标受众精选色板（可使用 `--domain color` 命令查询）
+- `effects-match-style` —— 阴影、模糊、圆角和渐变等物理效果必须与整体风格紧密吻合（如 Glassmorphism 配毛玻璃、Brutalism 配粗描边粗阴影等）
+- `platform-adaptive` —— 尊重平台的设计惯例（如 SwiftUI 遵循 Apple HIG，Android 遵循 Material Design 3）
+- `state-clarity` —— 悬停 (Hover)、聚焦 (Focus)、按压 (Active) 与禁用 (Disabled) 状态必须在视觉上界定分明，同时不偏离整体风格（参考 Material 状态层）
+- `elevation-consistent` —— 构建系统化的投影与层级阶梯，不要随机或凭感觉设定阴影属性
+- `dark-mode-pairing` —— 同时设计亮/暗两套对比度合规的界面配色，并维持统一的品牌感知与视觉调性
+- `icon-style-consistent` —— 在整个应用中规范使用同一种图标样式（粗细、圆角及描边风格），避免随机混用
+- `system-controls` —— 优先使用系统原生控件，仅在品牌及定制化场景要求高时才进行高定包装（参考 Apple HIG）
+- `blur-purpose` —— 仅在需要引导视觉重心、弱化底层元素时（如模态弹窗、底面板背景）使用模糊效果，切忌滥用为纯装饰（参考 Apple HIG）
+- `primary-action` —— 单个屏幕内应有且仅有一个主 CTA 按钮，确保次要操作在视觉表现上处于清晰的从属地位（参考 Apple HIG）
 
-### 5. Layout & Responsive (HIGH)
+### 5. 布局与多端响应式 Layout & Responsive (HIGH)
 
-- `viewport-meta` - 设置 `width=device-width initial-scale=1`（切勿禁用缩放）
-- `mobile-first` - 采用移动端优先的设计，随后逐步适配平板和桌面端
-- `breakpoint-consistency` - 使用系统化的屏幕断点（例如 375 / 768 / 1024 / 1440）
-- `readable-font-size` - 移动端正文文本至少为 16px（以避免 iOS 自动放大输入框）
-- `line-length-control` - 移动端每行 35–60 个字符；桌面端每行 60–75 个字符
-- `horizontal-scroll` - 移动端避免出现水平滚动条；确保内容完全自适应视口宽度
-- `spacing-scale` - 使用 4pt/8dp 增量间距系统（参考 Material Design）
-- `touch-density` - 保持适合触控的组件间距：不要过于拥挤，防止用户误触
-- `container-width` - 桌面端使用一致的最大宽度（如 `max-w-6xl` / `7xl`）
-- `z-index-management` - 定义清晰的 z-index 层级规范（例如 0 / 10 / 20 / 40 / 100 / 1000）
-- `fixed-element-offset` - 固定定位的导航栏/底栏必须为底层内容预留安全边距 (padding)
-- `scroll-behavior` - 避免使用会干扰主页面滚动体验的嵌套滚动区域
-- `viewport-units` - 在移动端优先使用 `min-h-dvh`，而不是 `100vh`
-- `orientation-support` - 确保布局在横屏模式下依然易读且可操作
-- `content-priority` - 在移动端优先展示核心内容；将次要内容折叠或隐藏
-- `visual-hierarchy` - 通过大小、间距、对比度来建立清晰的层级关系 —— 而不仅仅依赖颜色
+- `viewport-meta` —— 必须在 HTML 中声明 `<meta name="viewport" content="width=device-width, initial-scale=1">`（切勿限制用户缩放）
+- `mobile-first` —— 坚持采用移动端优先 (Mobile-First) 设计思路，然后逐步向上适配平板 and 桌面端
+- `breakpoint-consistency` —— 在整个项目中使用统一的断点体系（例如 `375px` / `768px` / `1024px` / `1440px`）
+- `readable-font-size` —— 移动端正文字体最小设为 16px，以防 iOS 浏览器在聚焦输入框时进行强制放大
+- `line-length-control` —— 移动端单行限制在 35–60 个字符，桌面端单行字数控制在 60–75 个字符，确保极佳的可读性
+- `horizontal-scroll` —— 绝不允许在移动端出现横向滚动条，内容必须在视口内完成自适应与合理折行
+- `spacing-scale` —— 采用科学的 4pt/8dp 阶梯级间距缩放规范（参考 Material Design）
+- `touch-density` —— 可交互元素之间必须保留足够的物理间距，避免由于排版过于拥挤引起交互误触
+- `container-width` —— 在大屏桌面端建立统一的最大容器宽度限制（如 `max-w-6xl` 或 `7xl`），使版面居中聚拢
+- `z-index-management` —— 在全局建立统一、成体系的 `z-index` 层级系统（如 `0 / 10 / 20 / 40 / 100 / 1000`）
+- `fixed-element-offset` —— 凡是使用固定定位 (`fixed`) 的导航栏或底部悬浮栏，必须为底层内容容器留足相等的安全边距
+- `scroll-behavior` —— 尽量避免在页面中使用多重嵌套滚动区域，这会严重干扰和割裂系统主滚动体验
+- `viewport-units` —— 在移动端推荐使用动态视口单位 `min-h-dvh` 代替不稳定的 `100vh`，防止视口高度被浏览器地址栏裁剪
+- `orientation-support` —— 确保页面在横屏模式下也能维持清晰的视觉层级、合理的间距与完备的可操作性
+- `content-priority` —— 移动端必须聚焦核心内容，在折叠面板或次级菜单中收纳次要信息
+- `visual-hierarchy` —— 通过巧妙的字号大小、字重、间距与对比度强弱来构建清晰的信息阶梯，而不是只依赖色彩区分
 
-### 6. Typography & Color (MEDIUM)
+### 6. 排版调性与语义化色彩 Typography & Color (MEDIUM)
 
-- `line-height` - 正文文本使用 1.5-1.75 的行高
-- `line-length` - 限制单行字符数在 65-75 个字符以内
-- `font-pairing` - 确保标题与正文字体的性格与气质相契合
-- `font-scale` - 使用一致的字号阶梯（例如 12 14 16 18 24 32）
-- `contrast-readability` - 亮色背景上使用深色文字（例如在白色背景上使用 `slate-900`）
-- `text-styles-system` - 使用平台字形排版系统：iOS 11 动态字体样式 / Material 5 字体角色（display, headline, title, body, label）（参考 HIG, MD）
-- `weight-hierarchy` - 使用字重强化层级：粗体标题（600-700）、常规正文（400）、中等标签（500）（参考 MD）
-- `color-semantic` - 定义语义化颜色 Token（primary, secondary, error, surface, on-surface），不要在组件中直接硬编码 Hex 颜色值（参考 Material 颜色系统）
-- `color-dark-mode` - 暗色模式应使用低饱和度/较浅的同音色调，而不是直接反转颜色；独立进行对比度测试（参考 HIG, MD）
-- `color-accessible-pairs` - 前景/背景配色必须满足 4.5:1 (AA) 或 7:1 (AAA)；使用工具进行验证（参考 WCAG, MD）
-- `color-not-only-decorative` - 功能性颜色（错误红、成功绿）必须辅以图标或文本；避免单纯通过颜色表达含义（参考 HIG, MD）
-- `truncation-strategy` - 换行优先于截断；需要截断时使用省略号，并通过工具提示 (tooltip) 或展开操作提供完整文本（参考 Apple HIG）
-- `letter-spacing` - 遵循平台默认的字距；避免在正文文本上使用过紧的字距（参考 HIG, MD）
-- `number-tabular` - 对数据列、价格和计时器使用等宽数字 (tabular/monospaced figures)，以防止数据变化时布局抖动
-- `whitespace-balance` - 有意图地使用留白来对相关项进行分组以及分隔区域；避免界面视觉拥挤（参考 Apple HIG）
+- `line-height` —— 网页正文段落推荐使用 1.5 - 1.75 的行高，确保行间距呼吸感
+- `line-length` —— 将正文单行长度限制在 65 - 75 个字符以内，以减缓阅读疲劳
+- `font-pairing` —— 确保标题字体与正文字体在个性和调性上相辅相成，统一视觉风格
+- `font-scale` —— 严格采用系统化的字号阶梯进行排版（如 12, 14, 16, 18, 24, 32, 48px）
+- `contrast-readability` —— 选用高对比度的前背景文字色，在亮色背景下应避免使用过淡的灰色字（推荐使用类似 `slate-900` 的深灰色）
+- `text-styles-system` —— 主动适配平台的排版预设体系（iOS 的 Dynamic Type 样式 / Material Design 的排版角色）（参考 HIG, MD）
+- `weight-hierarchy` —— 利用字重建立明确的信息主次：粗体标题 (600–700)、常规体正文 (400)、中字重标签 (500)（参考 MD）
+- `color-semantic` —— 定义规范的语义化颜色 Token（`primary`、`secondary`、`error`、`success`、`surface` 等），严禁在组件中大范围硬编码 `#hex` 颜色值
+- `color-dark-mode` —— 暗色模式应使用经过低饱和度或明度微调的颜色变体，而非简单反转，并单独校验对比度（参考 HIG, MD）
+- `color-accessible-pairs` —— 确保每一个前景与背景色搭配均符合 WCAG 的 4.5:1 (AA) 或 7:1 (AAA) 对比度合规标准
+- `color-not-only-decorative` —— 传达状态的颜色（如表示错误的红色、表示成功的绿色）必须同时辅助图标或文本提示，避免让色弱群体漏掉关键信息
+- `truncation-strategy` —— 换行排版优于截断。若必须截断，应辅以省略号，并通过悬停提示或展开按钮呈现完整内容（参考 Apple HIG）
+- `letter-spacing` —— 尊重平台默认字距设定，绝不能在阅读性正文中使用过于紧密或松散的字距（参考 HIG, MD）
+- `number-tabular` —— 在数据表格、财务金额、倒计时等经常变动的数字场景下，强制启用等宽数字（`tabular-nums`），防止数字变动时布局闪烁
+- `whitespace-balance` —— 积极利用留白（白空间）对相关元素进行视觉归组；页面各模块之间应留有足够的呼吸空间
 
-### 7. Animation (MEDIUM)
+### 7. 动效与平滑过渡 Animation (MEDIUM)
 
-- `duration-timing` - 微交互时长使用 150-300ms；复杂过渡动画 ≤400ms；避免使用 >500ms 的时长（参考 MD）
-- `transform-performance` - 仅对 `transform` 和 `opacity` 进行动画处理；避免对 `width` / `height` / `top` / `left` 做动画
-- `loading-states` - 当加载时间超过 300ms 时，显示骨架屏或进度指示器
-- `excessive-motion` - 每个视图中最多对 1-2 个核心元素进行动画处理
-- `easing` - 入场使用 ease-out，出场使用 ease-in；在 UI 过渡中避免使用线性 (linear) 缓动
-- `motion-meaning` - 所有的动画必须表达因果关系，而不仅仅是作为装饰（参考 Apple HIG）
-- `state-transition` - 状态变化（悬停、激活、展开、收起、模态框）应平滑过渡，避免瞬间生硬切换
-- `continuity` - 页面/屏幕过渡应保持空间连续性（如共享元素、方向性滑动）（参考 Apple HIG）
-- `parallax-subtle` - 克制地使用视差效果；必须尊重减弱动态效果设置，且不能引起眩晕（参考 Apple HIG）
-- `spring-physics` - 优先使用弹簧/物理阻尼曲线，而不是线性或贝塞尔曲线，以获得更自然的质感（参考 Apple HIG 流体动画）
-- `exit-faster-than-enter` - 出场动画应快于入场动画（约为入场时长的 60-70%）以显得响应迅速（参考 MD 动效规范）
-- `stagger-sequence` - 对列表/网格项的入场动效进行交错处理，每项延迟 30-50ms；避免同时展现或过慢展现（参考 MD）
-- `shared-element-transition` - 使用共享元素 / Hero 过渡，以保持屏幕之间的视觉连续性（参考 MD, HIG）
-- `interruptible` - 动画必须是可打断的；用户的点击/手势应能立即取消正在进行的动画（参考 Apple HIG）
-- `no-blocking-animation` - 绝不要在动画进行中阻塞用户输入；UI 必须保持可即时交互状态（参考 Apple HIG）
-- `fade-crossfade` - 在同一个容器内进行内容替换时，使用交叉淡入淡出 (crossfade)（参考 MD）
-- `scale-feedback` - 可点击的卡片/按钮在按压时进行轻微缩放 (0.95-1.05)；松开时恢复原状（参考 HIG, MD）
-- `gesture-feedback` - 拖拽、滑动和捏合必须提供实时跟随手指运动的视觉响应（参考 MD 动效）
-- `hierarchy-motion` - 使用平移/缩放方向来表达层级关系：从下方入场 = 更深层级，向上方退出 = 返回上一级（参考 MD）
-- `motion-consistency` - 全局统一时长和缓动 Token；使所有的动画共享相同的节奏和质感
-- `opacity-threshold` - 渐隐元素的透明度低于 0.2 时不应停留太久；要么完全淡出，要么保持可见
-- `modal-motion` - 模态框/面板应从其触发源位置开始动画（缩放+淡入，或滑入），以提供空间上下文关系（参考 HIG, MD）
-- `navigation-direction` - 前进导航向左/向上移动；后退导航向右/向下移动 —— 保持方向逻辑一致（参考 HIG）
-- `layout-shift-avoid` - 动画绝对不能引发页面重排或 CLS；使用 transform 改变位置
+- `duration-timing` —— 微交互的时长应控制在 150–300ms 之间，较复杂的全屏过渡动效不宜超过 400ms，避开 500ms 以上的拖沓动效
+- `transform-performance` —— 动效必须高度关注渲染性能，只对 `transform` 和 `opacity` 应用动画，绝不针对 `width` / `height` / `top` / `left` 等极易引发生长和重排的属性做过渡
+- `loading-states` —— 一旦网络请求或渲染耗时预期超过 300ms，必须展示骨架屏或进度条，不能让页面产生卡顿感
+- `excessive-motion` —— 保持页面动效克制，单个视口内最多同时对 1-2 个关键元素应用动效，避免过度晃动干扰视线
+- `easing` —— 坚持“快入缓出”原则：滑入等进入动画使用 `ease-out`，划出等退出动画使用 `ease-in`；禁止在 UI 过渡中使用生硬的 `linear` 线性过渡
+- `motion-meaning` —— 每一个交互动效都应承载明确的设计意图（暗示物理空间关系、状态变更等），切忌为动而动（参考 Apple HIG）
+- `state-transition` —— UI 元素的状态改变（如 hover、展开折叠、激活）必须声明平滑过渡，消灭突兀的瞬变
+- `continuity` —— 页面或路由切换时，尽量保持空间连续性（如使用共享英雄元素、相同的平移方向等）（参考 Apple HIG）
+- `parallax-subtle` —— 视差滚动必须保持极度克制，不仅要完美适配减弱动画设置，更不能对晕动症用户造成困扰（参考 Apple HIG）
+- `spring-physics` —— 优先选用基于弹簧物理定律的动效曲线，而非生硬的代码贝塞尔曲线，使交互更具流体质感（参考 Apple HIG 流体动效）
+- `exit-faster-than-enter` —— 退出动画快于进入：退出动画应比进入动画更迅速（建议设为进入时长的 60%–70%），使界面交互感觉更加干净利落（参考 MD 动效规范）
+- `stagger-sequence` —— 交错动效序列 (Stagger)：将列表/网格项的入场动画进行 30–50ms 的交错延迟，避免生硬地一次性呈现或过慢地依次呈现（参考 MD）
+- `shared-element-transition` —— 合理使用共享元素过渡 (Shared Element Transition)，在页面级跳转中维护视觉连续性（参考 MD, HIG）
+- `interruptible` —— 动效可中断性：所有动画过渡必须可随时被打断，用户的点击或滑动手势应能立即响应并中止当前动画，决不能形成阻碍
+- `no-blocking-animation` —— 绝不能在动画执行期间锁定用户输入，UI 交互层必须保持实时可触控、可交互状态（参考 Apple HIG）
+- `fade-crossfade` —— 在同一个区域容器中进行内容替换时，使用交叉淡入淡出 (Crossfade) 进行过渡，防止生硬闪跳（参考 MD）
+- `scale-feedback` —— 在点击按钮或可点击卡片时，提供轻微的按压缩放（0.95–1.05）反馈，释放时弹回，丰富交互层次（参考 HIG, MD）
+- `gesture-feedback` —— 拖动、滑动和双指缩放操作必须实时跟随用户手指进行高帧率的动效渲染（参考 MD 动效规范）
+- `hierarchy-motion` —— 用运动轨迹的方向来隐喻页面层级：由下往上滑入代表深入层级，往下滑出代表返回或关闭（参考 MD）
+- `motion-consistency` - 在全局统一定义动画时长 Token 和缓动曲线，让整个系统的动效节奏保持连贯
+- `opacity-threshold` —— 渐隐组件的透明度低于 0.2 时应迅速完全隐藏，不要在尾声拖泥带水
+- `modal-motion` —— 模态弹窗或底面板应首选从其触发点（如点击的按钮）发发起渐变及滑入动效，这有利于用户心智模型构建（参考 HIG, MD）
+- `navigation-direction` —— 前进与后退的切换方向必须保持直觉一致：前进向左滑，后退向右退（参考 Apple HIG）
+- `layout-shift-avoid` —— 所有常规动画均不能引发生长式布局重排，严防累积布局偏移 (CLS)
 
-### 8. Forms & Feedback (MEDIUM)
+### 8. 表单设计与交互反馈 Forms & Feedback (MEDIUM)
 
-- `input-labels` - 每一个输入框都必须有可见的 label 标签（不只提供 input 占位符 placeholder）
-- `error-placement` - 在对应的输入框下方展示错误提示信息
-- `submit-feedback` - 提交时展示加载状态，随后展示成功或错误状态
-- `required-indicators` - 标明必填字段（例如使用星号 *）
-- `empty-states` - 无内容时提供有帮助的提示信息和操作引导
-- `toast-dismiss` - Toast 提示在 3-5 秒内自动消失
-- `confirmation-dialogs` - 执行破坏性操作前弹出确认对话框
-- `input-helper-text` - 在复杂的输入框下方提供常驻的辅助文本，而不仅仅依赖占位符（参考 Material Design）
-- `disabled-states` - 禁用元素使用降低的不透明度 (0.38-0.5) + 光标改变 + 语义化 disabled 属性（参考 MD）
-- `progressive-disclosure` - 渐进式呈现复杂选项；不要一开始就展示过多内容让用户手足无措（参考 Apple HIG）
-- `inline-validation` - 在失去焦点 (blur) 时进行验证（而不是在打字时）；在用户输入完成后再显示错误（参考 MD）
-- `input-type-keyboard` - 使用语义化的 input 类型（email, tel, number），以便在移动端弹出正确的键盘布局（参考 HIG, MD）
-- `password-toggle` - 为密码输入框提供显示/隐藏明文的切换开关（参考 MD）
-- `autofill-support` - 使用 `autocomplete` / `textContentType` 属性，以便系统可以自动填充表单（参考 HIG, MD）
-- `undo-support` - 对破坏性或批量操作提供撤销支持（例如“撤销删除”的 Toast 提示）（参考 Apple HIG）
-- `success-feedback` - 操作完成时提供简短的视觉确认反馈（打勾、Toast 提示、颜色闪烁）（参考 MD）
-- `error-recovery` - 错误提示信息必须包含清晰的解决路径（重试、编辑、帮助链接）（参考 HIG, MD）
-- `multi-step-progress` - 多步骤流程应展示步骤指示器或进度条；且允许返回上一步（参考 MD）
-- `form-autosave` - 长表单应能自动保存草稿，防止因意外关闭而丢失数据（参考 Apple HIG）
-- `sheet-dismiss-confirm` - 在关闭有未保存更改的面板/模态框前进行确认（参考 Apple HIG）
-- `error-clarity` - 错误信息必须说明原因 + 如何修复（不能只说“输入无效”）（参考 HIG, MD）
-- `field-grouping` - 将相关的输入框进行逻辑分组（使用 fieldset/legend 或视觉边框/背景分组）（参考 MD）
-- `read-only-distinction` - 只读状态与禁用状态在视觉和语义上应有明确的区隔（参考 MD）
-- `focus-management` - 提交出错后，自动将焦点移至第一个无效的输入框（参考 WCAG, MD）
-- `error-summary` - 存在多个错误时，在顶部显示错误摘要并提供跳转到各输入框的锚点链接（参考 WCAG）
-- `touch-friendly-input` - 移动端输入框高度 ≥44px 以满足触控热区要求（参考 Apple HIG）
-- `destructive-emphasis` - 破坏性操作使用语义化的危险颜色（红色），并与主要操作进行视觉隔离（参考 HIG, MD）
-- `toast-accessibility` - Toast 提示不能强行抢占焦点；使用 `aria-live="polite"` 供屏幕阅读器播报（参考 WCAG）
-- `aria-live-errors` - 表单错误使用 `aria-live` 区域或 `role="alert"` 属性以便通知屏幕阅读器（参考 WCAG）
-- `contrast-feedback` - 错误和成功状态的颜色必须满足 4.5:1 的对比度要求（参考 WCAG, MD）
-- `timeout-feedback` - 请求超时必须提供清晰的反馈以及重试选项（参考 MD）
+- `input-labels` —— 所有输入控件都必须配备清晰可见的文本标签 (Label)，不要试图只用占位符 (Placeholder) 代替标签
+- `error-placement` —— 校验报错提示信息必须紧密呈现在与之相关联的输入框下方或临近区域，避免让用户寻找
+- `submit-feedback` —— 提交表单时必须将按钮切换至 Loading 状态并禁用，操作结束后给出明确的成功/失败反馈
+- `required-indicators` —— 在必填表单项旁边醒目标注必填符号（如统一使用红色星号 *）
+- `empty-states` —— 遇到空列表或空状态时，应呈现富有引导性的空状态页面（包含清晰文案说明 + 主行动按钮），严禁只展示白板
+- `toast-dismiss` —— 轻提示 (Toast) 应具有 3–5 秒的自动消失机制，不打断用户操作
+- `confirmation-dialogs` —— 在执行破坏性操作前，必须弹出模态对话框让用户进行二次确认
+- `input-helper-text` —— 针对格式复杂的表单，在输入框下方直接说明格式要求或提供帮助文案，不建议将其隐藏在 tooltip 中
+- `disabled-states` —— 禁用状态的按钮或表单必须应用半透明淡化 (0.38–0.5)、鼠标禁用手势以及 HTML5 语义化 `disabled` 属性
+- `progressive-disclosure` —— 循序渐进地展示复杂选项，避免在一开始塞给用户过多字段导致认知过载（参考 Apple HIG）
+- `inline-validation` —— 优先在失去焦点 (`blur`) 时触发就近校验，而不是随用户敲击按键实时报错，防止造成焦虑情绪
+- `input-type-keyboard` —— 为输入框声明准确的 HTML5 `type` 类型（如 `email`、`tel`、`number`），以便移动端能唤起最佳的键盘布局
+- `password-toggle` —— 密码输入框必须提供显式/隐式的一键切换眼睛图标，供用户检查输入
+- `autofill-support` —— 声明 `autocomplete` 或原生平台 `textContentType` 属性，方便用户利用系统凭据进行自动填充
+- `undo-support` —— 针对删除或批量移动等破坏性行为，在 Toast 中提供限时撤销 (Undo) 操作，给予用户后悔药（参考 Apple HIG）
+- `success-feedback` —— 关键任务完成后提供明确的反馈，如微动画打勾、通知 Toast 或高亮确认，强化完成感（参考 MD）
+- `error-recovery` —— 错误报错信息必须给出一条可行性排查路径（重试、修改建议、在线支持链接），不能只报告错误而无法解决
+- `multi-step-progress` —— 分步表单必须提供步骤条 (Step Indicator) 以展示进度，并绝对支持安全返回上一步
+- `form-autosave` —— 较长的表单输入应在底层进行草稿自动保存，防止因断电、误触或浏览器崩溃导致用户数据彻底丢失
+- `sheet-dismiss-confirm` —— 在用户关闭带有未保存更改的底面板或模态弹窗前，必须进行弹窗警告确认，严防误触丢失数据
+- `error-clarity` —— 报错文案必须直观、易懂（写明错误原因和解决方法），禁止抛出“参数无效”、“500 Error”等代码级错误
+- `field-grouping` —— 逻辑关联 of 输入项应在视觉或语义上分组合并（使用 `fieldset`、容器或留白区划）（参考 MD）
+- `read-only-distinction` —— 只读状态 (Read-Only) 的数据应在视觉上与禁用状态 (Disabled) 进行区分，只读应保持良好的文字对比度
+- `focus-management` —— 表单校验失败提交时，自动将焦点移动至第一个未通过校验 of 输入框中，并唤起键盘（参考 WCAG）
+- `error-summary` —— 长表单如果有多处报错，应在表单顶部进行红框汇总提示，并提供链接至报错位置的锚点导航（参考 WCAG）
+- `touch-friendly-input` —— 移动端输入框的物理高度不应低于 44px，以确保优良的触控交互体验（参考 Apple HIG）
+- `destructive-emphasis` —— 破坏性操作（如删除、注销）应使用明确的警示红，且在空间排列上与主 CTA 保持距离（参考 HIG, MD）
+- `toast-accessibility` —— Toast 提示严禁抢夺用户的焦点，在 Web 中声明 `aria-live="polite"` 以供屏幕阅读器播报（参考 WCAG）
+- `aria-live-errors` —— 表单报错区域使用 `aria-live="assertive"` 或 `role="alert"`，确保视障用户能实时听到错误播报（参考 WCAG）
+- `contrast-feedback` —— 表单成功或错误状态提示的颜色对比度也必须严格满足 4.5:1 的无障碍要求（参考 WCAG, MD）
+- `timeout-feedback` —— 一旦网络请求超时，必须展示清晰的超时提示，并配备一键重试机制（参考 MD）
 
-### 9. Navigation Patterns (HIGH)
+### 9. 导航设计与层级模式 Navigation Patterns (HIGH)
 
-- `bottom-nav-limit` - 底部导航栏最多包含 5 个项目；且图标必须搭配文字标签（参考 Material Design）
-- `drawer-usage` - 使用抽屉栏/侧边栏进行次要导航，不要用来放置主要操作（参考 Material Design）
-- `back-behavior` - 返回导航必须可预测且保持一致；保留页面滚动位置/先前状态（参考 Apple HIG, MD）
-- `deep-linking` - 所有核心屏幕必须支持深度链接 / URL 访问，以便于分享和推送通知（参考 Apple HIG, MD）
-- `tab-bar-ios` - iOS：在顶层导航中使用底部的 Tab Bar（参考 Apple HIG）
-- `top-app-bar-android` - Android：在顶层结构中使用带有导航图标的 Top App Bar（参考 Material Design）
-- `nav-label-icon` - 导航项目必须同时包含图标与文字标签；纯图标导航会降低功能的可发现性（参考 MD）
-- `nav-state-active` - 在导航栏中，当前所在位置必须有清晰的视觉高亮（颜色、字重、指示条）（参考 HIG, MD）
-- `nav-hierarchy` - 主要导航（Tab/底部导航）与次要导航（侧边栏/设置）必须在视觉上清晰隔离（参考 MD）
-- `modal-escape` - 模态框和面板必须提供清晰的关闭/退出手势（移动端支持下滑手势关闭）（参考 Apple HIG）
-- `search-accessible` - 搜索入口必须易于触达（如置于顶栏或 Tab 栏中）；提供最近搜索和推荐词（参考 MD）
-- `breadcrumb-web` - Web 端：对于 3 层以上的层级深度，使用面包屑导航辅助定位（参考 MD）
-- `state-preservation` - 返回导航必须能恢复先前的滚动位置、过滤状态和已填输入项（参考 HIG, MD）
-- `gesture-nav-support` - 支持系统级手势导航（iOS 的滑动返回、Android 的预测性返回），避免与之发生冲突（参考 HIG, MD）
-- `tab-badge` - 极克制地在导航项上使用徽标 (Badge) 来指示未读/待办；在用户访问后清除（参考 HIG, MD）
-- `overflow-menu` - 当操作项超出可用空间时，使用“更多”/溢出菜单，而不是强行塞入（参考 MD）
-- `bottom-nav-top-level` - 底部导航仅用于顶层屏幕；决不在其中嵌套子导航（参考 MD）
-- `adaptive-navigation` - 大屏设备（≥1024px）优先使用侧边栏；小屏设备使用底部/顶部导航（参考 Material Adaptive）
-- `back-stack-integrity` - 绝不默默重置导航栈，或出乎意图地直接跳转回首页（参考 HIG, MD）
-- `navigation-consistency` - 导航栏的位置在所有页面中应保持一致；不要根据页面类型改变其位置
-- `avoid-mixed-patterns` - 避免在同一层级混合使用 Tab、侧边栏和底部导航
-- `modal-vs-navigation` - 模态框不能用于主要导航流程；它们会打断用户的路径（参考 HIG）
-- `focus-on-route-change` - 页面过渡后，将焦点移至主要内容区域以服务屏幕阅读器用户（参考 WCAG）
-- `persistent-nav` - 核心导航必须在深层页面中依然可触及；不要在子流程中将其完全隐藏（参考 HIG, MD）
-- `destructive-nav-separation` - 危险的操作（删除账户、登出）必须与普通导航项在视觉和空间上隔离开（参考 HIG, MD）
-- `empty-nav-state` - 当导航目的地不可用时，解释具体原因，而不是直接默默隐藏它（参考 MD）
+- `bottom-nav-limit` —— 底部导航栏 Tab 数量限制在 3-5 个；且必须同时采用“图标+文字标签”的设计，只放图标非常不易用
+- `drawer-usage` —— 侧边栏/抽屉导航仅用于收纳次要或低频的导航项，切勿把主流程操作塞入侧栏
+- `back-behavior` —— 返回行为必须符合直觉并保持全局连贯，且务必保留先前页面的滚动高度与未提交的表单状态
+- `deep-linking` —— 确保核心功能页面均配有唯一的 URL 路径，支持直接通过深层链接 (Deep Link) 进行分享或跳转
+- `tab-bar-ios` —— iOS 原生设计：必须将全局一级分类放在屏幕底部的 Tab Bar 中，符合单手持机操作习惯（参考 Apple HIG）
+- `top-app-bar-android` —— Android 原生设计：使用顶部应用栏 (Top App Bar) 放置页面标题、返回键与动作入口（参考 Material Design）
+- `nav-label-icon` —— 导航入口不能仅设计纯图标，文字标签对减少认知障碍极其关键
+- `nav-state-active` —— 处于激活状态的导航项必须有极高辨识度的高亮设计（如主色高亮、字重加粗、动态底划线）
+- `nav-hierarchy` —— 严格划分主级导航（底栏/主栏）与次级/辅助级导航（页内标签/设置面板）的视觉权重
+- `modal-escape` —— 每一个模态弹窗或底面板都必须有显眼的“关闭”或“取消”键，在移动端还需支持手势下滑关闭（参考 Apple HIG）
+- `search-accessible` —— 搜索框应处于极易触达的常驻区（如顶栏或首个 Tab 中）；并提供搜索历史、热门推荐词等辅助录入
+- `breadcrumb-web` —— Web 端：当信息层级深度超过 3 级时，必须配置面包屑导航 (Breadcrumbs)，指引用户所在位置
+- `state-preservation` —— 点击返回时，页面必须高还原度恢复先前的滚动位置、侧栏筛选条件与已输入的文字（参考 HIG, MD）
+- `gesture-nav-support` —— 主动适配系统的滑动手势导航（如 iOS 侧滑返回、Android 边缘预测性返回），避免产生手势拦截冲突
+- `tab-badge` —— 谨慎在导航 Tab 上应用徽标红点 (Badge) 进行强打扰，一旦用户点击该模块，红点应立即消除（参考 HIG, MD）
+- `overflow-menu` —— 如果操作按钮超出容器宽度，收纳至“更多”溢出菜单中，切勿把按钮挤爆到换行
+- `bottom-nav-top-level` —— 底部导航栏仅用于放置应用最顶层的 3-5 个核心入口，决不能在底部导航栏内嵌套次级页面底栏
+- `adaptive-navigation` —— 响应式导航：宽屏大屏设备上（≥1024px）优先选用侧边栏或左侧导航轨，移动端则切换至底栏/顶栏
+- `back-stack-integrity` —— 确保应用的导航栈完整度，返回操作必须循序渐进，绝不能直接把用户的导航历史清空并丢回首页
+- `navigation-consistency` —— 导航栏的位置在所有页面中应保持一致，不能随着页面切换而在顶部、底部、侧边随机变化
+- `avoid-mixed-patterns` —— 避免在同一层级混乱地混合使用顶部 Tabs、侧边抽屉与底部 Tab Bar
+- `modal-vs-navigation` —— 模态框 (Modal) 绝不能用作主线导航流程；它们的设计初衷是临时打断用户以处理独立事务
+- `focus-on-route-change` —— 路由页面切换后，将焦点移至主要容器标题上，使屏幕阅读器能第一时间为盲人播报新页面（参考 WCAG）
+- `persistent-nav` —— 关键导航入口在深度页面中依然需要可触及，不要在子流程中将其彻底隐藏或锁死
+- `destructive-nav-separation` —— 带有危险性的入口（如注销、删除组织、注销账号）必须在空间上与日常导航大距离隔开
+- `empty-nav-state` —— 如果某个导航项由于无权限或无数据暂时无法访问，应显示具体的权限说明或引导流程，不能默默隐藏
 
-### 10. Charts & Data (LOW)
+### 10. 图表设计与数据可视化 Charts & Data (LOW)
 
-- `chart-type` - 图表类型必须与数据类型匹配（趋势 → 折线图，对比 → 柱状图，占比 → 饼图/环形图）
-- `color-guidance` - 使用无障碍配色方案；避免针对色盲用户仅提供红绿配色（参考 WCAG, MD）
-- `data-table` - 提供表格形式的替代方案以满足无障碍要求；仅有图表对屏幕阅读器并不友好（参考 WCAG）
-- `pattern-texture` - 用图案、纹理或形状来辅助颜色，以便在没有颜色的情况下也能区分数据（参考 WCAG, MD）
-- `legend-visible` - 始终显示图例；并将其放置在靠近图表的地方，不要分离开放在滚动折行下方（参考 MD）
-- `tooltip-on-interact` - 在悬停（Web 端）或点击（移动端）时提供展示确切数值的工具提示/数据标签（参考 HIG, MD）
-- `axis-labels` - 标注带有单位和易读刻度的坐标轴；在移动端避免使用截断或旋转的标签
-- `responsive-chart` - 图表在小屏幕上必须重新排版或简化（例如，用水平条形图代替垂直柱状图、减少刻度线）
-- `empty-data-state` - 无数据时展示有意义的空状态（如“暂无数据” + 操作引导），而不是一张空白的图表（参考 MD）
-- `loading-chart` - 在图表数据加载时使用骨架屏或闪光占位符；不要直接显示一个空的坐标轴框架
-- `animation-optional` - 图表的入场动画必须尊重减弱动态效果设置；数据应该可以立即读取（参考 HIG）
-- `large-dataset` - 对于 1000+ 的数据点，应进行聚合或抽样；提供下钻 (drill-down) 操作来查看详情，而不是一次性渲染所有数据（参考 MD）
-- `number-formatting` - 对坐标轴和标签上的数字、日期、货币进行本地化格式化处理（参考 HIG, MD）
-- `touch-target-chart` - 交互式的图表元素（如数据点、扇区）必须具有 ≥44pt 的触控区域，或在触控时放大区域（参考 Apple HIG）
-- `no-pie-overuse` - 当分类超过 5 个时，避免使用饼图/环形图；改用条形图以提高清晰度
-- `contrast-data` - 数据线/数据条与背景的对比度应 ≥3:1；数据文本标签与背景的对比度应 ≥4.5:1（参考 WCAG）
-- `legend-interactive` - 图例应该是可点击的，以切换对应数据系列的显示与隐藏（参考 MD）
-- `direct-labeling` - 对于小数据集，直接在图表上标注数值，以减少视线移动距离
-- `tooltip-keyboard` - 工具提示内容必须是键盘可达的，而不仅仅依赖悬停操作（参考 WCAG）
-- `sortable-table` - 数据表必须支持排序，并使用 `aria-sort` 指示当前的排序状态（参考 WCAG）
-- `axis-readability` - 坐标轴刻度不能过于拥挤；保持易读的间距，在小屏幕上自动跳过部分刻度
-- `data-density` - 限制每个图表的信息密度以避免认知超载；必要时拆分为多个图表
-- `trend-emphasis` - 强调数据趋势而非装饰；避免使用遮挡数据的重阴影或渐变
-- `gridline-subtle` - 网格线应保持低对比度（例如使用 `gray-200`），以免干扰数据展示
-- `focusable-elements` - 交互式图表元素（数据点、柱条、扇区）必须是键盘可导航的（参考 WCAG）
-- `screen-reader-summary` - 为屏幕阅读器提供文字摘要或 `aria-label` 描述图表的核心洞察（参考 WCAG）
-- `error-state-chart` - 数据加载失败时必须展示带有重试操作的错误提示，而不是一个损坏或空白的图表
-- `export-option` - 对于重度依赖数据的产品，提供图表数据的 CSV 或图片导出功能
-- `drill-down-consistency` - 下钻交互必须保持清晰的返回路径和层级面包屑
-- `time-scale-clarity` - 时间序列图表必须清晰标明时间粒度（日/周/月）并允许切换
+- `chart-type` —— 图表类型与数据结构必须高度契合：时间趋势推荐折线图/面积图，横向对比选用柱状图，占比推荐环形图/饼图
+- `color-guidance` —— 必须选择对色盲用户友好的配色方案，绝不能仅通过红、绿两色对比来表达涨跌或数据盈亏
+- `data-table` —— 所有的图表页面，均必须提供表格 (Table) 版本的替代呈现，这对屏幕阅读器用户是刚需
+- `pattern-texture` —— 对图表使用不同的线条样式（实线、虚线）、纹理填充或形状标记，确保即使没有颜色信息也能轻松阅读
+- `legend-visible` —— 图表必须配备直观易读的图例说明，且图例必须紧靠图表主体放置，严禁将其放在首屏线以下
+- `tooltip-on-interact` —— 必须支持点击（移动端）或悬停（Web 端）时弹出包含确切数据值的浮窗 (Tooltip)
+- `axis-labels` —— 坐标轴标签必须配有明确的物理单位与人性化的刻度划分，移动端避免使用倾斜 45 度或被截断的文字
+- `responsive-chart` —— 图表必须具备完整的响应式能力，在小屏设备上可自动精简坐标轴刻度或将柱状图转换为水平条形图
+- `empty-data-state` —— 当图表无数据可显示时，必须展示易懂的空状态界面并提供引导（如“暂无数据”+“去创建”），严禁丢出一个空白的坐标轴
+- `loading-chart` —— 数据加载中时，使用图表专用的骨架图或微光动画占位，不要给用户展示坏掉的布局
+- `animation-optional` —— 数据图表入场动画必须适配减弱动效偏好，确保急需数据的用户能立即获取信息
+- `large-dataset` —— 面对 1000+ 的海量数据点时，后台或前端需进行抽样/聚合，并提供下钻 (Drill-Down) 入口，不能直接丢给渲染引擎
+- `number-formatting` —— 坐标轴及数值标签上的所有数字、日期、金融金额，均必须进行本地化格式化处理（如 `¥12,500.00`）
+- `touch-target-chart` —— 交互式图表元素（如散点图的圆点、饼图扇区）触控热区至少保持 44pt，或在用户手指接近时自动吸附高亮
+- `no-pie-overuse` —— 类别超过 5 个时禁止使用饼图或环形图，因为极难阅读对比；应果断切换为水平条形图
+- `contrast-data` —— 数据线条/图形块与图表背景的对比度需 ≥3:1，图表内嵌的数据文本标签与背景对比度需 ≥4.5:1
+- `legend-interactive` —— 数据系列的图例应设计为可交互式点击，允许用户通过勾选图例来过滤和显示/隐藏对应的数据系列
+- `direct-labeling` —— 当数据系列较少时，直接将数值标签标在折线或柱条上，减少用户在图表与图例之间来回移动视线的疲劳
+- `tooltip-keyboard` —— 交互图表的浮窗 (Tooltip) 数据必须支持键盘 Focus 唤起，不能让键盘用户摸黑
+- `sortable-table` —— 提供替代方案的表格数据必须支持列排序，并使用 `aria-sort` 语义化标签声明当前排序状态
+- `axis-readability` —— 坐标轴刻度布局不能过于拥挤；在小屏下必须根据屏幕宽度自动跳过部分刻度，确保不重叠
+- `data-density` —— 严格限制单个图表的信息密度以避免认知超载；必要时应合理拆分为多个子图表进行对比
+- `trend-emphasis` —— 可视化的核心是凸显数据本身的客观趋势，切忌使用过重的卡片投影或喧宾夺主的背景渐变
+- `gridline-subtle` —— 坐标轴辅助网格线必须保持极低的视觉权重（如使用非常淡的 `gray-100` 或 `gray-200`），严防抢夺视线
+- `focusable-elements` —— 所有的交互式图表数据点、柱条、扇区，均必须支持键盘焦点 Focus 状态，以兼容辅助技术
+- `screen-reader-summary` —— 在图表容器上声明 `aria-label`，用一两句话为视障用户精炼总结当前图表的核心结论或数据趋势
+- `error-state-chart` —— 图表请求失败时，必须在图表区域内展示明确的报错提示及“重新加载”按钮，禁止页面崩溃或空白
+- `export-option` —— 针对数据敏感的报表系统，提供将图表所含源数据导出为 CSV/Excel 或下载图表为图片/PDF 的快捷操作
+- `drill-down-consistency` —— 图表的深度钻取必须提供清晰的面包屑导航，并保障用户能随时安全返回上一层级
+- `time-scale-clarity` —— 涉及时间维度的图表，必须在显眼位置标明当前的时间粒度（如日/周/月/季），并提供快速切换 Tab
 
-## 如何使用 (How to Use)
+## 使用说明 (How to Use)
 
-使用下方的 CLI 工具搜索特定的领域。
+请使用下方提供的 CLI 命令行工具，来检索特定的设计领域规则。
 
 ---
 
-## 前提条件 (Prerequisites)
+## 开发前提条件 (Prerequisites)
 
-检查是否已安装 Python：
+检查开发环境是否已安装 Python 3.x：
 
 ```bash
 python3 --version || python --version
 ```
 
-如果未安装 Python，请根据您的操作系统进行安装：
+如果未安装 Python，请根据您的操作系统执行相应命令安装：
 
 **macOS:**
 ```bash
@@ -332,137 +332,137 @@ winget install Python.Python.3.12
 
 ---
 
-## 如何使用此 Skill
+## 使用指南 (How to Use)
 
-当用户请求以下任何内容时，应使用此 Skill：
+在以下业务开发场景中，可直接调用此技能：
 
-| 场景 (Scenario) | 触发示例 (Trigger Examples) | 从何处开始 (Start From) |
+| 场景 (Scenario) | 触发示例 (Trigger Examples) | 推荐起点 (Start From) |
 |----------|-----------------|------------|
-| **新项目 / 页面** | "Build a landing page", "Build a dashboard" | 步骤 1 → 步骤 2（设计系统） |
-| **新组件** | "Create a pricing card", "Add a modal" | 步骤 3（领域搜索：style, ux） |
-| **选择风格 / 配色 / 字体** | "What style fits a fintech app?", "Recommend a color palette" | 步骤 2（设计系统） |
-| **审查现有 UI** | "Review this page for UX issues", "Check accessibility" | 上方的快速参考清单 |
-| **修复 UI 缺陷 (Bug)** | "Button hover is broken", "Layout shifts on load" | 快速参考 → 相关章节 |
-| **改进 / 优化** | "Make this faster", "Improve mobile experience" | 步骤 3（领域搜索：ux, react） |
-| **实现暗色模式** | "Add dark mode support" | 步骤 3（领域搜索：style "dark mode"） |
-| **添加图表 / 数据可视化** | "Add an analytics dashboard chart" | 步骤 3（领域搜索：chart） |
-| **技术栈最佳实践** | "React performance tips"、"SwiftUI navigation" | 步骤 4（技术栈搜索） |
+| **全新项目 / 页面开发** | "做一个 landing page"、"Build a dashboard" | 步骤 1 → 步骤 2（生成设计系统） |
+| **新组件设计与还原** | "Create a pricing card"、"Add a modal" | 步骤 3（专项检索：style, ux） |
+| **风格定义 / 调性设计 / 字体配对** | "What style fits a fintech app?"、"推荐配色" | 步骤 2（生成设计系统） |
+| **UI 走查与无障碍审查** | "Review this page for UX issues"、"检查无障碍" | 上方的快速参考指南 (Quick Reference) |
+| **UI 还原度缺陷及交互异常修复** | "Button hover is broken"、"Layout shifts on load" | 快速参考指南 → 匹配章节调优 |
+| **体验升级与性能优化** | "Make this faster"、"Improve mobile experience" | 步骤 3（专项检索：ux, react） |
+| **适配暗黑模式** | "Add dark mode support" | 步骤 3（专项检索：style "dark mode"） |
+| **引入图表与数据可视化** | "Add an analytics dashboard chart" | 步骤 3（专项检索：chart） |
+| **特定技术栈的最佳开发实践** | "React performance tips" | 步骤 4（框架指令检索） |
 
-请遵循以下工作流：
+请遵循以下标准开发流：
 
-### 步骤 1：分析用户需求
+### 步骤 1：深入分析用户需求
 
-从用户请求中提取关键信息：
-- **产品类型**：娱乐（社交、视频、音乐、游戏）、工具（扫描仪、编辑器、转换器）、效率（任务管理、笔记、日历）或混合型
-- **目标受众**：C 端消费者用户；考虑年龄段、使用场景（通勤、闲暇、工作）
-- **风格关键词**：活泼 (playful)、活力 (vibrant)、极简 (minimal)、暗色模式 (dark mode)、内容优先 (content-first)、沉浸式 (immersive) 等
-- **技术栈**：React Native（当前项目的唯一技术栈）
+从用户请求中精准提取以下决策因子：
+- **产品定位/类型**：娱乐社交（社交、视频、音乐、游戏）、生产力工具（扫描仪、编辑器、转换器）、效率协作（任务管理、笔记、日历）或复合型平台
+- **目标受众画像**：C 端消费者用户；考虑年龄段、使用场景（通勤、闲暇、工作）
+- **风格关键词**：活泼趣味 (playful)、动感活力 (vibrant)、极简 (minimal)、暗黑 OLED (dark mode)、内容优先 (content-first)、沉浸式 (immersive) 等
+- **框架技术栈**：确认当前项目所采用的框架与技术栈
 
-### 步骤 2：生成设计系统（必须执行）
+### 步骤 2：生成设计系统规范（核心前置步骤，必须执行）
 
-**请始终首先运行 `--design-system`**，以获取包含推导逻辑的完整设计建议：
+**请务必首先执行 `--design-system` 命令**，以获取包含严密推理逻辑的完整设计系统方案：
 
 ```bash
 python3 skills/ui-ux-pro-max/scripts/search.py "<product_type> <industry> <keywords>" --design-system [-p "Project Name"]
 ```
 
-该命令会：
-1. 并行搜索多个领域（产品 product、风格 style、颜色 color、落地页 landing、排版 typography）
-2. 应用来自 `ui-reasoning.csv` 的推理规则来选择最佳匹配项
-3. 返回完整的设计系统：模式、风格、配色、排版、效果
-4. 包含需要避免的反面模式
+底层执行逻辑：
+1. **多维度并行检索**：并行检索产品定位 (product)、UI 风格 (style)、色彩搭配 (color)、布局模式 (landing) 以及字体排版 (typography) 数据库
+2. **智能规则推理**：基于 `ui-reasoning.csv` 决策模型，智能匹配并输出最佳方案
+3. **输出标准化设计系统**：提供版式布局、视觉风格、色板、字体调性及动效交互说明
+4. **输出反模式避坑清单**：列出当前行业需规避的交互/视觉雷区
 
 **示例：**
 ```bash
 python3 skills/ui-ux-pro-max/scripts/search.py "beauty spa wellness service" --design-system -p "Serenity Spa"
 ```
 
-### 步骤 2b：持久化设计系统（主系统 + 页面覆盖模式）
+### 步骤 2b：持久化设计系统（全局主配置 + 页面覆盖模式）
 
-如需保存设计系统以便在**跨会话时进行分层检索**，请添加 `--persist` 参数：
+若需保存生成的配置以支持跨会话的**层级上下文检索**，请追加 `--persist` 参数：
 
 ```bash
 python3 skills/ui-ux-pro-max/scripts/search.py "<query>" --design-system --persist -p "Project Name"
 ```
 
-这会创建：
-- `design-system/MASTER.md` — 包含所有设计规则的全局唯一真理源 (Global Source of Truth)
-- `design-system/pages/` — 存放特定页面覆盖规则的文件夹
+这将在项目根目录下自动创建：
+- `design-system/MASTER.md` —— 全局唯一事实来源 (Single Source of Truth，包含全局通用规范)
+- `design-system/pages/` —— 存放特定页面覆盖规则的文件夹
 
-**带有特定页面覆盖规则的示例：**
+**生成特定页面覆盖规则示例：**
 ```bash
 python3 skills/ui-ux-pro-max/scripts/search.py "<query>" --design-system --persist -p "Project Name" --page "dashboard"
 ```
 
-这还会创建：
-- `design-system/pages/dashboard.md` — 特定于仪表盘 (dashboard) 页面且偏离 Master 的覆盖规则
+这还会额外创建：
+- `design-system/pages/dashboard.md` —— 仅针对仪表盘页面的局部覆盖规范（只声明偏离 Master 的差异部分）
 
-**分层检索是如何工作的：**
-1. 在构建特定页面（例如 "Checkout"）时，首先检查 `design-system/pages/checkout.md` 文件是否存在
-2. 如果该页面文件存在，它的规则将**覆盖** Master 文件中的规则
-3. 如果不存在，则完全使用 `design-system/MASTER.md`
+**层级上下文检索机制：**
+1. AI 在构建特定页面（如 Checkout）时，会首先检索 `design-system/pages/checkout.md` 是否存在
+2. 如果该页面配置文件存在，其局部规则将**覆盖 (override)** 全局 `MASTER.md` 的设定
+3. 若不存在特定页面配置文件，则默认以 `design-system/MASTER.md` 为全局唯一依据
 
-**上下文感知检索提示词 (Prompt)：**
+**上下文感知检索提示词模板 (Context-Aware Prompt)：**
 ```
-我正在构建 [页面名称] 页面。请阅读 design-system/MASTER.md。
-同时检查 design-system/pages/[page-name].md 是否存在。
-如果该页面文件存在，请优先使用其规则。
-如果不存在，请完全使用 Master 文件中的规则。
-现在，请生成代码……
+I am building the [Page Name] page. Please read design-system/MASTER.md.
+Also check if design-system/pages/[page-name].md exists.
+If the page file exists, prioritize its rules.
+If not, use the Master rules exclusively.
+Now, generate the code...
 ```
 
-### 步骤 3：补充细节搜索（根据需要）
+### 步骤 3：补充性细节检索（按需执行）
 
-获取设计系统后，可以通过领域搜索来获取额外的设计细节：
+在设计系统大框架下，若需针对特定交互细节进行微调，可运行以下命令检索：
 
 ```bash
 python3 skills/ui-ux-pro-max/scripts/search.py "<keyword>" --domain <domain> [-n <max_results>]
 ```
 
-**何时使用细节搜索：**
+**补充检索场景：**
 
-| 需求 | 领域 (Domain) | 示例 (Example) |
+| 需求 | 检索领域 (Domain) | 示例 (Example) |
 |------|--------|---------|
-| 产品类型模式 | `product` | `--domain product "entertainment social"` |
-| 更多风格选择 | `style` | `--domain style "glassmorphism dark"` |
-| 配色方案 | `color` | `--domain color "entertainment vibrant"` |
-| 字体搭配 | `typography` | `--domain typography "playful modern"` |
-| 图表推荐 | `chart` | `--domain chart "real-time dashboard"` |
-| UX 最佳实践 | `ux` | `--domain ux "animation accessibility"` |
+| 产品原型与排版模式 | `product` | `--domain product "entertainment social"` |
+| 视觉风格深度检索 | `style` | `--domain style "glassmorphism dark"` |
+| 配色/色板精选 | `color` | `--domain color "entertainment vibrant"` |
+| 字体组合/字体配对 | `typography` | `--domain typography "playful modern"` |
+| 图表展现与库推荐 | `chart` | `--domain chart "real-time dashboard"` |
+| UX 交互与无障碍合规 | `ux` | `--domain ux "animation accessibility"` |
 | 替代字体 | `typography` | `--domain typography "elegant luxury"` |
 | 单个 Google 字体 | `google-fonts` | `--domain google-fonts "sans serif popular variable"` |
-| 落地页结构 | `landing` | `--domain landing "hero social-proof"` |
-| React Native 性能优化 | `react` | `--domain react "rerender memo list"` |
-| 应用界面无障碍/平台规范 | `web` | `--domain web "accessibilityLabel touch safe-areas"` |
-| AI 提示词 / CSS 关键词 | `prompt` | `--domain prompt "minimalism"` |
+| 落地页布局与 CTA 策略 | `landing` | `--domain landing "hero social-proof"` |
+| 开发框架性能调优 | `react` | `--domain react "rerender memo list"` |
+| 平台交互规范 (iOS/Android) | `web` | `--domain web "accessibilityLabel touch safe-areas"` |
+| AI 提示词与核心变量 | `prompt` | `--domain prompt "minimalism"` |
 
-### 步骤 4：技术栈指南（React Native）
+### 步骤 4：特定技术栈规范适配
 
-获取特定于 React Native 实现的最佳实践：
+检索针对特定框架底层实现的高质量代码模板与性能建议：
 
 ```bash
-python3 skills/ui-ux-pro-max/scripts/search.py "<keyword>" --stack react-native
+python3 skills/ui-ux-pro-max/scripts/search.py "<keyword>" --stack <stack>
 ```
 
 ---
 
-## 搜索参考
+## 快捷检索参考表
 
-### 可用领域
+### 检索领域 (Domains)
 
 | 领域 (Domain) | 用途 | 示例关键词 |
 |--------|---------|------------------|
-| `product` | 产品类型推荐建议 | SaaS, e-commerce, portfolio, healthcare, beauty, service |
-| `style` | UI 风格、颜色、特效 | glassmorphism, minimalism, dark mode, brutalism |
-| `typography` | 字体搭配、Google Fonts 推荐 | elegant, playful, professional, modern |
-| `color` | 根据产品类型推荐的配色方案 | saas, ecommerce, healthcare, beauty, fintech, service |
-| `landing` | 页面结构、CTA (行动召唤) 策略 | hero, hero-centric, testimonial, pricing, social-proof |
-| `chart` | 图表类型、推荐的图表库 | trend, comparison, timeline, funnel, pie |
-| `ux` | 用户体验最佳实践与反面模式 | animation, accessibility, z-index, loading |
+| `product` | 产品类型模式推荐建议 | SaaS, e-commerce, portfolio, healthcare, beauty, service |
+| `style` | UI 设计风格、颜色、特效特征 | glassmorphism, minimalism, dark mode, brutalism |
+| `typography` | 经典字体搭配、Google Fonts 导入推荐 | elegant, playful, professional, modern |
+| `color` | 匹配行业受众的产品色板推荐 | saas, ecommerce, healthcare, beauty, fintech, service |
+| `landing` | 落地页页面结构与 CTA 转化策略 | hero, hero-centric, testimonial, pricing, social-proof |
+| `chart` | 推荐的数据图表类型与可视化图表库 | trend, comparison, timeline, funnel, pie |
+| `ux` | 交互设计优秀实践与反模式防坑指南 | animation, accessibility, z-index, loading |
 | `google-fonts` | 单个 Google Font 查询 | sans serif, monospace, japanese, variable font, popular |
-| `react` | React/Next.js 性能优化 | waterfall, bundle, suspense, memo, rerender, cache |
-| `web` | 应用界面设计指南（iOS/Android/React Native） | accessibilityLabel, touch targets, safe areas, Dynamic Type |
-| `prompt` | AI 提示词、CSS 关键词 | (style name) |
+| `react` | React 生态框架的前端渲染性能调优 | waterfall, bundle, suspense, memo, rerender, cache |
+| `web` | 主流端平台设计与无障碍接口规范 | accessibilityLabel, touch targets, safe areas, Dynamic Type |
+| `prompt` | 生成特定风格视觉的 AI 绘图提示词 | (style name) |
 
 ### 可用技术栈
 
@@ -472,188 +472,148 @@ python3 skills/ui-ux-pro-max/scripts/search.py "<keyword>" --stack react-native
 
 ---
 
-## 示例工作流
+## 标准工作流实战演练
 
-**用户请求**："制作一个 AI 搜索首页。"
+**用户请求**："帮我设计一个 AI 搜索首页"
 
 ### 步骤 1：分析需求
-- 产品类型：工具（AI 搜索引擎）
-- 目标受众：寻求快速、智能化搜索的 C 端用户
-- 风格关键词：现代、极简、内容优先、暗色模式
-- 技术栈：React Native
+- 产品定位：工具类（AI 智能搜索终端）
+- 目标受众：追求极致效率、即用即走的 C 端用户
+- 风格关键词：前沿、极简、内容优先、暗色模式
+- 技术栈：根据项目配置或默认使用 HTML + Tailwind
 
-### 步骤 2：生成设计系统（必须执行）
+### 步骤 2：生成设计系统规范（核心前置步骤，必须执行）
 
 ```bash
 python3 skills/ui-ux-pro-max/scripts/search.py "AI search tool modern minimal" --design-system -p "AI Search"
 ```
 
-**输出**：完整的设计系统，包含模式、风格、配色、排版、特效以及反面模式。
+**输出**：获得一份量身定制的设计系统方案，包含推荐布局、视觉风格特征、语义配色、字体排版、核心交互动效以及避坑指南。
 
-### 步骤 3：补充细节搜索（根据需要）
+### 步骤 3：补充性细节检索（按需执行）
 
 ```bash
-# 获取现代工具类产品的风格选项
+# 检索极简与纯黑 OLED 模式的设计规范细节
 python3 skills/ui-ux-pro-max/scripts/search.py "minimalism dark mode" --domain style
 
-# 获取关于搜索交互和加载状态的 UX 最佳实践
+# 检索关于搜索过渡和加载状态的 UX 优秀动效实践
 python3 skills/ui-ux-pro-max/scripts/search.py "search loading animation" --domain ux
 ```
 
-### 步骤 4：技术栈指南
+### 步骤 4：特定开发框架的规范检索
 
 ```bash
-python3 skills/ui-ux-pro-max/scripts/search.py "list performance navigation" --stack react-native
+# 检索特定技术栈下的输入性能与列表渲染最佳实践
+python3 skills/ui-ux-pro-max/scripts/search.py "input performance" --stack react-native
 ```
 
-**随后**：综合设计系统与细节搜索结果，并实现设计方案。
+**最后阶段**：将设计系统规范与检索出的最佳交互细节融会贯通，产出高质量前端代码。
 
 ---
 
-## 输出格式
+## 输出格式 (Output Formats)
 
-`--design-system` 标志支持两种输出格式：
+`--design-system` 命令行标志支持以下两种输出格式：
 
 ```bash
-# ASCII 框（默认）- 最适合终端显示
+# ASCII 艺术框（默认）- 最适合终端显示与命令行直观阅读
 python3 skills/ui-ux-pro-max/scripts/search.py "fintech crypto" --design-system
 
-# Markdown 格式 - 最适合文档记录
+# Markdown 格式 - 格式更规整，最适合保存为文档记录或传给 AI 上下文
 python3 skills/ui-ux-pro-max/scripts/search.py "fintech crypto" --design-system -f markdown
 ```
 
 ---
 
-## 获得更好结果的实用技巧
+## 高阶开发与提问技巧
 
-### 查询策略
+### 提问与检索策略
 
-- 使用**多维度关键词** —— 结合产品 + 行业 + 基调 + 密度，例如：`"entertainment social vibrant content-dense"`，而不是简单地使用 `"app"`
-- 尝试对同一需求使用不同的关键词：`"playful neon"` → `"vibrant dark"` → `"content-first minimal"`
-- 首先使用 `--design-system` 获取完整推荐，然后使用 `--domain` 对你不确定的任何维度进行深度探索
-- 始终添加 `--stack react-native` 以获得特定于实现的开发指导
+- **使用多维度复合关键词** —— 结合“产品类别 + 垂直行业 + 视觉基调 + 信息密度”进行检索，例如：`"entertainment social vibrant content-dense"`，而不是随意地检索一个 `"app"`
+- **横向测试相似关键词** —— `"playful neon"` → `"vibrant dark"` → `"content-first minimal"`
+- **采用漏斗式分析** —— 首先运行 `--design-system` 构建底层规范，随后用 `--domain` 深入研究有疑问的局部维度
+- **明确绑定技术栈** —— 检索时追加 `--stack <stack_name>`，以获取针对该框架最优雅的组件封装与渲染逻辑
 
-### 常见痛点与解决方案
+### 常见设计/交互痛点排查与方案
 
 | 问题 | 解决方案 |
 |---------|------------|
-| 无法决定风格或配色 | 使用不同的关键词重新运行 --design-system |
-| 暗色模式下的对比度问题 | 参考快速参考手册第 6 节：color-dark-mode + color-accessible-pairs |
-| 动画效果显得不自然 | 参考快速参考手册第 7 节：spring-physics + easing + exit-faster-than-enter |
-| 表单的 UX 体验较差 | 参考快速参考手册第 8 节：inline-validation + error-clarity + focus-management |
-| 导航体验令人困惑 | 参考快速参考手册第 9 节：nav-hierarchy + bottom-nav-limit + back-behavior |
-| 布局在小屏幕上发生错乱 | 参考快速参考手册第 5 节：mobile-first + breakpoint-consistency |
-| 性能问题 / 界面卡顿 | 参考快速参考手册第 3 节：virtualize-lists + main-thread-budget + debounce-throttle |
+| **视觉失焦（风格或配色拿捏不准）** | 尝试微调检索关键词重新运行 `--design-system` 进行设计推演 |
+| **暗黑模式文本对比度不合规** | 参阅快速参考指南第 1 节：`color-dark-mode` + `color-accessible-pairs` 优化明度 |
+| **动画与交互手感生硬** | 参阅快速参考指南第 7 节：`spring-physics` + `easing` + `exit-faster-than-enter` 曲线 |
+| **表单填报交互繁琐、报错不友好** | 参阅快速参考指南第 8 节：`inline-validation` + `error-clarity` + `focus-management` 重构 |
+| **导航路径混乱、返回状态丢失** | 参阅快速参考指南第 9 节：`nav-hierarchy` + `bottom-nav-limit` + `back-behavior` 保留现场 |
+| **移动端小屏布局拥挤或溢出** | 参阅快速参考指南第 5 节：`mobile-first` + `breakpoint-consistency` 优雅折行 |
+| **列表滚动掉帧或交互响应迟钝** | 参阅快速参考指南第 3 节：`virtualize-lists` + `main-thread-budget` + `debounce-throttle` 优化 |
 
-### 交付前核对清单
+### 上线前 UX 质量走查清单 (Pre-delivery Checklist)
 
-- 在实现前运行 `--domain ux "animation accessibility z-index loading"` 作为 UX 校验步骤
-- 仔细检查快速参考手册的 **§1–§3**（严重 + 高优先级）作为最终审查
-- 在 375px（小屏幕手机）以及横屏模式下进行测试
-- 在启用 **减弱动态效果 (reduced-motion)** 以及 **动态字体 (Dynamic Type)** 最大字号时验证界面表现
-- 独立检查暗色模式的对比度（不要假定亮色模式的参数直接可用）
-- 确保所有触控目标 ≥44pt 且没有任何内容被遮挡在安全区域之外
+- 在具体实现前，建议检索 `--domain ux "animation accessibility z-index loading"` 作为防错预走查
+- 交付前，务必严格核对快速参考指南的 **§1–§3** 章节（CRITICAL & HIGH 级别），这是产品可用性的底线
+- 至少在 375px（移动端黄金分辨率）和横屏设备下进行界面极限测试
+- 开启系统 **减弱动画 (reduced-motion)** 以及 **系统字体最大字号 (Dynamic Type)**，验证布局是否错乱或被截断
+- 亮/暗色模式下的前背景色对比度必须使用专业对比度工具双向校验，不要凭主观推测
+- 交互按钮的物理热区面积至少达 44pt，且操作入口在系统级边缘（如状态栏/手势条）绝无重合或干扰
 
 ---
 
-## 专业 UI 的通用规则
+## 高质量 UI 开发通用铁律
 
-以下是经常被忽视、会导致 UI 显得不够专业的常见问题：
-范围说明：以下规则适用于 App UI（iOS/Android/React Native/Flutter），而非桌面端网页的交互模式。
+以下是极易被忽略、但会导致界面显得极其廉价和不专业的细节硬伤：
 
-### 图标与视觉元素
+### 图标与视觉资产规范
 
-| 规则 (Rule) | 规范标准 (Standard) | 应避免的反面模式 (Avoid) | 为什么重要 (Why It Matters) |
+- 默认图标库使用 **Phosphor (`@phosphor-icons/react`)**。`src/ui-ux-pro-max/data/icons.csv` 中列出的只是常用推荐图标，不是完整集合。
+- 当推荐表中找不到合适的图标时：
+  - **优先继续从 Phosphor 的完整图标集中选择任何语义更贴切的图标**；
+  - 如果 Phosphor 也没有理想选项，可以使用 **Heroicons (`@heroicons/react`)** 作为备选，注意保持风格一致（线性/填充、笔画粗细、圆角风格）。
+
+| 规范准则 (Rule) | 优秀实践 (Do) | 应规避的反模式 (Avoid) | 核心设计考量 (Why It Matters) |
 |------|----------|--------|----------------|
-| **No Emoji as Structural Icons** | 使用矢量图标（如 Lucide、react-native-vector-icons、@expo/vector-icons）。 | 在导航、设置或系统控件中使用 Emoji 表情符号（🎨 🚀 ⚙️）。 | 表情符号依赖系统字体，在不同平台上显示不一致，且无法通过设计 Token 进行控制。 |
-| **Vector-Only Assets** | 使用能够干净缩放且支持主题切换的 SVG 或平台矢量图标。 | 使用在缩放时会模糊或出现像素点的位图 PNG 图标。 | 确保可伸缩性、清晰的渲染以及亮/暗色模式的适配能力。 |
-| **Stable Interaction States** | 在按压状态下使用颜色、不透明度或高度过渡，而不改变布局的边界尺寸。 | 使用会移动周围内容或引发视觉抖动的、会导致布局偏移的形变 (transform)。 | 防止不稳定的交互，保持流畅的动效并提升移动端用户的感知质量。 |
-| **Correct Brand Logos** | 使用官方品牌资源，并遵循其使用指南（间距、颜色、安全空间）。 | 胡乱猜测 Logo 路径、未经授权重新配色或修改品牌比例。 | 避免品牌滥用，并确保符合法律和平台合规性要求。 |
-| **Consistent Icon Sizing** | 将图标尺寸定义为设计 Token（例如 icon-sm, icon-md = 24pt, icon-lg）。 | 随意混用 20pt / 24pt / 28pt 等任意数值。 | 维护整个界面中的视觉节奏和清晰的层级结构。 |
-| **Stroke Consistency** | 在同一视觉层级内使用一致的线条描边宽度（例如 1.5px 或 2px）。 | 随意混用粗细不一的描边风格。 | 不一致的描边会降低界面的精致感和整体凝聚力。 |
-| **Filled vs Outline Discipline** | 在同一层级内统一使用一种图标样式。 | 在同一层级中混合使用填充型 (filled) 和线性 (outline) 图标。 | 保持语义清晰度和风格的一致连贯。 |
-| **Touch Target Minimum** | 至少 44×44pt 的交互区域（如果图标较小，使用 hitSlop 属性扩展点击区域）。 | 使用没有扩展点击区域的小图标。 | 符合无障碍可访问性以及平台可用性规范。 |
-| **Icon Alignment** | 将图标与文本基线对齐，并保持一致的内边距。 | 使用未对齐的图标或其周围出现不一致的间距。 | 防止因细微的视觉失衡而降低界面整体的品质感。 |
-| **Icon Contrast** | 遵循 WCAG 对比度标准：小元素为 4.5:1，较大的 UI 图形符号最小为 3:1。 | 使用会融入背景之中的低对比度图标。 | 确保在亮色和暗色模式下的无障碍可访问性。 |
+| **禁止将 Emoji 用于结构化图标** | 统一使用高阶矢量图标（如 Phosphor、Heroicons 或平台专有矢量图标库）。 | 在侧边栏导航、设置表单或重要交互控件中胡乱堆叠 Emoji（如 🎨 🚀 ⚙️）。 | Emoji 极其依赖客户端系统预装字库，渲染效果千差万别且无法被设计 Token 所控制。 |
+| **纯矢量化资产原则** | 全量使用可无限缩放、完美兼容主题切换的 SVG 图标或平台级矢量 XML 格式。 | 使用 PNG、JPG 等拉伸时会产生锯齿、模糊且无法变色的位图图标。 | 确保在高分视网膜屏幕下的极致清晰度，以及无缝切换亮/暗主题的能力。 |
+| **按压状态过渡稳定性** | 点击/按压态仅使用颜色深浅、不透明度 (Opacity) 或投影高度 (Elevation) 的过渡，绝对不改变组件本身的边框物理大小。 | 在按压或悬停时，使用会改变物理宽高、导致周围元素被挤压或抖动的形变 (Layout Shift)。 | 避免造成交互过程中的页面视觉抖动，保障移动端交互的极其平滑，提升感知质量。 |
+| **品牌资产规范使用** | 统一使用官方矢量品牌资产，严格遵循其标志安全边界与配色指南。 | 主观臆断或手动绘制 Logo、未经授权随意为品牌图标重新配色或强行拉伸比例。 | 确保品牌呈现的严肃与规范，防范法务纠纷及合规性风险。 |
+| **图标尺寸系统化** | 将图标高度与宽度抽象并定义为统一的设计 Token（如 `icon-sm`、`icon-md`=24px、`icon-lg`）。 | 在同一界面中随意混用 18px、21px、25px、29px 等混乱的任意像素尺寸。 | 维持产品设计系统的整体韵律感，建立严谨的视觉阶梯。 |
+| **图标描边线宽一致性** | 在同一个视觉信息层级内，所有图标必须采用相同的线宽描边（如统一使用 1.5px 或 2px）。 | 随意拼凑不同线宽、粗细交织的图标集合。 | 描边粗细不一会严重割裂页面的精致度，降低产品的整体品质感。 |
+| **图标填充/线性风格纯净度** | 在同一视觉层级或同一组功能区（如底部 Tab 栏）内，必须统一使用同一种图标风格（要么全部线性，要么全部填充）。 | 在同一功能区域内，随性混用填充型与线性图标（如首页是线性，搜索页是填充）。 | 维护图标系统的整体调性与视觉规律性。 |
+| **触控热区最小面积限制** | 确保可交互按钮物理热区面积至少达 44×44pt；如果图标视觉过小，必须使用负外边距或 hitSlop 属性扩大实际热区。 | 使用直接暴露的小图标而未做任何热区扩展，导致用户反复点击失败。 | 保障不同手部尺寸用户在运动、颠簸场景下的触碰成功率，满足 A11y 规范。 |
+| **图标文字基线精准对齐** | 图标必须与同级排版的文本基线（Baseline）或中心线严格对齐，并保持统一的水平外边距。 | 图标高度偏高或偏低，产生杂乱无章的视错觉。 | 细微的视觉失衡是摧毁高级感的主要元凶，必须做到像素级严谨对齐。 |
+| **图形对比度无障碍审查** | 遵循 WCAG 对比度底线：常规功能图标对比度 ≥4.5:1，大型图形化装饰性符号对比度 ≥3:1。 | 采用过淡的灰色图标，导致在阳光直射下完全看不清。 | 确保在各种极端照度和不同设备屏幕上的卓越可读性。 |
 
+### 主流端交互规范原则
 
-### 交互规则 (App)
-
-| 规则 (Rule) | 正面实践 (Do) | 反面模式 (Don't) |
+| 规范法则 (Rule) | 正面实践 (Do) | 反面模式 (Don't) |
 |------|----|----- |
-| **Tap feedback** | 在 80-150ms 内提供清晰的按压反馈（涟漪/透明度/高度等） | 点击时没有任何视觉响应 |
-| **Animation timing** | 微交互控制在 150-300ms 左右，采用平台原生缓动曲线 | 使用瞬间切换或过于缓慢的动画（>500ms） |
-| **Accessibility focus** | 确保屏幕阅读器的焦点顺序与视觉顺序一致，且文本标签具有描述性 | 使用未加标签的控件或令人困惑的焦点遍历顺序 |
-| **Disabled state clarity** | 使用禁用语义（disabled 或原生禁用属性）、降低视觉强调度、且不响应点击操作 | 控件看起来可以点击但点击后毫无反应 |
-| **Touch target minimum** | 确保点击区域 >=44x44pt (iOS) 或 >=48x48dp (Android)，在图标较小时扩展热区 | 使用极小的点击目标，或没有外边距的纯图标热区 |
-| **Gesture conflict prevention** | 在每个区域中只保留一种主要手势，并避免嵌套点击/拖拽冲突 | 重叠的手势引发用户的误操作 |
-| **Semantic native controls** | 优先使用原生交互原语（如 Button, Pressable 或平台等效控件），并带有正确的 accessibility role | 在没有语义的情况下使用普通容器作为主要交互控件 |
+| **即时触控反馈 (Tap feedback)** | 必须在触控后的 80–150ms 内给出明确的涟漪、明度微调或透明度过渡等响应 | 点击后界面如一潭死水，无任何视觉或动效响应 |
+| **动效时间把控 (Animation timing)** | 微交互时长限定在 150–300ms 左右，且必须配置符合物理特性的非线性曲线 | 动效瞬间硬切 (0ms) 或采用超过 500ms 的沉重拖沓动画 |
+| **朗读焦点顺序 (Accessibility focus)** | 确保屏幕阅读器 (Screen Reader) 的焦点流向与页面视觉布局顺序绝对匹配 | 焦点焦点随意跳动或将无关的装饰元素朗读给视障用户 |
+| **禁用态状态表达** | 应用淡化透明度、鼠标禁用标识，并通过 `disabled` 属性禁止一切点击触发 | 按钮看起来依然可用但点击后无任何反应，使用户困惑是否发生卡顿 |
+| **扩大最小交互区域** | 确保移动端触控目标热区宽与高均 ≥44pt，对微小图标通过属性扩充交互热区 | 使用过小的像素点，逼迫用户像做外科手术一样精准点击 |
+| **规避多重手势冲突** | 每一个物理区域仅设计一种主流手势操作，防止嵌套滚动或边缘划动手势拦截系统手势 | 在支持滑动的卡片组件内，强行嵌入横向滚动的次级数据列表 |
+| **无障碍语义声明** | 规范使用原生交互控件（如 Button、Pressable），配置准确的 accessibility role 角色 | 随意使用普通的无语义容器（如 Div、View）来包裹关键交互入口 |
 
-### 亮/暗色模式对比度
+### 亮/暗色模式对比度调优
 
-| 规则 (Rule) | 正面实践 (Do) | 反面模式 (Don't) |
+| 规范法则 (Rule) | 正面实践 (Do) | 反面模式 (Don't) |
 |------|----|----- |
-| **Surface readability (light)** | 使用足够的透明度或高度差，使卡片/表面与背景有清晰的区隔 | 使用过度透明的表面而使层级关系变得模糊 |
-| **Text contrast (light)** | 确保正文文本在亮色表面上的对比度 >=4.5:1 | 使用低对比度的灰色正文 |
-| **Text contrast (dark)** | 确保在暗色表面上，主要文本对比度 >=4.5:1，次要文本对比度 >=3:1 | 暗色模式下的文本融入了背景中 |
-| **Border and divider visibility** | 确保分割线在两个主题下均清晰可见（而不仅仅是亮色模式） | 特定主题的边框在某一种模式下完全消失 |
-| **State contrast parity** | 确保在亮色和暗色主题下，按压/获取焦点/禁用的状态具有同等的可区分性 | 只针对其中一种主题定义交互状态 |
-| **Token-driven theming** | 在应用表面、文本、图标中统一使用与各主题建立映射的语义化颜色 Token | 在每个屏幕的样式中硬编码十六进制颜色值 |
-| **Scrim and modal legibility** | 使用足够强的模态框背景遮罩 (scrim) 以隔离前景内容（通常为 40-60% 的黑色半透明） | 使用太淡的遮罩使得背景内容依然与前景在视觉上产生竞争 |
+| **卡片/卡板层级感 (Surface readability)** | 善用投影高度、高光边框或微弱明度差将卡片面板与底层背景界定分明 | 卡片完全融入背景，导致页面沦为平铺直叙的一张白板 |
+| **浅色模式文本易读性** | 确保浅色主题下的正文段落与背景的对比度 ≥4.5:1 | 在白底上使用过淡的浅灰色文字，伤害视力 |
+| **暗黑模式文本易读性** | 确保深色主题下主要文本对比度 ≥4.5:1，次要说明文字对比度 ≥3:1 | 暗色主题下的文本对比度不足，导致文字几乎隐形 |
+| **边框与分割线辨识度** | 确保分割线和细边框在浅色与暗色主题下均有匹配的明暗度对比 | 只针对默认主题调优，在暗黑模式下边框彻底消失 |
+| **交互状态双向适配** | 针对亮/暗两套主题，均设计高水准的 hover、focus、disabled 及 active 交互态 | 仅针对其中一个主题优化了状态，导致另一主题下交互态难以辨认 |
+| **Token 化色彩管理** | 在文字、背景和边框上全量引入语义化色彩 Token，实现主题一键切换 | 在组件样式中大量写死 Hex 颜色，使得主题适配维护成本巨大 |
+| **半透明遮罩对比调优** | 模态弹窗的底层 Scrim 半透明度应设在 40%–60% 之间，以提供充足的前景聚焦力 | 遮罩过淡导致底层内容与弹窗文本发生视觉打架，严重干扰阅读 |
 
-### 布局与间距
+### 布局与间距节奏规范
 
-| 规则 (Rule) | 正面实践 (Do) | 反面模式 (Don't) |
+| 规范法则 (Rule) | 正面实践 (Do) | 反面模式 (Don't) |
 |------|----|----- |
-| **Safe-area compliance** | 为所有固定页眉、标签栏和 CTA 栏严格预留顶部/底部安全区域 | 将固定 UI 放置在刘海屏、状态栏或手势区域的下方且未作适配 |
-| **System bar clearance** | 为状态栏/导航栏和底部手势指示条添加足够的间距 | 让可点击内容与操作系统的系统 UI 元素相冲突 |
-| **Consistent content width** | 按设备类别（手机/平板）保持可预测的、统一的内容宽度 | 在不同屏幕之间混用随意的宽度 |
-| **8dp spacing rhythm** | 在内边距/元素间距/区域间距中统一使用一致的 4/8dp 间距系统 | 使用毫无节奏感、随意递增的间距值 |
-| **Readable text measure** | 在大屏设备上保持长篇文本的易读性（避免在平板上出现通栏横跨的段落） | 直接使用通栏长句而损害文本的可读性 |
-| **Section spacing hierarchy** | 按层级定义清晰的垂直间距阶梯（例如 16/24/32/48） | 在相似的 UI 层级上使用不一致的间距 |
-| **Adaptive gutters by breakpoint** | 在更宽的屏幕上以及横屏模式下，增加两侧的水平边距 | 在所有设备尺寸和屏幕方向下均使用相同的窄边距 |
-| **Scroll and fixed element coexistence** | 添加底部/顶部内容内边距 (insets)，以确保滚动列表底端不会被固定定位的底栏遮挡 | 滚动内容被粘性定位的头部/尾部底栏永久遮挡 |
-
----
-
-## 交付前核对清单
-
-在交付 UI 代码前，请逐一核对以下各项：
-范围说明：此清单适用于 App UI（iOS/Android/React Native/Flutter）。
-
-### 视觉品质
-- [ ] 不使用 Emoji 表情符号作为图标（应使用 SVG/矢量图标）
-- [ ] 所有图标均来自风格和家族统一的图标集
-- [ ] 使用官方品牌资源，保持正确的比例和安全距离
-- [ ] 按压状态下的视觉效果不会引发布局边框偏移或抖动
-- [ ] 统一使用语义化主题 Token（不使用硬编码的单页面颜色值）
-
-### 交互体验
-- [ ] 所有可点击的元素均提供清晰的按压反馈（涟漪/透明度/高度等）
-- [ ] 触控热区满足最小尺寸要求（iOS >=44x44pt，Android >=48x48dp）
-- [ ] 微交互时长保持在 150-300ms 范围内，具有原生质感的缓动曲线
-- [ ] 禁用状态在视觉上清晰可辨，且不响应任何交互
-- [ ] 屏幕阅读器的焦点顺序与视觉顺序匹配，且交互控件标签具有描述性
-- [ ] 手势区域避开嵌套/冲突的交互手势（避免点击、拖拽、侧滑返回发生冲突）
-
-### 亮/暗色模式
-- [ ] 在亮色和暗色模式下，主要文本对比度均 >=4.5:1
-- [ ] 在亮色和暗色模式下，次要文本对比度均 >=3:1
-- [ ] 分割线/边框以及各种交互状态在亮暗两种模式下均可清晰辨识
-- [ ] 模态框/抽屉的背景遮罩透明度足够强，以确保前景文本易读（通常为 40-60% 的黑色半透明）
-- [ ] 交付前对两个主题均进行了实际测试（不要仅凭单一主题的效果推断另一主题）
-
-### 布局表现
-- [ ] 页眉、标签栏和底部 CTA 栏均已对安全区域（Safe Areas）进行避让适配
-- [ ] 滚动列表的内容尾部不会被固定/粘性底栏遮掩
-- [ ] 已经在小屏手机、大屏手机以及平板上（含横竖屏）进行了验证
-- [ ] 水平页边距/槽宽 (insets/gutters) 能够针对设备尺寸和屏幕方向进行正确适配
-- [ ] 在组件、区域和页面层级上均维护了统一的 4/8dp 间距节奏
-- [ ] 在大屏设备上限制了长篇文本的单行字数（不直接使用通栏段落）
-
-### 无障碍可访问性
-- [ ] 所有有实际意义的图片/图标都带有辅助说明标签 (accessibility labels)
-- [ ] 表单字段具有标签、提示信息以及清晰的错误消息
-- [ ] 颜色不是传达数据的唯一指示标识
-- [ ] 支持减弱动态效果与动态字体缩放，且不会导致界面布局错乱
-- [ ] 各种辅助功能属性/角色/状态（如 selected, disabled, expanded）能被系统正确播报
+| **安全区域对齐 (Safe-area)** | 针对页眉、底栏及全局悬浮 CTA 栏，强制注入顶部与底部安全区域 padding | 悬浮底栏把刘海屏或系统底部手势条死死挡住，阻断操作 |
+| **避开系统交互热区** | 为系统状态栏和导航指示条预留充足的高度避让，严防手势冲突 | 让可交互的按钮与系统自带的手势滑轨边缘重叠，触发误触 |
+| **统一多端限制宽度** | 依据设备屏幕尺寸，采用预设的最大安全内容容器宽度（如大屏 PC 限制在 1200px 左右） | 页面布局在宽屏下无限延伸扩展，导致视觉重心涣散 |
+| **4/8pt 间距韵律系统** | 内边距、外边距、网格空隙等，一律采用统一的 4/8/16/24/32/48px 等阶梯节奏 | 随心所欲使用 7px、13px、19px、31px 等无规律的间距数值 |
+| **控制段落最大排版宽度** | 在宽屏平板及 PC 上，限制单行文字最大排版宽度，保证视线移动舒适 | 段落文字横跨整屏，导致用户每读完一行都需要长距离移动眼球寻找下一行 |
+| **垂直间距分明层级** | 页面各区块之间使用鲜明的、拉开差距的垂直间距（如 24px/48px/64px） | 区块区块之间没有清晰的空隙，使页面显得局促而杂乱 |
+| **响应式水平槽宽** | 随着设备屏幕宽度增加，按比例增加两侧的水平页面边距 (Page Gutters) | 在平板和移动端上都顽固使用相同极窄 of 12px 边距 |
+| **底部滚动安全占位** | 凡是页面底部有固定粘性底栏时，必须为列表容器最底端提供相等的 Padding 占位 | 用户滑动到列表最底部时，最后一个条目被粘性底栏永久遮挡 |

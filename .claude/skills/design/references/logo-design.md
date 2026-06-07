@@ -1,13 +1,13 @@
 # Logo 设计参考指南
 
-基于 AI 的 Logo 设计，支持 55+ 种风格、30 种调色板、25 个行业指南。使用 Gemini Nano Banana 模型。
+基于 AI 的 Logo 设计，支持 55+ 种风格、30 种调色板、25 个行业指南。使用 Gemini 图像生成模型。
 
 ## 脚本
 
 | 脚本 | 用途 |
 |--------|---------|
 | `scripts/logo/search.py` | 搜索风格、颜色、行业；生成设计简报 |
-| `scripts/logo/generate.py` | 使用 Gemini Nano Banana 生成 Logo |
+| `scripts/logo/generate.py` | 使用 Gemini 图像生成模型 生成 Logo |
 | `scripts/logo/core.py` | 用于 Logo 数据的 BM25 搜索引擎 |
 
 ## 命令行指令
@@ -40,15 +40,15 @@ python3 ~/.claude/skills/design/scripts/logo/generate.py --brand "TechFlow" --st
 python3 ~/.claude/skills/design/scripts/logo/generate.py --prompt "coffee shop vintage badge" --style vintage
 ```
 
-选项：`--style`, `--industry`, `--prompt`
+参数：`--style`, `--industry`, `--prompt`
 
 ## 可选风格
 
 | 类别 | 风格 |
 |----------|--------|
-| 基础类型 | 极简风格、字标/文本标、首字母标/字母标、图形标/品牌标志、抽象标、吉祥物、徽章标、组合标 |
-| 美学风格 | 复古/怀旧、装饰艺术（Art Deco）、奢华、俏皮活泼、企业形象商务、有机自然、霓虹、垃圾摇滚（Grunge）、水彩 |
-| 现代风格 | 渐变、扁平化设计、3D/等距投影（Isometric）、几何、线条艺术（Line Art）、双色调（Duotone）、动态就绪（Motion-Ready） |
+| 基础类型 | 极简风格、字标/文本标、首字母标志/字母徽标、图形标志/品牌徽记、抽象标、吉祥物、徽章标、组合标 |
+| 美学风格 | 复古/怀旧、装饰艺术（Art Deco）、奢华、俏皮活泼、企业商务风格、有机自然、霓虹、垃圾摇滚（Grunge）、水彩 |
+| 现代风格 | 渐变、扁平化设计、3D/等距投影（Isometric）、几何、线条艺术（Line Art）、双色调（Duotone）、适配动效（Motion-Ready） |
 | 创意/巧妙 | 负空间、单线设计（Monoline）、拆分/碎片化、响应式/自适应 |
 
 ## 色彩心理学
@@ -80,9 +80,9 @@ python3 ~/.claude/skills/design/scripts/logo/generate.py --prompt "coffee shop v
 
 ## 详细参考指南
 
-- `references/logo-style-guide.md` - 详细风格描述
-- `references/logo-color-psychology.md` - 颜色含义与配色组合
-- `references/logo-prompt-engineering.md` - AI 生成提示词
+- [logo-style-guide.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/logo-style-guide.md) - 详细风格描述
+- [logo-color-psychology.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/logo-color-psychology.md) - 颜色含义与配色组合
+- [logo-prompt-engineering.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/logo-prompt-engineering.md) - AI 生成提示词
 
 ## 环境配置
 

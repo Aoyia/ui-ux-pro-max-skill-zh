@@ -10,9 +10,9 @@ metadata:
 
 # 横幅设计 - 多格式创意横幅系统
 
-在社交媒体、广告、网页和印刷格式中设计横幅。根据每次请求，使用 AI 驱动的视觉元素生成多个艺术指导选项。此技能仅处理横幅设计。不处理视频编辑、完整的网站设计或印刷生产。
+设计适用于社交媒体、广告、网页及印刷媒介的各类横幅（Banner）。根据每次请求，使用 AI 驱动的视觉元素生成多个艺术指导选项。本技能专注于横幅视觉设计，不提供视频剪辑、整站开发或印刷品打样等服务。
 
-## 激活时机
+## 适用场景 (When to Use)
 
 - 用户请求横幅、封面或头部设计
 - 社交媒体封面/头部创建
@@ -23,36 +23,36 @@ metadata:
 
 ## 工作流程
 
-### 步骤 1：收集需求 (AskUserQuestion)
+### 步骤 1：需求交互收集 (AskUserQuestion)
 
-通过 AskUserQuestion 收集：
-1. **目的** —— 社交封面、广告横幅、网站 Hero、印刷品还是创意资产？
-2. **平台/尺寸** —— 哪个平台或自定义尺寸？
-3. **内容** —— 标题、副标题、行动呼吁 (CTA)、Logo 位置？
-4. **品牌** —— 现有的品牌指南？（检查 `docs/brand-guidelines.md`）
-5. **风格偏好** —— 有何艺术指导方向？（如果不确定，展示风格选项）
-6. **数量** —— 准备生成多少个选项？（默认：3）
+通过 `AskUserQuestion` 工具交互收集：
+1. **设计诉求** —— 社交封面、广告横幅、网站 Hero、印刷品还是创意资产？
+2. **发布平台/尺寸** —— 哪个平台或自定义尺寸？
+3. **文案内容** —— 标题、副标题、行动呼吁 (CTA)、Logo 位置？
+4. **品牌指南** —— 现有的品牌指南？（检查 `docs/brand-guidelines.md`）
+5. **视觉风格** —— 有何艺术指导方向？（如果不确定，展示风格选项）
+6. **产出数量** —— 准备生成多少个选项？（默认：3）
 
-### 步骤 2：调研与艺术指导
+### 步骤 2：灵感调研与艺术指导
 
-1. 激活 `ui-ux-pro-max` 技能以获取设计智能支持
-2. 使用 Chrome 浏览器在 Pinterest 上搜索设计参考：
+1. 激活 `/ui-ux-pro-max` 技能以获取设计智能支持。
+2. 使用 Chrome 浏览器在 Pinterest 上检索成熟设计作为参考：
    ```
    导航至 pinterest.com → 搜索 "[purpose] banner design [style]" (例如："[目的] 横幅设计 [风格]")
    截取 3-5 个参考 Pin 图作为艺术指导灵感
    ```
 3. 从参考资料中选择 2-3 种互补的艺术指导风格：
-   `references/banner-sizes-and-styles.md`
+   [banner-sizes-and-styles.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/banner-sizes-and-styles.md)
 
 ### 步骤 3：设计与生成选项
 
 针对每个艺术指导选项：
 
 1. **创建 HTML/CSS 横幅**（使用 `frontend-design` 技能）
-   - 使用尺寸参考中准确的平台维度
-   - 应用安全区规则（关键内容需置于中央 70-80% 区域）
-   - 最多使用 2 种字体，单个 CTA，对比度至少 4.5:1
-   - 通过 `inject-brand-context.cjs` 注入品牌上下文
+   - 使用尺寸参考中准确的平台维度。
+   - 应用安全区规则（关键内容需置于中央 70-80% 区域）。
+   - 最多使用 2 种字体，单个 CTA，对比度至少 4.5:1。
+   - 通过 `inject-brand-context.cjs` 注入品牌上下文。
 
 2. **生成视觉元素**（配合 `ai-artist` + `ai-multimodal` 技能）
 
@@ -78,20 +78,21 @@ metadata:
    ```
 
    **何时使用哪种模型：**
-   | 使用场景 | 模型 | 质量 |
+
+   | 使用场景 | 推荐模型 | 质量表现 |
    |----------|-------|---------|
-   | 背景、渐变、图案 | 标准 (Flash) | 2K，快速 |
-   | Hero 插画、产品照 | Pro | 4K，细节丰富 |
-   | 写实场景、复杂艺术 | Pro | 4K，最佳品质 |
-   | 快速迭代、A/B 变体 | 标准 (Flash) | 2K，快速 |
+   | 背景、渐变及纹理图案 | 基础版 (Flash) | 2K 分辨率，生成迅速 |
+   | Hero 插画、产品宣发照 | 专业版 (Pro) | 4K 分辨率，细节刻画细腻 |
+   | 写实级场景、高复杂度艺术效果 | 专业版 (Pro) | 4K 分辨率，画质卓越 |
+   | 快速方案测试、A/B 变体测试 | 基础版 (Flash) | 2K 分辨率，生成迅速 |
 
    **宽高比：** `1:1`, `16:9`, `9:16`, `3:4`, `4:3`, `2:3`, `3:2`
-   匹配到相应平台 - 例如：Twitter 头部 = `3:1`（使用最接近的 `3:2`），Instagram 故事 = `9:16`
+   匹配到相应平台 - 例如：Twitter 头部 = `3:1`（使用最接近的 `3:2`），Instagram 故事 = `9:16`。
 
    **Pro 模型提示词技巧**（参见 `ai-artist` 中的 `references/nano-banana-pro-examples.md`）：
-   - 描述要具体：包括风格、光效、氛围、构图、配色方案
-   - 包含艺术指导：“minimalist flat design”（极简扁平设计）、“cyberpunk neon”（赛博朋克霓虹）、“editorial photography”（社论摄影）
-   - 指定不要文字：“no text, no letters, no words”（无文字、无字母、无单词，因为文字将在 HTML 步骤中进行叠加）
+   - 描述要具体：包括风格、光效、氛围、构图、配色方案。
+   - 包含艺术指导：“minimalist flat design”（极简扁平设计）、“cyberpunk neon”（赛博朋克霓虹）、“editorial photography”（社论摄影）。
+   - 指定不要文字：“no text, no letters, no words”（无文字、无字母、无单词，因为文字将在 HTML 步骤中进行叠加）。
 
 3. **合成最终横幅** —— 在 HTML/CSS 中将文字、CTA、Logo 叠加到生成的视觉元素上。
 
@@ -99,7 +100,7 @@ metadata:
 
 在设计好 HTML 横幅后，使用 `chrome-devtools` 技能将每个横幅导出为 PNG 格式：
 
-1. **通过本地服务器托管 HTML 文件**（使用 python http.server 或类似工具）
+1. **通过本地服务器托管 HTML 文件**（使用 Python http.server 或类似工具）。
 2. **按照准确的平台尺寸截取横幅**：
    ```bash
    # 按照准确尺寸将横幅导出为 PNG
@@ -129,7 +130,7 @@ assets/banners/{campaign}/
 
 - 文件名采用 kebab-case 命名法：`{style}-{width}x{height}.{ext}`
 - 时间敏感型营销活动使用日期前缀：`{YYMMDD}-{style}-{size}.png`
-- 营销活动文件夹（Campaign folder）将所有变体分组归类在一起
+- 营销活动文件夹（Campaign folder）将所有变体分组归类在一起。
 
 ### 步骤 5：展示选项与迭代
 
@@ -164,13 +165,13 @@ assets/banners/{campaign}/
 | 极简主义 (Minimalist) | SaaS、科技 | 留白、1-2 种颜色、干净的排版 |
 | 粗体排版 (Bold Typography) | 宣告、通知 | 超大字体作为视觉主体 |
 | 渐变 (Gradient) | 现代品牌 | 弥散渐变、色彩融合 |
-| 基于照片 (Photo-Based) | 生活方式、电商 | 通栏照片 + 文字覆盖 |
-| 几何 (Geometric) | 科技、金融科技 | 形状、网格、抽象图案 |
-| 复古 (Retro/Vintage) | 餐饮、手工艺 | 磨损纹理、柔和色彩 |
-| 毛玻璃效果 (Glassmorphism) | SaaS、应用 | 磨砂玻璃、模糊、发光边框 |
-| 霓虹/赛博朋克 (Neon/Cyberpunk) | 游戏、活动 | 暗色背景、发光霓虹点缀 |
-| 社论 (Editorial) | 媒体、奢侈品 | 网格布局、引言框 |
-| 3D/雕塑感 (3D/Sculptural) | 产品、科技 | 渲染物体、深度感、阴影 |
+| 基于照片 (Photo-Based) | 生活方式、电商 | 用作背景的通栏照片 + 纯色文字覆盖 |
+| 几何 (Geometric) | 科技、金融科技 | 几何形状、数学网格、抽象装饰图案 |
+| 复古 (Retro/Vintage) | 餐饮、手工艺 | 经典磨损纹理、柔和怀旧色彩 |
+| 毛玻璃效果 (Glassmorphism) | SaaS、应用 | 磨砂玻璃质感、背景高斯模糊、细腻发光边框 |
+| 霓虹/赛博朋克 (Neon/Cyberpunk) | 游戏、活动 | 暗色背景、高饱和度发光霓虹点缀 |
+| 社论 (Editorial) | 媒体、奢侈品 | 典雅网格布局、引言框、大片气场 |
+| 3D/雕塑感 (3D/Sculptural) | 产品、科技 | 3D 渲染物体、空间深度感、柔和阴影 |
 
 完整 22 种风格：`references/banner-sizes-and-styles.md`
 

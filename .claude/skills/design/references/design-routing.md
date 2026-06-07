@@ -49,7 +49,7 @@
 ### Logo 设计任务
 **→ logo-design**
 
-- 使用 AI 生成 Logo（Gemini Nano Banana）
+- 使用 AI 生成 Logo（Gemini 图像生成模型）
 - 搜索 Logo 风格、调性色彩、行业指南
 - 生成设计简报
 - 探索 55+ 种风格（极简、复古、奢华、几何等）

@@ -1,6 +1,6 @@
 ---
 name: ckm:design-system
-description: 设计标记 (Token) 架构、组件规范和演示幻灯片生成。三层 Token 结构（基础级Primitive→语义级Semantic→组件级Component）、CSS 变量、间距/排版比例、组件规范、战略性演示幻灯片创建。适用于设计标记、系统化设计和符合品牌规范的演示文稿。
+description: 设计标记 (Token) 架构、组件规范和演示幻灯片生成。三层 Token 结构（基础级 Primitive → 语义级 Semantic → 组件级 Component）、CSS 变量、间距/排版比例、组件规范、战略性演示幻灯片创建。适用于设计标记、系统化设计和符合品牌规范的演示文稿。
 argument-hint: "[component or token]"
 license: MIT
 metadata:
@@ -12,7 +12,7 @@ metadata:
 
 设计标记 (Token) 架构、组件规范、系统化设计、演示幻灯片生成。
 
-## 使用时机
+## 适用场景 (When to Use)
 
 - 设计标记 (Design token) 创建
 - 组件状态定义 (Component states)
@@ -64,13 +64,13 @@ node scripts/validate-tokens.cjs --dir src/
 
 | 主题 | 文件 |
 |-------|------|
-| 设计标记架构 (Token Architecture) | `references/token-architecture.md` |
-| 基础标记 (Primitive Tokens) | `references/primitive-tokens.md` |
-| 语义标记 (Semantic Tokens) | `references/semantic-tokens.md` |
-| 组件标记 (Component Tokens) | `references/component-tokens.md` |
-| 组件规范 (Component Specs) | `references/component-specs.md` |
-| 状态与变体 (States & Variants) | `references/states-and-variants.md` |
-| Tailwind 集成 (Tailwind Integration) | `references/tailwind-integration.md` |
+| 设计标记架构 (Token Architecture) | [token-architecture.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design-system/references/token-architecture.md) |
+| 基础标记 (Primitive Tokens) | [primitive-tokens.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design-system/references/primitive-tokens.md) |
+| 语义标记 (Semantic Tokens) | [semantic-tokens.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design-system/references/semantic-tokens.md) |
+| 组件标记 (Component Tokens) | [component-tokens.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design-system/references/component-tokens.md) |
+| 组件规范 (Component Specs) | [component-specs.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design-system/references/component-specs.md) |
+| 状态与变体 (States & Variants) | [states-and-variants.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design-system/references/states-and-variants.md) |
+| Tailwind 集成 (Tailwind Integration) | [tailwind-integration.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design-system/references/tailwind-integration.md) |
 
 ## 组件规范模式 (Component Spec Pattern)
 
@@ -100,9 +100,9 @@ node scripts/validate-tokens.cjs --dir src/
 ## 集成与协作
 
 **与品牌协作：** 从品牌颜色/排版中提取基础级标记 (Primitives)
-**与UI样式协作：** 组件标记 (Component tokens) → Tailwind 配置文件
+**与 UI 样式协作：** 组件标记 (Component tokens) → Tailwind 配置文件
 
-**技能依赖：** brand (品牌)、ui-styling (UI样式)
+**技能依赖：** brand (品牌)、ui-styling (UI 样式)
 **核心代理角色：** ui-ux-designer (UI/UX 设计师)、frontend-developer (前端开发人员)
 
 ## 幻灯片系统 (Slide System)
@@ -114,7 +114,7 @@ node scripts/validate-tokens.cjs --dir src/
 | 文件 | 用途 |
 |------|---------|
 | `docs/brand-guidelines.md` | 品牌识别、语气、配色方案 |
-| `assets/design-tokens.json` | 标记定义（基础级Primitive→语义级Semantic→组件级Component） |
+| `assets/design-tokens.json` | 标记定义（基础级 Primitive → 语义级 Semantic → 组件级 Component） |
 | `assets/design-tokens.css` | CSS 变量（导入到幻灯片中） |
 | `assets/css/slide-animations.css` | CSS 动画库 |
 
@@ -123,14 +123,18 @@ node scripts/validate-tokens.cjs --dir src/
 ```bash
 # 基础搜索 (自动检测领域)
 python scripts/search-slides.py "investor pitch"
+```
 
+```bash
 # 针对特定领域的搜索
 python scripts/search-slides.py "problem agitation" -d copy # 搜索文案领域
 python scripts/search-slides.py "revenue growth" -d chart # 搜索图表领域
+```
 
+```bash
 # 上下文关联搜索 (高级系统)
-python scripts/search-slides.py "problem slide" --context --position 2 --total 9 # 第2张幻灯片的上下文搜索
-python scripts/search-slides.py "cta" --context --position 9 --prev-emotion frustration # 前一个情感为挫败时的CTA搜索
+python scripts/search-slides.py "problem slide" --context --position 2 --total 9 # 第 2 张幻灯片的上下文搜索
+python scripts/search-slides.py "cta" --context --position 9 --prev-emotion frustration # 前一个情感为挫败时的 CTA 搜索
 ```
 
 ### 决策系统 CSV 文件列表

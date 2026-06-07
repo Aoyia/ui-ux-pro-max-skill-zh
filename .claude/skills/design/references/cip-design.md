@@ -1,6 +1,6 @@
 # CIP 设计参考指南
 
-企业形象识别系统（CIP）设计，包含 50+ 种交付物、20 种风格、20 个行业。使用 Gemini Nano Banana (Flash/Pro) 生成样机效果图。
+企业形象识别系统（CIP）设计，包含 50+ 种交付物、20 种风格、20 个行业。使用 Gemini 图像生成模型 (Flash/Pro) 生成样机效果图。
 
 ## 脚本
 
@@ -109,9 +109,9 @@ python3 ~/.claude/skills/design/scripts/cip/render-html.py --brand "TopGroup" --
 
 ## 详细参考指南
 
-- `references/cip-deliverable-guide.md` - 交付物规格说明
-- `references/cip-style-guide.md` - 设计风格说明
-- `references/cip-prompt-engineering.md` - AI 生成提示词
+- [cip-deliverable-guide.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/cip-deliverable-guide.md) - 交付物规格说明
+- [cip-style-guide.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/cip-style-guide.md) - 设计风格说明
+- [cip-prompt-engineering.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/design/references/cip-prompt-engineering.md) - AI 生成提示词
 
 ## 环境配置
 

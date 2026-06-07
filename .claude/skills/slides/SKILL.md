@@ -13,7 +13,7 @@ metadata:
 
 <args>$ARGUMENTS</args>
 
-## 使用时机
+## 适用场景 (When to Use)
 
 - 营销展示与商业路演幻灯片 (Pitch decks)
 - 使用 Chart.js 绘制的数据驱动型幻灯片
@@ -24,16 +24,16 @@ metadata:
 
 | 子命令 | 描述 | 参考文档 |
 |------------|-------------|-----------|
-| `create` | 创建战略性演示幻灯片 | `references/create.md` |
+| `create` | 创建战略性演示幻灯片 | [create.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/slides/references/create.md) |
 
 ## 参考文档 (知识库)
 
 | 主题 | 文件 |
 |-------|------|
-| 布局模式 (Layout Patterns) | `references/layout-patterns.md` |
-| HTML 模板 (HTML Template) | `references/html-template.md` |
-| 文案写作公式 (Copywriting Formulas) | `references/copywriting-formulas.md` |
-| 幻灯片策略 (Slide Strategies) | `references/slide-strategies.md` |
+| 布局模式 (Layout Patterns) | [layout-patterns.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/slides/references/layout-patterns.md) |
+| HTML 模板 (HTML Template) | [html-template.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/slides/references/html-template.md) |
+| 文案写作公式 (Copywriting Formulas) | [copywriting-formulas.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/slides/references/copywriting-formulas.md) |
+| 幻灯片策略 (Slide Strategies) | [slide-strategies.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/slides/references/slide-strategies.md) |
 
 ## 路由逻辑
 

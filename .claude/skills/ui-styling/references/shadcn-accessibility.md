@@ -75,8 +75,8 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 ```
 
 键盘快捷键：
-- `空格键/回车键`：打开菜单
-- `上/下方向键`：导航菜单项
+- ` 空格键/回车键 `：打开菜单
+- ` 上/下方向键 `：导航菜单项
 - `Esc`：关闭菜单
 - `Tab`：关闭菜单并将焦点移出
 

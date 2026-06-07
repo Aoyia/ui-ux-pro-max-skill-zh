@@ -10,7 +10,7 @@
 |-------|---------|---------------|
 | default | 无 | 基础外观 |
 | hover | 鼠标悬停 | 颜色轻微变化 |
-| focus | Tab键/点击 | 聚焦环 |
+| focus | Tab 键/点击 | 聚焦环 |
 | active | 鼠标按下 | 最深颜色 |
 | disabled | disabled 属性 | 降低不透明度 |
 | loading | 异步操作 | 旋转指示器 (Spinner) + 不透明度 |

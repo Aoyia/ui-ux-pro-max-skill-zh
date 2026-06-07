@@ -2,15 +2,16 @@
 
 {{DESCRIPTION}}
 {{QUICK_REFERENCE}}
-# 前提条件 (Prerequisites)
 
-检查是否已安装 Python：
+## 开发前提条件 (Prerequisites)
+
+检查开发环境是否已安装 Python 3.x：
 
 ```bash
 python3 --version || python --version
 ```
 
-如果未安装 Python，请根据您的操作系统进行安装：
+如果未安装 Python，请根据您的操作系统执行相应命令安装：
 
 **macOS:**
 ```bash
@@ -29,330 +30,279 @@ winget install Python.Python.3.12
 
 ---
 
-## 如何使用此 Skill
+## 使用指南 (How to Use)
 
-当用户请求以下任何内容时，应使用此 Skill：
+在以下业务开发场景中，可直接调用此技能：
 
-| 场景 (Scenario) | 触发示例 (Trigger Examples) | 从何处开始 (Start From) |
+| 场景 (Scenario) | 触发示例 (Trigger Examples) | 推荐起点 (Start From) |
 |----------|-----------------|------------|
-| **新项目 / 页面** | "做一个 landing page"、"Build a dashboard" | 步骤 1 → 步骤 2（设计系统） |
-| **新组件** | "Create a pricing card"、"Add a modal" | 步骤 3（领域搜索：style, ux） |
-| **选择风格 / 配色 / 字体** | "What style fits a fintech app?"、"推荐配色" | 步骤 2（设计系统） |
-| **审查现有 UI** | "Review this page for UX issues"、"检查无障碍" | 上方的快速参考清单 |
-| **修复 UI 缺陷 (Bug)** | "Button hover is broken"、"Layout shifts on load" | 快速参考 → 相关章节 |
-| **改进 / 优化** | "Make this faster"、"Improve mobile experience" | 步骤 3（领域搜索：ux, react） |
-| **实现暗色模式** | "Add dark mode support" | 步骤 3（领域搜索：style "dark mode"） |
-| **添加图表 / 数据可视化** | "Add an analytics dashboard chart" | 步骤 3（领域搜索：chart） |
-| **技术栈最佳实践** | "React performance tips"、"SwiftUI navigation" | 步骤 4（技术栈搜索） |
+| **全新项目 / 页面开发** | "做一个 landing page"、"Build a dashboard" | 步骤 1 → 步骤 2（生成设计系统） |
+| **新组件设计与还原** | "Create a pricing card"、"Add a modal" | 步骤 3（专项检索：style, ux） |
+| **风格定义 / 调性设计 / 字体配对** | "What style fits a fintech app?"、"推荐配色" | 步骤 2（生成设计系统） |
+| **UI 走查与无障碍审查** | "Review this page for UX issues"、"检查无障碍" | 上方的快速参考指南 (Quick Reference) |
+| **UI 还原度缺陷及交互异常修复** | "Button hover is broken"、"Layout shifts on load" | 快速参考指南 → 匹配章节调优 |
+| **体验升级与性能优化** | "Make this faster"、"Improve mobile experience" | 步骤 3（专项检索：ux, react） |
+| **适配暗黑模式** | "Add dark mode support" | 步骤 3（专项检索：style "dark mode"） |
+| **引入图表与数据可视化** | "Add an analytics dashboard chart" | 步骤 3（专项检索：chart） |
+| **特定技术栈的最佳开发实践** | "React performance tips" | 步骤 4（框架指令检索） |
 
-请遵循以下工作流：
+请遵循以下标准开发流：
 
-### 步骤 1：分析用户需求
+### 步骤 1：深入分析用户需求
 
-从用户请求中提取关键信息：
-- **产品类型**：娱乐（社交、视频、音乐、游戏）、工具（扫描仪、编辑器、转换器）、效率（任务管理、笔记、日历）或混合型
-- **目标受众**：C 端消费者用户；考虑年龄段、使用场景（通勤、闲暇、工作）
-- **风格关键词**：活泼 (playful)、活力 (vibrant)、极简 (minimal)、暗色模式 (dark mode)、内容优先 (content-first)、沉浸式 (immersive) 等
-- **技术栈**：React Native（当前项目的唯一技术栈）
+从用户请求中精准提取以下决策因子：
+- **产品定位/类型**：娱乐社交（社交、视频、音乐、游戏）、生产力工具（扫描仪、编辑器、转换器）、效率协作（任务管理、笔记、日历）或复合型平台
+- **目标受众画像**：C 端消费者用户；考虑年龄段、使用场景（通勤、闲暇、工作）
+- **风格关键词**：活泼趣味 (playful)、动感活力 (vibrant)、极致极简 (minimal)、暗黑 OLED (dark mode)、内容优先 (content-first)、沉浸式 (immersive) 等
+- **框架技术栈**：确认当前项目所采用的框架与技术栈
 
-### 步骤 2：生成设计系统（必须执行）
+### 步骤 2：生成设计系统规范（核心前置步骤，必须执行）
 
-**请始终首先运行 `--design-system`**，以获取包含推导逻辑的完整设计建议：
+**请务必首先执行 `--design-system` 命令**，以获取包含严密推理逻辑的完整设计系统方案：
 
 ```bash
 python3 skills/ui-ux-pro-max/scripts/search.py "<product_type> <industry> <keywords>" --design-system [-p "Project Name"]
 ```
 
-该命令会：
-1. 并行搜索多个领域（产品 product、风格 style、颜色 color、落地页 landing、排版 typography）
-2. 应用来自 `ui-reasoning.csv` 的推理规则来选择最佳匹配项
-3. 返回完整的设计系统：模式、风格、配色、排版、效果
-4. 包含需要避免的反面模式
+底层执行逻辑：
+1. **多维度并行检索**：并行检索产品定位 (product)、UI 风格 (style)、色彩搭配 (color)、布局模式 (landing) 以及字体排版 (typography) 数据库
+2. **智能规则推理**：基于 `ui-reasoning.csv` 决策模型，智能匹配并输出最佳方案
+3. **输出标准化设计系统**：提供版式布局、视觉风格、色板、字体调性及动效交互说明
+4. **输出反模式避坑清单**：列出当前行业需规避的交互/视觉雷区
 
 **示例：**
 ```bash
 python3 skills/ui-ux-pro-max/scripts/search.py "beauty spa wellness service" --design-system -p "Serenity Spa"
 ```
 
-### 步骤 2b：持久化设计系统（主系统 + 页面覆盖模式）
+### 步骤 2b：持久化设计系统（全局主配置 + 页面覆盖模式）
 
-如需保存设计系统以便在**跨会话时进行分层检索**，请添加 `--persist` 参数：
+若需保存生成的配置以支持跨会话的**层级上下文检索**，请追加 `--persist` 参数：
 
 ```bash
 python3 skills/ui-ux-pro-max/scripts/search.py "<query>" --design-system --persist -p "Project Name"
 ```
 
-这会创建：
-- `design-system/MASTER.md` — 包含所有设计规则的全局唯一真理源 (Global Source of Truth)
-- `design-system/pages/` — 存放特定页面覆盖规则的文件夹
+这将在项目根目录下自动创建：
+- `design-system/MASTER.md` —— 全局唯一事实来源 (Single Source of Truth，包含全局通用规范)
+- `design-system/pages/` —— 存放特定页面覆盖规则的文件夹
 
-**带有特定页面覆盖规则的示例：**
+**生成特定页面覆盖规则示例：**
 ```bash
 python3 skills/ui-ux-pro-max/scripts/search.py "<query>" --design-system --persist -p "Project Name" --page "dashboard"
 ```
 
-这还会创建：
-- `design-system/pages/dashboard.md` — 特定于仪表盘 (dashboard) 页面且偏离 Master 的覆盖规则
+这还会额外创建：
+- `design-system/pages/dashboard.md` —— 仅针对仪表盘页面的局部覆盖规范（只声明偏离 Master 的差异部分）
 
-**分层检索是如何工作的：**
-1. 在构建特定页面（例如 "Checkout"）时，首先检查 `design-system/pages/checkout.md` 文件是否存在
-2. 如果该页面文件存在，它的规则将**覆盖** Master 文件中的规则
-3. 如果不存在，则完全使用 `design-system/MASTER.md`
+**层级上下文检索机制：**
+1. AI 在构建特定页面（如 Checkout）时，会首先检索 `design-system/pages/checkout.md` 是否存在
+2. 如果该页面配置文件存在，其局部规则将**覆盖 (override)** 全局 `MASTER.md` 的设定
+3. 若不存在特定页面配置文件，则默认以 `design-system/MASTER.md` 为全局唯一依据
 
-**上下文感知检索提示词 (Prompt)：**
+**上下文感知检索提示词模板 (Context-Aware Prompt)：**
 ```
-我正在构建 [页面名称] 页面。请阅读 design-system/MASTER.md。
-同时检查 design-system/pages/[page-name].md 是否存在。
-如果该页面文件存在，请优先使用其规则。
-如果不存在，请完全使用 Master 文件中的规则。
-现在，请生成代码……
+I am building the [Page Name] page. Please read design-system/MASTER.md.
+Also check if design-system/pages/[page-name].md exists.
+If the page file exists, prioritize its rules.
+If not, use the Master rules exclusively.
+Now, generate the code...
 ```
 
-### 步骤 3：补充细节搜索（根据需要）
+### 步骤 3：补充性细节检索（按需执行）
 
-获取设计系统后，可以通过领域搜索来获取额外的设计细节：
+在设计系统大框架下，若需针对特定交互细节进行微调，可运行以下命令检索：
 
 ```bash
 python3 skills/ui-ux-pro-max/scripts/search.py "<keyword>" --domain <domain> [-n <max_results>]
 ```
 
-**何时使用细节搜索：**
+**补充检索场景：**
 
-| 需求 | 领域 (Domain) | 示例 (Example) |
+| 需求 | 检索领域 (Domain) | 示例 (Example) |
 |------|--------|---------|
-| 产品类型模式 | `product` | `--domain product "entertainment social"` |
-| 更多风格选择 | `style` | `--domain style "glassmorphism dark"` |
-| 配色方案 | `color` | `--domain color "entertainment vibrant"` |
-| 字体搭配 | `typography` | `--domain typography "playful modern"` |
-| 图表推荐 | `chart` | `--domain chart "real-time dashboard"` |
-| UX 最佳实践 | `ux` | `--domain ux "animation accessibility"` |
-| 落地页结构 | `landing` | `--domain landing "hero social-proof"` |
-| React Native 性能优化 | `react` | `--domain react "rerender memo list"` |
-| 应用界面无障碍/平台规范 | `web` | `--domain web "accessibilityLabel touch safe-areas"` |
-| AI 提示词 / CSS 关键词 | `prompt` | `--domain prompt "minimalism"` |
+| 产品原型与排版模式 | `product` | `--domain product "entertainment social"` |
+| 视觉风格深度检索 | `style` | `--domain style "glassmorphism dark"` |
+| 配色/色板精选 | `color` | `--domain color "entertainment vibrant"` |
+| 字体组合/字体配对 | `typography` | `--domain typography "playful modern"` |
+| 图表展现与库推荐 | `chart` | `--domain chart "real-time dashboard"` |
+| UX 交互与无障碍合规 | `ux` | `--domain ux "animation accessibility"` |
+| 落地页布局与 CTA 策略 | `landing` | `--domain landing "hero social-proof"` |
+| 开发框架性能调优 | `react` | `--domain react "rerender memo list"` |
+| 平台交互规范 (iOS/Android) | `web` | `--domain web "accessibilityLabel touch safe-areas"` |
+| AI 提示词与核心变量 | `prompt` | `--domain prompt "minimalism"` |
 
-### 步骤 4：技术栈指南（React Native）
+### 步骤 4：特定技术栈规范适配
 
-获取特定于 React Native 实现的最佳实践：
+检索针对特定框架底层实现的高质量代码模板与性能建议：
 
 ```bash
-python3 skills/ui-ux-pro-max/scripts/search.py "<keyword>" --stack react-native
+python3 skills/ui-ux-pro-max/scripts/search.py "<keyword>" --stack <stack>
 ```
 
 ---
 
-## 搜索参考
+## 快捷检索参考表
 
-### 可用领域
+### 检索领域 (Domains)
 
 | 领域 (Domain) | 用途 | 示例关键词 |
 |--------|---------|------------------|
-| `product` | 产品类型推荐建议 | SaaS, e-commerce, portfolio, healthcare, beauty, service |
-| `style` | UI 风格、颜色、特效 | glassmorphism, minimalism, dark mode, brutalism |
-| `typography` | 字体搭配、Google Fonts 推荐 | elegant, playful, professional, modern |
-| `color` | 根据产品类型推荐的配色方案 | saas, ecommerce, healthcare, beauty, fintech, service |
-| `landing` | 页面结构、CTA (行动召唤) 策略 | hero, hero-centric, testimonial, pricing, social-proof |
-| `chart` | 图表类型、推荐的图表库 | trend, comparison, timeline, funnel, pie |
-| `ux` | 用户体验最佳实践与反面模式 | animation, accessibility, z-index, loading |
-| `react` | React/Next.js 性能优化 | waterfall, bundle, suspense, memo, rerender, cache |
-| `web` | 应用界面设计指南（iOS/Android/React Native） | accessibilityLabel, touch targets, safe areas, Dynamic Type |
-| `prompt` | AI 提示词、CSS 关键词 | (style name) |
-
-### 可用技术栈
-
-| 技术栈 (Stack) | 核心关注点 |
-|-------|-------|
-| `react-native` | 组件 (Components)、导航 (Navigation)、列表 (Lists) |
+| `product` | 产品类型模式推荐建议 | SaaS, e-commerce, portfolio, healthcare, beauty, service |
+| `style` | UI 设计风格、颜色、特效特征 | glassmorphism, minimalism, dark mode, brutalism |
+| `typography` | 经典字体搭配、Google Fonts 导入推荐 | elegant, playful, professional, modern |
+| `color` | 匹配行业受众的产品色板推荐 | saas, ecommerce, healthcare, beauty, fintech, service |
+| `landing` | 落地页页面结构与 CTA 转化策略 | hero, hero-centric, testimonial, pricing, social-proof |
+| `chart` | 推荐的数据图表类型与可视化图表库 | trend, comparison, timeline, funnel, pie |
+| `ux` | 交互设计优秀实践与反模式防坑指南 | animation, accessibility, z-index, loading |
+| `react` | React 生态框架的前端渲染性能调优 | waterfall, bundle, suspense, memo, rerender, cache |
+| `web` | 主流端平台设计与无障碍接口规范 | accessibilityLabel, touch targets, safe areas, Dynamic Type |
+| `prompt` | 生成特定风格视觉的 AI 绘图提示词 | (style name) |
 
 ---
 
-## 示例工作流
+## 标准工作流实战演练
 
-**用户请求**："制作一个 AI 搜索首页。"
+**用户请求**："帮我设计一个 AI 搜索首页"
 
 ### 步骤 1：分析需求
-- 产品类型：工具（AI 搜索引擎）
-- 目标受众：寻求快速、智能化搜索的 C 端用户
-- 风格关键词：现代、极简、内容优先、暗色模式
-- 技术栈：React Native
+- 产品定位：工具类（AI 智能搜索终端）
+- 目标受众：追求极致效率、即用即走的 C 端用户
+- 风格关键词：前沿、极简、内容优先、暗色模式
+- 技术栈：根据项目配置或默认使用 HTML + Tailwind
 
-### 步骤 2：生成设计系统（必须执行）
+### 步骤 2：生成设计系统规范（核心前置步骤，必须执行）
 
 ```bash
 python3 skills/ui-ux-pro-max/scripts/search.py "AI search tool modern minimal" --design-system -p "AI Search"
 ```
 
-**输出**：完整的设计系统，包含模式、风格、配色、排版、特效以及反面模式。
+**输出**：获得一份量身定制的设计系统方案，包含推荐布局、视觉风格特征、语义配色、字体排版、核心交互动效以及避坑指南。
 
-### 步骤 3：补充细节搜索（根据需要）
+### 步骤 3：补充性细节检索（按需执行）
 
 ```bash
-# 获取现代工具类产品的风格选项
+# 检索极简与纯黑 OLED 模式的设计规范细节
 python3 skills/ui-ux-pro-max/scripts/search.py "minimalism dark mode" --domain style
 
-# 获取关于搜索交互和加载状态的 UX 最佳实践
+# 检索关于搜索过渡和加载状态的 UX 优秀动效实践
 python3 skills/ui-ux-pro-max/scripts/search.py "search loading animation" --domain ux
 ```
 
-### 步骤 4：技术栈指南
+### 步骤 4：特定开发框架的规范检索
 
 ```bash
-python3 skills/ui-ux-pro-max/scripts/search.py "list performance navigation" --stack react-native
+# 检索特定技术栈下的输入性能与列表渲染最佳实践
+python3 skills/ui-ux-pro-max/scripts/search.py "input performance" --stack react
 ```
 
-**随后**：综合设计系统与细节搜索结果，并实现设计方案。
+**最后阶段**：将设计系统规范与检索出的最佳交互细节融会贯通，产出高质量前端代码。
 
 ---
 
-## 输出格式
+## 输出格式 (Output Formats)
 
-`--design-system` 标志支持两种输出格式：
+`--design-system` 命令行标志支持以下两种输出格式：
 
 ```bash
-# ASCII 框（默认）- 最适合终端显示
+# ASCII 艺术框（默认）- 最适合终端显示与命令行直观阅读
 python3 skills/ui-ux-pro-max/scripts/search.py "fintech crypto" --design-system
 
-# Markdown 格式 - 最适合文档记录
+# Markdown 格式 - 格式更规整，最适合保存为文档记录或传给 AI 上下文
 python3 skills/ui-ux-pro-max/scripts/search.py "fintech crypto" --design-system -f markdown
 ```
 
 ---
 
-## 获得更好结果的实用技巧
+## 高阶开发与提问技巧
 
-### 查询策略
+### 提问与检索策略
 
-- 使用**多维度关键词** —— 结合产品 + 行业 + 基调 + 密度，例如：`"entertainment social vibrant content-dense"`，而不是简单地使用 `"app"`
-- 尝试对同一需求使用不同的关键词：`"playful neon"` → `"vibrant dark"` → `"content-first minimal"`
-- 首先使用 `--design-system` 获取完整推荐，然后使用 `--domain` 对你不确定的任何维度进行深度探索
-- 始终添加 `--stack react-native` 以获得特定于实现的开发指导
+- **使用多维度复合关键词** —— 结合“产品类别 + 垂直行业 + 视觉基调 + 信息密度”进行检索，例如：`"entertainment social vibrant content-dense"`，而不是随意地检索一个 `"app"`
+- **横向测试相似关键词** —— `"playful neon"` → `"vibrant dark"` → `"content-first minimal"`
+- **采用漏斗式分析** —— 首先运行 `--design-system` 构建底层规范，随后用 `--domain` 深入研究有疑问的局部维度
+- **明确绑定技术栈** —— 检索时追加 `--stack <stack_name>`，以获取针对该框架最优雅的组件封装与渲染逻辑
 
-### 常见痛点与解决方案
+### 常见设计/交互痛点排查与方案
 
 | 问题 | 解决方案 |
 |---------|------------|
-| 无法决定风格或配色 | 使用不同的关键词重新运行 --design-system |
-| 暗色模式下的对比度问题 | 参考快速参考手册第 6 节：color-dark-mode + color-accessible-pairs |
-| 动画效果显得不自然 | 参考快速参考手册第 7 节：spring-physics + easing + exit-faster-than-enter |
-| 表单的 UX 体验较差 | 参考快速参考手册第 8 节：inline-validation + error-clarity + focus-management |
-| 导航体验令人困惑 | 参考快速参考手册第 9 节：nav-hierarchy + bottom-nav-limit + back-behavior |
-| 布局在小屏幕上发生错乱 | 参考快速参考手册第 5 节：mobile-first + breakpoint-consistency |
-| 性能问题 / 界面卡顿 | 参考快速参考手册第 3 节：virtualize-lists + main-thread-budget + debounce-throttle |
+| **视觉失焦（风格或配色拿捏不准）** | 尝试微调检索关键词重新运行 `--design-system` 进行设计推演 |
+| **暗黑模式文本对比度不合规** | 参阅快速参考指南第 1 节：`color-dark-mode` + `color-accessible-pairs` 优化明度 |
+| **动画与交互手感生硬** | 参阅快速参考指南第 7 节：`spring-physics` + `easing` + `exit-faster-than-enter` 曲线 |
+| **表单填报交互繁琐、报错不友好** | 参阅快速参考指南第 8 节：`inline-validation` + `error-clarity` + `focus-management` 重构 |
+| **导航路径混乱、返回状态丢失** | 参阅快速参考指南第 9 节：`nav-hierarchy` + `bottom-nav-limit` + `back-behavior` 保留现场 |
+| **移动端小屏布局拥挤或溢出** | 参阅快速参考指南第 5 节：`mobile-first` + `breakpoint-consistency` 优雅折行 |
+| **列表滚动掉帧或交互响应迟钝** | 参阅快速参考指南第 3 节：`virtualize-lists` + `main-thread-budget` + `debounce-throttle` 优化 |
 
-### 交付前核对清单
+### 上线前 UX 质量走查清单 (Pre-delivery Checklist)
 
-- 在实现前运行 `--domain ux "animation accessibility z-index loading"` 作为 UX 校验步骤
-- 仔细检查快速参考手册的 **§1–§3**（严重 + 高优先级）作为最终审查
-- 在 375px（小屏幕手机）以及横屏模式下进行测试
-- 在启用 **减弱动态效果 (reduced-motion)** 以及 **动态字体 (Dynamic Type)** 最大字号时验证界面表现
-- 独立检查暗色模式的对比度（不要假定亮色模式的参数直接可用）
-- 确保所有触控目标 ≥44pt 且没有任何内容被遮挡在安全区域之外
+- 在具体实现前，建议检索 `--domain ux "animation accessibility z-index loading"` 作为防错预走查
+- 交付前，务必严格核对快速参考指南的 **§1–§3** 章节（CRITICAL & HIGH 级别），这是产品可用性的底线
+- 至少在 375px（移动端黄金分辨率）和横屏设备下进行界面极限测试
+- 开启系统 **减弱动画 (reduced-motion)** 以及 **系统字体最大字号 (Dynamic Type)**，验证布局是否错乱或被截断
+- 亮/暗色模式下的前背景色对比度必须使用专业对比度工具双向校验，不要凭主观推测
+- 交互按钮的物理热区面积至少达 44pt，且操作入口在系统级边缘（如状态栏/手势条）绝无重合或干扰
 
 ---
 
-## 专业 UI 的通用规则
+## 高质量 UI 开发通用铁律
 
-以下是经常被忽视、会导致 UI 显得不够专业的常见问题：
-范围说明：以下规则适用于 App UI（iOS/Android/React Native/Flutter），而非桌面端网页的交互模式。
+以下是极易被忽略、但会导致界面显得极其廉价和不专业的细节硬伤：
 
-### 图标与视觉元素
+### 图标与视觉资产规范
 
 - 默认图标库使用 **Phosphor (`@phosphor-icons/react`)**。`src/ui-ux-pro-max/data/icons.csv` 中列出的只是常用推荐图标，不是完整集合。
 - 当推荐表中找不到合适的图标时：
   - **优先继续从 Phosphor 的完整图标集中选择任何语义更贴切的图标**；
   - 如果 Phosphor 也没有理想选项，可以使用 **Heroicons (`@heroicons/react`)** 作为备选，注意保持风格一致（线性/填充、笔画粗细、圆角风格）。
 
-| 规则 (Rule) | 规范标准 (Standard) | 应避免的反面模式 (Avoid) | 为什么重要 (Why It Matters) |
+| 规范准则 (Rule) | 优秀实践 (Do) | 应规避的反模式 (Avoid) | 核心设计考量 (Why It Matters) |
 |------|----------|--------|----------------|
-| **No Emoji as Structural Icons** | 使用矢量图标（如 Phosphor `@phosphor-icons/react`、Heroicons `@heroicons/react`、react-native-vector-icons、@expo/vector-icons）。 | 在导航、设置或系统控件中使用 Emoji 表情符号（🎨 🚀 ⚙️）。 | 表情符号依赖系统字体，在不同平台上显示不一致，且无法通过设计 Token 进行控制。 |
-| **Vector-Only Assets** | 使用能够干净缩放且支持主题切换的 SVG 或平台矢量图标。 | 使用在缩放时会模糊或出现像素点的位图 PNG 图标。 | 确保可伸缩性、清晰的渲染以及亮/暗色模式的适配能力。 |
-| **Stable Interaction States** | 在按压状态下使用颜色、不透明度或高度过渡，而不改变布局的边界尺寸。 | 使用会移动周围内容或引发视觉抖动的、会导致布局偏移的形变 (transform)。 | 防止不稳定的交互，保持流畅的动效并提升移动端用户的感知 quality。 |
-| **Correct Brand Logos** | 使用官方品牌资源，并遵循其使用指南（间距、颜色、安全空间）。 | 胡乱猜测 Logo 路径、未经授权重新配色或修改品牌比例。 | 避免品牌滥用，并确保符合法律和平台合规性要求。 |
-| **Consistent Icon Sizing** | 将图标尺寸定义为设计 Token（例如 icon-sm, icon-md = 24pt, icon-lg）。 | 随意混用 20pt / 24pt / 28pt 等任意数值。 | 维护整个界面中的视觉节奏和清晰的层级结构。 |
-| **Stroke Consistency** | 在同一视觉层级内使用一致的线条描边宽度（例如 1.5px 或 2px）。 | 随意混用粗细不一的描边风格。 | 不一致的描边会降低界面的精致感和整体凝聚力。 |
-| **Filled vs Outline Discipline** | 在同一层级内统一使用一种图标样式。 | 在同一层级中混合使用填充型 (filled) 和线性 (outline) 图标。 | 保持语义清晰度和风格的一致连贯。 |
-| **Touch Target Minimum** | 至少 44×44pt 的交互区域（如果图标较小，使用 hitSlop 属性扩展点击区域）。 | 使用没有扩展点击区域的小图标。 | 符合无障碍可访问性以及平台可用性规范。 |
-| **Icon Alignment** | 将图标与文本基线对齐，并保持一致的内边距。 | 使用未对齐的图标或其周围出现不一致的间距。 | 防止因细微的视觉失衡而降低界面整体的品质感。 |
-| **Icon Contrast** | 遵循 WCAG 对比度标准：小元素为 4.5:1，较大的 UI 图形符号最小为 3:1。 | 使用会融入背景之中的低对比度图标。 | 确保在亮色和暗色模式下的无障碍可访问性。 |
+| **禁止将 Emoji 用于结构化图标** | 统一使用高阶矢量图标（如 Phosphor、Heroicons 或平台专有矢量图标库）。 | 在侧边栏导航、设置表单或重要交互控件中胡乱堆叠 Emoji（如 🎨 🚀 ⚙️）。 | Emoji 极其依赖客户端系统预装字库，渲染效果千差万别且无法被设计 Token 所控制。 |
+| **纯矢量化资产原则** | 全量使用可无限缩放、完美兼容主题切换的 SVG 图标或平台级矢量 XML 格式。 | 使用 PNG、JPG 等拉伸时会产生锯齿、模糊且无法变色的位图图标。 | 确保在高分视网膜屏幕下的极致清晰度，以及无缝切换亮/暗主题的能力。 |
+| **按压状态过渡稳定性** | 点击/按压态仅使用颜色深浅、不透明度 (Opacity) 或投影高度 (Elevation) 的过渡，绝对不改变组件本身的边框物理大小。 | 在按压或悬停时，使用会改变物理宽高、导致周围元素被挤压或抖动的形变 (Layout Shift)。 | 避免造成交互过程中的页面视觉抖动，保障移动端交互的极其平滑，提升感知质量。 |
+| **品牌资产规范使用** | 统一使用官方矢量品牌资产，严格遵循其标志安全边界与配色指南。 | 主观臆断或手动绘制 Logo、未经授权随意为品牌图标重新配色或强行拉伸比例。 | 确保品牌呈现的严肃与规范，防范法务纠纷及合规性风险。 |
+| **图标尺寸系统化** | 将图标高度与宽度抽象并定义为统一的设计 Token（如 `icon-sm`、`icon-md`=24px、`icon-lg`）。 | 在同一界面中随意混用 18px、21px、25px、29px 等混乱的任意像素尺寸。 | 维持产品设计系统的整体韵律感，建立严谨的视觉阶梯。 |
+| **图标描边线宽一致性** | 在同一个视觉信息层级内，所有图标必须采用相同的线宽描边（如统一使用 1.5px 或 2px）。 | 随意拼凑不同线宽、粗细交织的图标集合。 | 描边粗细不一会严重割裂页面的精致度，降低产品的整体品质感。 |
+| **图标填充/线性风格纯净度** | 在同一视觉层级或同一组功能区（如底部 Tab 栏）内，必须统一使用同一种图标风格（要么全部线性，要么全部填充）。 | 在同一功能区域内，随性混用填充型与线性图标（如首页是线性，搜索页是填充）。 | 维护图标系统的整体调性与视觉规律性。 |
+| **触控热区最小面积限制** | 确保可交互按钮物理热区面积至少达 44×44pt；如果图标视觉过小，必须使用负外边距或 hitSlop 属性扩大实际热区。 | 使用直接暴露的小图标而未做任何热区扩展，导致用户反复点击失败。 | 保障不同手部尺寸用户在运动、颠簸场景下的触碰成功率，满足 A11y 规范。 |
+| **图标文字基线精准对齐** | 图标必须与同级排版的文本基线（Baseline）或中心线严格对齐，并保持统一的水平外边距。 | 图标高度偏高或偏低，产生杂乱无章的视错觉。 | 细微的视觉失衡是摧毁高级感的主要元凶，必须做到像素级严谨对齐。 |
+| **图形对比度无障碍审查** | 遵循 WCAG 对比度底线：常规功能图标对比度 ≥4.5:1，大型图形化装饰性符号对比度 ≥3:1。 | 采用过淡的灰色图标，导致在阳光直射下完全看不清。 | 确保在各种极端照度和不同设备屏幕上的卓越可读性。 |
 
+### 主流端交互规范原则
 
-### 交互规则 (App)
-
-| 规则 (Rule) | 正面实践 (Do) | 反面模式 (Don't) |
+| 规范法则 (Rule) | 正面实践 (Do) | 反面模式 (Don't) |
 |------|----|----- |
-| **Tap feedback** | 在 80-150ms 内提供清晰的按压反馈（涟漪/透明度/高度等） | 点击时没有任何视觉响应 |
-| **Animation timing** | 微交互控制在 150-300ms 左右，采用平台原生缓动曲线 | 使用瞬间切换或过于缓慢的动画（>500ms） |
-| **Accessibility focus** | 确保屏幕阅读器的焦点顺序与视觉顺序一致，且文本标签具有描述性 | 使用未加标签的控件或令人困惑的焦点遍历顺序 |
-| **Disabled state clarity** | 使用禁用语义（disabled 或原生禁用属性）、降低视觉强调度、且不响应点击操作 | 控件看起来可以点击但点击后毫无反应 |
-| **Touch target minimum** | 确保点击区域 >=44x44pt (iOS) 或 >=48x48dp (Android)，在图标较小时扩展热区 | 使用极小的点击目标，或没有外边距的纯图标热区 |
-| **Gesture conflict prevention** | 在每个区域中只保留一种主要手势，并避免嵌套点击/拖拽冲突 | 重叠的手势引发用户的误操作 |
-| **Semantic native controls** | 优先使用原生交互原语（如 Button, Pressable 或平台等效控件），并带有正确的 accessibility role | 在没有语义的情况下使用普通容器作为主要交互控件 |
+| **即时触控反馈 (Tap feedback)** | 必须在触控后的 80–150ms 内给出明确的涟漪、明度微调或透明度过渡等响应 | 点击后界面如一潭死水，无任何视觉或动效响应 |
+| **动效时间把控 (Animation timing)** | 微交互时长限定在 150–300ms 左右，且必须配置符合物理特性的非线性曲线 | 动效瞬间硬切 (0ms) 或采用超过 500ms 的沉重拖沓动画 |
+| **朗读焦点顺序 (Accessibility focus)** | 确保屏幕阅读器 (Screen Reader) 的焦点流向与页面视觉布局顺序绝对匹配 | 焦点焦点随意跳动或将无关的装饰元素朗读给视障用户 |
+| **禁用态状态表达** | 应用淡化透明度、鼠标禁用标识，并通过 `disabled` 属性禁止一切点击触发 | 按钮看起来依然可用但点击后无任何反应，使用户困惑是否发生卡顿 |
+| **扩大最小交互区域** | 确保移动端触控目标热区宽与高均 ≥44pt，对微小图标通过属性扩充交互热区 | 使用过小的像素点，逼迫用户像做外科手术一样精准点击 |
+| **规避多重手势冲突** | 每一个物理区域仅设计一种主流手势操作，防止嵌套滚动或边缘划动手势拦截系统手势 | 在支持滑动的卡片组件内，强行嵌入横向滚动的次级数据列表 |
+| **无障碍语义声明** | 规范使用原生交互控件（如 Button、Pressable），配置准确的 accessibility role 角色 | 随意使用普通的无语义容器（如 Div、View）来包裹关键交互入口 |
 
-### 亮/暗色模式对比度
+### 亮/暗色模式对比度调优
 
-| 规则 (Rule) | 正面实践 (Do) | 反面模式 (Don't) |
+| 规范法则 (Rule) | 正面实践 (Do) | 反面模式 (Don't) |
 |------|----|----- |
-| **Surface readability (light)** | 使用足够的透明度或高度差，使卡片/表面与背景有清晰的区隔 | 使用过度透明的表面而使层级关系变得模糊 |
-| **Text contrast (light)** | 确保正文文本在亮色表面上的对比度 >=4.5:1 | 使用低对比度的灰色正文 |
-| **Text contrast (dark)** | 确保在暗色表面上，主要文本对比度 >=4.5:1，次要文本对比度 >=3:1 | 暗色模式下的文本融入了背景中 |
-| **Border and divider visibility** | 确保分割线在两个主题下均清晰可见（而不仅仅是亮色模式） | 特定主题的边框在某一种模式下完全消失 |
-| **State contrast parity** | 确保在亮色和暗色主题下，按压/获取焦点/禁用的状态具有同等的可区分性 | 只针对其中一种主题定义交互状态 |
-| **Token-driven theming** | 在应用表面、文本、图标中统一使用与各主题建立映射的语义化颜色 Token | 在每个屏幕的样式中硬编码十六进制颜色值 |
-| **Scrim and modal legibility** | 使用足够强的模态框背景遮罩 (scrim) 以隔离前景内容（通常为 40-60% 的黑色半透明） | 使用太淡的遮罩使得背景内容依然与前景在视觉上产生竞争 |
+| **卡片/卡板层级感 (Surface readability)** | 善用投影高度、高光边框或微弱明度差将卡片面板与底层背景界定分明 | 卡片完全融入背景，导致页面沦为平铺直叙的一张白板 |
+| **浅色模式文本易读性** | 确保浅色主题下的正文段落与背景的对比度 ≥4.5:1 | 在白底上使用过淡的浅灰色文字，伤害视力 |
+| **暗黑模式文本易读性** | 确保深色主题下主要文本对比度 ≥4.5:1，次要说明文字对比度 ≥3:1 | 暗色主题下的文本对比度不足，导致文字几乎隐形 |
+| **边框与分割线辨识度** | 确保分割线和细边框在浅色与暗色主题下均有匹配的明暗度对比 | 只针对默认主题调优，在暗黑模式下边框彻底消失 |
+| **交互状态双向适配** | 针对亮/暗两套主题，均设计高水准的 hover、focus、disabled 及 active 交互态 | 仅针对其中一个主题优化了状态，导致另一主题下交互态难以辨认 |
+| **Token 化色彩管理** | 在文字、背景和边框上全量引入语义化色彩 Token，实现主题一键切换 | 在组件样式中大量写死 Hex 颜色，使得主题适配维护成本巨大 |
+| **半透明遮罩对比调优** | 模态弹窗的底层 Scrim 半透明度应设在 40%–60% 之间，以提供充足的前景聚焦力 | 遮罩过淡导致底层内容与弹窗文本发生视觉打架，严重干扰阅读 |
 
-### 布局与间距
+### 布局与间距节奏规范
 
-| 规则 (Rule) | 正面实践 (Do) | 反面模式 (Don't) |
+| 规范法则 (Rule) | 正面实践 (Do) | 反面模式 (Don't) |
 |------|----|----- |
-| **Safe-area compliance** | 为所有固定页眉、标签栏和 CTA 栏严格预留顶部/底部安全区域 | 将固定 UI 放置在刘海屏、状态栏或手势区域的下方且未作适配 |
-| **System bar clearance** | 为状态栏/导航栏和底部手势指示条添加足够的间距 | 让可点击内容与操作系统的系统 UI 元素相冲突 |
-| **Consistent content width** | 按设备类别（手机/平板）保持可预测的、统一的内容宽度 | 在不同屏幕之间混用随意的宽度 |
-| **8dp spacing rhythm** | 在内边距/元素间距/区域间距中统一使用一致的 4/8dp 间距系统 | 使用毫无节奏感、随意递增的间距值 |
-| **Readable text measure** | 在大屏设备上保持长篇文本的易读性（避免在平板上出现通栏横跨的段落） | 直接使用通栏长句而损害文本的可读性 |
-| **Section spacing hierarchy** | 按层级定义清晰的垂直间距阶梯（例如 16/24/32/48） | 在相似的 UI 层级上使用不一致的间距 |
-| **Adaptive gutters by breakpoint** | 在更宽的屏幕上以及横屏模式下，增加两侧的水平边距 | 在所有设备尺寸和屏幕方向下均使用相同的窄边距 |
-| **Scroll and fixed element coexistence** | 添加底部/顶部内容内边距 (insets)，以确保滚动列表底端不会被固定定位的底栏遮挡 | 滚动内容被粘性定位的头部/尾部底栏永久遮挡 |
-
----
-
-## 交付前核对清单
-
-在交付 UI 代码前，请逐一核对以下各项：
-范围说明：此清单适用于 App UI（iOS/Android/React Native/Flutter）。
-
-### 视觉品质
-- [ ] 不使用 Emoji 表情符号作为图标（应使用 SVG/矢量图标）
-- [ ] 所有图标均来自风格和家族统一的图标集
-- [ ] 使用官方品牌资源，保持正确的比例和安全距离
-- [ ] 按压状态下的视觉效果不会引发布局边框偏移或抖动
-- [ ] 统一使用语义化主题 Token（不使用硬编码的单页面颜色值）
-
-### 交互体验
-- [ ] 所有可点击的元素均提供清晰的按压反馈（涟漪/透明度/高度等）
-- [ ] 触控热区满足最小尺寸要求（iOS >=44x44pt，Android >=48x48dp）
-- [ ] 微交互时长保持在 150-300ms 范围内，具有原生质感的缓动曲线
-- [ ] 禁用状态在视觉上清晰可辨，且不响应任何交互
-- [ ] 屏幕阅读器的焦点顺序与视觉顺序匹配，且交互控件标签具有描述性
-- [ ] 手势区域避开嵌套/冲突的交互手势（避免点击、拖拽、侧滑返回发生冲突）
-
-### 亮/暗色模式
-- [ ] 在亮色和暗色模式下，主要文本对比度均 >=4.5:1
-- [ ] 在亮色和暗色模式下，次要文本对比度均 >=3:1
-- [ ] 分割线/边框以及各种交互状态在亮暗两种模式下均可清晰辨识
-- [ ] 模态框/抽屉的背景遮罩透明度足够强，以确保前景文本易读（通常为 40-60% 的黑色半透明）
-- [ ] 交付前对两个主题均进行了实际测试（不要仅凭单一主题的效果推断另一主题）
-
-### 布局表现
-- [ ] 页眉、标签栏和底部 CTA 栏均已对安全区域（Safe Areas）进行避让适配
-- [ ] 滚动列表的内容尾部不会被固定/粘性底栏遮掩
-- [ ] 已经在小屏手机、大屏手机以及平板上（含横竖屏）进行了验证
-- [ ] 水平页边距/槽宽 (insets/gutters) 能够针对设备尺寸和屏幕方向进行正确适配
-- [ ] 在组件、区域和页面层级上均维护了统一的 4/8dp 间距节奏
-- [ ] 在大屏设备上限制了长篇文本的单行字数（不直接使用通栏段落）
-
-### 无障碍可访问性
-- [ ] 所有有实际意义的图片/图标都带有辅助说明标签 (accessibility labels)
-- [ ] 表单字段具有标签、提示信息以及清晰的错误消息
-- [ ] 颜色不是传达数据的唯一指示标识
-- [ ] 支持减弱动态效果与动态字体缩放，且不会导致界面布局错乱
-- [ ] 各种辅助功能属性/角色/状态（如 selected, disabled, expanded）能被系统正确播报
+| **安全区域对齐 (Safe-area)** | 针对页眉、底栏及全局悬浮 CTA 栏，强制注入顶部与底部安全区域 padding | 悬浮底栏把刘海屏或系统底部手势条死死挡住，阻断操作 |
+| **避开系统交互热区** | 为系统状态栏和导航指示条预留充足的高度避让，严防手势冲突 | 让可交互的按钮与系统自带的手势滑轨边缘重叠，触发误触 |
+| **统一多端限制宽度** | 依据设备屏幕尺寸，采用预设的最大安全内容容器宽度（如大屏 PC 限制在 1200px 左右） | 页面布局在宽屏下无限延伸扩展，导致视觉重心涣散 |
+| **4/8pt 间距韵律系统** | 内边距、外边距、网格空隙等，一律采用统一的 4/8/16/24/32/48px 等阶梯节奏 | 随心所欲使用 7px、13px、19px、31px 等无规律的间距数值 |
+| **控制段落最大排版宽度** | 在宽屏平板及 PC 上，限制单行文字最大排版宽度，保证视线移动舒适 | 段落文字横跨整屏，导致用户每读完一行都需要长距离移动眼球寻找下一行 |
+| **垂直间距分明层级** | 页面各区块之间使用鲜明的、拉开差距的垂直间距（如 24px/48px/64px） | 区块区块之间没有清晰的空隙，使页面显得局促而杂乱 |
+| **响应式水平槽宽** | 随着设备屏幕宽度增加，按比例增加两侧的水平页面边距 (Page Gutters) | 在平板和移动端上都顽固使用相同极窄的 12px 边距 |
+| **底部滚动安全占位** | 凡是页面底部有固定粘性底栏时，必须为列表容器最底端提供相等的 Padding 占位 | 用户滑动到列表最底部时，最后一个条目被粘性底栏永久遮挡 |

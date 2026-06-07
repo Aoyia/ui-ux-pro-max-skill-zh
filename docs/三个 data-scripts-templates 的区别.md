@@ -1,28 +1,30 @@
-# 三处 data / scripts / templates 的区别
+# 项目中三处 data / scripts / templates 目录的功能区隔与协作规范
 
-## 三处分别是什么
+在整个工程架构中，共存在三处 `data`、`scripts` 与 `templates` 结构。它们各自承担着不同的系统职责。
 
-| 位置 | 作用 | 能删吗 |
+## 目录功能与区隔一览
+
+| 目录物理路径 | 核心业务职责 | 维护建议 / 能否删除 |
 |------|------|--------|
-| **src/ui-ux-pro-max/** | **唯一源码**。所有 CSV、脚本、模板都在这里改，是“唯一真相来源”。 | ❌ 不能删，这是你要维护的那一份。 |
-| **.claude/skills/ui-ux-pro-max/** | 给 **Cursor / Claude Code** 用的 Skill。AI 从这里读 SKILL.md 和运行 `scripts/search.py`。设计上这里的 data、scripts 应是**指向 src 的符号链接**，这样不用维护两份。 | ❌ 不能删（否则 Skill 不工作）；但可以改成只链到 src，不保留副本。 |
-| **cli/assets/** | 给 **npm 包 uipro-cli** 打包用。用户执行 `npm i -g uipro-cli` 再 `uipro init` 时，安装的是这里打包进去的 data/scripts/templates。 | ❌ 不能删；发布前用脚本从 src 同步过来即可。 |
+| **`src/ui-ux-pro-max/`** | **核心源码库**。所有 CSV 数据集、搜索引擎脚本、指令模板的唯一事实来源 (Source of Truth)。 | ❌ **绝对不可删除**。这是整个项目最上游的源头。 |
+| **`.claude/skills/ui-ux-pro-max/`** | **AI 技能扩展插槽 (Skill)**。面向 Claude Code / Cursor 等 AI 编程助手提供的本地技能描述与检索入口。在架构设计上，此处的 `data` 与 `scripts` 应作为指向 `src/` 的符号链接 (Symlinks)，从而避免冗余维护。 | ❌ **绝对不可删除**（否则本地 AI 助手将无法消费该技能）。但必须确保以符号链接方式与 `src/` 进行绑定，不要保留物理副本。 |
+| **`cli/assets/`** | **CLI 打包静态资产**。供发布在 npm 上的全局包 `uipro-cli` 使用。当终端用户执行 `npm install -g uipro-cli` 并运行 `uipro init` 进行初始化时，本地生成的资源全部提取自此处的打包目录。 | ❌ **绝对不可删除**。每次发布 npm 包前，需使用同步脚本从 `src/` 一键覆盖同步。 |
 
-## 可以只保留一个吗？
+## 是否能够进行物理合并？
 
-- **不能**只保留一个“物理目录”：三处**用途不同**，都要存在。
-- **可以**只维护**一份内容**：
-  - 所有修改只在 **src/ui-ux-pro-max/** 里做。
-  - .claude 里用**符号链接**指向 src → 不用在 .claude 里再维护 data/scripts。
-  - 发布 CLI 前执行一次同步：把 src 拷到 cli/assets。
+- **不能物理删除任何一处**：这三处目录的消费方与环境（源码开发、本地 AI 开发检索、最终全球用户安装）完全不同，必须共同存在。
+- **但可实现逻辑上的“单一事实来源”维护**：
+  1. 所有业务层面的修改**有且仅在** `src/ui-ux-pro-max/` 内进行。
+  2. `.claude/` 目录下相关的 `data`、`scripts` 和 `templates` 必须以**符号链接 (Symlink)** 形式指向 `src/ui-ux-pro-max/` 对应的子目录，实现自动同步。
+  3. 在执行 npm 发布流程前，通过自动化命令将最新的 `src/ui-ux-pro-max/` 静态资产拷贝到 `cli/assets/` 下。
 
-这样你日常只改 src，其它两处自动或按需跟上。
+这样您日常仅需聚焦维护 `src/` 目录，其他两处则会自动同步或在发布时按需构建。
 
-## 推荐工作流
+## 推荐开发工作流
 
-1. 只改 **src/ui-ux-pro-max/data/**、**scripts/**、**templates/**。
-2. .claude/skills 下的 data、scripts 用 symlink 指回 src（见下方「恢复符号链接」）。
-3. 发布 npm 前执行：
+1. 日常迭代仅限修改 `src/ui-ux-pro-max/data/`、`src/ui-ux-pro-max/scripts/` 和 `src/ui-ux-pro-max/templates/`。
+2. 确保 `.claude/skills/ui-ux-pro-max/` 下的 `data` 和 `scripts` 是正确的 symlink，并指向 `src/ui-ux-pro-max/`（参见「恢复符号链接」指引）。
+3. 每次发布 npm 包之前，执行同步拷贝命令：
    ```bash
    cp -r src/ui-ux-pro-max/data/* cli/assets/data/
    cp -r src/ui-ux-pro-max/scripts/* cli/assets/scripts/

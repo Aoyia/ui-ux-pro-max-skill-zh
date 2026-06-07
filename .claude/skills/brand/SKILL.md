@@ -11,7 +11,7 @@ metadata:
 
 品牌身份、语气、信息传递、资产管理及一致性框架。
 
-## 使用时机
+## 适用场景 (When to Use)
 
 - 品牌语气 (Voice) 定义与内容调性指导
 - 视觉识别 (Visual identity) 标准与样式指南制定
@@ -58,28 +58,28 @@ node scripts/inject-brand-context.cjs --json | head -20
 
 | 子命令 | 描述 | 参考文档 |
 |------------|-------------|-----------|
-| `update` | 更新品牌身份并同步到所有设计系统 | `references/update.md` |
+| `update` | 更新品牌身份并同步到所有设计系统 | [update.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/brand/references/update.md) |
 
 ## 参考文档 (References)
 
 | 主题 | 文件 |
 |-------|------|
-| 语气框架 (Voice Framework) | `references/voice-framework.md` |
-| 视觉识别 (Visual Identity) | `references/visual-identity.md` |
-| 信息传递 (Messaging) | `references/messaging-framework.md` |
-| 一致性 (Consistency) | `references/consistency-checklist.md` |
-| 指南模板 (Guidelines Template) | `references/brand-guideline-template.md` |
-| 资产组织 (Asset Organization) | `references/asset-organization.md` |
-| 色彩管理 (Color Management) | `references/color-palette-management.md` |
-| 排版设计 (Typography) | `references/typography-specifications.md` |
-| Logo 使用规范 (Logo Usage) | `references/logo-usage-rules.md` |
-| 审批清单 (Approval Checklist) | `references/approval-checklist.md` |
+| 语气框架 (Voice Framework) | [voice-framework.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/brand/references/voice-framework.md) |
+| 视觉识别 (Visual Identity) | [visual-identity.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/brand/references/visual-identity.md) |
+| 信息传递 (Messaging) | [messaging-framework.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/brand/references/messaging-framework.md) |
+| 一致性 (Consistency) | [consistency-checklist.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/brand/references/consistency-checklist.md) |
+| 指南模板 (Guidelines Template) | [brand-guideline-template.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/brand/references/brand-guideline-template.md) |
+| 资产组织 (Asset Organization) | [asset-organization.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/brand/references/asset-organization.md) |
+| 色彩管理 (Color Management) | [color-palette-management.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/brand/references/color-palette-management.md) |
+| 排版设计 (Typography) | [typography-specifications.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/brand/references/typography-specifications.md) |
+| Logo 使用规范 (Logo Usage) | [logo-usage-rules.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/brand/references/logo-usage-rules.md) |
+| 审批清单 (Approval Checklist) | [approval-checklist.md](file:///Users/neoyuan/Desktop/aoyi/ui-ux-pro-max-skill-zh/.claude/skills/brand/references/approval-checklist.md) |
 
 ## 脚本 (Scripts)
 
 | 脚本 | 用途 |
 |--------|---------|
-| `scripts/inject-brand-context.cjs` | 提取品牌上下文以便进行提示词注入 |
+| `scripts/inject-brand-context.cjs` | 提取 brand 上下文以便进行提示词注入 |
 | `scripts/sync-brand-to-tokens.cjs` | 将 brand-guidelines.md 同步到 design-tokens.json/css |
 | `scripts/validate-asset.cjs` | 验证资产的命名、大小和格式 |
 | `scripts/extract-colors.cjs` | 提取颜色并与调色板进行对比 |

@@ -253,7 +253,7 @@ async function captureScreenshots(htmlFiles) {
 ## 输出文件清单
 | 文件 | 尺寸 | 平台 | 预览说明 |
 |------|------|----------|---------|
-| exports/{文件名}.png | {宽x高} | {平台} | {说明} |
+| exports/{文件名}.png | {宽 x 高} | {平台} | {说明} |
 
 ## 为什么该设计有效
 - {平台特定的设计考量原因}
@@ -293,7 +293,7 @@ async function captureScreenshots(htmlFiles) {
 |-------|----------|--------------|
 | Minimalist (极简) | SaaS、科技、奢侈品 | 大面积留白、单一辅助色、干净利落的排版 |
 | Bold Typography (大胆文字) | 公告通知、金句分享 | 巨大字号、高对比度、极少使用图形 |
-| Gradient Mesh (渐变网格) | 现代品牌、APP应用 | 流畅的色彩过渡、悬浮元素 |
+| Gradient Mesh (渐变网格) | 现代品牌、APP 应用 | 流畅的色彩过渡、悬浮元素 |
 | Photo-Based (图片基底) | 生活方式、电子商务 | 主视觉大图、柔和的遮罩层、在图片上放置文字 |
 | Geometric (几何构图) | 科技、金融科技 | 各种几何形状、纹理背景、极具结构感的布局 |
 | Glassmorphism (毛玻璃) | SaaS、现代应用 | 磨砂玻璃质感、模糊效果、半透明层级 |
