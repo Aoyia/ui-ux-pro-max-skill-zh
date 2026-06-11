@@ -17,6 +17,11 @@
 
 一款面向多平台与多框架开发，提供专业 UI/UX 设计智能的 AI 技能插件。
 
+> [!NOTE]
+> **本地化项目说明 (Localization Details)**：
+> 本项目是 [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) 官方项目的中文翻译与深度本地化润色版本。
+> 我们对底层的 29 个 CSV 数据库、AI 技能描述及所有参考指南进行了深度汉化打磨，彻底消除了生硬的机翻，统一了中英文空格排版，以确保国内开发者和设计师在使用 AI 助手生成代码与设计方案时能获得最流畅、最符合国内习惯的体验。
+
 <p align="center">
   <a href="https://uupm.cc">
     <img src="screenshots/website.png" alt="UI UX Pro Max" width="800">
