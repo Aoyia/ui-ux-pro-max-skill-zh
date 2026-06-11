@@ -1,6 +1,6 @@
 No,Category,Guideline,Description,Do,Don't,Code Good,Code Bad,Severity,Docs URL
 1,Animation,Use Tailwind animate utilities,内置动画经过优化并尊重简化运动,使用 animate-pulse animate-spin animate-ping,自定义@keyframes 以获得简单效果,animate-pulse,@keyframes pulse {...},Medium,https://tailwindcss.com/docs/animation
-2,Animation,Limit bounce animations,连续弹跳会分散注意力并导致晕车,仅在 CTA 上谨慎使用 animate-bounce,页面上多个弹跳动画,Single CTA with animate-bounce,5+ elements with animate-bounce,High,
+2,Animation,Limit bounce animations,连续弹跳会分散注意力并导致晕动症,仅在 CTA 上谨慎使用 animate-bounce,页面上多个弹跳动画,Single CTA with animate-bounce,5+ elements with animate-bounce,High,
 3,Animation,Transition duration,使用适当的过渡速度进行 UI 反馈,UI 的持续时间为 150 到持续时间 300,UI 元素的持续时间为 1000 或更长,transition-all duration-200,transition-all duration-1000,Medium,https://tailwindcss.com/docs/transition-duration
 4,Animation,Hover transitions,添加悬停状态变化的平滑过渡,添加具有悬停状态的过渡类,即时悬停变化，无需过渡,hover:bg-gray-100 transition-colors,hover:bg-gray-100 (no transition),Low,
 5,Z-Index,Use Tailwind z-* scale,具有预定义比例的一致堆叠上下文,z-0 z-10 z-20 z-30 z-40 z-50,任意 z 索引值,z-50 for modals,z-[9999],Medium,https://tailwindcss.com/docs/z-index
@@ -32,7 +32,7 @@ No,Category,Guideline,Description,Do,Don't,Code Good,Code Bad,Severity,Docs URL
 31,Responsive,Breakpoint testing,在标准断点处测试,320 375 768 1024 1280 1536,仅在开发设备上测试,Test all breakpoints,Single device testing,High,
 32,Responsive,Hidden/shown utilities,控制每个断点的可见性,隐藏 MD：块,每个断点的内容不同,hidden md:flex,Separate mobile/desktop components,Low,https://tailwindcss.com/docs/display
 33,Buttons,Button sizing,按钮尺寸一致,px-4 py-2 或 px-6 py-3,按钮尺寸不一致,px-4 py-2 text-sm,Various padding per button,Medium,
-34,Buttons,Touch targets,移动设备上的触摸目标最小为 44 像素,移动设备上的 min-h-[44px],手机上的小按钮,min-h-[44px] min-w-[44px],h-8 w-8 on mobile,High,
+34,Buttons,Touch targets,移动设备上的触摸目标最小为 44px,移动设备上的 min-h-[44px],手机上的小按钮,min-h-[44px] min-w-[44px],h-8 w-8 on mobile,High,
 35,Buttons,Loading states,显示加载反馈,禁用 + 微调器图标,加载期间可点击,<Button disabled><Spinner/></Button>,Button without loading state,High,
 36,Buttons,Icon buttons,可访问的纯图标按钮,图标按钮上的 aria-label,没有标签的图标按钮,<button aria-label='Close'><XIcon/></button>,<button><XIcon/></button>,High,
 37,Cards,Card structure,卡片样式一致,圆形-lg 阴影-md p-6,卡片样式不一致,rounded-2xl shadow-lg p-6,Mixed card styling,Low,

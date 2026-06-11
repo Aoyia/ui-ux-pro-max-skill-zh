@@ -20,7 +20,7 @@ No,Category,Guideline,Description,Do,Don't,Code Good,Code Bad,Severity,Docs URL
 19,Images,Use fill for responsive images,用适合对象的容器填充容器,用相对父级填充 prop,响应式固定尺寸,"<Image fill className=""object-cover""/>",<Image width={window.width}/>,Medium,
 20,Images,Configure remote image domains,白名单外部图像源,next.config.js 中的远程模式,允许所有域,remotePatterns: [{ hostname: 'cdn.example.com' }],domains: ['*'],High,https://nextjs.org/docs/app/api-reference/components/image#remotepatterns
 21,Images,Use priority for LCP images,将首屏图像标记为优先,英雄图像上的优先道具,所有图像优先,<Image priority src={hero}/>,<Image priority/> on every image,Medium,
-22,Fonts,Use next/font for fonts,自托管字体，布局零偏移,下一个/字体/谷歌或下一个/字体/本地,外部字体链接,import { Inter } from 'next/font/google',"<link href=""fonts.googleapis.com""/>",Medium,https://nextjs.org/docs/app/building-your-application/optimizing/fonts
+22,Fonts,Use next/font for fonts,自托管字体，布局零偏移,next/font/google 或 next/font/local,外部字体链接,import { Inter } from 'next/font/google',"<link href=""fonts.googleapis.com""/>",Medium,https://nextjs.org/docs/app/building-your-application/optimizing/fonts
 23,Fonts,Apply font to layout,在根布局中设置字体以保持一致性,layout.tsx 中 body 上的 className,各个页面的字体,<body className={inter.className}>,Each page imports font,Low,
 24,Fonts,Use variable fonts,可变字体可减少包大小,单变量字体文件,多种字体粗细作为文件,Inter({ subsets: ['latin'] }),Inter_400 Inter_500 Inter_700,Low,
 25,Metadata,Use generateMetadata for dynamic,根据参数生成元数据,导出异步函数 generateMetadata(),无处不在的硬编码元数据,generateMetadata({ params }),export const metadata = {},Medium,https://nextjs.org/docs/app/building-your-application/optimizing/metadata
@@ -44,7 +44,7 @@ No,Category,Guideline,Description,Do,Don't,Code Good,Code Bad,Severity,Docs URL
 43,Link,Prefetch strategically,控制预取行为,prefetch={false} 表示低优先级,预取所有链接,<Link prefetch={false}>,Default prefetch on every link,Low,
 44,Link,Use scroll option appropriately,控制导航上的滚动行为,scroll={false} 用于选项卡分页,始终滚动到顶部,<Link scroll={false}>,Manual scroll management,Low,
 45,Config,Use next.config.js correctly,配置 Next.js 行为,正确的配置选项,已弃用或错误的选项,images: { remotePatterns: [] },images: { domains: [] },Medium,https://nextjs.org/docs/app/api-reference/next-config-js
-46,Config,Enable strict mode,及早发现潜在问题,反应严格模式：真,严格模式已禁用,reactStrictMode: true,reactStrictMode: false,Medium,
+46,Config,Enable strict mode,及早发现潜在问题,React 严格模式：真,严格模式已禁用,reactStrictMode: true,reactStrictMode: false,Medium,
 47,Config,Configure redirects and rewrites,使用配置进行 URL 管理,配置中的 redirects()重写(),手动重定向处理,redirects: async () => [...],res.redirect in pages,Medium,https://nextjs.org/docs/app/api-reference/next-config-js/redirects
 48,Deployment,Use Vercel for easiest deploy,Vercel 针对 Next.js 进行了优化,部署到 Vercel,无需知识即可自行托管,vercel deploy,Complex Docker setup for simple app,Low,https://nextjs.org/docs/app/building-your-application/deploying
 49,Deployment,Configure output for self-hosting,设置部署目标的输出选项,输出：Docker 的“独立”,容器的默认输出,output: 'standalone',No output config for Docker,Medium,https://nextjs.org/docs/app/building-your-application/deploying#self-hosting

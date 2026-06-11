@@ -15,14 +15,14 @@ Bauhaus（包豪斯）
 核心理念: The mobile interface is a vertical geometric composition. Scroll views are not just content streams but stacked layers of colored paper and rigid shapes. The limited screen real estate forces a focus on massive typography and distinct color blocking （红色#D02020、蓝色#1040C0、黄色#F0C020）. Every tap should feel mechanical and substantial.
 Key Characteristics: 
 ● 几何纯度: UI elements are strictly circles （按钮/头像） or squares (cards/inputs).
-● 触觉深度:硬阴影表示交互性；元素看起来“可按压”。
+"”● 触觉深度:硬阴影表示交互性；元素看起来“可按压”。"""
 ● 色块:不同的屏幕部分使用纯原色来分隔内容，没有空格。
-● 粗边框:2 像素和 3 像素黑色边框可确保小屏幕上的易读性和清晰的分隔。
+● 粗边框:2px 和 3px 黑色边框可确保小屏幕上的易读性和清晰的分隔。
 ● 垂直节奏:牢固的垂直堆叠，精心间隔，避免混乱。
 ● 建构主义版式: Headlines are massive （文本 4xl 到文本 5xl） relative to screen width, breaking traditional mobile scaling rules.
 ● 拇指友好:互动区域很大、独特且具有几何定义。
 2. 设计代币系统（DNA）
-颜色（单一调色板 - 灯光模式）
+颜色（单一调色板 - 亮色模式）
 调色板严格保留包豪斯原色，针对高对比度户外进行了优化。
 ● 背景: #F0F0F0 （灰白色帆布）
 ● 前景: #121212 （斯塔克·布莱克）
@@ -37,7 +37,7 @@ Key Characteristics:
 ● 缩放:适用于垂直视口的激进缩放。
     ○ 显示: text-4xl → text-5xl （大量标题占据屏幕宽度的 30-40%）
     ○ 副标题:文本-xl → 文本-2xl
-    ○ 身体: text-base （最小 16 像素以确保易读性）
+    ○ 身体: text-base （最小 16px 以确保易读性）
     ○ 按钮文字: text-lg （大的可读性）
 ● 重量:
     ○ 头条新闻: font-black （900） uppercase, tight tracking (tracking-tighter)
@@ -54,15 +54,15 @@ Key Characteristics:
 阴影/效果
 ● Hard Offset Shadows （触觉反馈）:
     ○ Small elements （标签/图标）:阴影-[2px_2px_0px_0px_black]
-    ○ 按钮/卡片: shadow-[4px_4px_0px_0px_black] （从网页 8 像素减少以节省屏幕宽度）
+    ○ 按钮/卡片: shadow-[4px_4px_0px_0px_black] （从网页 8px 减少以节省屏幕宽度）
     ○ Floating Action Button （FAB）:阴影-[5px_5px_0px_0px_black]
 ● 触摸反馈: active:translate-x-[2px] active:translate-y-[2px] active:shadow-none （即时机械压低）.
 ● 图案:
-    ○ Dot grid backgrounds on "Paper" colored sections （背景大小：16px 16px）.
+    ○ Dot grid backgrounds on ”Paper” colored sections （背景大小：16px 16px）.
     ○ 屏幕转换:带有硬黑色边框的滑盖。
 3. 组件样式
 按钮（触摸目标）
-● 最小尺寸: Height h-12 or h-14 （48 像素-56 像素） for thumb accessibility.
+● 最小尺寸: Height h-12 or h-14 （48px-56px） for thumb accessibility.
 ● 变体:
     ○ Primary （CTA）:w-full bg-[#D02020] 文本-白色边框-2 边框-黑色阴影-[4px_4px_0px_0px_black]
     ○ 中学:w-full bg-[#1040C0] 文本-白色边框-2 边框-黑色阴影-[4px_4px_0px_0px_black]
@@ -140,24 +140,24 @@ Mobile Constraints require distinct personality to avoid looking like a wirefram
 ● 互动:
     ○ Tap: The element physically depresses （平移 X/Y 匹配阴影大小）.
     ○ 抽屉打开:从左/右滑入，并带有实心黑色边框线。无软褪色——它像机械门一样滑动。
-    ○ 吐司/警报: Drop down from top as a solid geometric block （黄/红） with hard borders, swinging slightly like a hanging sign.
+    ○ Toast/警报: Drop down from top as a solid geometric block （黄/红） with hard borders, swinging slightly like a hanging sign.
     ○ 滚动:粘性标头立即卡入到位。
 </design-system>
 
 
 
-"Monochrome（单色/黑白）
-"一套简洁的编辑设计体系，建立在纯粹的黑白之上。没有点缀色——只有戏剧性的对比、超大衬线字体和精准的几何布局。让人联想到高端时尚专题和建筑作品集。严肃、成熟、毫不掩饰地大胆。
-"1. 极简主义电商与高端奢侈品
+"””Monochrome（单色/黑白）
+”一套简洁的编辑设计体系，建立在纯粹的黑白之上。没有点缀色——只有戏剧性的对比、超大衬线字体和精准的几何布局。让人联想到高端时尚专题和建筑作品集。严肃、成熟、毫不掩饰地大胆。”"
+"””1. 极简主义电商与高端奢侈品
 2. 专业创意与文档编辑工具
 3. 数据密集型仪表盘（局部应用）
-4. 实验性与先锋感网站"
+4. 实验性与先锋感网站””"
 
 <design-system>
 设计风格: Minimalist Monochrome （手机）
 设计理念
 核心原则
-袖珍社论。在移动设备上，Minimalist Monochrome 将屏幕转变为有触觉的高端印刷宣言。它拒绝了软气泡和友好渐变的“类似应用程序”的趋势。相反，它提供了由纯黑色 (#000000)、纯白色 (#FFFFFF) 和锋利边框定义的鲜明、垂直的旅程。每一次点击都是经过深思熟虑的决定；每卷卷轴都是豪华专着中的一页翻页。
+袖珍社论。在移动设备上，Minimalist Monochrome 将屏幕转变为有触觉的高端印刷宣言。它拒绝了软气泡和友好渐变的“类似应用程序”的趋势。相反，它提供了由纯黑色 (#000000)、纯白色 (#FFFFFF) 和锋利边框定义的鲜明、垂直的旅程。每一次点击都是经过深思熟虑的决定；每卷滚动都是豪华专着中的一页翻页。
 视觉氛围
 情感关键词: 触觉、严肃、社论、直接、高保真、毫不妥协、尖锐、节奏。
 This is the visual language of: 
@@ -166,7 +166,7 @@ This is the visual language of:
 ● 内容自行构建的数字展览
 ● 高对比度电子阅读器美学
 这个设计不是什么
-● ❌ "App-y" （没有带有阴影的卡片，没有漂浮的气泡）
+● ❌ ”App-y” （没有带有阴影的卡片，没有漂浮的气泡）
 ● ❌ Native iOS/Android standard （没有系统蓝色，没有圆形组）
 ● ❌ Gesture-heavy （交互是明确的点击，而不是模糊的滑动）
 ● ❌ Cluttered （每个屏幕视图一个想法）
@@ -191,7 +191,7 @@ This is the visual language of:
 边框光: #E5E5E5 （微妙的分隔线）
 覆盖: #000000 （全屏菜单背景）
 
-规则: 没有强调色。 “活动状态”与“默认状态”正好相反。
+"”规则: 没有强调色。 “活动状态”与“默认状态”正好相反。"""
 版式
 Font Stack: 
 ● 显示:“Playfair Display”，衬线体 - 适用于所有标题和大数字。
@@ -207,7 +207,7 @@ xl: 1.5rem   （24px） - Section headers
 2xl: 2rem     （32px） - Standard Headlines
 3xl: 2.5rem   （40px） - Hero Sub-text
 4xl: 3rem     （48px） - Major Headlines
-5xl: 4rem     （64px） - "Cover" text (Often wraps)
+5xl: 4rem     （64px） - ”Cover” text (Often wraps)
 6xl: 5rem     （80px） - Numerical statements
 
 Tracking & Leading: 
@@ -264,7 +264,7 @@ Sticky Bottom Action (CTA):
 ● 包含单个主要操作或价格+操作对。
 ● 背景: #FFFFFF （或倒置#000000）.
 卡片/清单项目
-The "Stacked" Card: 
+The ”Stacked” Card: 
 移动卡通常不是带有填充的盒子，而是由边框分隔的全宽片段。
 - 集装箱:边框底部 1px 实心 #000000
 - 填充:py-6
@@ -273,8 +273,8 @@ The "Stacked" Card:
 - 互动:触摸段中的任何位置都会触发“活动”状态
 
 导航
-The "Bar": 
-● Top: Minimal. Just a logo （左） and a "MENU" text button or Hamburger (Right).
+The ”Bar”: 
+● Top: Minimal. Just a logo （左） and a ”MENU” text button or Hamburger (Right).
 ● 底部:可选。如果使用，简单的文本标签或细轮廓图标。边框-t-2 边框-黑色。
 The Menu Overlay: 
 ● 全屏。
@@ -286,7 +286,7 @@ The Menu Overlay:
 Mobile Input: 
 - 风格:与背景齐平。
 - 边框: Bottom only （2px 纯黑）.
-- 半径:0 像素。
+- 半径:0px。
 - 身高:h-14。
 - 焦点:边框变为 4px 厚。没有原生的蓝光。
 - 清除按钮:简单的黑色“X”图标。
@@ -302,7 +302,7 @@ Mobile Input:
     ○ 小间隙:py-4
     ○ 截面间隙:py-16
     ○ 文字与图像之间:我的 6
-“卷轴”
+"”“滚动"""
 ● Design for the scroll. Use sticky headers for section titles （例如，“详细信息”、“运输”） that stack as the user scrolls down, creating a filing cabinet effect.
 ● 对列表使用“divide-ydivide-black”来创建强烈的分离。
 
@@ -312,16 +312,16 @@ Mobile Input:
 互动: 
 ● Tap: active:bg-black active:text-white （即时反转）.
 ● 页面转换: Slide in from right （100% 宽度） with a hard edge. No distinct shadow on the sliding page, just a clean line.
-● 莫代尔:从底部向上滑动。 0 像素半径。覆盖 100% 或 90% 的屏幕。黑色边框顶部。
+● 莫代尔:从底部向上滑动。 0px 半径。覆盖 100% 或 90% 的屏幕。黑色边框顶部。
 ● 滚动视差:没有。保持滚动与手指运动 1:1 相关。
 Specific Implementation: 
 TypeScript
 
 // 移动按钮活动状态
-className =“bg-black text-white active”: bg-白色活动：文本黑色活动：边框活动：边框黑色过渡-无”
+"className=""bg-black text-white active:bg-white active:text-black active:border active:border-black transition-none"""
 
 // Image Loading
-className="opacity-0 数据-[已加载=true]: opacity-100 过渡-不透明度持续时间-300 缓动-线性灰度数据-[loaded=true]:grayscale-0"
+"className=""opacity-0 data-[loaded=true]:opacity-100 transition-opacity duration-300 ease-linear grayscale data-[loaded=true]:grayscale-0"""
 
 
 图像学
@@ -362,26 +362,26 @@ A successfully implemented Minimalist Monochrome mobile design should feel like:
 It should NOT feel like: 
 ● 桌面网站的缩小版。
 ● 标准 Bootstrap/Tailwind 移动布局。
-● 一个试图变得“友好”的应用程序。
+"”● 一个试图变得“友好”的应用程序。"""
 </design-system>
 
 
 
 Modern Dark（现代深色模式）
 一种电影般的高精度暗模式设计，通过动画渐变斑点、鼠标跟踪聚光灯效果和精心制作的微交互实现分层环境照明，感觉就像高级软件。
-"1. 影音娱乐与流媒体平台
+"””1. 影音娱乐与流媒体平台
 2. 开发者工具与专业生产力软件
 3. 金融、科技与 AI 仪表盘
-4. 高端运动与奢华品牌"
+4. 高端运动与奢华品牌””"
 
 设计理念
 核心原则: 精确度、触觉深度和流畅的运动定义了这个移动设计系统。对于 React Native，每个组件都被视为堆叠 3D 空间中的物理层，由虚拟光源照亮。该设计传达了“高端移动实用程序”——与 Linear 移动应用程序或 Apple 的本机界面一样灵敏且精致。每个阴影都使用多个层，每个渐变都会抖动以防止出现条带，并且每个交互都使用精确的触觉反馈与 Expo.out 缓动相结合。
-氛围: Cinematic Technical Minimalism. It’s a "Dark Mode First" aesthetic, utilizing near-blacks （#050506） and deep indigos. Imagine a high-end pro tool interface viewed through frosted glass at night. It is technical but inviting, using soft "glow" sources (#5E6AD2) to guide the thumb. It should feel like a premium native iOS/Android app, not a web-wrapper.
+氛围: Cinematic Technical Minimalism. It’s a ”Dark Mode First” aesthetic, utilizing near-blacks （#050506） and deep indigos. Imagine a high-end pro tool interface viewed through frosted glass at night. It is technical but inviting, using soft ”glow” sources (#5E6AD2) to guide the thumb. It should feel like a premium native iOS/Android app, not a web-wrapper.
 差异化: 签名是大气深度。虽然大多数移动应用程序都是扁平的，但该系统使用：
 ● 分层背景:具有不同不透明度、模糊强度和微妙噪点纹理的堆叠视图图层。
 ● 动画环境光: Large, slow-moving blurred Canvas objects （使用 react-native-skia 或 Animated） that simulate light pools.
-● 触觉交互: Every "Pressable" event is paired with subtle haptics （轻/中冲击） to reinforce the "hardware" feel.
-● 无弹簧精度: Eschewing "bouncy" animations for sophisticated Bezier（0.16, 1, 0.3, 1） curves.
+● 触觉交互: Every ”Pressable” event is paired with subtle haptics （轻/中冲击） to reinforce the ”hardware” feel.
+● 无弹簧精度: Eschewing ”bouncy” animations for sophisticated Bezier（0.16, 1, 0.3, 1） curves.
 
 设计代币系统（DNA）
 色彩策略: 深空和环境光
@@ -457,14 +457,14 @@ H3
 2. 卡片和容器
 ● 半径:始终 borderRadius：16。
 ● 边框: Use borderWidth: StyleSheet.hairlineWidth with rgba（255,255,255,0.1）.
-● 发光:使用卡片内的 1 像素 LinearGradient 应用微妙的顶部边缘突出显示。
-● 影子: React Native shadows are limited on Android; use react-native-shadow-2 or Skia to achieve the "3-layer" shadow look （环境+漫反射+强调）.
+● 发光:使用卡片内的 1px LinearGradient 应用微妙的顶部边缘突出显示。
+● 影子: React Native shadows are limited on Android; use react-native-shadow-2 or Skia to achieve the ”3-layer” shadow look （环境+漫反射+强调）.
 3. 按钮（可按下的）
 ● 小学:背景#5E6AD2。发短信#FFFFFF。
 ● 互动:在 onPressIn 上，缩放至 0.97。在 onPressOut 上，缩小到 1.0。使用选择触觉反馈。
 ● 视觉:添加 10% 不透明度的白色“Shine”渐变，覆盖按钮的上半部分。
 4. 互动导航
-● 标签栏: Use BlurView （展会模糊） with intensity={20} and tint="dark".
+● 标签栏: Use BlurView （expo-blur） with intensity={20} and tint=”dark”.
 ● 活动状态:活动图标后面应该有一个小的强调发光阴影。
 ● 过渡:共享元素过渡用于从卡片导航到详细视图，确保卡片的边框和背景无缝流动。
 
@@ -481,7 +481,7 @@ H3
 
 反模式（要避免什么）
 ● Pure Black （#000000）:它会导致手机屏幕上出现“OLED 拖尾”。坚持#050506。
-● 标准操作系统模式: Avoid default Modal components; use "Bottom Sheets" （就像 gorhom/bottom-sheet） with blurred backdrops to maintain depth.
+● 标准操作系统模式: Avoid default Modal components; use ”Bottom Sheets” （就像 gorhom/bottom-sheet） with blurred backdrops to maintain depth.
 ● 完全不透明边框:切勿使用纯灰色边框。始终使用 rgba 白色/黑色进行自然混合。
 ● 拉吉斑点:不要在主 JS 线程上使用太多的 BlurRadius 效果。始终使用 useNativeDriver: true 或 Skia。
 
@@ -505,30 +505,32 @@ SaaS（软件即服务）
 结构清晰，细节大胆，个性鲜明。该系统采用了适合手掌的高端编辑美学。它拒绝“微型网站”的感觉，转而支持原生优先的触觉体验。
 Whitespace 是一种用于拇指驱动导航的精密工具。运动不是装饰，而是装饰。这是空间反馈。颜色集中在一个电蓝色签名中，引导用户浏览应用程序的层次结构。
 视觉氛围
-“高科技精品店”。 想象一下优质金融科技应用程序与现代设计组合的结合。它给人一种精心设计的感觉，但又不失艺术感；最小，但还活着。
-● 自信:大胆的排版和充满活力的口音。
-● 精致:分层阴影和双字体系统低语“质量”。
+"高科技精品店”。 想象一下优质金融科技应用程序与现代设计组合的结合。它给人一种精心设计的感觉，但又不失艺术感；最小，但还活着。
+"
+”
+"● 自信:大胆的排版和充满活力的口音。"""
+”● 精致:分层阴影和双字体系统低语“质量”。”””
 ● 触觉:触觉就绪交互和流体弹簧动画。
-● 高级版:宽敞的“安全区域”和高架表面。
+
 
 这种风格的基因
 1. 签名梯度（移动优化）
 电蓝色渐变（#0052FF → #4D7CFF）是心跳。在 React Native 中，这是通过 React-Native-Linear-Gradient 实现的。
-● 用途:主按钮、活动选项卡图标、标题背景和进度指示器。
-● Why:渐变在移动屏幕上提供了深度，而平面颜色通常让人感觉“死气沉沉”。
+"● 用途:主按钮、活动选项卡图标、标题背景和进度指示器。"""
+”● Why:渐变在移动屏幕上提供了深度，而平面颜色通常让人感觉“死气沉沉”。”””
 2. 物理深度和生活元素
 Mobile is a 3D space. We use Z-index and shadows to create a clear mental model: 
 ● Floating Action Buttons （FAB）:使用 react-native-reanimated 轻轻地摆动。
-● 表面高程: Cards use shadowColor and elevation （安卓） to feel like physical layers.
-● 脉冲状态:小状态点使用刻度环来表示“活动”或“活动”。
+"● 表面高程: Cards use shadowColor and elevation （安卓） to feel like physical layers."""
+”● 脉冲状态:小状态点使用刻度环来表示“活动”或“活动”。”””
 3. 复杂的双字体排版
 ● 显示: Calistoga （或衬线后备） for Headlines. It adds human warmth to the digital interface.
 ● 用户界面/主体: Inter （或系统无衬线）. The workhorse for readability.
 ● 技术:用于标签和数据点的 JetBrains Mono。
 4. 纹理和微图案
-To prevent "Flat Design Fatigue": 
+To prevent ”Flat Design Fatigue”: 
 ● 微妙的叠加: Use a very low-opacity dot pattern （PNG/SVG） on dark backgrounds.
-● 玻璃拟态 / 磨砂玻璃风: Use BlurView （世博会/社区） for navigation bars to create a sense of context.
+
 
 设计代币系统（DNA）
 色彩策略
@@ -560,7 +562,7 @@ To prevent "Flat Design Fatigue":
 ● Hero （H1）:36 点 - 42 点 | 卡利斯托加 | 卡利斯托加领先 1.1
 ● Section （H2）:28 点 - 32 点 | 卡利斯托加 | 卡利斯托加领先 1.2
 ● 身体:16 点 - 18 点 | 国际米兰 |领先 1.5
-● 标签:12 点| JetBrains Mono |大写|字母间距 1.5
+
 
 组件规格（React Native）
 1. 主按钮（可按下 + 重新激活）
@@ -569,21 +571,21 @@ To prevent "Flat Design Fatigue":
 ● 互动:* On PressIn：缩小至 0.96。
     ○ OnPressOut 上:弹回到 1.0。
 ● 风格:带有阴影强调的线性渐变背景。
-2. 部门徽章
+2. 依赖项徽章
 A consistent pattern for orienting the user: 
-JavaScript
+
 
 // 结构体
-<视图样式={{flexDirection: 'row', alignItems: 'center', borderRadius: 100, paddingHorizontal: 16, paddingVertical: 8, backgroundColor: 'rgba（0, 82, 255, 0.05）', borderWidth: 1, borderColor: 'rgba(0, 82, 255, 0.2)'}}>
-  <PulseDot color="#0052FF"/>
+<视图样式={{flexDirection: 'row'
+  <PulseDot color=”#0052FF”/>
   <文字样式={{fontFamily: 'JetBrains Mono'，fontSize：12，颜色：'#0052FF'}}> 部分名称</Text>
-</查看>
+
 
 3. 内容卡
 ● 边框:Slate-200 中的 1 磅发际线。
 ● 影子:* iOS：shadowOpacity：0.1，shadowRadius：10，shadowOffset：{宽度：0，高度：4}。
     ○ 安卓:海拔：4。
-● 填充: 24px （一致的排水沟）.
+
 
 运动和交互规则
 “弹簧”标准
@@ -591,16 +593,16 @@ Avoid linear animations. Use Spring Config for all transitions:
 ● 质量:1、阻尼：15，刚度：120。
 入口动画
 ● 交错淡入: Content should slide up （是：20 -> 0） and fade in (Opacity: 0 -> 1) as the screen mounts.
-● 布局转换:使用 LayoutAnimation 或 Reanimated 的输入属性实现无缝列表更新。
+
 
 人工智能实施说明
-1、严格的造型: Use StyleSheet.create or a utility-first library like NativeWind （RN 的顺风）.
+1、严格的造型: Use StyleSheet.create or a utility-first library like NativeWind （RN 的 Tailwind）.
 2. 安全区域: 始终将根内容包裹在 SafeAreaView 中。
-3. 触摸目标: 确保所有交互元素至少为 44x44 像素。
+3. 触摸目标: 确保所有交互元素至少为 44x44px。
 4. 图标: Use Lucide-React-Native or Expo Vector Icons （羽毛/离子图标）.
 5. 挂钩: 对提到的任何动作使用 useSharedValue 和 useAnimatedStyle。
 Example Signature Block: 
-生成屏幕时，请始终包含“设计说明”，解释如何应用不对称和渐变强调，以确保它看起来不像通用模板。
+
 
 
 Terminal（终端/命令行）
@@ -617,7 +619,7 @@ Key visual signatures:
 ● 等宽霸权:每个 UI 元素都使用等宽字体。布局是根据字符宽度而不是流动百分比来计算的。
 ● 命令行提示符: Every screen starts with a system path or user breadcrumb （例如，~/root/user/home）.
 ● 触觉反馈:每次“击键”或按下按钮时都会产生微妙的触觉，以模仿机械键盘反馈。
-● ASCII 边框:使用 +、-、| 和 * 等字符来定义 UI 边界，而不是标准移动阴影或圆形容器。
+
 
 设计代币系统
 颜色（OLED 优化的暗黑模式）
@@ -636,52 +638,52 @@ React Native implementations should use the StyleSheet or Tailwind/NativeWind
 ● 行高:紧的。 1.2 倍字体大小，可最大限度地提高小屏幕上的信息密度。
 半径和边界
 ● 半径:0. 标准 React Native borderRadius：0。没有例外。
-● 边框:边框宽度：1。样式：实心。
+
 
 组件样式（React Native 特定）
 按钮（命令）
 ● 结构:TouchableHighlight 中包裹的文本。显示为[执行]或>继续。
-● 互动: On press, underlayColor should be the Primary Green, and text color should flip to #000000（倒置视频）.
+● 互动: On press
 ● 触觉: Trigger Haptics.impactAsync（Haptics.ImpactFeedbackStyle.Light） on press.
 卡（进程窗口）
 ● 结构:一个 <View>，其 borderWidth：1 和 borderColor：primary。
 ● 标题栏:顶行颜色反转：[ TITLE: SYSTEM_LOG ]。
-● 滚动:使用 FlatList 和 indicatorStyle="white" 来模拟滚动终端缓冲区。
+● 滚动:使用 FlatList 和 indicatorStyle=”white” 来模拟滚动终端缓冲区。
 输入（插入符号）
 ● 风格:没有背景。以前缀开头：$ 或 >。
 ● 光标: A View with a blinking Opacity animation （0 到 1） placed at the end of the text string.
-● 键盘:设置 keyboardType =“ascii-capable”和 autoCapitalize =“none”。
+
 
 布局策略（移动端）
 该布局模仿移动 tmux 会话。
 ● 垂直堆叠:将 Flexbox 与 flexDirection: 'column' 结合使用。屏幕应该感觉像是连续的数据流。
 ● 分离器:创建一个呈现破折号字符串的 <Separator /> 组件：----------------------------。
-● 状态栏:永久固定页脚显示 [电池：88%] [网络：已连接] [时间：08:51]。
+
 
 非通用性（大胆因素）
-● 启动顺序: On app launch, show a rapid-fire scroll of fake system logs （INIT_KERNEL...，LOADING_UI...） before the main content appears.
+● 启动顺序: On app launch
 ● ASCII 图形:使用文本组件作为标题，而不是 PNG 图标。
-Plaintext
+
 
  _  _  ____  ____
 ( \/ )(  _ \(  _ \
  \  /  ) _ ( )   /
-  \/  (____/(_)\_)
 
-● 进度指标:无活动指示器。使用基于文本的栏：[#####-----] 50%。
+
+
 
 效果和动画（React Native Reanimated）
 ● 眨眼:光标 █ 的 500 毫秒不透明度循环。
 ● 打字机:使用自定义挂钩随着时间的推移将字符串从 0 到 n 个字符进行切片，以应对新数据的到达。
-● 扫描线:顶级 <ImageBackground> 或绝对 <View>，具有重复水平线图案，不透明度为 0.05。
+
 
 图像学
 ● 风格:使用标准 MaterialCommunityIcons 或 Lucide，但始终设置描边宽度={1} 和大小={20}。
-● 实施:图标应被视为“字符”。它们的颜色必须与其所附文字的颜色相同。
+
 
 辅助功能和性能
-● 对比:黑底绿字对于视力受损的用户来说非常清晰。
-● 触摸目标:即使样式“紧密”，也要确保在括号按钮上使用 hitSlop 以满足 44x44dp 移动标准。
+"● 对比:黑底绿字对于视力受损的用户来说非常清晰。
+”● 触摸目标:即使样式“紧密”，也要确保在括号按钮上使用 hitSlop 以满足 44x44dp 移动标准。
 ● 减少运动:如果需要，请通过禁用打字机和扫描线效果来尊重 AccessibilityInfo.isReduceMotionEnabled。
 
 Kinetic（动力学/动态）
@@ -691,17 +693,17 @@ Kinetic（动力学/动态）
 3. 数据可视化与实时监控 (Data Visualization)
 4. 情感化设计与反馈 (Micro-interactions)
 系统提示: 动能移动野蛮主义
-设计理念
-核心原则: 版式是移动屏幕的架构。这种风格拒绝标准应用程序布局，而是采用“动态海报”方法。文本被视为图形元素；标头是英雄单位。运动是恒定的和反应性的——如果一个元素没有移动，它应该对用户的拇指做出响应。每一次互动都让人感觉沉重、有触感且对比度高。
+设计理念"
+核心原则: 版式是移动屏幕的架构。这种风格拒绝标准应用程序布局，而是采用“动态海报”方法。文本被视为图形元素；标头是英雄单位。运动是恒定的和反应性的——如果一个元素没有移动，它应该对用户的拇指做出响应。每一次互动都让人感觉沉重、有触感且对比度高。”
 审美氛围: 高能量的街头野蛮主义。精度与原始功率的结合。这是一本针对 6 英寸屏幕进行优化的地下杂志。一切都是大写的，超大的，而且是令人不舒服的粗体。它尖叫而不是耳语。清晰度是通过极端的对比度和巨大的比例来实现的，而不是通过空白或微妙的阴影来实现。
-视觉 DNA: Relentless motion and aggressive scale. Numbers tower over labels. Scrolling isn't just movement—it's a performance. Use hard edges （$0px$ 半径）, sharp $2px$ borders, and instant color flips. If traditional mobile design uses a $14pt$ body and $24pt$ header, this style uses $18pt$ body and $80pt$headers.
+视觉 DNA: Relentless motion and aggressive scale. Numbers tower over labels. Scrolling isn't just movement—it's a performance. Use hard edges （$0px$ 半径）
 Signature Elements: 
 ● 无限字幕: Horizontal scrolling text that never stops （使用 react-native-reanimated）.
 ● 激进的版式:显示文本始终为大写且紧密跟踪。
 ● 大量数字元素: Numbers （$60-120pt$） used as background graphic textures.
-● 触觉色彩反转: On press, cards flood with accent color instantly （无缓慢褪色）.
+● 触觉色彩反转: On press
 ● 滚动驱动的缩放: Elements scale or rotate based on scroll position （使用插值）.
-● 野兽派几何:$2px$ solid borders, $0px$ border-radius, hairline grid dividers.
+
 
 设计代币系统（DNA）
 色彩架构
@@ -746,11 +748,11 @@ Signature Elements:
 ● 边界半径:严格来说 0。
 ● 边框: $2px$ solid （使用 borderWidth: 2）.
 ● 阴影:没有任何。 使用颜色分层和边框来增加深度。
-● 填充:挑衅的。部分填充 py：40，卡片填充 p：24。
+
 
 组件样式原则
 按钮
-● 结构:高度 64 像素或 80 像素。粗体、大写文本。
+● 结构:高度 64px 或 80px。粗体、大写文本。
 ● 小学:背景#DFE104，文本#000000。
 ● 概要:borderWidth：2，边框#3F3F46，透明背景。
 ● 互动:将 Pressable 与 useAnimatedStyle 结合使用。在 onPressIn 上，缩放至 0.95。在 onPressOut 上，返回到 1.0。
@@ -760,19 +762,19 @@ Signature Elements:
 ● 堆叠:使用 zIndex 和 translateY 在滚动过程中创建重叠的“粘性”卡片效果。
 输入
 ● 造型: Height 80px. borderBottomWidth: 2. Large uppercase text （$24pt+$）.
-● 焦点:边框颜色翻转为酸性黄色。 Muted Zinc 中的占位符文本。
+
 
 动画和运动系统（动能引擎）
 跑马灯运动
 ● 使用 react-native-reanimated 来实现。
-● 高能: Speed 5s per loop, no easing （缓动：线性）.
+● 高能: Speed 5s per loop
 ● 规则:边缘处没有渐变褪色。文本应在屏幕边界处清晰地剪辑。
 滚动触发的变换
 ● 英雄视差:当用户滚动时，英雄文本应从 1.0 缩放到 1.3，然后淡入到 0。
 ● 粘性标题:标题应该捕捉并“推送”前一节的内容。
 微交互
 ● 触觉反馈: Trigger Haptics.impactAsync（Haptics.ImpactFeedbackStyle.Medium） on every button press and card flip.
-● 即时转换: Color changes should be near-instant （$100ms$） to maintain the "brutalist" feel. Scale transforms can be slightly smoother ($300ms$).
+
 
 实施指南（React Native 细节）
 ● 性能: Use the Native Thread for all animations （复活）. Avoid setState for scroll animations.
@@ -781,7 +783,7 @@ Signature Elements:
 ● 无障碍:
     ○ Maintain high contrast ratios （$15:1$ for text）.
     ○ 确保为大量自定义按钮定义了 accessibilityRole。
-    ○ 尊重 isReduceMotionEnabled 可停止敏感用户的选取框。
+
 
 
 Flat Design（扁平化设计）
@@ -789,20 +791,20 @@ Flat Design（扁平化设计）
 1. 跨平台响应式网页与移动应用
 2. 信息架构极其复杂的仪表盘 (Dashboard)
 3. 系统级界面与图标设计
-4. 品牌导向的插画与营销页面
+
 
 系统提示: React Native 平面设计专家
-移动设备的扁平化设计消除了所有的技巧。它拒绝三维幻觉——没有立面、没有阴影、没有斜角、也没有真实的纹理。它完全依赖于尺寸、颜色和版式的层次结构。这是专为手掌量身定制的自信还原。
+移动设备的扁平化设计消除了所有的技巧。它拒绝 3D 幻觉——没有立面、没有阴影、没有斜角、也没有真实的纹理。它完全依赖于尺寸、颜色和版式的层次结构。这是专为手掌量身定制的自信还原。
 美学是“移动优先的海报设计”: 清晰的边缘、坚实的色块和高冲击力的布局。每个元素都是功能性触摸目标。视觉兴趣是通过几何形状、充满活力的色块和动态比例的战略相互作用产生的。
 核心原则
 ● 零海拔: The elevation （安卓） and shadowColor (iOS) properties are strictly set to 0 or null. Hierarchy is created through color contrast and scale, never depth.
 ● 颜色作为结构:部分由粗体全角背景色而不是边框或阴影定义。转变是急剧而直接的。
 ● 版式优先的界面:在没有阴影的情况下，字体粗细和大小承受 UI 的重量。使用引起注意的几何、粗体字体。
-● 几何纯度: Perfect circles and squares. Rounded corners must be consistent （边界半径）. No "organic" or "hand-drawn" shapes.
-● 触觉反馈: Since "hover" doesn't exist on mobile, use Pressable with immediate color shifts or scale-down effects （变换：[{比例：0.96}]） to provide instant feedback.
+● 几何纯度: Perfect circles and squares. Rounded corners must be consistent （边界半径）. No ”organic” or ”hand-drawn” shapes.
+
 
 设计令牌系统（React Native StyleSheet）
-1. 颜色（灯光模式）
+1. 颜色（亮色模式）
 ● 背景: #FFFFFF （纯白）
 ● 表面/静音: #F3F4F6 （灰色 100） - For secondary blocks.
 ● Text （小学）:#111827（灰色 900）- 高对比度。
@@ -816,9 +818,9 @@ Flat Design（扁平化设计）
 ● 身体:字体粗细：“400”，行高：24。
 ● 瓶盖/标签:textTransform：'大写'，fontWeight：'700'，letterSpacing：1。
 3. 形状和布局
-● 边界半径: 6 （小号）, 12 (Medium/Cards), 999 (Pill/Circular).
+● 边界半径: 6 （小号）
 ● 触摸目标:所有交互元素的最小高度/宽度为 48。
-● 间距: Base-4 system （4, 8, 16, 24, 32, 48）.
+
 
 组件样式规范
 按钮（可按/可触摸不透明度）
@@ -832,32 +834,32 @@ Flat Design（扁平化设计）
 ● 规则:阴影不透明度：0，高度：0，内边距：20，边框半径：12。
 ● 布局:使用 flexDirection: 'column' 或 'row' 进行硬对齐。没有微妙的渐变。
 输入（文本输入）
-● 默认:背景颜色：'#F3F4F6'，边框半径：8，填充：16，边框宽度：0。
-● 专注:边框宽度：2，边框颜色：'#3B82F6'，背景颜色：'#FFFFFF'。没有外部“发光”。
+"● 默认:背景颜色：'#F3F4F6'，边框半径：8，填充：16，边框宽度：0。"""
+
 
 部分和导航样式
 ● 平头:为标题使用纯色原色背景。无底部阴影；仅当背景与正文颜色相同时才使用 1px 实线边框。
-● 底部标签: Use active/inactive colors （#3B82F6 与 #9CA3AF）. No "floating" tab bars; stick to the bottom with a solid color fill.
+● 底部标签: Use active/inactive colors （#3B82F6 与 #9CA3AF）. No ”floating” tab bars; stick to the bottom with a solid color fill.
 ● 色块: Alternate screen sections using full-width View components with contrasting background colors （例如，蓝色英雄视图后跟白色内容视图）.
 图像学
 ● 图书馆:Lucide-react-native 或 MaterialCommunityIcons。
 ● 风格: Thick strokes （笔划宽度：2.5）.
-● 集装箱:将图标放置在没有阴影的纯色正方形或圆形内。
+
 
 “大胆因素”（React Native 实现）
-● 避免: Subtle drop shadows on buttons, "Soft UI" （新拟态）, or standard iOS/Android system-default styling.
+● 避免: Subtle drop shadows on buttons
 ● 强调:
     ○ 规模:使主要标题比正文大得多，以产生“海报”效果。
-    ○ 装修: Use position: 'absolute' views to place large, low-opacity geometric shapes （圆形/旋转正方形） behind content.
-    ○ 硬边框:对于具有高影响力的元素（例如特色 CTA 按钮），请使用 borderWidth: 4。
+    ○ 装修: Use position: 'absolute' views to place large
+
 
 
 
 Material Design（材料设计）
-有趣、动态的颜色提取、药丸形状的按钮和不同的仰角状态。基于谷歌的Material Design 3，具有增强的深度和微观交互。
+有趣、动态的颜色提取、药丸形状的按钮和不同的仰角状态。基于谷歌的 Material Design 3，具有增强的深度和微观交互。
 1. 安卓（Android）生态系统应用
 2. 跨平台工具与生产力软件
-3. 数据密集型 B 端后台 (Material UI)
+
 
 系统提示: Material You （MD3） for React Native
 设计理念
@@ -865,13 +867,13 @@ Material Design（材料设计）
 氛围: 友好、柔软、圆润、有触感。用户界面给人一种生机勃勃的感觉——通过流畅的动作和“状态层”来响应触摸。表面具有深度感知能力，使用色调而不是浓重的阴影来定义层次结构。
 Mobile-Specific Implementation Details: 
 ● 触摸优先反馈:每个交互元素都利用带有状态层和微妙比例转换的 Pressable。
-● 触觉整合: Success, warning, and heavy interactions （像 FAB 印刷机一样） trigger HapticFeedback for a physical feel.
+● 触觉整合: Success, warning
 ● 大气深度:由于 CSS 背景模糊在移动设备上很重要，因此我们使用具有 LinearGradient 和绝对定位模糊形状的分层视图组件来模拟深度。
 ● 安全区域意识:完全符合 react-native-safe-area-context，确保有机形状在状态栏和主页指示器后面流动。
-● 流体运动:由使用标志性材质“强调”缓动的 Reanimated 提供支持。
+
 
 设计代币系统（DNA）
-颜色（灯光模式）
+颜色（亮色模式）
 种子颜色: Purple/Violet （#6750A4）
 代币
 十六进制值
@@ -936,14 +938,14 @@ State Layer Rules (Opacity Overlays):
 12px
 500
 16px
-● 字母间距:按钮和标签使用 0.1 像素跟踪，以提高小尺寸下的可读性。
+● 字母间距:按钮和标签使用 0.1px 跟踪，以提高小尺寸下的可读性。
 半径和边界
 ● Extra Small （8px）:芯片，小工具提示。
 ● Small （12px）:工具提示、迷你卡片。
 ● Medium （16px）:标准卡、选择对话框。
 ● Large （28px）:主屏幕卡、底页。
 ● Full （药丸）:所有按钮、搜索栏、FAB。
-● 输入:borderTopLeftRadius：12，borderTopRightRadius：12，borderBottomLeftRadius：0，borderBottomRightRadius：0。
+
 
 阴影和效果
 移动高度主要通过色调提升（覆盖颜色）而不仅仅是阴影来实现。
@@ -952,48 +954,49 @@ State Layer Rules (Opacity Overlays):
     ○ 0 级:无阴影，表面平坦。
     ○ Level 1 （卡片）:列表项的微妙深度。
     ○ Level 2 （主动卡）:增强拖动或按下项目的深度。
-    ○ Level 3 （FAB）:明显的浮动效果。
-● 模糊形状: Use absolute positioned View components with Canvas （通过 react-native-skia） or pre-rendered blurred SVG assets to create atmospheric background "blobs."
+"    ○ Level 3 （FAB）:明显的浮动效果。"""
+
 
 组件样式原则
 按钮
 ● 形状: Always Pill-Shaped （边框半径：999）.
 ● 反馈意见:必须使用内部带有 Animated.View 的 Pressable 来处理缩放比例：按下时为 0.95。
-● FAB: 56x56dp, Tertiary color, borderRadius: 16 （圆角正方形） or 28 (circular).
+● FAB: 56x56dp
 输入（M3 填充风格）
-● 视觉效果:背景#E7E0EC，平底，带有 2 像素指示器。
+● 视觉效果:背景#E7E0EC，平底，带有 2px 指示器。
 ● 动画:使用 Reanimated，标签会在焦点上向上浮动。底部边框从中心扩展。
 卡片
-● 半径:24 像素-28 像素。
-● 分离:在表面背景上使用表面容器颜色。避免严格的边界。
+● 半径:24px-28px。
+
 
 动画与动作
 All animations must use the Material Emphasized Easing: 
-缓动.贝塞尔曲线(0.2, 0, 0, 1)
+缓动.贝塞尔曲线(0.2
 ● 持续时间:
     ○ Small （开关/复选框）:100 毫秒。
     ○ Medium （按钮/卡片）:250 毫秒。
-    ○ Large （模态/屏幕转换）:400 毫秒。
 
-“移动大胆因素”
+"
+"
+”“移动大胆因素”””
 1. 触觉编排: 切换时为轻触觉，长按时为中触觉。
-2. 有机覆盖: Backgrounds must feature at least two blurred organic shapes （小学/高等教育） at 15% opacity to break the "app-grid" feel.
+2. 有机覆盖: Backgrounds must feature at least two blurred organic shapes （小学/高等教育） at 15% opacity to break the ”app-grid” feel.
 3. 音调导航: 底部导航栏应使用辅助容器丸来显示活动图标状态。
-4. 边到边: UI elements should bleed into the safe areas where appropriate （例如，英雄图像） to feel modern.
+
 
 反模式（避免）
 ● ❌ 没有方形按钮:所有互动的东西都是药丸状或圆形的。
 ● ❌ 没有纯白色:对屏幕使用#FFFBFE。
-● ❌ 无默认不透明度削减:使用色调调色板标记来表示状态，而不仅仅是不透明度：0.5。
-● ❌ 没有刺眼的阴影:如果它看起来像“投影”，则它太重了。它应该看起来像“环境光”。
+"● ❌ 无默认不透明度削减:使用色调调色板标记来表示状态，而不仅仅是不透明度：0.5。"""
+
 
 
 
 Neo Brutalism（新野兽派）
-一种原始的、高对比度的美学，模仿印刷设计和DIY朋克文化。其特点是奶油色背景、厚厚的黑色边框（4px）、零模糊的硬偏移阴影、冲突的鲜艳颜色（热红色、鲜艳的黄色、柔和的紫色）和厚重的Space Grotesk排版。拥抱不对称、旋转、贴纸般的分层和有组织的视觉混乱。
+一种原始的、高对比度的美学，模仿印刷设计和 DIY 朋克文化。其特点是奶油色背景、厚厚的黑色边框（4px）、零模糊的硬偏移阴影、冲突的鲜艳颜色（热红色、鲜艳的黄色、柔和的紫色）和厚重的 Space Grotesk 排版。拥抱不对称、旋转、贴纸般的分层和有组织的视觉混乱。
 1. 创意工具与协作平台
 2. 针对 Z 世代（Gen Z）的市场营销与电商
-3. 内容展示与个人作品集
+
 
 设计理念: Mobile Neo-Brutalism （React 本机）
 移动环境中的新野蛮主义是对 iOS 和 Android 的“玻璃拟态 / 磨砂玻璃风主义”和“极简主义”趋势的强烈反叛。它将原始的“笔记本电脑贴纸”美学转化为拇指友好的触觉界面。虽然标准的移动设计隐藏了结构，但移动新野蛮主义却强化了它。它将移动屏幕视为一个物理拼贴板，其中的元素不仅仅是“浮动”——它们占据了沉重的、有边框的空间。
@@ -1001,26 +1004,26 @@ Core DNA & Fundamental Principles:
 ● 毫无歉意的可见性: Reject subtle elevation. If a component exists, it must have a thick black border（边框宽度：4）. No soft shadows; use solid offset blocks for depth.
 ● Tactile Feedback （“机械”水龙头）:交互不应该感觉像“触摸玻璃”。按钮必须感觉像物理开关。在按下时，它们会发生物理移动（translateX 和 translateY）以“覆盖”它们的影子，从而产生机械点击的感觉。
 ● 贴纸分层: Treat screens as a series of layered paper cutouts. Use slight rotations （变换：[{旋转：'-2deg'}]） on cards, badges, and text blocks to break the rigid mobile grid.
-● 高压调色板: Use a "Pop Art" color scheme. A warm Cream background （#FFFDF5） paired with high-saturation Hot Red, Vivid Yellow, and Pure Black.
+● 高压调色板: Use a ”Pop Art” color scheme. A warm Cream background （#FFFDF5） paired with high-saturation Hot Red, Vivid Yellow, and Pure Black.
 ● 抗平滑运动:避免缓慢、宽松的过渡。使用基于弹簧的活泼动画或即时状态更改。运动应该感觉像街机游戏，而不是豪华汽车仪表板。
 设计代币系统（React Native）
 1. 颜色（“高饱和度”调色板）
 ● 背景: #FFFDF5 （奶油） - The default canvas.
-● 墨迹/描边: #000000 （纯黑） - Used for ALL text, borders, and shadows.
+● 墨迹/描边: #000000 （纯黑） - Used for ALL text
 ● Accent （小学）:#FF6B6B（热红色）- 主要操作。
 ● 中学: #FFD93D （鲜艳的黄色） - Secondary highlights/badges.
 ● 静音: #C4B5FD （柔和的紫罗兰色） - Tertiary/Card headers.
 ● 白色:#FFFFFF - 深色背景上的高对比度。
 2. 版式（粗体和粗体）
-● 字体家族: Space Grotesk （或“系统粗体”（如果不可用））.
-● 重量: Only 700 （大胆） and 900 (Black/Heavy). Avoid "Regular" or "Light."
+"● 字体家族: Space Grotesk （或“系统粗体”（如果不可用））."""
+”● 重量: Only 700 （大胆） and 900 (Black/Heavy). Avoid ”Regular” or ”Light.”””
 ● 尺码:
     ○ 显示: 48px - 64px （头条新闻）
-    ○ 标题:24 像素 - 32 像素
+    ○ 标题:24px - 32px
     ○ 身体: 18px - 20px （可读但沉重）
     ○ 标签: 14px （全部大写，跟踪：2）.
 3. 边框与阴影（签名）
-● 边框宽度:默认 4 像素。次要 2 像素。
+● 边框宽度:默认 4px。次要 2px。
 ● 边界半径: 0 （夏普） is default. 999 (Pill) only for badges/special buttons.
 ● 硬阴影:非模糊、纯黑色偏移。
     ○ 小号:偏移量：{宽度：4，高度：4}
@@ -1028,7 +1031,7 @@ Core DNA & Fundamental Principles:
 组件样式原则
 按钮
 ● 结构:高度：56，边框宽度：4，边框颜色：'#000'，边框半径：0。
-● 影子:在按钮后面应用纯黑色视图，偏移 4 像素。
+● 影子:在按钮后面应用纯黑色视图，偏移 4px。
 ● 互动:使用可按压。按下时，使用 transform: [{translateX: 4}, {translateY:4}]隐藏阴影并模拟物理按下。
 ● 文字:fontFamily：“SpaceGrotesk-Bold”，textTransform：“大写”。
 卡片和容器
@@ -1037,7 +1040,7 @@ Core DNA & Fundamental Principles:
 ● 填充: Aggressive padding （数量：20） to prevent text from touching the thick borders.
 输入
 ● 风格:高度：64，边框宽度：4，边框颜色：“#000”，背景颜色：“#FFF”。
-● 焦点状态: Change backgroundColor to Yellow （#FFD93D） when focused. No soft "glow" or blue rings.
+● 焦点状态: Change backgroundColor to Yellow （#FFD93D） when focused. No soft ”glow” or blue rings.
 徽章
 ● 风格:圆形或矩形，边框宽度：2。
 ● 定位:使用位置：“绝对”将它们“拍”到卡片或图像的角上（通常是旋转的）。
@@ -1053,23 +1056,23 @@ Core DNA & Fundamental Principles:
 ● 没有软宽松:动画应该是弹簧或线性的。
 ● 没有“标准”边界半径:避免 borderRadius：8 或 12。它可以是 0 或 999。
 系统提示 AI 代码生成
-系统角色: 您是一位专业的 React Native 开发人员，专门从事新野蛮主义移动 UI。核心说明：生成严格遵循新野蛮主义美学的代码。样式规则：目标：创建一个高对比度、响亮且有触觉的移动界面，给人机械感和叛逆感。
+
 
 
 Bold Typography（粗体排版/大字报风）
 以字体为导向的设计，将大字体作为主要的视觉元素。超大标题、极端对比和戏剧性的负面空间创造了海报般的构图，文字成为了艺术。
 1. 创意品牌官网与产品首屏（Hero Section）
 2. 纯内容驱动的应用与阅读平台
-3. 活动推广、展览与快闪页面
+
 
 系统提示: Bold Typography （移动/React Native）
 设计理念
 Bold Typography Mobile 将编辑海报设计转化为手持体验。在这个移动优先的环境中，排版就是界面。我们拒绝典型的移动“混乱”（阴影、圆角、沉重的图标），转而采用高对比度类型和有意的负空间。我们的目标是让 6.7 英寸的屏幕感觉像一张优质的印刷大报。
 核心原则
-● 输入英雄: Headlines aren't just titles; they are the UI. A massive, tight-kerned headline （48 点+） is the primary visual anchor, replacing the need for decorative imagery.
+● 输入英雄: Headlines aren't just titles; they are the UI. A massive, tight-kerned headline （48 点+） is the primary visual anchor
 ● 极端比例对比:保持 H1 和 Body 之间的显着比例。在移动设备上，我们推动 5:1 的比例，以确保即使在小型显示屏上也能清晰地看到层次结构。
-● 故意的负空间: Whitespace is used to frame "typographic blocks." We favor large vertical gaps between sections （60 像素以上） to let the letterforms breathe.
-● 严格的等级制度: The eye must follow a linear, editorial path: Massive Headline → Subhead （单声道） → Body → High-contrast CTA.
+● 故意的负空间: Whitespace is used to frame ”typographic blocks.” We favor large vertical gaps between sections （60px 以上） to let the letterforms breathe.
+● 严格的等级制度: The eye must follow a linear
 ● 内敛调色板:接近黑色和暖白色。用于互动的单一“Vermillion”口音。颜色从来不装饰；它仅表明重要性或行动。
 氛围
 有信心。社论。高端。它感觉就像是奢侈品牌的移动应用程序或数字设计宣言。每一次互动都是决定性的，每一句话都是必不可少的。
@@ -1077,26 +1080,26 @@ Visual Signatures:
 ● 边到边的版式:突破屏幕水平界限的标题。
 ● 无圆角:borderRadius：所有按钮、输入和容器均为 0。
 ● 下划线作为主要 UI: Interactive text is identified by thick （2 点-3 点） accent underlines.
-● 急剧的过渡:即时或高速转换。没有“弹跳”或“弹性”动画。
+
 
 设计代币系统
 颜色（暗黑模式）
-JSON
+
 
 {
-  「背景」: "#0A0A0A", // 接近黑色
-  “前景”: "#FAFAFA", // 暖白色
-  “静音”: "#1A1A1A", // 微妙的表面
-  “静音前景”: "#737373", // 辅助文本
-  “口音”: "#FF3D00", // 朱红色
-  “强调前景”: "#0A0A0A", // 重音上的深色文本
-  “边界”: "#262626", // 精确除法器
-  “输入”: "#1A1A1A", // 输入表面
-  “卡”: "#0F0F0F" // 海拔高度
-}
+  「背景」: ”#0A0A0A”, // 接近黑色
+  “前景”: ”#FAFAFA”, // 暖白色
+  “静音”: ”#1A1A1A”, // 微妙的表面
+  “静音前景”: ”#737373”, // 辅助文本
+  “口音”: ”#FF3D00”, // 朱红色
+  “强调前景”: ”#0A0A0A”, // 重音上的深色文本
+  “边界”: ”#262626”, // 精确除法器
+  “输入”: ”#1A1A1A”
+  “卡”: ”#0F0F0F” // 海拔高度
+
 
 版式（React 原生样式对象）
-● 主堆栈: Inter-Tight, System （体重：600+）
+● 主堆栈: Inter-Tight
 ● 显示堆栈: PlayfairDisplay-Italic （对于重要引述）
 ● 单堆栈: JetBrainsMono-Regular （对于标签/统计数据）
 Scale System: 
@@ -1116,7 +1119,7 @@ Letter Spacing (Tracking):
 ● 更宽: 2px （全大写 CTA）
 线高: 
 ● 紧: 1.1 （头条新闻）
-● 正常: 1.6 （身体）
+
 
 组件样式
 按钮
@@ -1137,32 +1140,32 @@ Secondary (The Inverted Box):
 输入
 ● 高度:56、背景颜色：输入、边框宽度：1、边框颜色：边框、边框半径：0。
 ● 内边距水平:16、颜色：前景，字体大小：16。
-● 焦点状态:边框颜色：重音。
+
 
 布局策略（移动）
 ● 集装箱填料:标准水平内边距：24。
-● 交错布局: Use asymmetric margins （例如，marginLeft: 0 表示标题，marginLeft: 40 表示正文） to create an editorial "grid" feel.
+● 交错布局: Use asymmetric margins （例如，marginLeft: 0 表示标题，marginLeft: 40 表示正文） to create an editorial ”grid” feel.
 ● 垂直度:优先考虑具有大量垂直间隙的单柱流。
-● 出血: Large decorative type （像部分编号“01”） should partially bleed off the screen edge (right: -20).
+
 
 效果和动画（Reanimated/Moti）
 ● 理念:快速、干脆、果断。
 ● 时机:所有转换的持续时间为 200 毫秒。
-● 宽松: Easing.bezier（0.25, 0, 0, 1）.
+● 宽松: Easing.bezier（0.25
 ● 入口处: Fade in + subtle slide up （10px） for text blocks.
-● 互动: Pressing a card should result in a color shift （背景从黑色变为静音）, not a "lift" or shadow effect.
+
 
 图像学
 ● 图书馆:Lucide-react-native。
 ● 风格:笔画宽度：1.5。
-● 尺寸:UI 控件为 20 像素，功能锚点为 32 像素。
-● 严格的规则: Icons must always be accompanied by a Mono-stack text label. Icons never stand alone unless they are standard navigation （例如，后退箭头）.
+● 尺寸:UI 控件为 20px，功能锚点为 32px。
+
 
 无障碍
 ● 对比:确保前景/背景比例保持 18:1。
-● 触摸目标:所有按钮/链接的最小 hitSlop 或高度必须为 44 像素。
-● 可读性:正文文本永远不会低于 16 像素，以确保在高 DPI 移动屏幕上的易读性。
-● 视觉提示: Since we avoid shadows/depth, focus and active states must use the Accent Color （#FF3D00） or high-contrast inversion to indicate selection.
+● 触摸目标:所有按钮/链接的最小 hitSlop 或高度必须为 44px。
+● 可读性:正文文本永远不会低于 16px，以确保在高 DPI 移动屏幕上的易读性。
+
 
 
 
@@ -1171,11 +1174,11 @@ Academia （学院风）
 1、知识管理与深度阅读工具类
 2、仪式感较强的个人品牌与创意作品集
 3、解谜与角色扮演游戏
-4、特定文化调性的社区平台
+
 
 系统提示: Scholarly Academia Mobile （React 本机）
-设计理念
-核心原则: Scholarly gravitas meets timeless elegance, optimized for the handheld experience. This style channels the atmosphere of centuries-old university libraries and Victorian study halls into a mobile interface. Every interaction—from a scroll to a tap—must feel like handling a prestigious artifact: rich material references （桃花心木、黄铜、羊皮纸） combined with measured ornamentation and traditional typography. Vibe: Scholarly, Prestigious, Tactile, Timeless, Dignified, Intellectual. The Academia Mobile Promise: This is not a flat mobile app. It is a digital "pocket watch" or "leather-bound journal." We trade modern minimalism for physical depth, replacing generic cards with "ledger pages" and standard buttons with "etched brass hardware."
+"设计理念"""
+
 
 设计代币系统（DNA）
 色彩系统（夜晚的图书馆）
@@ -1183,14 +1186,14 @@ Foundation Colors:
 ● 背景: #1C1714 （深桃花心木） - Primary screen background.
 ● 背景 Alt: #251E19 （陈年橡木） - Surface elevation for cards and modals.
 ● 前景: #E8DFD4 （古董羊皮纸） - Primary text.
-● 静音: #3D332B （破旧的皮革） - Input backgrounds, disabled states.
+● 静音: #3D332B （破旧的皮革） - Input backgrounds
 ● 静音前景: #9C8B7A （褪色的墨水） - Secondary text and labels.
 ● 边界: #4A3F35 （木纹） - Subtle dividers.
 Accent Colors: 
-● 口音: #C9A962 （抛光黄铜） - Primary interactive color (icons, links, active borders).
+● 口音: #C9A962 （抛光黄铜） - Primary interactive color (icons
 ● 口音中学: #8B2635 （图书馆深红） - High-importance badges/wax seals.
 ● 口音前景: #1C1714 （深色黄铜） - Text on brass buttons.
-黄铜渐变（用于按钮）: ['#D4B872', '#C9A962', '#B8953F'] （线性渐变）
+
 
 版式系统
 Font Families: 
@@ -1204,33 +1207,33 @@ Type Scale (Mobile Optimized):
 ● 身体: 16px - 18px （Crimson Pro，领先：24px-26px）
 ● 标签/上划线: 10px - 12px （Cinzel，大写，字母间距：2px-3px）
 Special Typography Patterns: 
-● 首字下沉:部分的第一个字母使用 Cinzel，60 像素，颜色：黄铜。
-● 卷编号:主要部分必须以 Cinzel、10 像素、黄铜材质的“VOLUME I”、“VOLUME II”为前缀。
+● 首字下沉:部分的第一个字母使用 Cinzel，60px，颜色：黄铜。
+
 
 半径和边界系统
 ● 默认半径: 4px （按钮、输入、卡）.
-● 拱顶特惠: borderTopLeftRadius: 100, borderTopRightRadius: 100 （应用于英雄图像和特征容器以模仿大教堂窗户）.
-● 边框厚度:1 像素标准； 2px 用于黄铜互动亮点。
+● 拱顶特惠: borderTopLeftRadius: 100
+
 
 阴影和深度（特定于移动设备）
 ● 卡高度:阴影颜色：'#000'，阴影偏移：{宽度：0，高度：4}，阴影不透明度：0.4，阴影半径：6，高度：8。
 ● 黄铜纽扣:阴影颜色：'#C9A962'，阴影不透明度：0.2，阴影半径：4。
-● 雕刻文字: Applied via subtle textShadowColor: 'rgba（0,0,0,0.5）', textShadowOffset: { width: 1, height: 1 }, textShadowRadius: 1.
+
 
 纹理和大气效果
 1.晕影叠加: 使用带有径向渐变的 LinearGradient 或绝对定位视图来使屏幕角落变暗。
 2. 棕褐色滤镜: All images must have a sepia tint by default （通过图像滤镜或半透明#C9A962overlay） until interacted with.
 3. 角落蓬勃发展: 在主要卡片的左上角和右下角使用绝对定位的视图元素。
-    ○ 实施:24 像素 x 24 像素 L 形黄铜边框。
+    ○ 实施:24px x 24px L 形黄铜边框。
 4.华丽的分隔线: A horizontal line with a centered Unicode glyph （例如，“✶”）.
-    ○ 风格:渐变线透明 -> #C9A962 -> 透明。
+
 
 组件样式原则
 按钮
 ● 小学:黄铜渐变背景，Cinzel 字体，深色桃花心木文本，大写。
 ● 中学:透明背景，2px 黄铜边框，黄铜文本。
 ● 第三/幽灵:无边框，黄铜文字，Cinzel 字体。
-● 尺寸: Height 52px （标准型）, 44px (Small).
+● 尺寸: Height 52px （标准型）
 卡片
 ● 背景: #251E19 （陈年橡木）.
 ● 边框: 1px of #4A3F35 （木纹）.
@@ -1242,34 +1245,34 @@ Special Typography Patterns:
 表单输入
 ● 背景: #3D332B （破旧的皮革）.
 ● 文字: #E8DFD4 （羊皮纸）.
-● 焦点状态:边框变为黄铜色，并带有微妙的光泽。
+
 
 布局原则
-● 填充:标准水平屏幕内边距：20 像素或 24 像素。
-● 垂直节奏: Generous spacing between sections （48 像素至 64 像素）.
-● 对准:标题通常居中，给人一种正式的“宣言”感觉；正文左对齐或对齐以获得“书”的感觉。
+● 填充:标准水平屏幕内边距：20px 或 24px。
+● 垂直节奏: Generous spacing between sections （48px 至 64px）.
+
 
 “大胆因素”（强制性签名元素）
 1. 拱顶图像: 每个主图像必须有一个大教堂拱顶。
 2. 罗马数字系统: 使用“第一卷、第二卷、第三卷”作为章节标题。
 3.黄铜互动语言: Every tappable item must feature Brass （#C9A962）.
 4. 首字下沉介绍: 任何主要部分的第一段都以一个大的黄铜辛泽尔字母开头。
-5. 触觉纹理: 使用晕影和角花以避免“扁平”的数字外观。
+
 
 动画与动作
 ● 理念:厚重、深思熟虑、流畅。没有“弹性”或“弹跳”效果。
 ● 过渡: Use Timing with Easing.out（缓动.poly(4）).
-● 签名互动: On press, buttons should "dim" slightly （不透明度 0.8） to feel like physical pressure on metal.
+
 
 反模式（要避免什么）
 ● NO Pure White （#FFFFFF） or Pure Black (#000000). Use Parchment and Mahogany.
 ● 除非小型系统元数据绝对需要，否则不要使用 Sans-Serif 字体。
 ● 禁止使用明亮、霓虹或饱和的颜色。
 ● 没有尖锐的几何/科技灵感的图像。
-● 没有快速、流行或有弹性的动画。
+
 
 实现参考（NativeWind / React Native）
-JavaScript
+
 
 // 令牌使用示例
 const academiaTheme = {
@@ -1280,30 +1283,30 @@ const academiaTheme = {
     黄铜: '#C9A962',
     深红色: '#8B2635',
     ink: '#9C8B7A',
-  },
+  }
   archStyle: {
     边框左上半径: 100,
-    边框右上半径: 100,
+    边框右上半径: 100
   }
-};
+
 
 
 Cyberpunk（赛博朋克）
-黑色上的高对比度霓虹灯、故障动画、终端/单空间字体、面向技术的装饰。受80年代科幻和黑客文化启发的反乌托邦数字美学。
+黑色上的高对比度霓虹灯、故障动画、终端/单空间字体、面向技术的装饰。受 80 年代科幻和黑客文化启发的反乌托邦数字美学。
 1. 游戏领域
 2. 金融科技与加密货币
 3. 数据可视化与大屏监控
-4. 潮流品牌与创意营销
+
 
 系统提示: Cyber-Noir React Native 架构师
 1. 设计理念
 核心原则: 小屏幕的“高科技，低寿命”。这是数字反乌托邦的移动界面——流氓甲板客的便携式终端。它强调张力、信号干扰和工业实用性。与网络界面不同，每次交互都必须具有触觉、触觉和危险的响应能力。 Vibe：一个“被黑”的移动操作系统。深受《攻壳机动队》和《赛博朋克 2077》的影响。这是一个高对比度、数据密集的环境，感觉就像在经过修改的手持军事设备上运行。 触觉体验：
-● 信号不完美: Utilize Canvas （斯基亚） or Svg filters for chromatic aberration and signal noise. The UI should "flicker" during transitions.
-● 绝对虚空: Use #0a0a0f for deep backgrounds. Interactive elements shouldn't just be colored; they should emit a digital "radiance" （发光） that bleeds into the void.
+● 信号不完美: Utilize Canvas （斯基亚） or Svg filters for chromatic aberration and signal noise. The UI should ”flicker” during transitions.
+● 绝对虚空: Use #0a0a0f for deep backgrounds. Interactive elements shouldn't just be colored; they should emit a digital ”radiance” （发光） that bleeds into the void.
 ● 角度人体工程学:硬质 45 度倒角。避免使用标准的 iOS/Android 圆角。使用自定义 SVG 蒙版或 React-native-skia 进行剪辑。
 2. 设计代币系统（DNA）
 颜色（仅限暗黑模式）
-TypeScript
+
 
 const colors = {
   背景: '#0a0a0f',      // Deep void
@@ -1314,8 +1317,8 @@ const colors = {
   中学: '#ff00ff', // 霓虹洋红色
   高等教育: '#00d4ff', // 网络青色
   边界: '#2a2a3a',      // Structural lines
-  破坏性的: '#ff3366', // 警报/错误
-};
+  破坏性的: '#ff3366'
+
 
 版式（React Native TextStyle）
 ● 字体家族: Orbitron （标题）, JetBrains Mono (Body/Data). Fallback to monospace.
@@ -1329,19 +1332,19 @@ const colors = {
 3. 组件样式
 按钮（可按/可触摸不透明度）
 ● 网络按钮:使用 SVG 背景实现 45 度切角的自定义组件。
-● 互动: On onPressIn, scale to 0.98, trigger a haptic pulse （Haptics.impactAsync）, and increase the shadowOpacity of the neon glow.
+● 互动: On onPressIn
 ● 变体:* 小故障：激活时快速循环切换左：1 和左：-1。
     ○ 概要:透明中心，霓虹色边框，带有文本阴影的文本。
 容器（查看）
-● 平视显示器卡: High-tech panels with "corner brackets" （拐角处的绝对定位 L 形）.
-● 终端视图: A view with a subtle repeating-linear-gradient （扫描线） overlay using PointerEvents="none".
+● 平视显示器卡: High-tech panels with ”corner brackets” （拐角处的绝对定位 L 形）.
+● 终端视图: A view with a subtle repeating-linear-gradient （扫描线） overlay using PointerEvents=”none”.
 ● 全息玻璃: Use BlurView （世博会） with an extremely low intensity and a thin neon border.
 输入（文本输入）
 ● 提示风格:在 colors.accent 中始终以 static > 作为前缀。
 ● 焦点状态:边框应使用 Animated.loop 进行脉动。隐藏标准光标并使用自定义闪烁视图块。
 4、布局策略
-● 安全区: Respect the notch, but fill it with a "System Status" bar （假比特率，十六进制电池百分比）.
-● 密度: Prefer information density over whitespace. Use small, sharp margins （8 像素增量）.
+● 安全区: Respect the notch, but fill it with a ”System Status” bar （假比特率，十六进制电池百分比）.
+● 密度: Prefer information density over whitespace. Use small
 ● 不对称性:在特定部分标题上使用 transform: [{ skewY: '-1deg' }] 来打破移动“网格”感觉。
 5.非通用性（大胆的因素）
 ● 触觉故障:每当出现“故障”动画时，都会触发轻微的触觉点击。
@@ -1351,31 +1354,31 @@ const colors = {
 Reanimated / Animated API: 
 ● 眨眼: duration: 500, easing: Easing.steps（2）
 ● 故障:使用 useAnimatedStyle 每隔几秒随机偏移 translateX [-2, 2, 0]。
-● 霓虹灯脉冲:```typescript ShadowOffset: { width: 0, height: 0 }, ShadowRadius:pulseAnim, // 从 4 到 12 进行动画处理 ShadowColor: Colors.accent, ShadowOpacity: 0.6,
+
 
 ## 7. 图像学
 * **图书馆: ** `Lucide-react-native`。
 * **配置: ** `描边宽度={1.5}`、`颜色={colors.accent}`。
-* **增强: ** 在“View”中用一个小“shadow”包裹图标，使图标看起来在背景下发光。
+
 
 ## 8.移动策略（用户体验）
 * **性能: ** 对所有不透明度和变换动画使用“Native Driver”。避免在低端 Android 设备上出现严重的“模糊”。
 * **加载状态: ** 将标准 `ActivityIndi​​cator` 替换为“解密...”文本动画或旋转电路图案 SVG。
-* **手势: ** 使用“PanResponder”或“Gesture Detector”进行滑动到操作的转换，感觉就像滑动硬件面板。
+
 
 ## 9. 辅助功能
 * **对比: ** Maintain high contrast for legibility in outdoor （高眩光） environments.
-* **触摸目标: ** Even with "sharp" aesthetics, ensure hitboxes （`hitSlop`） are at least `44x44dp`.
-* **屏幕阅读器: ** Use `accessibilityLabel` for all icon-only buttons to explain the "hacker" jargon （例如，“解密”而不是“输入”）.
+* **触摸目标: ** Even with ”sharp” aesthetics, ensure hitboxes （`hitSlop`） are at least `44x44dp`.
+
 
 ## 10. 实施指南
 * 优先考虑“StyleSheet.create”以提高性能。
 * 使用“expo-linear-gradient”实现霓虹灯边框效果。
-* For the "Chamfer" look, use this SVG path template for `BackgroundView`: 
-    `M10,0 L100,0 L110,10 L110,100 L100,110 L10,110 L0,100 L0,10 Z`（根据元件尺寸调整）。
+* For the ”Chamfer” look, use this SVG path template for `BackgroundView`: 
+
 
 ---
-**Next Step: ** Would you like me to generate a specific React Native component （例如，网络风格的登录屏幕或故障卡） using this prompt?
+
 
 
 网络 3
@@ -1383,29 +1386,29 @@ Reanimated / Animated API:
 1. 去中心化金融协议 (DeFi) 与 钱包 (Wallets)
 2. NFT 交易市场与数字收藏品展示
 3. 元宇宙 (Metaverse) 与 社交平台
-4. 前沿科技品牌官网 (High-Tech Brands)
+
 
 系统提示: Bitcoin DeFi Mobile （React 本机）
 您是一位专门从事高端金融科技和 Web3 移动界面的 React Native 开发专家。您的目标是实现“比特币 DeFi”美学——精密工程、加密信任和数字黄金的复杂融合。这是一个深邃的宇宙真空，其中的数据结构闪烁着比特币橙色和数字黄金的光芒。
 1. 核心设计原则（移动优先）
-● 发光能量: Interactive elements emit light. Use shadowColor and shadowOpacity in React Native to create colored glows （橙色/金色）, not just black shadows.
+● 发光能量: Interactive elements emit light. Use shadowColor and shadowOpacity in React Native to create colored glows （橙色/金色）
 ● 触觉精度:使用超薄边框宽度： 1. 为了技术准确性，数据必须使用等宽字体显示。
-● 分层深度: Use blurView （通过 expo-blur） or semi-transparent overlays (rgba) to create digital depth. Elements float in Z-space using elevation and shadows.
-● 通过设计获得信任:高对比度和技术精度。用户界面必须给人“设计完美”的感觉。
+"● 分层深度: Use blurView （通过 expo-blur） or semi-transparent overlays (rgba) to create digital depth. Elements float in Z-space using elevation and shadows."""
+”● 通过设计获得信任:高对比度和技术精度。用户界面必须给人“设计完美”的感觉。”””
 2. 设计代币系统（React Native）
 颜色（仅限暗黑模式）
-JavaScript
+
 
 const Colors = {
   无效: '#030304',       // True Void （背景）
   暗物质: '#0F1115', // Surface/Cards
   纯光: '#FFFFFF', // 主要文本
   星尘: '#94A3B8',   // Muted Text
-  模糊边界: 'rgba（30, 41, 59, 0.2）', // Border
+  模糊边界: 'rgba（30, 41
   比特币橙: '#F7931A', // 主要重音
   焦橙: '#EA580C', // 次重音
-  数字黄金: '#FFD600', // 第三重音
-};
+  数字黄金: '#FFD600'
+
 
 版式（自定义字体映射）
 ● 标题: SpaceGrotesk-Bold （几何、技术特征）
@@ -1424,7 +1427,7 @@ const Colors = {
 ● 文字:大写，字母间距：1.5，字体系列：“Inter-Bold”。
 卡（“区块链区块”）
 ● 表面:背景颜色：'#0F1115'。
-● 边框: borderWidth: 1, borderColor: 'rgba（255,255,255,0.1）'.
+● 边框: borderWidth: 1, borderColor: 'rgba（255
 ● 发光:微妙的 shadowColor：“#F7931A”，shadowOpacity：“活动”块的 0.1。
 ● 布局: Generous padding （填充：20）.
 输入（“终端”样式）
@@ -1433,31 +1436,31 @@ const Colors = {
 ● 文字:用于数字输入的白色等宽字体。
 4. 移动设备特有的效果
 ● 玻璃拟态 / 磨砂玻璃风: Use BlurView （强度：20） for navigation bars and floating overlays.
-● 触觉反馈: Trigger Haptics.impactAsync （轻或中） on button presses and successful transactions to reinforce "Engineered" feel.
+● 触觉反馈: Trigger Haptics.impactAsync （轻或中） on button presses and successful transactions to reinforce ”Engineered” feel.
 ● 渐变:对所有主要 CTA 和标题重音使用 React-Native-Linear-Gradient。
-● 网格背景:使用不透明度为 0.05 的 50 像素网格的重复 SVG 图案来模拟网络空隙。
+● 网格背景:使用不透明度为 0.05 的 50px 网格的重复 SVG 图案来模拟网络空隙。
 5.非通用的“大胆”选择
 ● 渐变文字:使用 MaskedView 将橙色到金色的渐变应用于关键平衡数字和标题。
 ● 全息节点:图标应包裹在带有橙色边框的圆形 BlurView 中。
-● 动画状态: Use a pulsing MotiView （或复活） for "Live" network status indicators.
+● 动画状态: Use a pulsing MotiView （或复活） for ”Live” network status indicators.
 ● “账本”时间线:使用垂直渐变线来显示交易历史记录，其中每个点在视图中都会闪烁。
 6. 布局和技术限制
 ● 安全区:始终将主容器包裹在 SafeAreaView 中。
 ● 触摸目标:所有交互元素的最小尺寸为 48x48dp。
-● 性能:对于繁重的交易列表，请使用 FlashList。使用 React Native Reanimated 将动画保留在 UI 线程中。
+
 
 
 Claymorphism（粘土拟物化）
-一种超现实的3D美学，模拟柔软的充气粘土物体，具有多层阴影堆叠、充满活力的糖果店颜色、触觉微交互和有机浮动环境元素，创造出优质、有趣的数字玩具体验。
+一种超现实的 3D 美学，模拟柔软的充气粘土物体，具有多层阴影堆叠、充满活力的糖果店颜色、触觉微交互和有机浮动环境元素，创造出优质、有趣的数字玩具体验。
 1. 针对儿童与青少年的教育类应用
 2. 品牌形象中的 3D 角色与插图
 3. 金融科技与加密货币 (轻量版)
-4. 创意工具与社交软件
+
 
 系统提示: High-Fidelity Claymorphism （React Native 移动版）
 设计理念
-核心理念: Digital Clay （手机） This design system is a high-fidelity simulation of a tangible, physical world constructed from premium digital clay. In a mobile environment, this translates to a "thumb-first" experience where every element feels like a soft, air-filled silicone object that physically reacts to touch. It rejects flat minimalism in favor of volume, weight, and extreme tactility.
-“高保真”差异: Unlike standard mobile UI, this system uses multi-layered Shadow Stacks（通过嵌套视图组件或 react-native-shadow-2 进行模拟） to create density. Elements are not flat vectors; they are substantial objects that "squish" and "bounce" under the user's thumb.
+核心理念: Digital Clay （手机） This design system is a high-fidelity simulation of a tangible, physical world constructed from premium digital clay. In a mobile environment
+
 
 视觉语言与物质性
 ● 材质:触感柔软的哑光硅胶和棉花糖状泡沫。表面吸收光；反射柔和且漫射。
@@ -1466,7 +1469,7 @@ Claymorphism（粘土拟物化）
     ○ 外容器:边框半径：40 到 50
     ○ 标准卡:边框半径：32
     ○ 按钮/输入:边框半径：20
-● 感官氛围:俏皮的“糖果店”调色板和有弹性的有机运动。
+
 
 设计代币系统（移动）
 1. 颜色（糖果店调色板）
@@ -1485,13 +1488,13 @@ Claymorphism（粘土拟物化）
     ○ 英雄:字体大小：48，行高：52，字母间距：-1
     ○ 章节标题:字体大小：32，行高：38
     ○ 卡牌名称:字体大小：22，行高：28
-    ○ 身体:字体大小：16，行高：24
+
 
 组件架构（React Native 实现）
 1. 万能粘土卡
-使用背景颜色的组合: 'rgba（255,255,255,0.7）' and BlurView (from expo-blur or react-native-blur) for a "Glass-Clay" hybrid.
+使用背景颜色的组合: 'rgba（255,255
 ● 影子堆栈:由于 RN 仰角有限，因此使用嵌套视图或 SVG 阴影来模拟：
-    a.外层: offset: {12, 12}, blur: 24, color: 'rgba（160, 150, 180, 0.2）'
+    a.外层: offset: {12, 12}, blur: 24, color: 'rgba（160
     b.亮点: 偏移量：{-8，-8}，模糊：16，颜色：'#FFFFFF'
 ● 互动: Use Pressable with useAnimatedStyle （复活） to lift the card (translateY: -4) on press.
 2. 粘土按钮（“挤压”因素）
@@ -1504,17 +1507,17 @@ Claymorphism（粘土拟物化）
 3. 隐藏式输入
 模拟手指压入粘土。
 ● 风格:背景颜色：'#EFEBF5'，高度：64，填充水平：24。
-● 内影:使用黑色左上角的内部阴影和白色右下角的边缘光来创建“空心”外观。
+
 
 动画系统（由 Reanimated 提供支持）
 1.浮力（Float）: Background blobs should use withRepeat（与计时（...）) to drift ±20px over 8-10 seconds.
 2. 粘土呼吸: 统计球应每 4 秒在 1.0 和 1.03 之间微妙地缩放。
-3. 触觉反馈: Every "Squish" interaction （按钮/卡片） must trigger Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).
+
 
 布局模式和响应策略
 ● 拇指区:将主要 CTA 保留在屏幕底部 30% 的位置。
 ● 移动便当:使用 2 列网格，其中“英雄卡”跨越 2 列，次要卡为方形。
-● 安全区域:使用 SafeAreaView，但允许背景斑点渗入边缘，以获得“零重力”的感觉。
+
 
 该做和不该做的事
 ● 请使用带有 includeFontPadding 的文本:false 确保圆形按钮垂直居中。
@@ -1522,16 +1525,16 @@ Claymorphism（粘土拟物化）
 ● DO 嵌套边界半径:如果卡片是 32，则里面的图像是 24。
 ● 请勿使用标准 Android 高度。它创造出平坦的灰色阴影，打破了粘土的美感。使用基于 SVG 的阴影。
 ● DON'T use sharp corners （< 20）.
-● 不要使用纯黑色 #000000 来表示文本或阴影。
+
 
 
 Enterprise（企业级/政企风）
-现代SaaS美学平衡了专业性和可接近性。鲜艳的靛蓝/紫罗兰色渐变、柔和的阴影、等距深度和干净的几何无衬线字体。
+现代 SaaS 美学平衡了专业性和可接近性。鲜艳的靛蓝/紫罗兰色渐变、柔和的阴影、等距深度和干净的几何无衬线字体。
 1. 后台管理系统
 2. 生产力工具与协作平台
 3. 政务与金融类严肃应用
-4. 垂直领域专业软件
-这是网页设计提示的翻译版本，专门针对移动应用程序开发（iOS/Android/React Native/Flutter）。我用“按下状态”、“触觉”、“安全区域”和“手势”等移动原生范例替换了“悬停状态”、“CSS 网格”和“鼠标交互”等特定于 Web 的概念。
+"4. 垂直领域专业软件"""
+
 
 App 设计系统提示: Modern Enterprise SaaS （手机）
 1. 设计理念
@@ -1544,12 +1547,12 @@ App 设计系统提示: Modern Enterprise SaaS （手机）
 ● 手机波兰语:宽敞的间距、安全区域意识和清晰的排版在手掌中营造出优质的企业就绪感。
 关键词: 值得信赖、充满活力、精致、触感、现代、平易近人、企业就绪、流畅。
 2. 设计代币系统
-颜色（灯光模式）
+颜色（亮色模式）
 ● 背景: #F8FAFC （板岩 50） - A very subtle cool grey/white base for screen backgrounds.
-● 表面: #FFFFFF （白色） - For cards, bottom sheets, and elevated elements.
+● 表面: #FFFFFF （白色） - For cards
 ● 小学: #4F46E5 （靛蓝 600） - The core brand color. Vibrant blue-purple.
-● 中学: #7C3AED （紫罗兰 600） - For gradients, badges, and accents.
-● 正文主要: #0F172A （板岩 900） - High contrast, sharp for primary readability.
+● 中学: #7C3AED （紫罗兰 600） - For gradients, badges
+● 正文主要: #0F172A （板岩 900） - High contrast
 ● 文本静音: #64748B （板岩 500） - For supporting text and inactive tab icons.
 ● 口音/成功: #10B981 （翡翠 500） - For positive indicators and snackbars.
 ● 分隔线/边框: #E2E8F0 （板岩 200） - Subtle separation for list items.
@@ -1561,25 +1564,25 @@ App 设计系统提示: Modern Enterprise SaaS （手机）
     ○ 节标题: Bold （700）
     ○ 卡片标题/按钮: SemiBold （600）
     ○ 正文: Regular （400）
-● 线高: Tight for titles （1.1-1.2）, relaxed for body text (1.4-1.5) to ensure comfortable reading on narrow screens.
+● 线高: Tight for titles （1.1-1.2）
 半径和边界
 ● 屏幕元素:大卡片和底页为 16pt/dp。
 ● 互动元素:输入和小芯片为 8pt/dp。
 ● 按钮: Fully rounded （药丸形状） or 12pt/dp for a modern tech feel.
 ● 边框: Hairline （0.5 点 - 1 点） borders using the Divider token to define edges without adding visual weight.
 阴影和深度
-● 卡高度: Soft, colored shadows replacing neutral grays. Android elevation or iOS shadow properties mimicking 0px 4px 16px rgba（79, 70, 229, 0.08）.
+● 卡高度: Soft
 ● 底板阴影:较强的向上阴影表示最高的 z 指数。
-● Button Shadow （小学）:0px 4px 12px rgba(79, 70, 229, 0.25) 使主要操作高度突出。
+● Button Shadow （小学）:0px 4px 12px rgba(79
 3. 组件样式
 按钮
 ● 主要 CTA: Full width （减去屏幕填充） at the bottom of the screen. Background uses the Indigo-to-Violet gradient. White text.
 ● 中学:白色表面，石板边框，石板文字。
-● 新闻状态: Instead of web hover, use an active press state that slightly scales the button down （0.95x） and reduces shadow, paired with subtle haptic feedback.
+● 新闻状态: Instead of web hover
 卡片和列表
 ● 基地:白色背景，16pt 半径，细线边框，柔和的彩色阴影。
 ● 布局: Horizontal scrolling （旋转木马） for feature discovery, vertical standard lists for data.
-● 列出项目: Edge-to-edge with inset dividers, utilizing leading icons （在柔和的圆形背景中）.
+● 列出项目: Edge-to-edge with inset dividers
 输入和表格
 ● 风格:白色背景，8pt 半径，浅色石板边框。
 ● 主动/专注状态:边框转换为 Indigo，标签动画到浮动位置，键盘自动呈现。
@@ -1589,7 +1592,7 @@ App 设计系统提示: Modern Enterprise SaaS （手机）
 ● 流畅的手势: Bottom sheets that can be dragged and dismissed fluidly. Cards that support swipe-to-action （例如，向左滑动即可存档） with color reveals underneath.
 ● 滚动链接动画:当用户向下滚动列表时，大屏幕标题会平滑地折叠到顶部导航栏中。
 ● 渐变使用:谨慎但有意地使用——在活动选项卡图标、主按钮上，以及作为入门屏幕后面微妙的模糊网格背景。
-● 骨骼加载: Instead of traditional spinners, use animated, pulsing placeholder shapes （靛蓝/板岩色） that match the layout of the incoming data.
+● 骨骼加载: Instead of traditional spinners
 5. 间距和布局
 ● 安全区域: Strict adherence to iOS and Android safe area insets （凹口、动态岛屿、主页指示区域）.
 ● 屏幕填充:所有屏幕的水平边距一致为 16pt/dp 或 20pt/dp。
@@ -1601,19 +1604,19 @@ App 设计系统提示: Modern Enterprise SaaS （手机）
 6. 动画和过渡
 ● 理念:“流畅且有弹性”——动画应该给人物理感和可中断的感觉。
 ● 屏幕转换: Standard platform pushes （在 iOS 上向左滑动，在 Android 上淡入/缩放）, but utilize Shared Element Transitions for hero images or core cards opening into detail views.
-● 新闻动画: Scale-down （规模：0.97） on press down, spring back on release.
+● 新闻动画: Scale-down （规模：0.97） on press down
 ● 宽松:避免线性动画。使用弹簧物理来更改布局和缓出不透明度。
 7. 图像和触摸目标
 ● 图书馆: Lucide-react-native （或等效的 SVG 系统）.
 ● 风格:2px 笔画宽度、圆形帽和连接营造出友好、现代的感觉。
-● 触摸目标: Crucial for mobile. Minimum tap area of 44x44 pt （iOS） or 48x48 dp (Android) for all interactive elements, even if the visual icon is only 24x24.
+● 触摸目标: Crucial for mobile. Minimum tap area of 44x44 pt （iOS） or 48x48 dp (Android) for all interactive elements
 ● 活跃状态: Navigation icons transition from outlined （不活跃的） to filled/gradient (active).
 8. 可访问性和最佳实践
 ● 动态文本:当用户增加系统字体大小时，UI 不得中断。文本必须优雅地换行或截断。
 ● 对比:所有文本均符合 WCAG AA 标准。 Slate 50 背景上的 Slate 900 高度兼容。
 ● 屏幕阅读器: Ensure all image assets and icon buttons have descriptive accessibilityLabel （iOS） and contentDescription (Android).
-● 暗黑模式准备情况: While this spec is light-mode first, tokens should be structured to easily invert （例如，Slate 50 变为 Slate 900，渐变变得稍微柔和）.
-● 减少运动:通过回退到简单的交叉淡入淡出而不是复杂的缩放和弹簧动画来尊重操作系统级别的“减少运动”设置。
+● 暗黑模式准备情况: While this spec is light-mode first
+
 
 
 
@@ -1622,7 +1625,7 @@ Sketch（素描/手绘风）
 1. 原型设计与早期创意提案 (Low-Fidelity Prototyping)
 2. 创意品牌、艺术与独立文化项目
 3. 教育、绘本与儿童类产品
-4. 游戏化 UI 与 叙事解谜游戏
+
 
 设计理念
 手绘移动设计风格颂扬手掌中真实的不完美和人性化的触感。它摒弃了典型移动用户界面的枯燥精确性，转而采用有机、有趣的不规则性，让人想起便携式素描本、袖珍笔记本或便签集。
@@ -1630,14 +1633,14 @@ Sketch（素描/手绘风）
 ● 没有直线:每个 View 和 TouchableOpacity 都使用复杂的 borderRadius 逻辑或 SVG 蒙版来创建拒绝几何完美的不稳定边缘。
 ● 触觉质感:使用背景叠加或平铺图像来模拟颗粒、纸张或笔记本网格等物理介质，使屏幕感觉像物理表面。
 ● 俏皮的倾斜:元素利用小变换：[{旋转：'-1deg'}]属性来打破僵化的移动网格并创造随意的能量。
-● 硬偏移阴影: Strictly avoid elevation （安卓） or shadowRadius (iOS) that creates blur. Use a secondary "shadow layer" View offset by (4px, 4px) to create a cut-paper, layered collage aesthetic.
+● 硬偏移阴影: Strictly avoid elevation （安卓） or shadowRadius (iOS) that creates blur. Use a secondary ”shadow layer” View offset by (4px, 4px) to create a cut-paper
 ● 手写字体: Exclusively use handwritten fonts （帕特里克·汉德·卡拉姆）. Typography should vary in size and rotation to look like quick notes written on the fly.
 ● 潦草的覆盖物:使用绝对定位的 SVG 来实现手绘箭头、图像上的“磁带”效果以及关闭按钮的“X”标记等华丽效果。
 ● 故意混乱:拥抱轻微的重叠和不对称的边缘，让应用程序感觉是自发的，而不是制造出来的。
-● 情感意图:这种风格通过显得未完成且平易近人来降低“对互动的恐惧”。它非常适合日记应用程序、创意工具、教育或任何想要感觉以人为本而不是企业的产品。
+
 
 设计代币系统
-颜色（单一调色板 - 灯光模式）
+颜色（单一调色板 - 亮色模式）
 ● 背景: #fdfbf7 （暖纸）
 ● 前景: #2d2d2d （软铅笔黑色）
 ● 静音: #e5e0d8 （旧纸/擦铅笔）
@@ -1649,14 +1652,14 @@ Sketch（素描/手绘风）
 ● 身体:PatrickHand-Regular - 高度清晰但明显人性化。
 ● 规模:大且适合移动设备阅读。标题应调整 lineHeight 以允许“潦草”的下降部分。
 半径和边界
-● 不稳定的边界: Since React Native doesn't support the slash / syntax for borderRadius, use unique values for each corner （例如，borderTopLeftRadius：15、borderTopRightRadius：25、borderBottomLeftRadius：20、borderBottomRightRadius：10）.
+● 不稳定的边界: Since React Native doesn't support the slash / syntax for borderRadius
 ● 边框宽度:大胆且可见。 边框宽度：最小值 2； borderWidth: 3 用于主要操作。
 ● 风格:用于容器的固体； 虚线表示“剪切”部分或空状态。
 阴影和效果
 ● 硬偏移阴影:由于半径为 0 的 ShadowOpacity 在各个平台上不一致，因此应将其实现为放置在主组件后面的“阴影视图”。
     ○ 标准型:偏移量 { x: 4, y: 4 } 与 #2d2d2d。
-    ○ Active （新闻）:偏移 { x: 0, y: 0 }（按钮“沉入”纸张中）。
-● 纸张纹理:在整个屏幕上使用重复图案背景图像或非常微妙的径向渐变 SVG 叠加层。
+    ○ Active （新闻）:偏移 { x: 0
+
 
 组件样式
 按钮（可触摸不透明度）
@@ -1666,40 +1669,40 @@ Sketch（素描/手绘风）
 ● Pressed State （activeOpacity={1}）:
     ○ 主按钮变换:[{translateX：4}，{translateY：4}]。
     ○ 背景“阴影视图”被覆盖，模拟物理按压。
-● 变体: "Post-it" Yellow （#fff9c4） for primary CTAs.
+● 变体: ”Post-it” Yellow （#fff9c4） for primary CTAs.
 卡/容器
-● 底座样式: White background, wobbly border, slight rotation （-1deg or 1deg）.
+● 底座样式: White background
 ● 装修类型:
-    ○ “磁带”: A semi-transparent View （RGBA(200, 200, 200, 0.5）) positioned absolutely at the top, slightly rotated to look like it holds the card.
+    ○ “磁带”: A semi-transparent View （RGBA(200
     ○ “大头钉”:顶部中心有一个红色小圆圈 SVG。
 ● 语音气泡:使用附加到容器底部的小 SVG 三角形作为“提示”文本或工具提示。
 输入（文本输入）
 ● 风格:带有不稳定边框半径的完整盒子。
 ● 字体:PatrickHand-常规。
 ● 焦点状态: Border color changes to Blue Ballpoint （#2d5da1） with a slight increase in borderWidth.
-● 占位符: Muted Pencil （#2d2d2d60）.
+
 
 布局策略
 ● “反网格”:避免完美对齐。为相邻卡提供稍微不同的旋转值。
 ● 分层:使用 zIndex 将“胶带”堆叠在卡片上以及将卡片堆叠在背景涂鸦上。
 ● 视觉节奏:对于标准屏幕，使用 padding: 20。在垂直元素之间使用较大的间隙值，让“纸张”呼吸。
-● 溢出: Allow decorative elements （像手绘的星星一样） to bleed slightly off the edge of the screen.
+
 
 非通用性（大胆的选择）
 ● 粗略的装载机:使用“涂鸦”圆形或在三个手绘帧之间切换的动画，而不是旋转器。
 ● 手绘图标: Use icons that look like they were drawn with a 0.5mm fineliner （粗笔画，未闭合的循环）.
 ● 删除线:当任务完成或项目被删除时，使用红色的“涂鸦”SVG 覆盖层而不是简单的线条。
-● 波浪分隔线:用手绘波浪线 SVG 替换标准水平规则。
+
 
 效果和动画
 ● “摇摇晃晃”:当用户触发错误时，使用序列动画在 -2 度和 2 度之间快速旋转元素。
-● 快速过渡: Use LayoutAnimation.configureNext（LayoutAnimation.Presets.spring） for all layout changes to give a bouncy, physical feel.
+
 
 移动优先策略（React Native）
 ● 触摸目标:确保所有摆动按钮的最小点击区域为 48x48，即使视觉“墨水”较小。
 ● 安全区:确保“纸张”背景延伸到 SafeAreaView 中，以保持物理媒体的错觉。
 ● 性能:使用 useNativeDriver: true 进行旋转和变换，以保持“手绘”动作在 60fps 下流畅。
-● 触觉:在按下按钮时添加 Haptics.impactAsync，以强化“点击”物理对象的感觉。
+
 
 
 Neumorphism（新拟物化）
@@ -1707,25 +1710,25 @@ Neumorphism（新拟物化）
 1. 极简主义硬件控制与智能家居
 2. 追求审美感的工具类 App
 3. 金融与健康监测看板（非密集型）
-4. 品牌营销与展示型页面
+
 
 设计理念（React Native / Mobile）
-核心原则: Neumorphism on mobile creates a tactile, physical interface through dual shadows. On React Native, this is achieved by layering View components or using specialized libraries to simulate the light source （左上角） and dark shadow (bottom-right). Every component is "molded" from the base material (#E0E5EC). Buttons are never flat; they are either "pillowed" (convex) or "wells" (concave/inset).
+核心原则: Neumorphism on mobile creates a tactile, physical interface through dual shadows. On React Native, this is achieved by layering View components or using specialized libraries to simulate the light source （左上角） and dark shadow (bottom-right). Every component is ”molded” from the base material (#E0E5EC). Buttons are never flat; they are either ”pillowed” (convex) or ”wells” (concave/inset).
 氛围: 优质、陶瓷般的感觉。它优先考虑按下物理按钮的“重击”声。这是一种平静的单色体验，使用深度而不是颜色来建立层次结构。
 Unique Visual Signatures (Mobile Specific): 
 ● 双阴影分层:由于 React Native 的 shadowColor 仅支持一个方向，因此可以使用嵌套的 View 组件或 react-native-shadow-2 来实现双光效果。
 ● 触觉反馈: Every neumorphic interaction （按下/释放） must be accompanied by light haptic feedback (ImpactFeedbackStyle.Light).
 ● 物理压力机:活动状态应使用变换：[{scale:0.97}]来模拟材料压缩。
-● 全屏表面: The entire app uses a single background color （#E0E5EC） to maintain the "continuous material" illusion.
+
 
 设计代币系统（DNA）
-颜色（灯光模式 - 冷单色）
+颜色（亮色模式 - 冷单色）
 ● 背景: #E0E5EC （“粘土”基地）.
 ● 文本主要: #3D4852 （7.5:1 对比度）.
 ● 文本静音: #6B7280 （4.6:1 对比度）.
 ● 口音: #6C63FF （用于活动切换或主要 CTA）.
 ● 影光: rgba（255, 255, 255, 0.6） (Top-Left).
-● 暗影: rgba（163, 177, 198, 0.7） (Bottom-Right).
+● 暗影: rgba（163
 版式
 ● 字体家族: Use System （旧金山/罗博托） or PlusJakartaSans-Bold.
 ● 尺码:* 标题：24pt-32pt，粗体。
@@ -1735,16 +1738,16 @@ Unique Visual Signatures (Mobile Specific):
 半径（React Native borderRadius）
 ● 大集装箱: 32
 ● 标准按钮/输入: 16
-● 药丸/搜索栏: 999
+
 
 阴影与效果（物理）
 注意事项: React Native 需要针对 iOS 的特定阴影属性和针对 Android 的海拔高度。对于高保真同态，请使用包装实现。
 挤压（凸面 - 静止）
 ● Outer Shadow （黑暗）:ShadowOffset：{宽度：6，高度：6}，shadowOpacity：1，shadowRadius：10，shadowColor：'rgba（163,177,198,0.7）'
-● Inner Shadow （光）:ShadowOffset：{宽度：-6，高度：-6}，shadowOpacity：1，shadowRadius：10，shadowColor：'rgba（255,255,255,0.6）'
+● Inner Shadow （光）:ShadowOffset：{宽度：-6，高度：-6}，shadowOpacity：1，shadowRadius：10，shadowColor：'rgba（255
 插图（凹面 - 按下/输入）
-● 概念: Use a slightly darker background color （#D1D9E6） or internal gradients/shadows to simulate a "carved out" look.
-● 视觉:背景颜色：“#E0E5EC”，加上 1 像素的内部边框，顶部颜色较深。
+● 概念: Use a slightly darker background color （#D1D9E6） or internal gradients/shadows to simulate a ”carved out” look.
+
 
 组件样式（React Native）
 按钮
@@ -1754,26 +1757,25 @@ Unique Visual Signatures (Mobile Specific):
 ● 触觉:在 onPressIn 上触发 Haptics.impactAsync。
 卡片
 ● 基地:填充：24，边框半径：32，背景颜色：'#E0E5EC'。
-● 层次结构: Use "Nested Depth." A card （挤压式） contains an Icon Container (Inset Deep).
+● 层次结构: Use ”Nested Depth.” A card （挤压式） contains an Icon Container (Inset Deep).
 输入
 ● 风格:高度：50，边框半径：16，水平填充：16。
 ● 深度: Must be Inset （凹面） to look like a physical slot.
-● 焦点:边框颜色更改为 #6C63FF，宽度为 1.5 像素。
+
 
 动画和微交互
 ● 框架:使用 React Native Reanimated 或 LayoutAnimation。
-● 过渡: Duration: 250ms, Easing: Bezier（0.4, 0, 0.2, 1）.
+● 过渡: Duration: 250ms
 ● 互动:* 比例：按钮按下时缩小 2-3%。
-    ○ 阴影过渡:当元素被“压”入表面时，平滑地将阴影不透明度从 1 插值到 0.4。
+
 
 布局和辅助功能
 ● 安全区:始终包裹在 SafeAreaView 中。
 ● 触摸目标:所有交互元素的最小尺寸为 48x48。
-● 间距: Use a 8pt grid system （8, 16, 24, 32, 48）.
-● 对比:确保文本颜色在 #E0E5EC 背景下保持 WCAG AA 合规性。
+● 间距: Use a 8pt grid system （8
+
 
 反模式（不做）
-● 没有黑色阴影: Never use rgba（0,0,0,x）. Shadows must be blue-grey to match the "Cool Grey" material.
+● 没有黑色阴影: Never use rgba（0
 ● 没有纯白色背景:屏幕背景必须是#E0E5EC。
 ● 无锋利边缘:避免 borderRadius < 12。
-● 没有平坦的边框:除非处于焦点状态，否则请勿使用 borderWidth: 1 作为深度的替代。

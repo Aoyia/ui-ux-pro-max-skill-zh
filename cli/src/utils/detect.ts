@@ -3,12 +3,12 @@ import { join } from 'node:path';
 import type { AIType } from '../types/index.js';
 
 interface DetectionResult {
-  detected: AIType[];
+  detected: Exclude<AIType, 'all'>[];
   suggested: AIType | null;
 }
 
 export function detectAIType(cwd: string = process.cwd()): DetectionResult {
-  const detected: AIType[] = [];
+  const detected: Exclude<AIType, 'all'>[] = [];
 
   if (existsSync(join(cwd, '.claude'))) {
     detected.push('claude');

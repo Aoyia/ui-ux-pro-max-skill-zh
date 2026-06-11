@@ -23,7 +23,7 @@ No,Category,Guideline,Description,Do,Don't,Code Good,Code Bad,Severity,Docs URL
 22,Lists,Implement windowSize,控制渲染窗口,较小的窗口大小以节省内存,大型列表的默认窗口大小,windowSize={5},windowSize={21} for huge lists,Medium,
 23,Performance,Use React.memo,防止不必要的重新渲染,纯组件的备注,没有记忆,export default memo(MyComponent),export default MyComponent,Medium,
 24,Performance,Use useCallback for handlers,稳定的函数引用,props 的 useCallback,每次渲染都有新功能,"useCallback(() => {}, [deps])",() => handlePress(),Medium,
-25,Performance,Use useMemo for expensive ops,缓存昂贵的计算,useMemo 用于繁重的计算,重新计算每个渲染,"useMemo(() => expensive(), [deps])",const result = expensive(),Medium,
+25,Performance,Use useMemo for expensive ops,缓存昂贵的计算,useMemo 用于繁重的计算,在每次渲染时重复计算,"useMemo(() => expensive(), [deps])",const result = expensive(),Medium,
 26,Performance,Avoid anonymous functions in JSX,防止重新渲染,命名处理程序或 useCallback,内联箭头函数,onPress={handlePress},onPress={() => doSomething()},Medium,
 27,Performance,Use Hermes engine,改进的启动和内存,在构建中启用 Hermes,用于新项目的 JavaScriptCore,hermes_enabled: true,hermes_enabled: false,Medium,https://reactnative.dev/docs/hermes
 28,Images,Use expo-image,React Native 的现代高性能图像组件,使用 expo-image 进行缓存、模糊和性能,对繁重的列表或未维护的库使用默认图像,<Image source={url} cachePolicy='memory-disk' /> (expo-image),<FastImage source={url} />,Medium,https://docs.expo.dev/versions/latest/sdk/image/

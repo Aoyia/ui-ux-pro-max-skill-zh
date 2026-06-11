@@ -1,7 +1,7 @@
 No,Category,Guideline,Description,Do,Don't,Code Good,Code Bad,Severity,Docs URL
 1,Reactivity,Use $: for reactive statements,自动依赖性跟踪,$: for derived values,手动重新计算,$: doubled = count * 2,let doubled; count && (doubled = count * 2),Medium,https://svelte.dev/docs/svelte-components#script-3-$-marks-a-statement-as-reactive
 2,Reactivity,Trigger reactivity with assignment,Svelte 跟踪分配而不是突变,重新分配数组/对象以触发更新,变异而不重新分配,"items = [...items, newItem]",items.push(newItem),High,https://svelte.dev/docs/svelte-components#script-2-assignments-are-reactive
-3,Reactivity,Use $state in Svelte 5,用于明确反应的符文,让计数 = $state(0),Svelte 5 中的隐式反应性,let count = $state(0),let count = 0 (Svelte 5),Medium,https://svelte.dev/blog/runes
+3,Reactivity,Use $state in Svelte 5,用于显式响应的符文,让计数 = $state(0),Svelte 5 中的隐式响应性,let count = $state(0),let count = 0 (Svelte 5),Medium,https://svelte.dev/blog/runes
 4,Reactivity,Use $derived for computed values,Svelte 5 中的 $driven 取代了 $:,让加倍= $衍生（计数* 2）,$: in Svelte 5,let doubled = $derived(count * 2),$: doubled = count * 2 (Svelte 5),Medium,
 5,Reactivity,Use $effect for side effects,$effect replaces $: side effects,使用 $effect 进行订阅,$: for side effects in Svelte 5,$effect(() => console.log(count)),$: console.log(count) (Svelte 5),Medium,
 6,Props,Export let for props,使用 export let 声明 props,导出 let propName,没有导出的道具,export let count = 0,let count = 0,High,https://svelte.dev/docs/svelte-components#script-1-export-creates-a-component-prop
@@ -17,8 +17,8 @@ No,Category,Guideline,Description,Do,Don't,Code Good,Code Bad,Severity,Docs URL
 16,Lifecycle,Use onMount for initialization,组件安装后运行代码,onMount 用于设置和数据获取,脚本主体中的代码以消除副作用,onMount(() => fetchData()),fetchData() in script body,High,https://svelte.dev/docs/svelte#onmount
 17,Lifecycle,Return cleanup from onMount,销毁时自动清理,onMount 返回函数,单独的 onDestroy 进行配对清理,onMount(() => { sub(); return unsub }),onMount(sub); onDestroy(unsub),Medium,
 18,Lifecycle,Use onDestroy sparingly,仅当无法进行 onMount 清理时,onDestroy 用于非安装清理,onDestroy 用于与挂载相关的清理,onDestroy for store unsubscribe,onDestroy(() => clearInterval(id)),Low,
-19,Lifecycle,Avoid beforeUpdate/afterUpdate,通常不需要,改为反应式语句,beforeUpdate 派生状态,$: if (x) doSomething(),beforeUpdate(() => doSomething()),Low,
-20,Stores,Use writable for mutable state,基本反应式存储,共享可变状态可写,共享状态的局部变量,const count = writable(0),let count = 0 in module,Medium,https://svelte.dev/docs/svelte-store#writable
+19,Lifecycle,Avoid beforeUpdate/afterUpdate,通常不需要,改为响应式语句,beforeUpdate 派生状态,$: if (x) doSomething(),beforeUpdate(() => doSomething()),Low,
+20,Stores,Use writable for mutable state,基本响应式存储,共享可变状态可写,共享状态的局部变量,const count = writable(0),let count = 0 in module,Medium,https://svelte.dev/docs/svelte-store#writable
 21,Stores,Use readable for read-only state,外部数据源,可读导出/外部数据,可写只读数据,"readable(0, set => interval(set))",writable(0) for timer,Low,https://svelte.dev/docs/svelte-store#readable
 22,Stores,Use derived for computed stores,合并或改造商店,导出计算值,派生手动订阅,"derived(count, $c => $c * 2)",count.subscribe(c => doubled = c * 2),Medium,https://svelte.dev/docs/svelte-store#derived
 23,Stores,Use $ prefix for auto-subscription,自动订阅/取消订阅,组件中的 $storeName,手动订阅,{$count},count.subscribe(c => value = c),High,
@@ -38,7 +38,7 @@ No,Category,Guideline,Description,Do,Don't,Code Good,Code Bad,Severity,Docs URL
 37,Logic,Use {#if} for conditionals,模板条件语句,{#if} {:else if} {:else},表达式中的三元,{#如果条件}...{:else}...{/if},{cond ? a : b} for complex,Low,https://svelte.dev/docs/logic-blocks#if
 38,Logic,Use {#each} for lists,列表渲染,{#each} 带钥匙,表达式中的映射,{#每个项目作为项目（item.id）},{items.map(i => `<div>${i}</div>`)},Medium,
 39,Logic,Always use keys in {#each},正确的列表调节,(item.id) 唯一键,索引作为键或无键,{#每个项目作为项目（item.id）},{#每个项目作为项目，i (i)},High,
-40,Logic,Use {#await} for promises,处理异步状态,{#await} 用于加载/错误状态,手动承诺处理,{#等待承诺}...{:then}...{:catch},{#如果正在加载}...{#如果错误},Medium,https://svelte.dev/docs/logic-blocks#await
+40,Logic,Use {#await} for promises,处理异步状态,{#await} 用于加载/错误状态,手动 Promise 处理,{#await promise}...{:then}...{:catch},{#如果正在加载}...{#如果错误},Medium,https://svelte.dev/docs/logic-blocks#await
 41,SvelteKit,Use +page.svelte for routes,基于文件的路由,+page.svelte 用于路由组件,自定义路由设置,routes/about/+page.svelte,routes/About.svelte,Medium,https://kit.svelte.dev/docs/routing
 42,SvelteKit,Use +page.js for data loading,渲染前加载数据,+page.js 中的加载函数,onMount 获取数据,export function load() {},onMount(() => fetchData()),High,https://kit.svelte.dev/docs/load
 43,SvelteKit,Use +page.server.js for server-only,服务器端数据加载,+page.server.js 用于敏感数据,+page.js 用于 API 密钥,+page.server.js with DB access,+page.js with DB access,High,

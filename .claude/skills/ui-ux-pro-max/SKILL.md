@@ -1,11 +1,10 @@
 ---
 name: ui-ux-pro-max
-description: "UI/UX design intelligence for web and mobile. Includes 50+ styles, 161 color palettes, 57 font pairings, 161 product types, 99 UX guidelines, and 25 chart types across 10 stacks (React, Next.js, Vue, Svelte, SwiftUI, React Native, Flutter, Tailwind, shadcn/ui, and HTML/CSS). Actions: plan, build, create, design, implement, review, fix, improve, optimize, enhance, refactor, and check UI/UX code. Projects: website, landing page, dashboard, admin panel, e-commerce, SaaS, portfolio, blog, and mobile app. Elements: button, modal, navbar, sidebar, card, table, form, and chart. Styles: glassmorphism, claymorphism, minimalism, brutalism, neumorphism, bento grid, dark mode, responsive, skeuomorphism, and flat design. Topics: color systems, accessibility, animation, layout, typography, font pairing, spacing, interaction states, shadow, and gradient. Integrations: shadcn/ui MCP for component search and examples."
+description: UI/UX 设计智能。包含 67 种风格、161 个色板、57 组字体配对、25 种图表、16 个技术栈 (React, Next.js, Vue, Svelte, Astro, SwiftUI, React Native, Flutter, Nuxt, Nuxt UI, Tailwind, shadcn/ui, Jetpack Compose, Three.js, Angular, Laravel)。操作 (Actions)：plan, build, create, design, implement, review, fix, improve, optimize, enhance, refactor, check UI/UX code。项目 (Projects)：website, landing page, dashboard, admin panel, e-commerce, SaaS, portfolio, blog, mobile app, .html, .tsx, .vue, .svelte。元素 (Elements)：button, modal, navbar, sidebar, card, table, form, chart。风格 (Styles)：磨砂玻璃风 (glassmorphism), 黏土拟态 (claymorphism), 极简主义 (minimalism), 粗野主义 (brutalism), 新拟态 (neumorphism), 便当格布局 (bento grid), 暗黑模式 (dark mode), 响应式 (responsive), 拟物风格 (skeuomorphism), 扁平设计 (flat design)。主题 (Topics)：色板 (color palette), 无障碍 (accessibility), 动画 (animation), 布局 (layout), 字体排版 (typography), 字体配对 (font pairing), 间距 (spacing), 悬停 (hover), 阴影 (shadow), 渐变 (gradient)。集成 (Integrations)：用于组件搜索和示例的 shadcn/ui MCP。
 ---
+# UI/UX Pro Max - Design Intelligence
 
-# UI/UX Pro Max - 设计智能 (Design Intelligence)
-
-适用于 Web 与移动端应用的全面设计智能指南。包含 50+ 种前沿 UI 风格、161 套专业色板、57 组经典字体配对、161 种集成商业决策推导逻辑的产品原型模式、99 条顶级 UX 指导原则，以及横跨 10 种技术栈的 25 类数据可视化图表。支持按规则优先级自动匹配的轻量级检索数据库。
+面向 Web 和移动端应用的全面设计指南。包含跨 16 个技术栈的 67 种 UI 风格、161 个色板、57 组字体配对、99 条 UX 指南以及 25 种图表类型。支持基于优先级的推荐和可搜索数据库。
 
 ## 适用场景 (When to Apply)
 
@@ -55,7 +54,7 @@ description: "UI/UX design intelligence for web and mobile. Includes 50+ styles,
 | 2 | 触控与交互 (Touch & Interaction) | 严重 (CRITICAL) | `ux` | 最小尺寸 44×44px、8px+ 间距、加载状态反馈 | 仅依赖悬停 (hover)、瞬间状态切换 (0ms) |
 | 3 | 性能与加载 (Performance) | 高 (HIGH) | `ux` | WebP/AVIF、延迟加载、保留空间 (CLS < 0.1) | 布局抖动、累积布局偏移 (CLS) |
 | 4 | 界面风格适配 (Style Selection) | 高 (HIGH) | `style`, `product` | 匹配产品类型、风格一致性、使用 SVG 图标 | 随机混搭扁平与拟物风、使用 Emoji 作为图标 |
-| 5 | 布局与响应式 (Layout & Responsive) | High (HIGH) | `ux` | 移动优先断点、视口 meta 标签、无水平滚动 | 产生水平滚动条、硬编码 px 容器宽度、禁用缩放 |
+| 5 | 布局与响应式 (Layout & Responsive) | 高 (HIGH) | `ux` | 移动优先断点、视口 meta 标签、无水平滚动 | 产生水平滚动条、硬编码 px 容器宽度、禁用缩放 |
 | 6 | 排版与色彩 (Typography & Color) | 中 (MEDIUM) | `typography`, `color` | 正文字体 ≥16px、行高 1.5、语义化颜色 Token | 正文字体小于 12px、灰底灰字、在组件中硬编码十六进制颜色值 |
 | 7 | 动效与过渡 (Animation) | 中 (MEDIUM) | `ux` | 时长 150–300ms、动效传达意图、空间连续性 | 仅作点缀的冗余动画、对宽/高做过渡、不支持减弱动态效果 (reduced-motion) |
 | 8 | 表单与反馈 (Forms & Feedback) | 中 (MEDIUM) | `ux` | 可见标签、就近字段错误提示、渐进式呈现 | 仅使用占位符作标签、错误仅堆叠在顶部、初始展示过多字段 |
@@ -70,7 +69,7 @@ description: "UI/UX design intelligence for web and mobile. Includes 50+ styles,
 - `focus-states` —— 交互元素上必须有清晰可见的焦点环（建议 2–4px，参考 Apple HIG 与 Material Design）
 - `alt-text` —— 为具有实际信息含义的图片提供准确且描述性的 `alt` 属性
 - `aria-labels` —— 针对仅包含图标的按钮必须提供 `aria-label` 属性；在移动端原生开发中对应 `accessibilityLabel`（参考 Apple HIG）
-- `keyboard-nav` —— 键盘 Tab 键焦点切换顺序应与视觉布局顺序一致，提供完整的键盘无障碍通道支持（参考 Apple HIG）
+- `keyboard-nav` —— 键盘 Tab 键切换焦点顺序应与视觉布局顺序一致，提供完整的键盘无障碍通道支持（参考 Apple HIG）
 - `form-labels` —— 使用带有 `for` 属性的 `label` 标签与输入框显式关联
 - `skip-links` —— 为键盘操作用户提供“跳过至主要内容 (Skip to content)”的快捷导航链接
 - `heading-hierarchy` —— 严格遵循 `h1` → `h6` 的阶梯级标题顺序，切勿越级使用
@@ -100,7 +99,7 @@ description: "UI/UX design intelligence for web and mobile. Includes 50+ styles,
 - `no-precision-required` —— 避免强迫用户在极窄的边缘或过小的像素点上进行高精度点击操作
 - `swipe-clarity` —— 凡是支持滑动的操作，必须提供直观的视觉引导或暗示（如箭头、渐变虚化、新手引导）
 - `drag-threshold` —— 在触发拖拽行为前设置合理的移动阈值，以避免因手抖或微小位移导致的误触发
-
+- 
 ### 3. 性能与加载优化 Performance (HIGH)
 
 - `image-optimization` —— 优先使用下一代图片格式 WebP/AVIF，配置响应式图片资源（`srcset`/`sizes`），并懒加载非首屏图片
@@ -142,7 +141,7 @@ description: "UI/UX design intelligence for web and mobile. Includes 50+ styles,
 ### 5. 布局与多端响应式 Layout & Responsive (HIGH)
 
 - `viewport-meta` —— 必须在 HTML 中声明 `<meta name="viewport" content="width=device-width, initial-scale=1">`（切勿限制用户缩放）
-- `mobile-first` —— 坚持采用移动端优先 (Mobile-First) 设计思路，然后逐步向上适配平板 and 桌面端
+- `mobile-first` —— 坚持采用移动端优先 (Mobile-First) 设计思路，然后逐步向上适配平板和桌面端
 - `breakpoint-consistency` —— 在整个项目中使用统一的断点体系（例如 `375px` / `768px` / `1024px` / `1440px`）
 - `readable-font-size` —— 移动端正文字体最小设为 16px，以防 iOS 浏览器在聚焦输入框时进行强制放大
 - `line-length-control` —— 移动端单行限制在 35–60 个字符，桌面端单行字数控制在 60–75 个字符，确保极佳的可读性
@@ -191,15 +190,15 @@ description: "UI/UX design intelligence for web and mobile. Includes 50+ styles,
 - `exit-faster-than-enter` —— 退出动画快于进入：退出动画应比进入动画更迅速（建议设为进入时长的 60%–70%），使界面交互感觉更加干净利落（参考 MD 动效规范）
 - `stagger-sequence` —— 交错动效序列 (Stagger)：将列表/网格项的入场动画进行 30–50ms 的交错延迟，避免生硬地一次性呈现或过慢地依次呈现（参考 MD）
 - `shared-element-transition` —— 合理使用共享元素过渡 (Shared Element Transition)，在页面级跳转中维护视觉连续性（参考 MD, HIG）
-- `interruptible` —— 动效可中断性：所有动画过渡必须可随时被打断，用户的点击或滑动手势应能立即响应并中止当前动画，决不能形成阻碍
+- `interruptible` —— 动效可中断性：所有动画过渡必须可随时被打断，用户的点击或滑动手势应能立即响应并中止当前动画，决不能形成阻塞
 - `no-blocking-animation` —— 绝不能在动画执行期间锁定用户输入，UI 交互层必须保持实时可触控、可交互状态（参考 Apple HIG）
 - `fade-crossfade` —— 在同一个区域容器中进行内容替换时，使用交叉淡入淡出 (Crossfade) 进行过渡，防止生硬闪跳（参考 MD）
 - `scale-feedback` —— 在点击按钮或可点击卡片时，提供轻微的按压缩放（0.95–1.05）反馈，释放时弹回，丰富交互层次（参考 HIG, MD）
 - `gesture-feedback` —— 拖动、滑动和双指缩放操作必须实时跟随用户手指进行高帧率的动效渲染（参考 MD 动效规范）
 - `hierarchy-motion` —— 用运动轨迹的方向来隐喻页面层级：由下往上滑入代表深入层级，往下滑出代表返回或关闭（参考 MD）
-- `motion-consistency` - 在全局统一定义动画时长 Token 和缓动曲线，让整个系统的动效节奏保持连贯
+- `motion-consistency` - 在全局统一定义动画时长 Token 和缓动曲线，让整个系统的动效呼吸节奏保持和谐
 - `opacity-threshold` —— 渐隐组件的透明度低于 0.2 时应迅速完全隐藏，不要在尾声拖泥带水
-- `modal-motion` —— 模态弹窗或底面板应首选从其触发点（如点击的按钮）发发起渐变及滑入动效，这有利于用户心智模型构建（参考 HIG, MD）
+- `modal-motion` —— 模态弹窗或底面板应首选从其触发点（如点击的按钮）发起源头动画（滑入或轻微缩放），这有利于用户心智模型构建（参考 HIG, MD）
 - `navigation-direction` —— 前进与后退的切换方向必须保持直觉一致：前进向左滑，后退向右退（参考 Apple HIG）
 - `layout-shift-avoid` —— 所有常规动画均不能引发生长式布局重排，严防累积布局偏移 (CLS)
 
@@ -211,7 +210,7 @@ description: "UI/UX design intelligence for web and mobile. Includes 50+ styles,
 - `required-indicators` —— 在必填表单项旁边醒目标注必填符号（如统一使用红色星号 *）
 - `empty-states` —— 遇到空列表或空状态时，应呈现富有引导性的空状态页面（包含清晰文案说明 + 主行动按钮），严禁只展示白板
 - `toast-dismiss` —— 轻提示 (Toast) 应具有 3–5 秒的自动消失机制，不打断用户操作
-- `confirmation-dialogs` —— 在执行破坏性操作前，必须弹出模态对话框让用户进行二次确认
+- `confirmation-dialogs` —— 执行破坏性操作（如删除、清空）前，必须弹出模态对话框让用户进行二次确认
 - `input-helper-text` —— 针对格式复杂的表单，在输入框下方直接说明格式要求或提供帮助文案，不建议将其隐藏在 tooltip 中
 - `disabled-states` —— 禁用状态的按钮或表单必须应用半透明淡化 (0.38–0.5)、鼠标禁用手势以及 HTML5 语义化 `disabled` 属性
 - `progressive-disclosure` —— 循序渐进地展示复杂选项，避免在一开始塞给用户过多字段导致认知过载（参考 Apple HIG）
@@ -226,9 +225,9 @@ description: "UI/UX design intelligence for web and mobile. Includes 50+ styles,
 - `form-autosave` —— 较长的表单输入应在底层进行草稿自动保存，防止因断电、误触或浏览器崩溃导致用户数据彻底丢失
 - `sheet-dismiss-confirm` —— 在用户关闭带有未保存更改的底面板或模态弹窗前，必须进行弹窗警告确认，严防误触丢失数据
 - `error-clarity` —— 报错文案必须直观、易懂（写明错误原因和解决方法），禁止抛出“参数无效”、“500 Error”等代码级错误
-- `field-grouping` —— 逻辑关联 of 输入项应在视觉或语义上分组合并（使用 `fieldset`、容器或留白区划）（参考 MD）
+- `field-grouping` —— 逻辑关联的输入项应在视觉或语义上分组合并（使用 `fieldset`、容器或留白区划）（参考 MD）
 - `read-only-distinction` —— 只读状态 (Read-Only) 的数据应在视觉上与禁用状态 (Disabled) 进行区分，只读应保持良好的文字对比度
-- `focus-management` —— 表单校验失败提交时，自动将焦点移动至第一个未通过校验 of 输入框中，并唤起键盘（参考 WCAG）
+- `focus-management` —— 表单校验失败提交时，自动将焦点移动至第一个未通过校验的输入框中，并唤起键盘（参考 WCAG）
 - `error-summary` —— 长表单如果有多处报错，应在表单顶部进行红框汇总提示，并提供链接至报错位置的锚点导航（参考 WCAG）
 - `touch-friendly-input` —— 移动端输入框的物理高度不应低于 44px，以确保优良的触控交互体验（参考 Apple HIG）
 - `destructive-emphasis` —— 破坏性操作（如删除、注销）应使用明确的警示红，且在空间排列上与主 CTA 保持距离（参考 HIG, MD）
@@ -258,11 +257,11 @@ description: "UI/UX design intelligence for web and mobile. Includes 50+ styles,
 - `bottom-nav-top-level` —— 底部导航栏仅用于放置应用最顶层的 3-5 个核心入口，决不能在底部导航栏内嵌套次级页面底栏
 - `adaptive-navigation` —— 响应式导航：宽屏大屏设备上（≥1024px）优先选用侧边栏或左侧导航轨，移动端则切换至底栏/顶栏
 - `back-stack-integrity` —— 确保应用的导航栈完整度，返回操作必须循序渐进，绝不能直接把用户的导航历史清空并丢回首页
-- `navigation-consistency` —— 导航栏的位置在所有页面中应保持一致，不能随着页面切换而在顶部、底部、侧边随机变化
+- `navigation-consistency` —— 导航栏的设计和位置在所有页面中应保持一致，不能随着页面切换而在顶部、底部、侧边随机变化
 - `avoid-mixed-patterns` —— 避免在同一层级混乱地混合使用顶部 Tabs、侧边抽屉与底部 Tab Bar
 - `modal-vs-navigation` —— 模态框 (Modal) 绝不能用作主线导航流程；它们的设计初衷是临时打断用户以处理独立事务
 - `focus-on-route-change` —— 路由页面切换后，将焦点移至主要容器标题上，使屏幕阅读器能第一时间为盲人播报新页面（参考 WCAG）
-- `persistent-nav` —— 关键导航入口在深度页面中依然需要可触及，不要在子流程中将其彻底隐藏或锁死
+- `persistent-nav` —— 关键导航入口在深度页面中依然需要可触及，不要在子任务中将其彻底隐藏或锁死
 - `destructive-nav-separation` —— 带有危险性的入口（如注销、删除组织、注销账号）必须在空间上与日常导航大距离隔开
 - `empty-nav-state` —— 如果某个导航项由于无权限或无数据暂时无法访问，应显示具体的权限说明或引导流程，不能默默隐藏
 
@@ -302,8 +301,6 @@ description: "UI/UX design intelligence for web and mobile. Includes 50+ styles,
 ## 使用说明 (How to Use)
 
 请使用下方提供的 CLI 命令行工具，来检索特定的设计领域规则。
-
----
 
 ## 开发前提条件 (Prerequisites)
 
@@ -355,7 +352,7 @@ winget install Python.Python.3.12
 从用户请求中精准提取以下决策因子：
 - **产品定位/类型**：娱乐社交（社交、视频、音乐、游戏）、生产力工具（扫描仪、编辑器、转换器）、效率协作（任务管理、笔记、日历）或复合型平台
 - **目标受众画像**：C 端消费者用户；考虑年龄段、使用场景（通勤、闲暇、工作）
-- **风格关键词**：活泼趣味 (playful)、动感活力 (vibrant)、极简 (minimal)、暗黑 OLED (dark mode)、内容优先 (content-first)、沉浸式 (immersive) 等
+- **风格关键词**：活泼趣味 (playful)、动感活力 (vibrant)、极致极简 (minimal)、暗黑 OLED (dark mode)、内容优先 (content-first)、沉浸式 (immersive) 等
 - **框架技术栈**：确认当前项目所采用的框架与技术栈
 
 ### 步骤 2：生成设计系统规范（核心前置步骤，必须执行）
@@ -429,8 +426,6 @@ python3 skills/ui-ux-pro-max/scripts/search.py "<keyword>" --domain <domain> [-n
 | 字体组合/字体配对 | `typography` | `--domain typography "playful modern"` |
 | 图表展现与库推荐 | `chart` | `--domain chart "real-time dashboard"` |
 | UX 交互与无障碍合规 | `ux` | `--domain ux "animation accessibility"` |
-| 替代字体 | `typography` | `--domain typography "elegant luxury"` |
-| 单个 Google 字体 | `google-fonts` | `--domain google-fonts "sans serif popular variable"` |
 | 落地页布局与 CTA 策略 | `landing` | `--domain landing "hero social-proof"` |
 | 开发框架性能调优 | `react` | `--domain react "rerender memo list"` |
 | 平台交互规范 (iOS/Android) | `web` | `--domain web "accessibilityLabel touch safe-areas"` |
@@ -459,16 +454,9 @@ python3 skills/ui-ux-pro-max/scripts/search.py "<keyword>" --stack <stack>
 | `landing` | 落地页页面结构与 CTA 转化策略 | hero, hero-centric, testimonial, pricing, social-proof |
 | `chart` | 推荐的数据图表类型与可视化图表库 | trend, comparison, timeline, funnel, pie |
 | `ux` | 交互设计优秀实践与反模式防坑指南 | animation, accessibility, z-index, loading |
-| `google-fonts` | 单个 Google Font 查询 | sans serif, monospace, japanese, variable font, popular |
 | `react` | React 生态框架的前端渲染性能调优 | waterfall, bundle, suspense, memo, rerender, cache |
 | `web` | 主流端平台设计与无障碍接口规范 | accessibilityLabel, touch targets, safe areas, Dynamic Type |
 | `prompt` | 生成特定风格视觉的 AI 绘图提示词 | (style name) |
-
-### 可用技术栈
-
-| 技术栈 (Stack) | 核心关注点 |
-|-------|-------|
-| `react-native` | 组件 (Components)、导航 (Navigation)、列表 (Lists) |
 
 ---
 
@@ -504,7 +492,7 @@ python3 skills/ui-ux-pro-max/scripts/search.py "search loading animation" --doma
 
 ```bash
 # 检索特定技术栈下的输入性能与列表渲染最佳实践
-python3 skills/ui-ux-pro-max/scripts/search.py "input performance" --stack react-native
+python3 skills/ui-ux-pro-max/scripts/search.py "input performance" --stack react
 ```
 
 **最后阶段**：将设计系统规范与检索出的最佳交互细节融会贯通，产出高质量前端代码。
@@ -615,5 +603,5 @@ python3 skills/ui-ux-pro-max/scripts/search.py "fintech crypto" --design-system 
 | **4/8pt 间距韵律系统** | 内边距、外边距、网格空隙等，一律采用统一的 4/8/16/24/32/48px 等阶梯节奏 | 随心所欲使用 7px、13px、19px、31px 等无规律的间距数值 |
 | **控制段落最大排版宽度** | 在宽屏平板及 PC 上，限制单行文字最大排版宽度，保证视线移动舒适 | 段落文字横跨整屏，导致用户每读完一行都需要长距离移动眼球寻找下一行 |
 | **垂直间距分明层级** | 页面各区块之间使用鲜明的、拉开差距的垂直间距（如 24px/48px/64px） | 区块区块之间没有清晰的空隙，使页面显得局促而杂乱 |
-| **响应式水平槽宽** | 随着设备屏幕宽度增加，按比例增加两侧的水平页面边距 (Page Gutters) | 在平板和移动端上都顽固使用相同极窄 of 12px 边距 |
+| **响应式水平槽宽** | 随着设备屏幕宽度增加，按比例增加两侧的水平页面边距 (Page Gutters) | 在平板和移动端上都顽固使用相同极窄的 12px 边距 |
 | **底部滚动安全占位** | 凡是页面底部有固定粘性底栏时，必须为列表容器最底端提供相等的 Padding 占位 | 用户滑动到列表最底部时，最后一个条目被粘性底栏永久遮挡 |
